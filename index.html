@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Design portfolio">
+        <meta name="author" content="Trang Do">
+        <title>Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+
+        <!-- Google Font https://fonts.google.com/specimen/Jost -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="home">
+        <div class="wrapper dark">
+            <header>
+                <div class="grid desktop-columns-4 tablet-columns-3 mobile-columns-2">
+                    <a href="../index.html" class="logo">
+                        <svg width="1rem" height="1rem" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
+                            <ellipse cx="192" cy="94" rx="14" ry="14"/>
+                            <ellipse cx="96" cy="94" rx="14" ry="14"/>
+                        </svg>
+                        <p>Trang Do</p>
+                    </a>
+    
+                    <span class="material-icons" id="nav-trigger">menu</span>
+                    
+                    <nav id="nav-triggered">
+                        <a href="#landing">Home</a>
+                        <a href="#works">Works</a>
+                        <a href="#about">About</a>
+                    </nav>
+                </div>  
+            </header>
+    
+            <main>
+                <section id="landing" class="grid desktop-columns-12 tablet-columns-12 row-gap-40">
+                    <div class="grid row-gap-8 tablet-span-5 row-2">
+                        <h1>Hi, my name is Trang<span class="blink">|</span></h1>
+                        <p>I'm a designer and front-end developer based in Ontario, graduated from the Bachelor of Interaction Design at Sheridan College.</p>                           
+                    </div>
+                    
+                    <img src="../img/animation.gif" class="tablet-span-7 row-1" alt="A laptop displays different projects one-by-one.">
+                </section>
+    
+    
+                <section id="works" class="grid row-gap-16">
+                    <h2 class="text-medium">Case studies</h2>
+    
+                    <div class="grid row-gap-40 desktop-columns-2 tablet-columns-2">
+                        <div>
+                            <a href="case-study/mindful-youtube-experience.html" class="project complete">
+                                <img src="../img/homepage/mindful-youtube.png" alt="A laptop displays a watch time reminder pop-up over a YouTube video.">
+                                <p class="text-medium">Mindful YouTube Experience</p>
+                            </a>
+                            <p>Designing for viewers' mental well-being.</p>
+                        </div>
+
+                        <div>
+                            <a href="case-study/nos4r2-book-cover.html" class="project complete">
+                                <img src="../img/homepage/book-cover.png" alt="Three book cover designs lay diagonally.">
+                                <p class="text-medium">NOS4R2 Book Cover</p>
+                            </a>
+                            <p>Exploring visual expression of central themes.</p>
+                        </div>
+        
+                        <div>
+                            <a href="case-study/blue-dragon-landing-page.html" class="project complete">
+                                <img src="../img/homepage/landing-page.png" alt="A landing page design overflowing out of the laptop screen.">
+                                <p class="text-medium">Blue Dragon's Landing Page</p>
+                            </a>
+                            <p>Establishing persuasion with rhetorical tropes.</p>
+                        </div>
+        
+                        <div class="project incomplete" style="align-content: start;">
+                            <img src="../img/homepage/eatwell.png" alt="Two phone mockups of the EatWell app.">
+                            <p class="text-medium">EatWell</p>
+                        </div>
+                    </div>
+    
+                    
+                </section>
+    
+                <section class="grid row-gap-16">
+                    <h2 class="text-medium">Other projects</h2>
+
+                    <div class="grid row-gap-32 desktop-columns-3 tablet-columns-3">
+                        <a href="project/career-courier.html" class="project complete">
+                            <img src="../img/homepage/career-courier.png">
+                            <p>Career Courier: Career guidance for high school students.</p>
+                        </a>
+
+                        <div class="project complete">
+                            <img src="../img/homepage/info-visualization.png" onclick="openSlides(infographics)">
+                            <p>Collection of infographics.</p>
+                        </div>
+
+                        <div class="project complete">
+                            <img src="../img/homepage/google-doodle.png" onclick="openModal(this)" class="video-modal" id="google-doodle">
+                            <p>Google Doodle celebrating the Walkman.</p>
+                        </div>
+
+                        <div class="project complete">
+                            <img src="../img/homepage/3d-model.png" onclick="openModal(this)" id="3d-model">
+                            <p>3D modeling exploration.</p>
+                        </div>
+
+                        <div class="project complete">
+                            <img src="../img/homepage/coffee-mill.png" onclick="openSlides(coffee)">
+                            <p>Brand identity for Coffee Mill.</p>
+                        </div>
+
+                        <!-- <div class="project complete">
+                            <img src="../img/homepage/synesthetic-guitar.png" onclick="openModal(this)" class="video-modal" id="synesthetic-guitar">
+                            <p>Visualizing guitar chords.</p>
+                        </div> -->
+
+                        <a href="project/noto.html" class="project incomplete">
+                            <img src="../img/homepage/noto.png">
+                            <p>NOTO: Assistive tool for early childhood educators.</p>
+                        </a>
+                        
+                        <div class="project incomplete">
+                            <img src="../img/homepage/shopping-calculator.png">
+                            <p>Shopping calculator with currency convertor.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+    
+    
+                <section id="about" class="grid">
+                    <div class="grid desktop-columns-12 tablet-columns-12">
+                        <div class="grid row-gap-8 tablet-span-5">
+                            <h2 class="text-medium">About me</h2>
+                            <p>
+                                I'm a designer and front-end developer based in Oakville, Ontario, Canada. 
+                                Although my focus is on visual communication and crafting user experiences, I've tackled diverse projects, including creating informational and interactive designs, developing responsive websites, enhancing application accessibility, and conducting usability research. 
+                                My educational background in math and science has allowed me to efficiently learn valuable technical skills and methodologies, enabling me to effectively troubleshoot obstacles and deliver high-quality results.
+                            </p>
+                        </div>
+    
+                        <div class="grid timeline tablet-span-7">
+                            <div class="timedot" style="grid-row: 1/2;"></div>
+                            <div class="timepoint" style="grid-row: 1/2;">
+                                <p class="text-small">09 &#8211 12/2024</p>
+                                <p>Part-time UI/UX and graphic designer at Sheridan S-Sense.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 2/3;"></div>
+                            <div class="timepoint" style="grid-row: 2/3;">
+                                <p class="text-small">06 &#8211 08/2024</p>
+                                <p>UI/UX and graphic design co-op student at Sheridan S-Sense.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 3/4;"></div>
+                            <div class="timepoint" style="grid-row: 3/4;">
+                                <p class="text-small">01/2024</p>
+                                <p>Participated in Hackville 2024 and aided in developing <a href="https://devpost.com/software/career-courier" target="_blank" class="link">a career tool</a> for high school students to determine their best career path.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 4/5;"></div>
+                            <div class="timepoint" style="grid-row: 4/5;">
+                                <p class="text-small">04/2023 &#8211 04/2024</p>
+                                <p>Co-Lead of Mentorship for Sheridan's Interaction Design Association.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 5/6;"></div>
+                            <div class="timepoint" style="grid-row: 5/6;">
+                                <p class="text-small">02/2023</p>
+                                <p>Participated in Hackville 2023 and aided in developing <a href="https://devpost.com/software/ara-app-extension" target="_blank" class="link">an app extension</a> that help familiarize users to new interfaces.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 6/7;"></div>
+                            <div class="timepoint" style="grid-row: 6/7;">
+                                <p class="text-small">01/2023 &#8211 04/2025</p>
+                                <p>Program and course tutor at Sheridan College.</p>
+                            </div>
+    
+                            <div class="timedot" style="grid-row: 7/8;"></div>
+                            <div class="timepoint" style="grid-row: 7/8;">
+                                <p class="text-small">09/2021 &#8211 04/2025</p>
+                                <p>Student in the Honours Bachelor of Interaction Design at Sheridan College.</p>
+                            </div>
+    
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="grid row-gap-16">
+                        <p>I like to read, watch movies, and draw in my free time.</p>
+    
+                        <div class="grid desktop-columns-4 tablet-columns-4 mobile-columns-2 row-gap-24">
+                            <img src="../img/drawings/drawing_01.PNG">
+                            <img src="../img/drawings/drawing_02.PNG">
+                            <img src="../img/drawings/drawing_03.PNG">
+                            <img src="../img/drawings/drawing_04.PNG">
+                            <img src="../img/drawings/drawing_05.PNG">
+                            <img src="../img/drawings/drawing_06.PNG">
+                            <img src="../img/drawings/drawing_07.PNG">
+                        </div>
+                    </div>
+                </section>
+    
+    
+                <footer class="grid row-gap-8">
+                    <h2 class="text-medium">Get in touch</h2>
+                    <div>
+                        <p>Email: <a href="mailto:trangdohanh@gmail.com">trangdohanh@gmail.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank">linkedin.com/in/hanh-trang-do</a></p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+
+        <!-- 1 image/video projects modals -->
+        <div class="modal" id="modal">
+            <div class="close-overlay" onclick="closeModal()"></div>
+            <span class="material-icons close-modal" onclick="closeModal()">close</span>
+
+            <div class="modal-content">
+                <img id="img-modal">
+
+                <video width="90%" height="auto" id="video-modal" controls>
+                    <source type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+        <!-- Infographics slideshow -->
+        <div class="modal" id="infographics">
+            <div class="close-overlay" onclick="closeSlides(this)"></div>
+            <span class="material-icons close-modal" onclick="closeSlides(this)">close</span>
+
+            <div class="modal-content grid row-gap-16">
+                <div class="thumbnails" style="grid-template-columns: repeat(6, 1fr);">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-1.jpg" onclick="currentSlideA(1)">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-2.jpg" onclick="currentSlideA(2)">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-3.jpg" onclick="currentSlideA(3)">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-4.jpg" onclick="currentSlideA(4)">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-5.jpg" onclick="currentSlideA(5)">
+                    <img class="thumbnail thumbnailA" src="../img/info-visualization/info-visual-6.jpg" onclick="currentSlideA(6)">
+                </div>
+    
+                <div class="slides">
+                    <img src="../img/info-visualization/info-visual-1.jpg" class="slide slideA fade">
+                    <img src="../img/info-visualization/info-visual-2.jpg" class="slide slideA fade">
+                    <img src="../img/info-visualization/info-visual-3.jpg" class="slide slideA fade">
+                    <img src="../img/info-visualization/info-visual-4.jpg" class="slide slideA fade">
+                    <img src="../img/info-visualization/info-visual-5.jpg" class="slide slideA fade">
+                    <img src="../img/info-visualization/info-visual-6.jpg" class="slide slideA fade">
+
+                    <a class="prev" style="color: var(--black);" onclick="plusSlidesA(-1)"><span class="material-icons">arrow_back_ios</span></a>
+                    <a class="next" style="color: var(--black);" onclick="plusSlidesA(1)"><span class="material-icons">arrow_forward_ios</span></a>
+                </div>
+
+                <div class="slides">
+                    <p class="caption fade">An instructional infographic of a handheld steam iron breaking down its parts and demonstrating how it is used. The process of designing this visualization explores how an object can be visualized to show both its components and functions. This infographic was designed in Adobe Illustrator for tabloid size, landscape orientation.</p>
+                    <p class="caption fade">Graphic representation of the number of deaths attributed to cardiovascular disease in South-East Asian countries from 1999 to 2019. The statistics was uploaded onto Datawrapper to create charts as a starting point, which are then traced and designed in Figma. The data for each year is represented in a doughnut chart, with each slice decreasing in size compared to the previous to accommodate for the significantly smaller value(s) of some countries compared to others.</p>
+                    <p class="caption fade">Data visualization of the prominent sounds I heard during each hour of a day, mapped against the perceived productivity of that hour. The sounds are separated into background and foreground sounds, then further broken down into different types. Each song I listened to was categorized by the primary emotion and visualized by colours. This visualization was designed using Figma.</p>
+                    <p class="caption fade">A calendar visualization of my coffee purchases from Tim Hortons throughout 2023. Each purchase was shown by the serving size. Similar to the previous graphic, this infographic uses Figma to visualize an experience, but with more objective data.</p>
+                    <p class="caption fade">An infographic of the main reasons U.S. college students consume caffeinated beverages, with additional caffeine-related information on the side. The statistics were first uploaded to Tableau to create the tree map which is then redesigned in Figma.</p>
+                    <p class="caption fade">Data visualization of U.S. college students' sleep behaviours by the frequency they experience those behaviours. The statistics was taken from a 2022 report by American College Health Association and visualized in Figma.</p>
+                    <!-- https://public.tableau.com/app/profile/trang.do2113/viz/Feb152024v3/Dashboard -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Coffee Mill slideshow -->
+        <div class="modal" id="coffee">
+            <div class="close-overlay" onclick="closeSlides(this)"></div>
+            <span class="material-icons close-modal" onclick="closeSlides(this)">close</span>
+
+            <div class="modal-content grid row-gap-16">
+                <div class="thumbnails" style="grid-template-columns: repeat(9, 1fr);">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-1.jpg" onclick="currentSlideB(1)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-2.jpg" onclick="currentSlideB(2)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-3.jpg" onclick="currentSlideB(3)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-4.jpg" onclick="currentSlideB(4)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-5.jpg" onclick="currentSlideB(5)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-6.jpg" onclick="currentSlideB(6)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-7.jpg" onclick="currentSlideB(7)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-8.jpg" onclick="currentSlideB(8)">
+                    <img class="thumbnail thumbnailB" src="../img/coffee-mill/mockup-9.jpg" onclick="currentSlideB(9)">
+                </div>
+    
+                <div class="slides">
+                    <img src="../img/coffee-mill/mockup-1.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-2.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-3.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-4.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-5.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-6.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-7.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-8.jpg" class="slide slideB fade">
+                    <img src="../img/coffee-mill/mockup-9.jpg" class="slide slideB fade">
+
+                    <a class="prev" style="color: var(--black);" onclick="plusSlidesB(-1)"><span class="material-icons">arrow_back_ios</span></a>
+                    <a class="next" style="color: var(--black);" onclick="plusSlidesB(1)"><span class="material-icons">arrow_forward_ios</span></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JavaScript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/modal.js"></script>
+        <script src="../js/slideshows.js"></script>
+    </body>
+</html>

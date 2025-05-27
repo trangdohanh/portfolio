@@ -1,0 +1,729 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    --black: #1A1A1A;
+    --white: #FBF7F4;
+    --green: #50826E;
+    --light-green: #96BEB4;
+    --dark-green: #285046;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    position: relative;
+    color: var(--black);
+    background-color: var(--white);
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.home{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+h1, h2, h3{
+    font-weight: 500;
+}
+
+h1, h3{
+    font-size: 1.25rem;
+    line-height: 2.02rem;
+}
+
+h2{
+    font-size: 0.875rem;
+    line-height: 1.42rem;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.62rem;
+}
+
+.wrapper{
+    position: fixed;
+    max-width: 100vw;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    
+}
+
+.wrapper.dark{
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0;
+    padding-top: 120px;
+    align-items: start;
+}
+
+section.extended{
+    max-width: 100vw;
+    min-width: 100vw;
+    justify-self: stretch;
+    margin: 0;
+}
+
+.coloured-section{
+    background-color: #F4E9E1;
+}
+
+.extended-wrapper{
+    padding: 40px 0;
+}
+
+.extended-content{
+    max-width: 1024px;
+}
+
+.extended .dark{
+    color: var(--white);
+    background-color: #000000;
+}
+
+#works{
+    padding-top: 80px;
+}
+
+a{
+    width: fit-content;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.3s ease;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--dark-green);
+}
+
+a.link{
+    text-decoration: underline;
+}
+
+a.link:hover{
+    text-decoration: none;
+}
+
+.home a{
+    color: var(--white);
+}
+
+.home a:hover{
+    color: var(--light-green);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    background-color: rgba(251, 247, 244, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.home header{
+    background-color: rgba(26, 26, 26, 0.2);
+}
+
+header div{
+    max-width: 1024px;
+    margin: 0 20px;
+}
+
+header a{
+    padding: 1rem 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-column: span 2;
+}
+
+#nav-trigger{
+    place-self: start end;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.hide-nav{
+    position: absolute;
+    top: -550px;
+    transition: ease 1s;
+}
+
+.logo{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.logo p{
+    font-size: 1.125rem;
+}
+
+svg{
+    width: 1rem;
+    height: 1rem;
+    fill: var(--dark-green);
+}
+
+.home svg {
+    fill: var(--light-green);
+}
+
+footer{
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 2.5rem;
+    padding: 2.5rem 0;
+}
+
+img{
+    width: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+video{
+    border-radius: 2px;
+}
+
+.grid{
+    display: grid;
+    /* grid-template-rows: auto 1fr; */
+    grid-column-gap: 16px;
+    align-content: start;
+}
+
+.row-gap-8{grid-row-gap: 8px;}
+.row-gap-16{grid-row-gap: 16px;}
+.row-gap-24{grid-row-gap: 24px;}
+.row-gap-32{grid-row-gap: 32px;}
+.row-gap-40{grid-row-gap: 40px;}
+.row-gap-80{grid-row-gap: 80px;}
+.row-gap-120{grid-row-gap: 120px;}
+.row-gap-160{grid-row-gap: 160px;}
+
+
+.text-small{font-size: 0.875rem; line-height: 1.42rem;}
+.text-regular{font-size: 1rem; line-height: 1.62rem;}
+.text-medium{font-size: 1.25rem; line-height: 2.02rem;}
+.text-large{font-size: 1.5rem; line-height: 2.42rem;}
+
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+
+.font-medium{font-weight: 500;}
+.font-semibold{font-weight: 600;}
+.font-bold{font-weight: 700;}
+.font-extrabold{font-weight: 800;}
+.font-black{font-weight: 900;}
+
+
+.project{
+    display: grid;
+    grid-row-gap: 1rem;
+    height: fit-content;
+}
+
+.complete{
+    cursor: pointer;
+}
+
+.complete img:hover{
+    scale: 98%;
+    transition: 0.2s ease;
+}
+
+.incomplete{
+    opacity: 0.8;
+}
+
+.project.incomplete:hover{
+    text-decoration: none;
+    color: var(--white);
+    cursor: initial;
+}
+
+
+.timeline{
+    grid-row-gap: 40px;
+    position: relative;
+    padding: 0 0 80px 0;
+}
+
+.timepoint{
+    grid-column: 1/2;
+    margin-left: 2rem;
+}
+
+.timedot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    margin-top: 2px;
+    grid-column: 1/2;
+    place-self: start start;
+}
+
+.line{
+    border-left: 2px solid var(--white);
+    height: 100%;
+    grid-area: 1/1/8/2;
+    margin-left: 7px;
+    z-index: -1;
+}
+
+.timeline .text-small {
+    font-weight: 300;
+}
+
+.blink{
+    color: var(--light-green);
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinker{
+    30% {opacity: 1;}
+    35% {opacity: 0;}
+    55% {opacity: 0;}
+    60% {opacity: 1;}
+}
+
+.colours{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 5rem;
+}
+
+.colour{
+    padding: 0.25rem 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.colour p{
+    font-weight: 300;
+}
+
+.hmw{
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2.02rem;
+    padding-top: 1rem;
+}
+
+.project-button{
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.project-button:hover{
+    background-color: var(--light-green);
+    border: 2px solid var(--green);
+}
+
+/* Start of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+.slides{
+    z-index: 1;
+    white-space: nowrap;
+    height: 100%;
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.slide{
+    vertical-align: top;
+    white-space: normal;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.caption{
+    vertical-align: top;
+    white-space: normal;
+}
+
+.next, .prev{
+    cursor: pointer;
+    z-index: 3;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(251, 247, 244, 0.2);
+    transition: 0.3s ease;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade{
+    from {opacity: 0.5}
+    to {opacity: 1}
+}
+
+.thumbnails{
+    display: grid;
+    height: 85%;
+    overflow-y: hidden;
+}
+
+.thumbnail{
+    border-radius: 0;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s ease;
+}
+
+.thumbnail:hover{
+    opacity: 1;
+}
+
+.active{
+    cursor: initial;
+    opacity: 1;
+}
+/* End of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+
+
+.modal{
+    z-index: 10;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+.modal-content{
+    position: relative;
+    max-width: 1024px;
+    place-self: center;
+}
+
+.close-modal{
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.close-overlay{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh;
+    z-index: -1;
+}
+
+#video-modal{
+    margin: 0 auto;
+}
+
+#img-modal, #video-modal{
+    display: none;
+}
+
+.youtube-grid div{
+    grid-row-gap: 0.5rem;
+    background-color: #F4E9E1;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.list{
+    list-style-type: disc;
+    /* list-style-position: inside; */
+    /* text-indent: -1.4rem; */
+    padding-left: 1rem;
+}
+
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {
+    .wrapper{
+        padding: 0 20px;
+    }
+
+    section.extended{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .extended-wrapper{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .mobile-columns-2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mobile-columns-3{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .mobile-columns-4{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .mobile-span-2{grid-column: span 2;}
+    .mobile-span-3{grid-column: span 3;}
+    .mobile-span-4{grid-column: span 4;}
+
+    .row-1{
+        grid-row: 1/2;
+    }
+    .row-2{
+        grid-row: 2/3;
+    }
+
+    nav a{
+        width: 100%;
+        text-align: right;
+    }
+
+    .timeline{
+        padding: 80px 0;
+    }
+
+    .colours{
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+    }
+
+    .colour{
+        height: 5rem;
+    }
+
+    .modal{
+        padding: 64px 20px;
+    }
+
+    .desktop-version{
+        display: none;
+    }
+}
+
+
+
+/* 768px < screen < 1024px */
+@media only screen and (min-width: 768px) {
+    .wrapper{
+        padding: 0 40px;
+    }
+
+    section.extended{
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+
+    .extended-wrapper{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .grid{
+        grid-column-gap: 24px;
+    }
+
+    .tablet-columns-2{grid-template-columns: repeat(2, 1fr);}
+    .tablet-columns-3{grid-template-columns: repeat(3, 1fr);}
+    .tablet-columns-4{grid-template-columns: repeat(4, 1fr);}
+    .tablet-columns-6{grid-template-columns: repeat(6, 1fr);}
+    .tablet-columns-12{grid-template-columns: repeat(12, 1fr);}
+
+    .tablet-span-2{grid-column: span 2;}
+    .tablet-span-4{grid-column: span 4;}
+    .tablet-span-5{grid-column: span 5;}
+    .tablet-span-6{grid-column: span 6;}
+    .tablet-span-7{grid-column: span 7;}
+    .tablet-span-8{grid-column: span 8;}
+    .tablet-span-12{grid-column: span 12;}
+
+    /* .center-content{grid-column: 2/12;}
+    .center-left{grid-column: 2/7;}
+    .center-right{grid-column: 7/12;} */
+
+    #landing{
+        align-items: center;
+    }
+
+    header div{
+        margin: 0 40px;
+    }
+
+    nav{
+        grid-column: 3/4;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #nav-trigger{
+        display: none;
+    }
+
+    .timeline{
+        margin-left: 2.5rem;
+    }
+
+    #about{
+        grid-row-gap: 5rem;
+    }
+
+
+    .overview{grid-area: 1/1/3/8;}
+    .tools{grid-area: 1/9/2/13;}
+    .time{grid-area: 2/9/3/13;}
+
+    .project-button{
+        grid-area: 3/1/4/8;
+    }
+
+    .modal{
+        padding: 64px 40px 40px 40px;
+    }
+
+    .mobile-version{
+        display: none;
+    }
+}
+
+
+
+/* 1024px < screen < 1440px */
+@media only screen and (min-width: 1104px) {
+    .wrapper{
+        padding: 0;
+    }
+    
+    section{
+        margin: 0 auto;
+    }
+
+    footer{
+        margin: 2.5rem auto 0 auto;
+    }
+
+    section.extended{
+        margin: 0;
+    }
+
+    .extended-wrapper{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .extended-content{
+        margin: 0 auto;
+    }
+
+    .desktop-columns-2{grid-template-columns: repeat(2, 1fr);}
+    .desktop-columns-3{grid-template-columns: repeat(3, 1fr);}
+    .desktop-columns-4{grid-template-columns: repeat(4, 1fr);}
+    .desktop-columns-6{grid-template-columns: repeat(6, 1fr);}
+    .desktop-columns-12{grid-template-columns: repeat(12, 1fr);}
+
+    .desktop-span-4{grid-column: span 4;}
+    .desktop-span-5{grid-column: span 5;}
+    .desktop-span-6{grid-column: span 6;}
+    .desktop-span-7{grid-column: span 7;}
+    .desktop-span-8{grid-column: span 8;}
+    .desktop-span-12{grid-column: span 12;}
+
+    .center-content{grid-column: 2/12;}
+    .center-left{grid-column: 2/7;}
+    .center-right{grid-column: 7/12;}
+
+    header div{
+        margin: auto;
+    }
+
+    nav{
+        grid-column: 4/5;
+    }
+
+    .timeline{
+        margin-left: 5rem;
+    }
+
+    .colour{
+        padding: 0.5rem 1rem;
+    }
+    
+    .pad-top-40{padding-top: 1.25rem;}
+
+    .modal{
+        padding: 40px 0;
+    }
+
+    .modal-content{
+        margin: 0 auto;
+    }
+}
+
+
+/* 1920px screen */
+@media only screen and (min-width: 1920px) {
+    .wrapper{
+        max-width: 1440px;
+    }
+
+    header div{
+        max-width: 1440px;
+    }
+}
