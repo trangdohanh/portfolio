@@ -340,17 +340,35 @@ video{
     padding-top: 1rem;
 }
 
-.project-button{
+.link-button{
     padding: 0.5rem 1rem;
     border: 2px solid var(--black);
     border-radius: 4px;
     transition: 0.3s ease;
 }
 
-.project-button:hover{
+.home .link-button{
+    border: 2px solid var(--white);
+}
+
+.link-button:hover{
     background-color: var(--light-green);
     border: 2px solid var(--green);
 }
+
+.home .link-button:hover{
+    background-color: var(--dark-green);
+    border: 2px solid var(--green);
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    padding-top: 1rem;
+}
+
 
 /* Start of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 .slides{
@@ -490,8 +508,6 @@ video{
 
 .list{
     list-style-type: disc;
-    /* list-style-position: inside; */
-    /* text-indent: -1.4rem; */
     padding-left: 1rem;
 }
 
