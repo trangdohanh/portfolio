@@ -293,7 +293,7 @@ video{
 .line{
     border-left: 2px solid var(--white);
     height: 100%;
-    grid-area: 1/1/8/2;
+    grid-area: 1/1/10/2;
     margin-left: 7px;
     z-index: -1;
 }
