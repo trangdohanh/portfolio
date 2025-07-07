@@ -146,7 +146,7 @@ form div{
 }
 
 
-@media only screen and (max-width: 480px){
+/* @media only screen and (max-width: 480px){ */
   .main {
     height: 100vh;
     grid-template-rows: auto 1fr;
@@ -167,7 +167,7 @@ form div{
   }
 
   .start {
-    margin: 12.5rem 1.25rem 0 1.25rem;
+    margin: 8rem 1.25rem 0 1.25rem;
     padding: 3rem 1.25rem 1.5rem 1.25rem;
     border-radius: 0.5rem;
     grid-row-gap: 1rem;
@@ -416,4 +416,4 @@ form div{
     font-size: 1.25rem;
     font-weight: 400;
   }
-}
+/* } */
