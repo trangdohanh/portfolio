@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IXD Behaviours Project 3</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="buttons">
+    <button onclick="showOriginal(event)">Original version</button>
+    <button onclick="showNew(event)">New version</button>
+    <button onclick="showBoth(event)" disabled>Both versions</button>
+  </div>
+
+  <main id="main" class="grid">
+    <div id="original">
+      <iframe src="original_code/index.html" title="orignal version"></iframe>
+      <!-- <a href="original_code/index.html">Original version</a> -->
+    </div>
+    
+    <div id="new">
+      <iframe src="new_code/index.html" title="new version"></iframe>
+      <!-- <a href="new_code/index.html">New version</a> -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

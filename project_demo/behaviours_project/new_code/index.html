@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>New version</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+</head>
+
+<body>
+
+  <!-- Shopping list page -->
+  <main class="grid main tabContent" id="shop">
+
+    <!-- Select currency and province -->
+    <div class="onboard grid start" id="onboard">
+      
+      <p>To begin, select the currency you want to convert to and the province you're in—this will help with calculating the sales tax.</p>
+
+      <fieldset>
+        <label>Currency</label>
+        <select id="currencySelector" class="dropdown">
+          <option value=" " hidden>Select currency</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>Province</label>
+        <select id="provinceSelector" class="dropdown">
+          <option value=" " hidden>Select province</option>
+          <option value="0.05">Alberta</option>
+          <option value="0.05">British Columbia</option>
+          <option value="0.05">Manitoba</option>
+          <option value="0.15">New Brunswick</option>
+          <option value="0.15">Newfoundland and Labrador</option>
+          <option value="0.05">Northwest Territories</option>
+          <option value="0.15">Nova Scotia</option>
+          <option value="0.05">Nunavut</option>
+          <option value="0.13">Ontario</option>
+          <option value="0.15">Prince Edward Island</option>   
+          <option value="0.05">Quebec</option> 
+          <option value="0.05">Saskatchewan</option> 
+          <option value="0.05">Yukon</option> 
+        </select>
+      </fieldset>
+     
+    </div>
+
+
+    <!-- Add to list form -->
+    <div id="overlay">
+      <form id="myInput">
+        <div>
+          <h2>Add to your list</h2>
+          <span class="material-symbols-rounded close" onclick="closeForm()">close</span>
+        </div>
+
+        <fieldset id="category-input">
+          <label for="product">Product category</label>
+          <select id="categorySelector" class="dropdown">
+            <option value=" " hidden>Select category</option>
+            <option value="food">Groceries</option>
+            <option value="health">Health & Beauty</option>
+            <option value="clothes">Clothing, Footwear, & Accessories</option>
+            <option value="house">Household Supplies</option>
+            <option value="decor">Furniture & Household Items</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+        
+        <fieldset id="product-input">
+          <label for="product">Product</label>
+          <input id="product" class="input" type="text" oninput="previewInfo()">
+        </fieldset>
+
+        <fieldset id="price-input">
+          <label for="price">Price</label>
+          <input id="price" class="input" type="text" placeholder="CA$" oninput="previewInfo()">
+        </fieldset>
+
+        <fieldset id="quantity-input">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" class="input" type="number" min="1" max="100" value="1" oninput="previewInfo()">
+        </fieldset>
+
+        <p id="previewInfo"></p>
+
+        <input id="resetBtn" class="btn btnSecondary" type="button" value="Reset form" onclick="resetForm()" disabled>
+        <input id="addBtn" class="btn btnPrimary" type="button" value="Add to list" onclick="addItem()" disabled>
+      </form>
+    </div>
+
+
+    <!--Shopping List-->
+    <div id="list">
+      <h2 class="startHide">Your list</h2>
+      <div id="food" class="listSection">
+        <h3 class="truncate">Food and beverage</h3>
+        <p id="foodTotal" class="sectionTotal truncate"></p>
+      </div>
+
+      <div id="health" class="listSection">
+        <h3 class="truncate">Health and beauty</h3>
+        <p id="healthTotal" class="sectionTotal truncate"></p>
+      </div>
+
+      <div id="clothes" class="listSection">
+        <h3 class="truncate">Clothing, footwear, and accessories</h3>
+        <p id="clothesTotal" class="sectionTotal truncate"></p>
+      </div>
+
+      <div id="house" class="listSection">
+        <h3 class="truncate">Household supplies</h3>
+        <p id="houseTotal" class="sectionTotal truncate"></p>
+      </div>
+
+      <div id="decor" class="listSection">
+        <h3 class="truncate">Furniture and household items</h3>
+        <p id="decorTotal" class="sectionTotal truncate"></p>
+      </div>
+
+      <div id="other" class="listSection">
+        <h3 class="truncate">Other</h3>
+        <p id="otherTotal" class="sectionTotal truncate"></p>
+      </div>
+    </div>
+
+
+    <button onclick="openForm()" class="btn btnPrimary action" id="openForm" disabled>
+      <span class="material-symbols-rounded">add</span>Add to list
+    </button>
+
+    <button onclick="closeForm()" class="btn btnSecondary action" id="closeForm">
+      <span class="material-symbols-rounded">close</span>Close form
+    </button>
+
+
+    <!-- Summary -->
+    <div id="summary">
+      <div class="grid">
+        <span class="swipeUp"></span>
+
+        <h2>Total</h2>
+        <p id="tripTotal" class="truncate">0.00</p>
+
+        <h3>Subtotal</h3>
+        <p id="tripSubtotal" class="truncate">0.00</p>
+
+        <h3 id="tax">HST</h3>
+        <p id="tripTaxed" class="truncate">0.00</p>
+
+        <div class="grid">
+            <button class="btn btnSecondary" id="newTrip" onclick="location.reload(true)">New trip</button>
+            <button class="btn btnPrimary" id="saveTrip" onclick="save()">Save trip</button>
+        </div>  
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- Saved page -->
+  <main class="grid main tabContent" id="saved">
+    <h2>Your Saved Trips</h2>
+    <div id="savedList"></div>
+  </main>
+
+
+  <!-- Tabs -->
+  <footer>
+    <button onclick="openPage(event, 'shop')" id="defaultOpen" class="tabLink">
+      <span class="material-symbols-rounded">shopping_basket</span>
+      <p>Your trip</p>
+    </button>
+    <button onclick="openPage(event, 'saved')" id="open" class="tabLink">
+      <span class="material-symbols-rounded">history</span>
+      <p>Saved trip</p>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
