@@ -362,6 +362,10 @@ video{
     text-decoration: none;
 }
 
+.link-button .material-icons{
+    vertical-align: bottom;
+}
+
 .buttons{
     display: flex;
     gap: 1rem;
