@@ -73,7 +73,7 @@ function retrieveSaved() {
                             <div><h4 class="truncate">Food and beverages</h4><p class="truncate">${retrieved.food}</p></div>
                             <div><h4 class="truncate">Health and beauty</h4><p class="truncate">${retrieved.health}</p></div>
                             <div><h4 class="truncate">Clothing, footwear, and accessories</h4><p class="truncate">${retrieved.clothes}</p></div>
-                            <div><h4 class="truncate">Household item</h4><p class="truncate">${retrieved.house}</p></div>
+                            <div><h4 class="truncate">Household supplies</h4><p class="truncate">${retrieved.house}</p></div>
                             <div><h4 class="truncate">Furniture and household items</h4><p class="truncate">${retrieved.decor}</p></div>
                             <div><h4 class="truncate">Other</h4><p class="truncate">${retrieved.other}</p></div>`;
                       
