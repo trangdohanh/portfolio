@@ -690,6 +690,7 @@ video{
     
     .extended-content{
         margin: 0 auto;
+        min-width: 1024px;
     }
 
     .desktop-columns-2{grid-template-columns: repeat(2, 1fr);}
