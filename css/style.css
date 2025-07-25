@@ -331,6 +331,8 @@ video{
 
 .colour p{
     font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.42rem;
 }
 
 .hmw{
