@@ -49,7 +49,7 @@ p{
 }
 
 .wrapper{
-    position: fixed;
+    position: relative;
     max-width: 100vw;
     min-width: 100vw;
     width: 100vw;
@@ -60,6 +60,7 @@ p{
 }
 
 .wrapper.dark{
+    position: fixed;
     background-image: url(../img/background.png);
     background-size: cover;
     background-position: center;
@@ -154,7 +155,7 @@ header a{
     padding: 1rem 0;
 }
 
-nav{
+header nav{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -198,6 +199,34 @@ footer{
     max-width: 1024px;
     margin-top: 2.5rem;
     padding: 2.5rem 0;
+}
+
+.page-nav-container{
+    position: fixed;
+    bottom: 3vh;
+    width: 100vw;
+}
+
+.page-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    background-color: rgba(251, 247, 244, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px rgba(26, 26, 26, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+}
+
+.page-nav li{
+    list-style: none;
+}
+
+.nav-link-active{
+    font-weight: 600;
+    color: var(--green);
 }
 
 img{
@@ -554,9 +583,25 @@ video{
         grid-row: 2/3;
     }
 
-    nav a{
+    header nav a{
         width: 100%;
         text-align: right;
+    }
+
+    .page-nav-container{
+        left: 0;
+        padding: 0 32px;
+    }
+
+    .page-nav{
+        max-width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .page-nav li{
+        font-size: 0.875rem;
     }
 
     .timeline{
@@ -629,7 +674,7 @@ video{
         margin: 0 40px;
     }
 
-    nav{
+    header nav{
         grid-column: 3/4;
         flex-direction: row;
         justify-content: space-between;
@@ -637,6 +682,15 @@ video{
 
     #nav-trigger{
         display: none;
+    }
+
+    .page-nav-container{
+        left: 0;
+        padding: 0 64px;
+    }
+
+    .page-nav{
+        max-width: 100%;
     }
 
     .timeline{
@@ -716,8 +770,22 @@ video{
         margin: auto;
     }
 
-    nav{
+    header nav{
         grid-column: 4/5;
+    }
+
+    .page-nav-container{
+        padding: 0;
+    }
+
+    .page-nav{
+        padding: 0.5rem 2rem;
+        max-width: 944px;
+        opacity: 0.7;
+    }
+
+    .page-nav:hover{
+        opacity: 1;
     }
 
     .timeline{
