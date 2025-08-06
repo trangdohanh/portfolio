@@ -14,7 +14,7 @@ checkDevice(x);
 x.addEventListener("change", function() {
     checkDevice(x);
 });
-// End of code from w3schools
+// End of code from https://www.w3schools.com/howto/howto_js_media_queries.asp
 
 
 document.getElementById("nav-trigger").addEventListener("click", () => {
@@ -31,6 +31,8 @@ if (document.body.contains(pageNav)){
     let currentSection = 'overview';
 
     window.addEventListener('scroll', () => {
+        updateProgress();
+
         sectionElements.forEach(sectionElement => {
             if (window.scrollY >= sectionElement.offsetTop - 300) {
                 currentSection = sectionElement.id;
@@ -50,4 +52,15 @@ if (document.body.contains(pageNav)){
             document.querySelector('.page-nav-container').style.display = "flex";
         }
     })
+    // End of code from https://www.youtube.com/watch?v=nwCtWn-xFz0
+
+    
+    // Code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
+    function updateProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    // End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 }
