@@ -251,6 +251,10 @@ img{
     object-fit: cover;
 }
 
+img.wide{
+    border-radius: 0;
+}
+
 video{
     border-radius: 2px;
 }
