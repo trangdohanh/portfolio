@@ -71,8 +71,10 @@ p{
 section{
     max-width: 1024px;
     width: 100%;
-    margin: 0;
-    padding-top: 120px;
+    margin-top: 120px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
     align-items: start;
 }
 
@@ -80,11 +82,6 @@ section.extended{
     max-width: 100vw;
     min-width: 100vw;
     justify-self: stretch;
-    margin: 0;
-}
-
-.coloured-section{
-    background-color: #F4E9E1;
 }
 
 .extended-wrapper{
@@ -240,13 +237,13 @@ footer{
     height: 0.25rem;
     background: var(--light-green);
 }
-
 .progress-bar {
     height: 0.25rem;
     background: var(--green);
     width: 0%;
 }
 /* End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
+
 
 img{
     width: 100%;
@@ -260,7 +257,6 @@ video{
 
 .grid{
     display: grid;
-    /* grid-template-rows: auto 1fr; */
     grid-column-gap: 16px;
     align-content: start;
 }
@@ -319,7 +315,6 @@ video{
 .timeline{
     grid-row-gap: 40px;
     position: relative;
-/*     padding: 0 0 80px 0; */
 }
 
 .timepoint{
@@ -383,13 +378,6 @@ video{
     line-height: 1.42rem;
 }
 
-.hmw{
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 2.02rem;
-    padding-top: 1rem;
-}
-
 .link-button{
     padding: 0.5rem 1rem;
     border: 2px solid var(--black);
@@ -435,7 +423,6 @@ video{
     right: 0;
     overflow: hidden;
 }
-
 .slide{
     vertical-align: top;
     white-space: normal;
@@ -444,12 +431,10 @@ video{
     height: 100%;
     position: relative;
 }
-
 .caption{
     vertical-align: top;
     white-space: normal;
 }
-
 .next, .prev{
     cursor: pointer;
     z-index: 3;
@@ -463,12 +448,10 @@ video{
     background-color: rgba(251, 247, 244, 0.2);
     transition: 0.3s ease;
 }
-
 .next{
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-
 .fade{
     animation-name: fade;
     animation-duration: 0.5s;
@@ -484,18 +467,15 @@ video{
     height: 85%;
     overflow-y: hidden;
 }
-
 .thumbnail{
     border-radius: 0;
     cursor: pointer;
     opacity: 0.6;
     transition: 0.3s ease;
 }
-
 .thumbnail:hover{
     opacity: 1;
 }
-
 .active{
     cursor: initial;
     opacity: 1;
@@ -643,6 +623,12 @@ video{
     .desktop-version{
         display: none;
     }
+
+    .mobile-wide-img{
+        margin-left: -20px;
+        margin-right: -20px;
+        width: 100vw;
+    }
 }
 
 
@@ -680,10 +666,6 @@ video{
     .tablet-span-7{grid-column: span 7;}
     .tablet-span-8{grid-column: span 8;}
     .tablet-span-12{grid-column: span 12;}
-
-    /* .center-content{grid-column: 2/12;}
-    .center-left{grid-column: 2/7;}
-    .center-right{grid-column: 7/12;} */
 
     #landing{
         align-items: center;
@@ -736,8 +718,13 @@ video{
     .mobile-version{
         display: none;
     }
-}
 
+    .tablet-wide-img{
+        margin-left: -40px;
+        margin-right: -40px;
+        width: 100vw;
+    }
+}
 
 
 /* 1024px < screen < 1440px */
@@ -755,7 +742,7 @@ video{
     }
 
     section.extended{
-        margin: 0;
+        margin: 120px 0 0 0;
     }
 
     .extended-wrapper{
@@ -766,6 +753,7 @@ video{
     .extended-content{
         margin: 0 auto;
         min-width: 1024px;
+        max-width: 1024px;
     }
 
     .desktop-columns-2{grid-template-columns: repeat(2, 1fr);}
@@ -824,12 +812,22 @@ video{
     .modal-content{
         margin: 0 auto;
     }
+
+    .tablet-wide-img{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 
 
 /* 1920px screen */
 @media only screen and (min-width: 1920px) {
     .wrapper{
+        max-width: 1440px;
+    }
+
+    .extended-content{
         max-width: 1440px;
     }
 
