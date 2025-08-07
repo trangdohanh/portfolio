@@ -103,6 +103,11 @@ section.extended{
 
 #works{
     margin-top: 80px;
+    scroll-margin-top: 120px;
+}
+
+#landing, #about{
+    scroll-margin-top: 120px;
 }
 
 a{
