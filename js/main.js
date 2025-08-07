@@ -24,6 +24,7 @@ document.getElementById("nav-trigger").addEventListener("click", () => {
 
 
 var pageNav = document.getElementById("page-nav")
+var progressBar = document.getElementById("progress-bar")
 if (document.body.contains(pageNav)){
     // Code from https://www.youtube.com/watch?v=nwCtWn-xFz0
     const navLinks = document.querySelectorAll('.nav-link');
@@ -31,7 +32,9 @@ if (document.body.contains(pageNav)){
     let currentSection = 'overview';
 
     window.addEventListener('scroll', () => {
-        updateProgress();
+        if (document.body.contains(progressBar)){
+            updateProgress();
+        }
 
         sectionElements.forEach(sectionElement => {
             if (window.scrollY >= sectionElement.offsetTop - 300) {
@@ -54,13 +57,12 @@ if (document.body.contains(pageNav)){
     })
     // End of code from https://www.youtube.com/watch?v=nwCtWn-xFz0
 
-    
     // Code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
     function updateProgress() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+        progressBar.style.width = scrolled + "%";
     }
     // End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 }
