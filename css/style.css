@@ -628,6 +628,7 @@ video{
         margin-left: -20px;
         margin-right: -20px;
         width: 100vw;
+        border-radius: 0;
     }
 }
 
@@ -723,6 +724,7 @@ video{
         margin-left: -40px;
         margin-right: -40px;
         width: 100vw;
+        border-radius: 0;
     }
 }
 
@@ -817,6 +819,7 @@ video{
         margin-left: 0;
         margin-right: 0;
         width: 100%;
+        border-radius: 2px;
     }
 }
 
