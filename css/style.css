@@ -259,10 +259,7 @@ img{
     border-radius: 2px;
     object-fit: cover;
 }
-
-img.wide{
-    border-radius: 0;
-}
+img.wide{border-radius: 0;}
 
 video{
     border-radius: 2px;
@@ -283,7 +280,6 @@ video{
 .row-gap-120{grid-row-gap: 120px;}
 .row-gap-160{grid-row-gap: 160px;}
 
-
 .text-small{font-size: 0.875rem; line-height: 1.42rem;}
 .text-regular{font-size: 1rem; line-height: 1.62rem;}
 .text-medium{font-size: 1.25rem; line-height: 2.02rem;}
@@ -298,6 +294,15 @@ video{
 .font-extrabold{font-weight: 800;}
 .font-black{font-weight: 900;}
 
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.container-flex p{
+    margin-top: 0.5rem;
+}
 
 .project{
     display: grid;
@@ -314,15 +319,29 @@ video{
     transition: 0.2s ease;
 }
 
-.incomplete{
-    opacity: 0.5;
+.labels{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
 }
 
-.project.incomplete:hover{
-    text-decoration: none;
-    color: var(--white);
-    cursor: initial;
+.label{
+    color: var(--black);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.label.prototype{background-color: #D0F5F8;}
+.label.ux{background-color: #E4D1F4;}
+.label.frontend{background-color: #CEE2D3;}
+.label.graphic{background-color: #F9ECC9;}
+.label.system{background-color: #FAD6C5;}
 
 
 .timeline{
