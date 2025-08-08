@@ -88,8 +88,9 @@ section.extended{
     justify-self: stretch;
 }
 
-.extended-wrapper{
-    padding: 40px 0;
+.coloured-section{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .extended-content{
