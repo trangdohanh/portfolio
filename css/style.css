@@ -280,29 +280,42 @@ video{border-radius: 2px;}
 .font-extrabold{font-weight: 800;}
 .font-black{font-weight: 900;}
 
-.container-flex{
+.content-flex{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.container-flex p{
+.content-flex p{
     margin-top: 0.5rem;
 }
 
 .project{
-    display: grid;
-    grid-row-gap: 1rem;
-    height: fit-content;
-}
-
-.complete{
     cursor: pointer;
+    height: fit-content;
+    transition: 0.3s ease;
 }
 
-.complete img:hover{
+.project:hover {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.project:hover img{
     scale: 98%;
-    transition: 0.2s ease;
+}
+
+.project:hover .title{
+    text-decoration: underline;
+    color: var(--light-green);
+}
+
+.project:hover .subtitle{
+    color: var(--white);
+}
+
+.projects:has(.project:hover) .project:not(:hover){
+    filter: blur(3px);
 }
 
 .labels{
