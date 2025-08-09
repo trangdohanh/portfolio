@@ -293,6 +293,9 @@ video{border-radius: 2px;}
 .project{
     cursor: pointer;
     height: fit-content;
+}
+
+.project img{
     transition: 0.3s ease;
 }
 
