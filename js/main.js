@@ -71,6 +71,9 @@ if (document.body.contains(pageNav)){
 var lightToggle = document.getElementById("switch-input")
 if (document.body.contains(lightToggle)){
     var setDarkMode;
+    var lightMode = document.getElementById("lm");
+    var darkMode = document.getElementById("dm");
+
     function checkSaved() {
         if(typeof(Storage)!=="undefined"){
             if(localStorage.hasOwnProperty("dark-mode")){
@@ -78,7 +81,6 @@ if (document.body.contains(lightToggle)){
             } else{
                 setDarkMode = localStorage.setItem('dark-mode', 'on');
             }
-            return setDarkMode;
         } else{ 
             console.log("nothing stored");
         }
@@ -87,17 +89,19 @@ if (document.body.contains(lightToggle)){
 
     if(setDarkMode !== 'on') {
         document.querySelector("body").classList.remove("dark")
-        document.querySelector(".dm").classList.add("inactive-mode")
-        document.querySelector(".lm").classList.remove("inactive-mode")
+        lightMode.classList.toggle("inactive-mode")
+        darkMode.classList.toggle("inactive-mode")
         lightToggle.checked = true;
     }
     
     document.querySelector(".switch").addEventListener("mouseover", () => {
         document.querySelector(".inactive-mode").style.scale = "120%";
+        document.querySelector(".inactive-mode").style.opacity = "0.8";
     })
 
     document.querySelector(".switch").addEventListener("mouseout", () => {
         document.querySelector(".inactive-mode").style.scale = "100%";
+        document.querySelector(".inactive-mode").style.opacity = "0.2";
     })
 
     lightToggle.addEventListener("click", () => {
@@ -105,14 +109,16 @@ if (document.body.contains(lightToggle)){
         document.querySelector("body").classList.toggle("dark")
         if(setDarkMode !== "on") {
             setDarkMode = localStorage.setItem('dark-mode', 'on');
-            console.log("on")
+            lightMode.style.opacity = "0.2"
+            darkMode.style.opacity = "1"
         } else {
             setDarkMode = localStorage.setItem('dark-mode', 'off');
-            console.log("off")
+            lightMode.style.opacity = "1"
+            darkMode.style.opacity = "0.2"
         }
 
         document.querySelector(".inactive-mode").style.scale = "100%";
-        document.querySelector(".dm").classList.toggle("inactive-mode")
-        document.querySelector(".lm").classList.toggle("inactive-mode")
+        darkMode.classList.toggle("inactive-mode")
+        lightMode.classList.toggle("inactive-mode")
     })
 }
