@@ -66,3 +66,59 @@ if (document.body.contains(pageNav)){
     }
     // End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 }
+
+
+var lightToggle = document.getElementById("switch-input")
+if (document.body.contains(lightToggle)){
+    var setDarkMode;
+    var lightMode = document.getElementById("lm");
+    var darkMode = document.getElementById("dm");
+
+    function checkSaved() {
+        if(typeof(Storage)!=="undefined"){
+            if(localStorage.hasOwnProperty("dark-mode")){
+                setDarkMode = localStorage.getItem('dark-mode');
+            } else{
+                setDarkMode = localStorage.setItem('dark-mode', 'on');
+            }
+        } else{ 
+            console.log("nothing stored");
+        }
+    }
+    checkSaved();
+
+    if(setDarkMode !== 'on') {
+        document.querySelector("body").classList.remove("dark")
+        lightMode.classList.toggle("inactive-mode")
+        darkMode.classList.toggle("inactive-mode")
+        lightToggle.checked = true;
+    }
+    
+    document.querySelector(".switch").addEventListener("mouseover", () => {
+        document.querySelector(".inactive-mode").style.scale = "120%";
+        document.querySelector(".inactive-mode").style.opacity = "0.8";
+    })
+
+    document.querySelector(".switch").addEventListener("mouseout", () => {
+        document.querySelector(".inactive-mode").style.scale = "100%";
+        document.querySelector(".inactive-mode").style.opacity = "0.2";
+    })
+
+    lightToggle.addEventListener("click", () => {
+        setDarkMode = localStorage.getItem('dark-mode');
+        document.querySelector("body").classList.toggle("dark")
+        if(setDarkMode !== "on") {
+            setDarkMode = localStorage.setItem('dark-mode', 'on');
+            lightMode.style.opacity = "0.2"
+            darkMode.style.opacity = "1"
+        } else {
+            setDarkMode = localStorage.setItem('dark-mode', 'off');
+            lightMode.style.opacity = "1"
+            darkMode.style.opacity = "0.2"
+        }
+
+        document.querySelector(".inactive-mode").style.scale = "100%";
+        darkMode.classList.toggle("inactive-mode")
+        lightMode.classList.toggle("inactive-mode")
+    })
+}
