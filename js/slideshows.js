@@ -15,21 +15,16 @@ function currentSlideA(n) {showSlidesA(slideIndexA = n);}
 function showSlidesA(n) {
   let i;
   let slides = document.getElementsByClassName("slideA");
-  let captions = document.getElementsByClassName("caption");
   let thumbnails = document.getElementsByClassName("thumbnailA");
   if (n > slides.length) {slideIndexA = 1}
   if (n < 1) {slideIndexA = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < slides.length; i++) {
-    captions[i].style.display = "none";
-  }
   for (i = 0; i < thumbnails.length; i++) {
     thumbnails[i].className = thumbnails[i].className.replace(" active", "");
   }
   slides[slideIndexA-1].style.display = "block";
-  captions[slideIndexA-1].style.display = "block";
   thumbnails[slideIndexA-1].className += " active";
 }
 
