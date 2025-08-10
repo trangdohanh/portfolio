@@ -66,3 +66,53 @@ if (document.body.contains(pageNav)){
     }
     // End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 }
+
+
+var lightToggle = document.getElementById("switch-input")
+if (document.body.contains(lightToggle)){
+    var setDarkMode;
+    function checkSaved() {
+        if(typeof(Storage)!=="undefined"){
+            if(localStorage.hasOwnProperty("dark-mode")){
+                setDarkMode = localStorage.getItem('dark-mode');
+            } else{
+                setDarkMode = localStorage.setItem('dark-mode', 'on');
+            }
+            return setDarkMode;
+        } else{ 
+            console.log("nothing stored");
+        }
+    }
+    checkSaved();
+
+    if(setDarkMode !== 'on') {
+        document.querySelector("body").classList.remove("dark")
+        document.querySelector(".dm").classList.add("inactive-mode")
+        document.querySelector(".lm").classList.remove("inactive-mode")
+        lightToggle.checked = true;
+    }
+    
+    document.querySelector(".switch").addEventListener("mouseover", () => {
+        document.querySelector(".inactive-mode").style.scale = "120%";
+    })
+
+    document.querySelector(".switch").addEventListener("mouseout", () => {
+        document.querySelector(".inactive-mode").style.scale = "100%";
+    })
+
+    lightToggle.addEventListener("click", () => {
+        setDarkMode = localStorage.getItem('dark-mode');
+        document.querySelector("body").classList.toggle("dark")
+        if(setDarkMode !== "on") {
+            setDarkMode = localStorage.setItem('dark-mode', 'on');
+            console.log("on")
+        } else {
+            setDarkMode = localStorage.setItem('dark-mode', 'off');
+            console.log("off")
+        }
+
+        document.querySelector(".inactive-mode").style.scale = "100%";
+        document.querySelector(".dm").classList.toggle("inactive-mode")
+        document.querySelector(".lm").classList.toggle("inactive-mode")
+    })
+}
