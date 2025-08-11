@@ -395,7 +395,7 @@ video{border-radius: 2px;}
 
 
 .mode-indicator{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--dark-green);
     transition: 0.4s ease;
     opacity: 1;
