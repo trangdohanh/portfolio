@@ -447,7 +447,7 @@ video{border-radius: 2px;}
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 14px;
