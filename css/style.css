@@ -141,6 +141,7 @@ header nav{
     flex-direction: column;
     width: 100%;
     grid-column: span 2;
+    transition: ease 0.8s;
 }
 
 #nav-trigger{
@@ -149,15 +150,12 @@ header nav{
     cursor: pointer;
 }
 
-#nav-triggered{
-    opacity: 1;
-    transition: ease 1s;
-}
-
 .hide-nav{
     position: absolute;
-    top: -550px;
-    opacity: 0;
+    right: 20px;
+    -webkit-transform: translateY(500px);
+    -ms-transform: translateY(500px);
+    transform: translateY(-500px);
 }
 
 .logo{
@@ -725,6 +723,10 @@ header .link-button:hover{
     .row-1{grid-row: 1/2;}
     .row-2{grid-row: 2/3;}
 
+    header nav{
+        padding-bottom: 0.5rem;
+    }
+    
     header nav a{
         width: 100%;
         text-align: right;
