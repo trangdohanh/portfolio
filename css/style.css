@@ -289,6 +289,7 @@ video{border-radius: 2px;}
 }
 
 .project img{
+    box-shadow: 2px 2px 4px rgba(26, 26, 26, 0.2);
     transition: 0.3s ease;
 }
 
@@ -303,6 +304,7 @@ video{border-radius: 2px;}
 
 .project:hover img{
     scale: 98%;
+    box-shadow: none;
 }
 
 .project:hover .title{
@@ -512,28 +514,47 @@ video{border-radius: 2px;}
 
 .link-button{
     padding: 0.5rem 1rem;
-    border: 2px solid var(--black);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--black);
     border-radius: 4px;
     transition: 0.3s ease;
 }
 
 .dark .link-button{
-    border: 2px solid var(--white);
+    border-color: var(--white);
 }
 
 .link-button:hover{
     background-color: var(--light-green);
-    border: 2px solid var(--green);
+    border-color: var(--green);
 }
 
 .dark .link-button:hover{
     background-color: var(--dark-green);
-    border: 2px solid var(--green);
-    text-decoration: none;
 }
 
 .link-button .material-icons{
     vertical-align: bottom;
+}
+
+header .link-button{
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    margin: 13px 0;
+    width: fit-content;
+    align-self: end;
+    align-items: center;
+    border-width: 1px;
+}
+
+header .link-button .material-icons{
+    font-size: 1.25rem;
+}
+
+header .link-button:hover{
+    text-decoration: none;
 }
 
 .buttons{
@@ -804,6 +825,11 @@ video{border-radius: 2px;}
 
     #nav-trigger{
         display: none;
+    }
+
+    header .link-button{
+        margin: 0;
+        align-self: center;
     }
 
     .page-nav-container{
