@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="Design portfolio">
+        <meta name="description" content="UX/UI Design Portfolio">
         <meta name="author" content="Trang Do">
         <title>Trang Do</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.png">
@@ -31,7 +31,18 @@
                         <p>Trang Do</p>
                     </a>
     
-                    <span class="material-icons" id="nav-trigger">menu</span>
+                    <div class="toggle-wrapper">
+                        <div class="toggle-container">
+                            <span class="material-icons mode-indicator" id="dm">nights_stay</span>
+                            <label class="switch">
+                                <input id="switch-input" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="material-icons mode-indicator inactive-mode" id="lm">light_mode</span>
+                        </div>
+
+                        <span class="material-icons" id="nav-trigger">menu</span>
+                    </div>
                     
                     <nav id="nav-triggered">
                         <a href="#landing">Home</a>
@@ -233,15 +244,6 @@
                     </div>
                 </footer>
             </main>
-
-            <div class="toggle-container">
-                <span class="material-icons mode-indicator" id="dm">nights_stay</span>
-                <label class="switch">
-                    <input id="switch-input" type="checkbox">
-                    <span class="slider"></span>
-                </label>
-                <span class="material-icons mode-indicator inactive-mode" id="lm">light_mode</span>
-            </div>
         </div>
 
 
