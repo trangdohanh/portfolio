@@ -531,12 +531,13 @@ video{border-radius: 2px;}
 }
 
 .link-button:hover{
-    background-color: var(--light-green);
+    background-color: var(--green);
+    color: var(--white);
     border-color: var(--green);
 }
 
 .dark .link-button:hover{
-    background-color: var(--dark-green);
+    color: var(--white);
 }
 
 .link-button .material-icons{
@@ -566,7 +567,7 @@ header .link-button:hover{
     display: flex;
     gap: 1rem;
     width: fit-content;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 }
 
 
