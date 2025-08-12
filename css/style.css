@@ -563,6 +563,10 @@ header .link-button:hover{
     text-decoration: none;
 }
 
+.home .link-button:hover{
+    text-decoration: none;
+}
+
 .buttons{
     display: flex;
     gap: 1rem;
