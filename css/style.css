@@ -268,6 +268,7 @@ video{border-radius: 2px;}
 .text-right{text-align: right;}
 .text-center{text-align: center;}
 
+.font-thin{font-weight: 300;}
 .font-medium{font-weight: 500;}
 .font-semibold{font-weight: 600;}
 .font-bold{font-weight: 700;}
@@ -282,6 +283,11 @@ video{border-radius: 2px;}
 
 .content-flex p{
     margin-top: 0.5rem;
+}
+
+.padded-box{
+    padding: 20px 32px;
+    border-radius: 10px;
 }
 
 .project{
@@ -328,6 +334,12 @@ video{border-radius: 2px;}
 
 .projects:has(.project:hover) .project:not(:hover){
     filter: blur(3px);
+}
+
+#sandbox .labels{
+    position: absolute;
+    top: 0.25rem;
+    left: 0.75rem;
 }
 
 .labels{
@@ -576,7 +588,7 @@ header .link-button:hover{
 
 mark{
     font-weight: 500; 
-    box-shadow: 0 2px 4px rgba(37, 31, 21, 0.2);
+/*     box-shadow: 0 2px 4px rgba(37, 31, 21, 0.2); */
 }
 
 
@@ -710,8 +722,11 @@ mark{
     border-radius: 4px;
 }
 
-.list{
+.list-bullet{
     list-style-type: disc;
+}
+
+.list{
     padding-left: 1rem;
 }
 
@@ -1010,8 +1025,8 @@ mark{
     }
 
     .tablet-wide-img{
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
         border-radius: 2px;
     }
