@@ -860,6 +860,7 @@ mark{
     .tablet-columns-12{grid-template-columns: repeat(12, 1fr);}
 
     .tablet-span-2{grid-column: span 2;}
+    .tablet-span-3{grid-column: span 3;}
     .tablet-span-4{grid-column: span 4;}
     .tablet-span-5{grid-column: span 5;}
     .tablet-span-6{grid-column: span 6;}
