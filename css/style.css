@@ -854,7 +854,9 @@ mark{
     .tablet-columns-2{grid-template-columns: repeat(2, 1fr);}
     .tablet-columns-3{grid-template-columns: repeat(3, 1fr);}
     .tablet-columns-4{grid-template-columns: repeat(4, 1fr);}
+    .tablet-columns-5{grid-template-columns: repeat(5, 1fr);}
     .tablet-columns-6{grid-template-columns: repeat(6, 1fr);}
+    .tablet-columns-10{grid-template-columns: repeat(10, 1fr);}
     .tablet-columns-12{grid-template-columns: repeat(12, 1fr);}
 
     .tablet-span-2{grid-column: span 2;}
