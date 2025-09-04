@@ -293,6 +293,7 @@ video{border-radius: 2px;}
 .project{
     cursor: pointer;
     height: fit-content;
+    transition: all 0.3s ease;
 }
 
 .project img{
@@ -367,12 +368,6 @@ video{border-radius: 2px;}
 
 .bento-rect{
     aspect-ratio: 3/2;
-}
-
-#sandbox .labels{
-    position: absolute;
-    top: 0.25rem;
-    left: 0.75rem;
 }
 
 .labels{
