@@ -336,6 +336,39 @@ video{border-radius: 2px;}
     filter: blur(3px);
 }
 
+.incomplete{
+    cursor: initial;
+}
+
+#sandbox{
+    grid-gap: 0.75rem;
+}
+
+#sandbox .project{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+}
+
+#sandbox .project a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.complete:hover{
+    scale: 98%;
+}
+
+.bento-square{
+    aspect-ratio: 1/1;
+}
+
+.bento-rect{
+    aspect-ratio: 3/2;
+}
+
 #sandbox .labels{
     position: absolute;
     top: 0.25rem;
@@ -760,9 +793,14 @@ mark{
     .mobile-columns-2{grid-template-columns: repeat(2, 1fr);}
     .mobile-columns-3{grid-template-columns: repeat(3, 1fr);}
     .mobile-columns-4{grid-template-columns: repeat(4, 1fr);}
+    
     .mobile-span-2{grid-column: span 2;}
     .mobile-span-3{grid-column: span 3;}
     .mobile-span-4{grid-column: span 4;}
+
+    .mobile-row-2{grid-row: span 2;}
+    .mobile-row-3{grid-row: span 3;}
+    .mobile-row-4{grid-row: span 4;}
 
     .row-1{grid-row: 1/2;}
     .row-2{grid-row: 2/3;}
@@ -819,6 +857,10 @@ mark{
         width: 100vw;
         border-radius: 0;
     }
+
+    #sandbox{
+        grid-gap: 0.5rem;
+    }
 }
 
 
@@ -867,6 +909,12 @@ mark{
     .tablet-span-7{grid-column: span 7;}
     .tablet-span-8{grid-column: span 8;}
     .tablet-span-12{grid-column: span 12;}
+
+    .tablet-row-2{grid-row: span 2;}
+    .tablet-row-3{grid-row: span 3;}
+    .tablet-row-4{grid-row: span 4;}
+    .tablet-row-5{grid-row: span 5;}
+    .tablet-row-6{grid-row: span 6;}
 
     #landing{
         align-items: center;
@@ -978,6 +1026,12 @@ mark{
     .desktop-span-7{grid-column: span 7;}
     .desktop-span-8{grid-column: span 8;}
     .desktop-span-12{grid-column: span 12;}
+
+    .desktop-row-2{grid-row: span 2;}
+    .desktop-row-3{grid-row: span 3;}
+    .desktop-row-4{grid-row: span 4;}
+    .desktop-row-5{grid-row: span 5;}
+    .desktop-row-6{grid-row: span 6;}
 
     .center-content{grid-column: 2/12;}
     .center-left{grid-column: 2/7;}
