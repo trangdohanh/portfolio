@@ -1,5 +1,5 @@
 function openModal(e) {
-  if (e.className == "video-modal"){
+  if (e.classList.contains("video-modal")){
     document.getElementById("video-modal").src = `img/lightbox/${e.id}.mp4`;
     document.getElementById("video-modal").style.display = "block";
   } else{
