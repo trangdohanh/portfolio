@@ -630,7 +630,6 @@ header .link-button:hover{
     display: flex;
     gap: 1rem;
     width: fit-content;
-    padding-top: 1.5rem;
 }
 
 mark{
