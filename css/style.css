@@ -275,6 +275,11 @@ video{border-radius: 2px;}
 .font-extrabold{font-weight: 800;}
 .font-black{font-weight: 900;}
 
+
+.flex{
+    display: flex;
+}
+
 .content-flex{
     display: flex;
     flex-direction: column;
@@ -288,6 +293,16 @@ video{border-radius: 2px;}
 .padded-box{
     padding: 20px 32px;
     border-radius: 10px;
+}
+
+#landing .contacts{
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#landing .contacts div{
+    gap: 0.25rem;
+    align-items: center;
 }
 
 .project{
@@ -375,6 +390,10 @@ video{border-radius: 2px;}
     flex-direction: row;
     gap: 0.5rem;
     padding-top: 0.5rem;
+}
+
+#landing .labels{
+    padding-top: 0;
 }
 
 .label{
