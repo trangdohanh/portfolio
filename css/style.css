@@ -190,15 +190,18 @@ header nav{
     font-size: 1.125rem;
 }
 
-svg{
-    width: 1rem;
-    height: 1rem;
-    fill: var(--dark-green);
+svg{fill: var(--dark-green);}
+.dark svg {fill: var(--light-green);}
+
+img{
+    width: 100%;
+    border-radius: 2px;
+    object-fit: cover;
 }
 
-.dark svg {
-    fill: var(--light-green);
-}
+img.wide{border-radius: 0;}
+
+video{border-radius: 2px;}
 
 footer{
     width: 100%;
@@ -255,16 +258,6 @@ footer{
 /* End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
 
 
-img{
-    width: 100%;
-    border-radius: 2px;
-    object-fit: cover;
-}
-
-img.wide{border-radius: 0;}
-
-video{border-radius: 2px;}
-
 .grid{
     display: grid;
     column-gap: 1rem;
@@ -296,11 +289,6 @@ video{border-radius: 2px;}
 
 #summary .content-flex p{
     margin-top: 0;
-}
-
-footer svg{
-    width: 1.25rem;
-    height: 1.25rem;
 }
 
 .contacts{
