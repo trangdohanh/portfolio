@@ -58,7 +58,7 @@ p{
 .text-center{text-align: center;}
 
 .font-light{font-weight: 300;}
-.font-regular{font-weight: 300;}
+.font-regular{font-weight: 400;}
 .font-medium{font-weight: 500;}
 .font-semibold{font-weight: 600;}
 .font-bold{font-weight: 700;}
@@ -425,7 +425,7 @@ footer svg{
     color: var(--black);
     font-family: "Space Grotesk", sans-serif;
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.25rem 0.5rem;
     border-radius: 2px;
     white-space: nowrap;
@@ -660,7 +660,6 @@ header .link-button:hover{
 
 mark{
     font-weight: 500; 
-/*     box-shadow: 0 2px 4px rgba(37, 31, 21, 0.2); */
 }
 
 
@@ -1001,9 +1000,7 @@ mark{
     #summary div:nth-child(2){grid-area: 1/9/2/13;}
     #summary div:nth-child(3){grid-area: 2/9/3/13;}
 
-    .project-button{
-        grid-area: 3/1/4/8;
-    }
+    #summary .link-button{grid-area: 3/1/4/8;}
 
     .modal{
         padding: 64px 40px 40px 40px;
@@ -1129,15 +1126,9 @@ mark{
 
 /* 1920px screen */
 @media only screen and (min-width: 1920px) {
-    .wrapper{
-        max-width: 1440px;
-    }
+    .wrapper{max-width: 1440px;}
 
-    .extended-content{
-        max-width: 1440px;
-    }
+    .extended-content{max-width: 1440px;}
 
-    header .grid{
-        max-width: 1440px;
-    }
+    header .grid{max-width: 1440px;}
 }
