@@ -248,10 +248,10 @@
                         <div class="project complete bento-square tablet-span-3 tablet-row-3" style="background-image: url(../img/homepage/career-courier.png);">
                             <a href="career-courier/"></a>
                         </div>
-                        <div class="project complete bento-square tablet-span-3 tablet-row-3" style="background-image: url(../img/homepage/info-visualization.png);" onclick="openSlides(infographics)"></div>
+                        <div class="project complete bento-square tablet-span-3 tablet-row-3" style="background-image: url(../img/homepage/info-visualization.png);" onclick="openSlides(this)" id="infographics"></div>
                         <div class="project incomplete bento-square tablet-span-4 tablet-row-4 mobile-span-2 mobile-row-2" style="background-image: url(../img/homepage/noto.png)"></div>
                         <div class="project complete bento-square tablet-span-2 tablet-row-2 video-modal" style="background-image: url(../img/homepage/google-doodle.png);" onclick="openModal(this)" id="google-doodle"></div>
-                        <div class="project complete bento-square tablet-span-3 tablet-row-3" style="background-image: url(../img/homepage/coffee-mill.png);" onclick="openSlides(coffee)"></div>
+                        <div class="project complete bento-square tablet-span-3 tablet-row-3" style="background-image: url(../img/homepage/coffee-mill.png);" onclick="openSlides(this)" id="coffee"></div>
                         <div class="project complete bento-square tablet-span-3 tablet-row-3 video-modal" style="background-image: url(../img/homepage/virtual-library.png);" onclick="openModal(this)" id="virtual-library"></div>
                         <div class="project complete bento-square tablet-span-2 tablet-row-2" style="background-image: url(../img/homepage/3d-model.png);" onclick="openModal(this)" id="candy-model"></div>
                     </div>
@@ -260,87 +260,6 @@
     
                <footer-el></footer-el>
             </main>
-        </div>
-
-
-        <!-- 1 image/video projects modals -->
-        <div class="modal" id="modal">
-            <div class="close-overlay" onclick="closeModal()"></div>
-            <span class="material-icons close-modal" onclick="closeModal()">close</span>
-
-            <div class="modal-content">
-                <img id="img-modal">
-
-                <video width="90%" height="auto" id="video-modal" controls>
-                    <source type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-
-        <!-- Infographics slideshow -->
-        <div class="modal" id="infographics">
-            <div class="close-overlay" onclick="closeSlides(this)"></div>
-            <span class="material-icons close-modal" onclick="closeSlides(this)">close</span>
-
-            <div class="modal-content grid row-gap-16">
-                <div class="thumbnails" style="grid-template-columns: repeat(6, 1fr);">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-1.jpg" onclick="currentSlideA(1)">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-2.jpg" onclick="currentSlideA(2)">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-3.jpg" onclick="currentSlideA(3)">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-4.jpg" onclick="currentSlideA(4)">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-5.jpg" onclick="currentSlideA(5)">
-                    <img class="thumbnail thumbnailA" src="img/info-visualization/info-visual-6.jpg" onclick="currentSlideA(6)">
-                </div>
-    
-                <div class="slides">
-                    <img src="img/info-visualization/info-visual-1.jpg" class="slide slideA fade" alt="Instructional infographic of a handheld steam iron.">
-                    <img src="img/info-visualization/info-visual-2.jpg" class="slide slideA fade" alt="Graphic representation of the number of deaths attributed to cardiovascular disease in Southeast Asian countries from 1999 to 2019.">
-                    <img src="img/info-visualization/info-visual-3.jpg" class="slide slideA fade" alt="Data visualization of the prominent sounds heard during each hour of a day.">
-                    <img src="img/info-visualization/info-visual-4.jpg" class="slide slideA fade" alt="Calendar visualization of my coffee purchases from Tim Hortons throughout 2023.">
-                    <img src="img/info-visualization/info-visual-5.jpg" class="slide slideA fade" alt="Infographic of the main reasons U.S. college students consume caffeinated beverages.">
-                    <img src="img/info-visualization/info-visual-6.jpg" class="slide slideA fade" alt="Data visualization of U.S. college students' sleep behaviours.">
-
-                    <a class="prev" style="color: var(--black);" onclick="plusSlidesA(-1)"><span class="material-icons">arrow_back_ios</span></a>
-                    <a class="next" style="color: var(--black);" onclick="plusSlidesA(1)"><span class="material-icons">arrow_forward_ios</span></a>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Coffee Mill slideshow -->
-        <div class="modal" id="coffee">
-            <div class="close-overlay" onclick="closeSlides(this)"></div>
-            <span class="material-icons close-modal" onclick="closeSlides(this)">close</span>
-
-            <div class="modal-content grid row-gap-16">
-                <div class="thumbnails" style="grid-template-columns: repeat(9, 1fr);">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-1.jpg" onclick="currentSlideB(1)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-2.jpg" onclick="currentSlideB(2)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-3.jpg" onclick="currentSlideB(3)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-4.jpg" onclick="currentSlideB(4)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-5.jpg" onclick="currentSlideB(5)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-6.jpg" onclick="currentSlideB(6)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-7.jpg" onclick="currentSlideB(7)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-8.jpg" onclick="currentSlideB(8)">
-                    <img class="thumbnail thumbnailB" src="img/coffee-mill/mockup-9.jpg" onclick="currentSlideB(9)">
-                </div>
-    
-                <div class="slides">
-                    <img src="img/coffee-mill/mockup-1.jpg" class="slide slideB fade" alt="A coffee cup and paper bag with the Coffee Mill logo, a barista works in the background.">
-                    <img src="img/coffee-mill/mockup-2.jpg" class="slide slideB fade" alt="The Coffee Mill logo at 3 different sizes.">
-                    <img src="img/coffee-mill/mockup-3.jpg" class="slide slideB fade">
-                    <img src="img/coffee-mill/mockup-4.jpg" class="slide slideB fade">
-                    <img src="img/coffee-mill/mockup-5.jpg" class="slide slideB fade">
-                    <img src="img/coffee-mill/mockup-6.jpg" class="slide slideB fade" alt="The Coffee Mill logo as signage at a coffee shop.">
-                    <img src="img/coffee-mill/mockup-7.jpg" class="slide slideB fade" alt="3 coffee cups at small, medium, and large sizes, with the Coffee Mill logo.">
-                    <img src="img/coffee-mill/mockup-8.jpg" class="slide slideB fade" alt="The front and diagonal views of a cake box with the Coffee Mill logo.">
-                    <img src="img/coffee-mill/mockup-9.jpg" class="slide slideB fade" alt="The front and back of a light orange shirt with the Coffee Mill logo.">
-
-                    <a class="prev" style="color: var(--black);" onclick="plusSlidesB(-1)"><span class="material-icons">arrow_back_ios</span></a>
-                    <a class="next" style="color: var(--black);" onclick="plusSlidesB(1)"><span class="material-icons">arrow_forward_ios</span></a>
-                </div>
-            </div>
         </div>
 
 
