@@ -767,11 +767,8 @@ mark{
 }
 
 #video-modal{
+    display: block;
     margin: 0 auto;
-}
-
-#img-modal, #video-modal{
-    display: none;
 }
 
 .textbox{
