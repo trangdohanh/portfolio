@@ -677,10 +677,10 @@ mark{
     top: 45%;
     width: auto;
     padding: 1rem;
-    color: var(--black);
     font-weight: bold;
     font-size: 1.25rem;
     border-radius: 0 3px 3px 0;
+    color: var(--black) !important;
     background-color: rgba(251, 247, 244, 0.2);
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
