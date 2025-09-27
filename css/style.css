@@ -648,6 +648,11 @@ header .link-button:hover{
 
 mark{
     font-weight: 500; 
+    background-color: var(--light-green);
+}
+
+.dark mark{
+    background-color: var(--dark-green);
 }
 
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Trang Do">
+        <title>Smart Documentation for ECE Teachers</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+
+        <!-- Fonts and Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            .coloured-back{background-color: #D1D2FF;}
+            .coloured-border{border-color: #D1D2FF;}
+            mark{background-color: #D1D2FF;}
+        </style>
+
+        <!-- Vue CDN -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header-el></header-el>
+    
+            <main>
+                <section class="grid row-gap-40">
+                    <div class="grid row-gap-16">
+                        <h1>Developing a smart documentation tool for early childhood educators</h1>
+                        <img src="../img/noto/mockup-1.jpg">
+                    </div>
+                    
+                    <div class="grid tablet-columns-12 row-gap-40" id="summary">
+                        <div class="content-flex">
+                            <h2 class="text-medium">Overview</h2>
+                            <p>
+                                Neurodiversity is rising in today's classrooms, but existing support systems for educators often prioritize administrative needs over practical and real-time support. 
+                                Fragmented support puts responsibility on already-overworked teachers to put together their own resources. 
+                                Through extensive research and conversations with early childhood educators, our team saw a lack of accessible professional development, inefficient behavioural tracking, and heavy administrative load.
+                                <mark>We designed NOTO to accelerate documentation and provide practical training modules, with the following key features: professional development dashboard, classroom management tools, smart documentation, and AI assistant.</mark>
+                            </p>
+                            <p>NOTO was developed as part of Red Thread Innovations' Purposeful Innovation mentorship and came in second place!</p>
+                        </div>
+        
+                        <div class="content-flex">
+                            <h3 class="text-medium">Team</h3>
+                            <p>Sketchy Solutions includes <a href="https://www.linkedin.com/in/marriane-jane/" class="link">Marriane Angga</a>, Trang Do (Me), <a href="https://www.linkedin.com/in/jadeguerin/" class="link">Jade Guerin</a>, <a href="https://www.linkedin.com/in/hgallenlin/" class="link">Allen Lin</a>, and <a href="https://www.linkedin.com/in/haileypham510/" class="link">Hailey Pham</a>.</p>
+                        </div>
+        
+                        <div class="content-flex">
+                            <h3 class="text-medium">Duration</h3>
+                            <p>Jan &#8211 Apr 2025 (14 weeks)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="extended">
+                    <div class="grid row-gap-40">
+                        <div class="grid desktop-columns-12 extended-wrapper extended-content">
+                            <div class="center-content content-flex">
+                                <h3>I led the development of the smart documentation tool to streamline notetaking and reports, allowing educators to reclaim lost time and reduce redundancy.</h3>
+                                <p>
+                                    65% of teachers are unsatisfied with their current documentation system, citing inefficiency and a high learning curve. 
+                                    As a result, documentation is often time-consuming, inconsistent, and often inaccessible across platforms. 
+                                    In response, we designed the NOTO mobile platform to <mark>allow teachers to quickly voice-record or jot down notes</mark>. 
+                                    These rough notes are then <mark>distilled into structured outputs for report cards, logs, or communication with caregivers</mark>.
+                                </p>
+                                <p>
+                                    More information about the project is coming soon!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="extended-wrapper coloured-section coloured-back">
+                            <video width="100%" height="auto" controls class="extended-content" style="display: block;">
+                                <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+
+                <footer-el></footer-el>
+            </main>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="../js/main.js"></script>
+    </body>
+</html>
