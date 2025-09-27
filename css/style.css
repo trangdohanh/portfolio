@@ -652,6 +652,7 @@ mark{
 }
 
 .dark mark{
+    color: var(--white);
     background-color: var(--dark-green);
 }
 
