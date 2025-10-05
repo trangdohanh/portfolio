@@ -5,10 +5,10 @@
 }
 
 html{
-    --black: #1A1A1A;
-    --white: #FBF7F4;
-    --green: #50826E;
-    --light-green: #96BEB4;
+    --black: #1a1a1a;
+    --white: #fbf7f4;
+    --green: #50826e;
+    --light-green: #96beb4;
     --dark-green: #285046;
     scroll-behavior: smooth;
 }
@@ -197,10 +197,7 @@ img{
     width: 100%;
     border-radius: 2px;
     object-fit: cover;    
-}
-
-img:not(.thumbnail){
-    /* Code from https://key2blogging.com/how-to-disable-download-of-images-in-website/ */
+     /* Code from https://key2blogging.com/how-to-disable-download-of-images-in-website/ */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -236,7 +233,7 @@ footer{
     width: 100%;
     margin: 0 auto;
     padding: 0.5rem 2rem;
-    background-color: rgba(251, 247, 244, 0.8);
+    background-color: #e2e9e4cc;
     border-radius: 1rem;
     box-shadow: 0 4px 4px rgba(26, 26, 26, 0.2);
     backdrop-filter: blur(5px);
@@ -1091,11 +1088,6 @@ mark{
     .page-nav{
         padding: 0.5rem 2rem;
         max-width: 944px;
-        opacity: 0.7;
-    }
-
-    .page-nav:hover{
-        opacity: 1;
     }
 
     .toggle-wrapper{
