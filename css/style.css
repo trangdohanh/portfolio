@@ -87,7 +87,7 @@ p{
     background-attachment: fixed;
 }
 
-.dark .wrapper{background-image: url(../img/background.png);}
+.home.dark .wrapper{background-image: url(../img/background.png);}
 
 section{
     max-width: 1024px;
@@ -196,7 +196,10 @@ svg{fill: var(--dark-green);}
 img{
     width: 100%;
     border-radius: 2px;
-    object-fit: cover;
+    object-fit: cover;    
+}
+
+img:not(.thumbnail){
     /* Code from https://key2blogging.com/how-to-disable-download-of-images-in-website/ */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
