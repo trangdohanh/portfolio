@@ -721,11 +721,13 @@ mark{
     overflow-y: hidden;
 }
 .thumbnail{
-    border-radius: 0;
     cursor: pointer;
     opacity: 0.6;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+}
+.thumbnail img{
+    border-radius: 0;
 }
 .thumbnail:hover{
     opacity: 1;
@@ -921,7 +923,7 @@ mark{
 
     #landing{
         margin-top: 0;
-        height: 85vh;
+        height: 75vh;
         align-content: center;
     }
 
