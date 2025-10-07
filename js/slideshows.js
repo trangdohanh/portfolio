@@ -6,12 +6,12 @@ template.innerHTML = `<div class="close-overlay" onclick="closeSlides(this)"></d
                       <div class="modal-content grid row-gap-16" id="modal-content"></div>`
 
 var infographics = `<div class="thumbnails" style="grid-template-columns: repeat(6, 1fr);">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-1.jpg" onclick="currentSlide(1)">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-2.jpg" onclick="currentSlide(2)">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-3.jpg" onclick="currentSlide(3)">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-4.jpg" onclick="currentSlide(4)">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-5.jpg" onclick="currentSlide(5)">
-                            <img class="thumbnail" src="img/info-visualization/info-visual-6.jpg" onclick="currentSlide(6)">
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(1)"><img src="img/info-visualization/info-visual-1.jpg"></div>
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(2)"><img src="img/info-visualization/info-visual-2.jpg"></div>
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(3)"><img src="img/info-visualization/info-visual-3.jpg"></div>
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(4)"><img src="img/info-visualization/info-visual-4.jpg"></div>
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(5)"><img src="img/info-visualization/info-visual-5.jpg"></div>
+                            <div class="thumbnail thumbnailA" onclick="currentSlide(6)"><img src="img/info-visualization/info-visual-6.jpg"></div>
                         </div>
             
                         <div class="slides">
@@ -27,15 +27,15 @@ var infographics = `<div class="thumbnails" style="grid-template-columns: repeat
                         </div>`
 
 var coffee = `<div class="thumbnails" style="grid-template-columns: repeat(9, 1fr);">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-1.jpg" onclick="currentSlide(1)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-2.jpg" onclick="currentSlide(2)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-3.jpg" onclick="currentSlide(3)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-4.jpg" onclick="currentSlide(4)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-5.jpg" onclick="currentSlide(5)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-6.jpg" onclick="currentSlide(6)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-7.jpg" onclick="currentSlide(7)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-8.jpg" onclick="currentSlide(8)">
-                        <img class="thumbnail" src="img/coffee-mill/mockup-9.jpg" onclick="currentSlide(9)">
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(1)"><img src="img/coffee-mill/mockup-1.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(2)"><img src="img/coffee-mill/mockup-2.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(3)"><img src="img/coffee-mill/mockup-3.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(4)"><img src="img/coffee-mill/mockup-4.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(5)"><img src="img/coffee-mill/mockup-5.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(6)"><img src="img/coffee-mill/mockup-6.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(7)"><img src="img/coffee-mill/mockup-7.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(8)"><img src="img/coffee-mill/mockup-8.jpg"></div>
+                        <div class="thumbnail thumbnailB" onclick="currentSlide(9)"><img src="img/coffee-mill/mockup-9.jpg"></div>
                     </div>
         
                     <div class="slides">
