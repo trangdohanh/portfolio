@@ -17,9 +17,8 @@
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
         <style>
-            mark{background-color: rgba(205, 225, 227, 0.5);}
-            .coloured-section{background-color: rgba(205, 225, 227, 0.5);}
-            .bordered-section{border: 2px solid #CDE1E3;}
+            mark, .coloured-section {background-color: #cde1e380;}
+            .bordered-section{border: 2px solid #cde1e3;}
         </style>
 
         <!-- Vue CDN -->
@@ -33,7 +32,7 @@
             <main>
                 <section class="section grid row-gap-40" id="overview">
                     <div class="content-flex">
-                        <h1>Developing a shopping calculator to improve newcomers' shopping experience in Canada</h1>
+                        <h1>Developing a shopping calculator to help newcomers in Canada acclimate to an unfamiliar pricing structure.</h1>
                         <img src="../img/shopping-calculator/mockup-1.jpg">
                     </div>
     
@@ -44,15 +43,11 @@
                                 The differences in currencies and tax systems hinder newcomers' ability to efficiently manage their finances when shopping in Canada for the first time. 
                                 This project aims to address this challenge and offer a more convenient shopping experience for visitors and new residents by <mark>converting prices from Canadian dollars to a currency familiar to the user, while calculating the total cost of their shopping trip and helping them keep track of their spending.</mark> 
                             </p>
-                            <p>
-                                This is a class assignment turned personal project that I started when I was a first-year Interaction Design student. 
-                                I revisited this project in my fourth year to improve it using what I had learned and practiced.
-                            </p>
                         </div>
         
                         <div class="content-flex">
                             <h3 class="text-medium">Tools</h3>
-                            <p>Adobe XD, Figma, HTML, CSS, JavaScript</p>
+                            <p>Pen and paper, Adobe XD, Figma, HTML, CSS, JavaScript</p>
                         </div>
         
                         <div class="content-flex">
@@ -84,13 +79,13 @@
                         <div class="center-content content-flex">
                             <p>
                                 I thought I had a decent system in place, but I still found myself looking at my banking app and wondering how I seemed to be spending more than expected. 
-                                Vietnam includes value-added tax on price tags, so I didn't realize there was an additional cost not reflected in the price tags after a few small shopping trips. 
+                                Vietnam includes value-added tax on price tags, so I didn't realize there was an additional cost not reflected in the prices. 
                                 I hadn't accounted for the sales tax and small miscalculations to add up so much. 
                             </p>
                             <p>
-                                Shoppers tend to judge prices based on their previous experience, but they've already been familiar with the pricing structure. 
+                                Shoppers tend to judge prices based on their previous experience, but local shoppers are already familiar with the pricing structure. 
                                 For newcomers, switching between currencies is one way to familiarize themselves with a new and unfamiliar pricing structure. 
-                                <mark>Being able to mentally convert one currency to another is one thing; keeping track of all the numbers is another matter. 
+                                <mark>Being able to mentally convert one currency to another is one thing, keeping track of the numbers is another matter. 
                                 Those who've been familiar with tax-inclusive pricing also have the additional task of figuring out how the sales tax applies.</mark>
                             </p>
 
@@ -109,9 +104,15 @@
                                 </p>
                                 
                                 <div class="thumbnails" style="grid-template-columns: repeat(3, 1fr); height: 100%;">
-                                    <div class="thumbnail" onclick="currentSlide(1)"><img src="../img/shopping-calculator/persona-1.png"></div>
-                                    <div class="thumbnail" onclick="currentSlide(2)"><img src="../img/shopping-calculator/persona-2.png"></div>
-                                    <div class="thumbnail" onclick="currentSlide(3)"><img src="../img/shopping-calculator/persona-3.png"></div>
+                                    <div class="thumbnail" onclick="currentSlide(1)">
+                                        <img src="../img/shopping-calculator/persona-1.png">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(2)">
+                                        <img src="../img/shopping-calculator/persona-2.png">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(3)">
+                                        <img src="../img/shopping-calculator/persona-3.png">
+                                    </div>
                                 </div>
                             </div>
             
@@ -152,9 +153,8 @@
                             <h2>Design</h2>
                             <h3>Based on what I read on online forums and saw in existing shopping calculator apps, I outlined primary features—calculation and conversion—and good-to-haves.</h3>
                             <p>
-                                The original idea was simple: <mark>the user types in the price and quantity, views the converted price, then adds the item to their list if they decide to buy it.</mark> 
+                                The original idea was simple: <mark>the user types in the price and quantity, views the converted price in a familiar currency (with the sales tax accounted for), then adds the item to their list if they decide to buy it.</mark> 
                                 Most people have their phone with them when they go out, so making this a shopping calculator app with integrated currency conversion would provide convenience and utility. 
-                                This application would focus on calculating the total of the items the user has bought and convert the numbers into a currency the user is familiar with, as well as accounting for the sales tax of the province.
                                 Editing, deleting, categorizing, and saving capabilities are good-to-haves, but aren't as necessary.
                             </p>
                         </div>
@@ -166,11 +166,6 @@
                         <div class="extended-wrapper extended-content grid desktop-columns-12">
                             <div class="center-content content-flex">
                                 <h3>With the feature set decided, I mapped out the user flow.</h3>
-                                <p>
-                                    I focused on mapping out user interactions with key features. 
-                                    Since this needed to be coded for the assignment, I was advised to omit the secondary features in consideration of my coding ability at the time. 
-                                    However, we were learning about local storage, and I thought of leveraging it to prototype the saving capability.
-                                </p>
                             </div>
                         </div>
 
@@ -183,9 +178,8 @@
                             <div class="center-content content-flex">
                                 <h3>I used paper prototypes to ideate layouts and conduct quick user tests.</h3>
                                 <p>
-                                    Paper prototypes allow for quick testing and require low commitment to the design, so I could make immediate adjustments when needed. 
-                                    I was advised to keep everything to <mark>one HTML document—thus, one screen.</mark> 
-                                    A challenge I encountered early on was fitting a lot of information into one phone screen. 
+                                    My experience with front-end development was limited at this point, so I was advised to keep everything to one HTML document—thus, one screen. 
+                                    <mark>A challenge I encountered early on was fitting a lot of information into one phone screen.</mark> 
                                     To address this constraint, most participants recommended <mark>displaying the information gradually.</mark>
                                 </p>
                             </div>
@@ -208,7 +202,7 @@
                         <div class="extended-wrapper extended-content grid desktop-columns-12">
                             <div class="center-content grid row-gap-40 tablet-columns-2">
                                 <div class="content-flex">
-                                    <h3>As I progressed in the Interaction Design program, I could identify shortcomings from my initial wireframes and redesign them to better account for the constraints of mobile devices.</h3>
+                                    <h3>I addressed shortcomings from my initial wireframes to better account for the constraints of mobile devices.</h3>
                                     <p>
                                         The biggest mistake I made when designing the original wireframes was not taking into account the device restrictions. 
                                         The screen size used was too small, considering the sizes of most phones at the time. 
@@ -242,24 +236,21 @@
                             <h3>I coded a prototype with HTML, CSS, and JavaScript, using an API to retrieve real-time conversion rates.</h3>
                             <p>
                                 Real-time conversion is crucial—1 CAD was roughly 18,000 VND in 2022, but roughly 19,000 VND in 2025, with a lot of fluctuations in between. 
-                                I used Exchangerates.host API to retrieve the conversion rates. 
-                                Using local storage allowed me to prototype a simple save feature which stores and displays a maximum of two entries.
+                                I initially used Exchangerates.host API to retrieve the conversion rates. 
+                                I leveraged local storage to prototype a simple save feature.
                             </p>
-
-                            <p><mark>Although I had made a working coded prototype, the code was messy and inefficient</mark> and, as mentioned above, the interface does not properly account for native UI elements.</p>
                         </div>
         
                         <img src="../img/shopping-calculator/develop-1.png" class="desktop-span-12">   
                     </div>
                       
                     
-                    <div class="grid desktop-columns-12 row-gap-120">
+                    <div class="grid desktop-columns-12 row-gap-80">
                         <div class="center-content content-flex">
-                            <h3>When I was inspired to revisit and improve this project, I decided to clean up the initial code and add error handling to improve the user experience.</h3>
+                            <h3>I decided to clean up the initial code and add error handling to improve the user experience.</h3>
                             <p>
-                                The first thing I did when revisiting the code was to replace the Exchangerates.host API with the Frankfurter API, the latter of which has <mark>fewer available currencies but is more reliable for a small and low-maintenance project</mark>. 
+                                My first task was replacing the Exchangerates.host API with the Frankfurter API, the latter of which has fewer available currencies but is more reliable for a small and low-maintenance project. 
                                 It may not be suitable to scale up, but it's sufficient for a proof of concept. 
-                                The majority of the other adjustments was cleaning up the code and adding error handling to improve the overall user experience.
                             </p>
                         </div>
                         
@@ -371,10 +362,6 @@
                                     To implement the two features above would require a more complex system that leverages a frontend framework, backend database, and device hardware. 
                                     <mark>With these proposed features added, the user base can expand to shoppers looking for an intuitive shopping calculator.</mark> 
                                     There's also potential to expand this app to other countries, not just limiting it to Canada.
-                                </p>
-                                <p>
-                                    Allowing label scanning to bypass manual typing and saving shopping lists to track spending, as well as automatically detecting the province the user is in and using the corresponding sales tax, would improve the overall user experience for shoppers. 
-                                    A frontend framework would better support more complex features, and a backend database would allow a more robust saving feature.
                                 </p>
                             </div>
                         </div>
