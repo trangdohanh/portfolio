@@ -113,6 +113,7 @@ section.extended{
 
 .extended-content{
     max-width: 1024px;
+    width: 100%;
 }
 
 a{
@@ -925,6 +926,7 @@ mark{
         margin-top: 0;
         height: 75vh;
         align-content: center;
+        align-items: center;
     }
 
     #works{
@@ -955,10 +957,6 @@ mark{
     .tablet-row-4{grid-row: span 4;}
     .tablet-row-5{grid-row: span 5;}
     .tablet-row-6{grid-row: span 6;}
-
-    #landing{
-        align-items: center;
-    }
 
     header .grid{
         margin: 0 40px;
