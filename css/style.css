@@ -29,7 +29,7 @@ body.dark{
     background-color: var(--black);
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 600;
 }
@@ -39,7 +39,7 @@ h1, h3{
     line-height: 2.25rem;
 }
 
-h2{
+h2, h4{
     font-size: 1rem;
     line-height: 1.62rem;
 }
@@ -53,6 +53,7 @@ p{
 .text-regular{font-size: 1rem; line-height: 1.62rem;}
 .text-medium{font-size: 1.25rem; line-height: 1.875rem;}
 .text-large{font-size: 1.5rem; line-height: 2.25rem;}
+.text-xlarge{font-size: 2rem; line-height: 2.25rem;}
 
 .text-right{text-align: right;}
 .text-center{text-align: center;}
@@ -115,6 +116,9 @@ section.extended{
     max-width: 1024px;
     width: 100%;
 }
+
+#landing{margin-top: 0;}
+#works{margin-top: 0;}
 
 a{
     width: fit-content;
@@ -355,6 +359,10 @@ footer{
     box-shadow: none;
 }
 
+.project.incomplete:hover img{
+    scale: 100%;
+}
+
 .project:hover .title{
     text-decoration: underline;
     color: var(--dark-green);
@@ -380,33 +388,19 @@ footer{
     cursor: initial;
 }
 
-#sandbox{
-    grid-gap: 0.75rem;
+#sandbox .project{
+    height: 100%;
 }
 
-#sandbox .project{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 2px;
+#sandbox img{
+    height: 100%;
+    object-fit: cover;
 }
 
 #sandbox .project a{
     display: block;
     width: 100%;
     height: 100%;
-}
-
-.complete:hover{
-    scale: 98%;
-}
-
-.bento-square{
-    aspect-ratio: 1/1;
-}
-
-.bento-rect{
-    aspect-ratio: 3/2;
 }
 
 .labels{
@@ -796,12 +790,63 @@ mark{
     border-radius: 0.5rem;
 }
 
+.textbox.padding-sm{
+    padding: 0.75rem 1rem !important;
+}
+
+.textbox.padding-lg{
+    padding: 2.5rem !important;
+}
+
+.textbox p{
+    margin: 0;
+}
+
 .list-bullet{
     list-style-type: disc;
 }
 
 .list{
     padding-left: 1rem;
+}
+
+.charts{
+    margin-left: -20px;
+    margin-right: -20px;
+    grid-gap: 2.5rem !important;
+    padding: 2.5rem 1rem;
+}
+
+.chart-h{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.pie-chart-out{
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 50%;
+    align-content: center;
+    justify-items: center;
+}
+
+.pie-chart-in{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--white);
+    text-align: center;
+    align-content: center;
+}
+
+.pie-chart-in p{
+    padding: 0;
 }
 
 
@@ -822,13 +867,10 @@ mark{
     }
 
     #landing{
-        margin-top: 0;
-        height: 100vh;
+        max-height: 90vh;
+        min-height: 750px;
+        height: 90vh;
         align-content: center;
-    }
-
-    #works{
-        margin-top: 0;
     }
 
     .mobile-columns-2{grid-template-columns: repeat(2, 1fr);}
@@ -843,8 +885,23 @@ mark{
     .mobile-row-3{grid-row: span 3;}
     .mobile-row-4{grid-row: span 4;}
 
+    .mobile-b-11{aspect-ratio: 1/1;}
+    .mobile-b-32{aspect-ratio: 3/2;}
+    .mobile-b-43{aspect-ratio: 4/3;}
+    .mobile-b-23{aspect-ratio: 2/3.05;}
+
     .row-1{grid-row: 1/2;}
     .row-2{grid-row: 2/3;}
+
+    #sandbox{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-gap: 0.5rem;
+    }
+
+    #coffee{
+        grid-area: 6/1/9/3;
+    }
 
     header nav{
         padding-bottom: 0.5rem;
@@ -898,10 +955,6 @@ mark{
         width: 100vw;
         border-radius: 0;
     }
-
-    #sandbox{
-        grid-gap: 0.5rem;
-    }
 }
 
 
@@ -923,14 +976,11 @@ mark{
     }
 
     #landing{
-        margin-top: 0;
+        max-height: 75vh;
+        min-height: 600px;
         height: 75vh;
         align-content: center;
         align-items: center;
-    }
-
-    #works{
-        margin-top: 0;
     }
 
     .grid{column-gap: 1.5rem;}
@@ -957,6 +1007,20 @@ mark{
     .tablet-row-4{grid-row: span 4;}
     .tablet-row-5{grid-row: span 5;}
     .tablet-row-6{grid-row: span 6;}
+
+    .tablet-b-11{aspect-ratio: 1/1;}
+    .tablet-b-32{aspect-ratio: 3/2;}
+    .tablet-b-23{aspect-ratio: 2/3.1;}
+
+    #sandbox{
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 0.75rem;
+    }
+
+    #awake-coffee img{
+        object-position: 6% 50%;
+    }
 
     header .grid{
         margin: 0 40px;
@@ -1001,8 +1065,13 @@ mark{
     #summary div:nth-child(1){grid-area: 1/1/3/8;}
     #summary div:nth-child(2){grid-area: 1/9/2/13;}
     #summary div:nth-child(3){grid-area: 2/9/3/13;}
-
     #summary .link-button{grid-area: 3/1/4/8;}
+
+    #summary.rows-3 div:nth-child(1){grid-area: 1/1/4/8;}
+    #summary.rows-3 div:nth-child(2){grid-area: 1/9/2/13;}
+    #summary.rows-3 div:nth-child(3){grid-area: 2/9/3/13;}
+    #summary.rows-3 div:nth-child(4){grid-area: 3/9/4/13;}
+    #summary.rows-3 .link-button{grid-area: 4/1/5/8;}
 
     .modal{
         padding: 64px 40px 40px 40px;
@@ -1017,6 +1086,19 @@ mark{
         margin-right: -40px;
         width: 100vw;
         border-radius: 0;
+    }
+
+    .charts{
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+
+    .charts.charts-3{
+        padding: 2.5rem 5rem;
+    }
+
+    .charts.charts-4{
+        padding: 2.5rem;
     }
 }
 
@@ -1056,11 +1138,14 @@ mark{
     .desktop-columns-6{grid-template-columns: repeat(6, 1fr);}
     .desktop-columns-12{grid-template-columns: repeat(12, 1fr);}
 
+    .desktop-span-2{grid-column: span 2;}
+    .desktop-span-3{grid-column: span 3;}
     .desktop-span-4{grid-column: span 4;}
     .desktop-span-5{grid-column: span 5;}
     .desktop-span-6{grid-column: span 6;}
     .desktop-span-7{grid-column: span 7;}
     .desktop-span-8{grid-column: span 8;}
+    .desktop-span-10{grid-column: span 10;}
     .desktop-span-12{grid-column: span 12;}
 
     .desktop-row-2{grid-row: span 2;}
@@ -1117,6 +1202,11 @@ mark{
         margin-right: auto;
         width: 100%;
         border-radius: 2px;
+    }
+
+    .charts{
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
