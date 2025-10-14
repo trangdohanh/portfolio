@@ -129,9 +129,6 @@ section.extended{
     width: 100%;
 }
 
-#landing{margin-top: 0;}
-#works{margin-top: 0;}
-
 a{
     width: fit-content;
     text-decoration: none;
@@ -869,9 +866,6 @@ header .link-button:hover{
     }
 
     #landing{
-        max-height: 90vh;
-        min-height: 750px;
-        height: 90vh;
         align-content: center;
     }
 
@@ -978,12 +972,15 @@ header .link-button:hover{
     }
 
     #landing{
+        margin-top: 0;
         max-height: 75vh;
         min-height: 600px;
         height: 75vh;
         align-content: center;
         align-items: center;
     }
+    
+    #works{margin-top: 0;}
 
     .grid{column-gap: 1.5rem;}
 
