@@ -65,6 +65,7 @@ p{
 .font-bold{font-weight: 700;}
 
 .font-italic{font-style: italic;}
+.text-upc{text-transform: uppercase;}
 
 .type-jost{font-family: "Jost", sans-serif;}
 .type-space{font-family: "Space Grotesk", sans-serif;}
