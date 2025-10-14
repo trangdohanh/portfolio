@@ -71,8 +71,8 @@ p{
 .type-space{font-family: "Space Grotesk", sans-serif;}
 
 mark{
-    padding: 0 4px;
-    margin: 0 -4px;
+    padding: 0 2px;
+    margin: 0 -2px;
     background-color: var(--light-green);
 }
 
