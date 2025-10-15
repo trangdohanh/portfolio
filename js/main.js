@@ -30,7 +30,7 @@ app.component('header-el', {
                                 <ellipse cx="192" cy="94" rx="14" ry="14"/>
                                 <ellipse cx="96" cy="94" rx="14" ry="14"/>
                             </svg>
-                            <p>Trang Do</p>
+                            Trang Do
                         </a>
         
                         <span class="material-icons" id="nav-trigger">menu</span>
