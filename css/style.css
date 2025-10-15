@@ -166,7 +166,7 @@ section.extended{
 /* ////////// */
 
 
-/* LINK AND BUTTON */
+/* LINK, BUTTON, & NAVIGATION */
 a{
     width: fit-content;
     font-size: 1.08rem;
@@ -223,7 +223,7 @@ header .link-button{
     display: flex;
     gap: 0.25rem;
     padding: 0.25rem 0.5rem;
-    margin: 10px 0;
+    margin: 14px 0;
     width: fit-content;
     align-self: end;
     align-items: center;
@@ -242,15 +242,6 @@ header .link-button:hover{
     text-decoration: none;
 }
 
-.buttons{
-    display: flex;
-    gap: 1rem;
-    width: fit-content;
-}
-/* ////////// */
-
-
-/* HEADER AND NAVIGATION */
 header{
     position: fixed;
     top: 0;
@@ -269,8 +260,8 @@ header .grid{
 }
 
 header a{
-    line-height: 1.08rem;
-    padding: 1rem 0;
+    line-height: 1rem;
+    padding: 1.25rem 0;
 }
 
 header nav{
@@ -965,6 +956,10 @@ svg{fill: var(--dark-green);}
 @media only screen and (max-width: 767px) {
     .wrapper{
         padding: 0 20px;
+    }
+
+    section{
+        margin-top: 80px;
     }
 
     section.extended{
