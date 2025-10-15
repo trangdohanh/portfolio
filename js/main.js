@@ -30,7 +30,7 @@ app.component('header-el', {
                                 <ellipse cx="192" cy="94" rx="14" ry="14"/>
                                 <ellipse cx="96" cy="94" rx="14" ry="14"/>
                             </svg>
-                            <p>Trang Do</p>
+                            Trang Do
                         </a>
         
                         <span class="material-icons" id="nav-trigger">menu</span>
@@ -73,7 +73,6 @@ document.getElementById("nav-trigger").addEventListener("click", () => {
 
 
 var pageNav = document.getElementById("page-nav")
-var progressBar = document.getElementById("progress-bar")
 if (document.body.contains(pageNav)){
     // Code from https://www.youtube.com/watch?v=nwCtWn-xFz0
     const navLinks = document.querySelectorAll('.nav-link');
@@ -81,10 +80,6 @@ if (document.body.contains(pageNav)){
     let currentSection = 'overview';
 
     window.addEventListener('scroll', () => {
-        if (document.body.contains(progressBar)){
-            updateProgress();
-        }
-
         sectionElements.forEach(sectionElement => {
             if (window.scrollY >= sectionElement.offsetTop - 300) {
                 currentSection = sectionElement.id;
@@ -105,15 +100,6 @@ if (document.body.contains(pageNav)){
         }
     })
     // End of code from https://www.youtube.com/watch?v=nwCtWn-xFz0
-
-    // Code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
-    function updateProgress() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        progressBar.style.width = scrolled + "%";
-    }
-    // End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
 }
 
 
