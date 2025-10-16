@@ -1289,6 +1289,7 @@ svg{fill: var(--dark-green);}
     }
     
     .pad-top-40{padding-top: 1.25rem;}
+    .pad-right-40{padding-right: 1.25rem;}
 
     .modal{
         padding: 40px 0;
