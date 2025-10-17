@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Trang Do">
+        <title>Shopping Calculator for Newcomers</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+
+        <!-- Fonts and Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            mark, .coloured-section {background-color: #cde1e3cc;}
+            .bordered-section{border: 2px solid #cde1e3;}
+        </style>
+
+        <!-- Vue CDN -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header-el></header-el>
+    
+            <main>
+                <section class="section grid row-gap-40" id="overview">
+                    <div class="grid row-gap-16">
+                        <h1>Developing a shopping calculator to help newcomers in Canada acclimate to an unfamiliar pricing structure</h1>
+                        <img src="../img/shopping-calculator/mockup-1.jpg">
+                    </div>
+    
+                    <div class="grid desktop-columns-12 tablet-columns-2 row-gap-40" id="summary">
+                        <div class="content-flex tablet-span-2">
+                            <h2 class="text-medium">Overview</h2>
+                            <p>
+                                The differences in currencies and tax systems hinder newcomers' ability to efficiently manage their finances when shopping in Canada for the first time. 
+                                This project aims to address this challenge and offer a more convenient shopping experience for visitors and new residents by <mark>converting prices from Canadian dollars to a currency familiar to the user, while calculating the total cost of their shopping trip and helping them keep track of their spending.</mark> 
+                            </p>
+                        </div>
+        
+                        <div class="content-flex">
+                            <h3 class="text-medium">Tools</h3>
+                            <p>Pen and paper, Adobe XD, Figma, HTML, CSS, JavaScript</p>
+                        </div>
+        
+                        <div class="content-flex">
+                            <h3 class="text-medium">Timeline</h3>
+                            <p>Jan &#8211 Apr 2022 (original concept)</p>
+                            <p>December 2024 & March 2025 (redesign)</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="section extended grid row-gap-40" id="challenge">
+                    <div class="extended-wrapper extended-content grid desktop-columns-12 row-gap-40">
+                        <div class="center-content content-flex">
+                            <h2>Challenge</h2>
+                            <h3>The small financial obstacle for new residents.</h3>
+                            <p>
+                                When I first came to Canada, I would mentally convert the prices to VND to determine if something is a reasonable purchase and gradually adapt to a new pricing structure. 
+                                I thought I had a decent system in place, but I still found myself wondering how I seemed to be spending more than expected. 
+                                Vietnam includes value-added tax on price tags, so <mark>I didn't realize there was an additional cost not reflected in the prices. 
+                                I hadn't accounted for the sales tax and small miscalculations to add up so much.</mark> 
+                            </p>
+                        </div>
+
+                        <figure class="center-content">
+                            <img src="../img/shopping-calculator/problem.png" class="mobile-wide-img">
+                            <figcaption class="text-small font-light">Illustrations are sourced from Flaticon.</figcaption>
+                        </figure>
+
+                        <p class="center-content">
+                            Shoppers tend to judge prices based on their previous experience. 
+                            Local shoppers are already familiar with the pricing structure, but for many newcomers, switching between currencies is a necessary added step to navigate unfamiliar pricing. 
+                            <mark>Being able to mentally convert from one currency to another is one thing, keeping track of the numbers is another matter. 
+                            Those who've been used to tax-inclusive pricing also have the additional task of figuring out how the sales tax applies.</mark>
+                        </p>
+
+                        <div class="grid center-content tablet-columns-5 row-gap-40 pad-top-40">
+                            <div class="grid row-gap-40 tablet-span-2">
+                                <p>
+                                    Currency conversion matters more in large transactions. 
+                                    <mark>Miscalculations in small-ish purchases are more easily forgivable, but they still add up.</mark> 
+                                    Regardless of the scale of the issue, it's still an obstacle that makes newcomers' transition to a new environment more difficult.
+                                </p>
+                                
+                                <div class="thumbnails" style="grid-template-columns: repeat(3, 1fr); height: 100%;">
+                                    <div class="thumbnail" onclick="currentSlide(1)">
+                                        <img src="../img/shopping-calculator/persona-1.png">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(2)">
+                                        <img src="../img/shopping-calculator/persona-2.png">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(3)">
+                                        <img src="../img/shopping-calculator/persona-3.png">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="grid row-gap-8 tablet-span-3">
+                                <div class="slides">
+                                    <img src="../img/shopping-calculator/persona-1.png" class="slide fade">
+                                    <img src="../img/shopping-calculator/persona-2.png" class="slide fade">
+                                    <img src="../img/shopping-calculator/persona-3.png" class="slide fade">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="center-content content-flex">
+                            <p>
+                                The common advice is to "give it time, and you'll get used to it."
+                                People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. 
+                                <mark>The few extra seconds spent mentally converting prices for a point of reference can add up to the few minutes that could have been spent on learning, hobbies, hangouts, etc.</mark>
+                                Amidst other challenges that come with relocating, one less source of stress could be valuable. 
+                            </p>
+
+                            <p>
+                                What if there's something to give people back those extra minutes? 
+                                Something to make shopping trips faster and easier? 
+                                Something to help newcomers adapt to the new currency and prices? 
+                            </p>
+                        </div>
+
+                        <div class="center-content textbox coloured-section bordered-section">
+                            <p class="text-large font-semibold type-space">Shopping calculators and currency converters exist on their own, but what if they can be combined into one platform to provide a better experience for newcomers?</p>
+                        </div>
+                    </div>                    
+                </section>
+                
+
+                <section class="section extended grid row-gap-120" id="design">
+                    <div class="grid row-gap-40">
+                        <div class="extended-wrapper extended-content grid desktop-columns-12">
+                            <div class="center-content content-flex">
+                                <h2>Design</h2>
+                                <h3>Based on my research, I outlined primary features—calculation and conversion—and good-to-haves.</h3>
+                                <p>
+                                    Most people have their phone with them when they go out, so making this a shopping calculator app with integrated currency conversion would provide convenience and utility. 
+                                    The original idea was simple: <mark>the user types in the price and quantity, views the converted price in a familiar currency (with the sales tax accounted for), then adds the item to their list if they decide to buy it.</mark> 
+                                    The app calculates the estimated total and displays it in Canadian dollars and another currency of choice.
+                                </p>
+                                <p>
+                                    Editing, deleting, and saving capabilities are good-to-haves, but aren't as necessary. 
+                                    Categorizing should also be a secondary feature, but since the sales tax is applied depending on the type of product, categorizing would be a small and benefical addition.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="extended-wrapper extended-content grid desktop-columns-12">
+                                <p class="center-content text-small font-light">Scroll to the right to see more of the user flow.</p>
+                            </div>
+
+                            <div class="extended-wrapper overflow-img">
+                                <img src="../img/shopping-calculator/user-flow.png" class="wide tablet-wide-img mobile-wide-img"> 
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                    <div class="extended-wrapper grid row-gap-120">
+                        <div class="extended-content grid desktop-columns-12 row-gap-40">
+                            <div class="center-content content-flex">
+                                <h3>I used paper prototypes to ideate layouts and conduct quick user tests.</h3>
+                                <p>
+                                    My experience with front-end development was limited at this point, so I was advised to keep everything to one HTML document—thus, one screen. 
+                                    <mark>A challenge I encountered early on was fitting a lot of information into one phone screen.</mark> 
+                                    To address this constraint, most participants recommended <mark>displaying the information gradually.</mark>
+                                </p>
+                            </div>
+
+                            <img src="../img/shopping-calculator/paper-prototype.jpg" class="desktop-span-12">  
+                        </div>
+
+                        <div class="extended-content grid desktop-columns-12 row-gap-40">
+                            <div class="center-content content-flex">
+                                <h3>I designed wireframes and continued to refine the design of the app.</h3>
+                                <p>From the first to the second iterations, I omitted the initial screens prompting the user to select their currency and province and intended to replace them with a brief instructional pop-up.</p>
+                            </div>
+            
+                            <img src="../img/shopping-calculator/iteration-1.png" class="desktop-span-12">
+                            <img src="../img/shopping-calculator/iteration-2.png" class="desktop-span-12">                 
+                        </div>
+                    </div>
+
+                    <div class="grid row-gap-40">
+                        <div class="extended-wrapper extended-content grid desktop-columns-12 tablet-columns-2 row-gap-40">
+                            <div class="content-flex desktop-span-6" style="justify-content: center;">
+                                <h3>I addressed shortcomings from my initial wireframes to better account for the constraints of mobile devices.</h3>
+                                <p>
+                                    The biggest mistake I made when designing the original wireframes was not taking into account the device restrictions. 
+                                    The screen size used was too small, considering the sizes of most phones at the time. 
+                                    Additionally, I didn't consider the native UI elements or the reachability of certain features. 
+                                </p>
+                            </div>
+                            
+                            <img src="../img/shopping-calculator/mistake.png" class="desktop-span-6">
+                            
+                            <div class="content-flex center-content tablet-span-2">
+                                <p>This redesign addressed those shortcomings and applied what I've learned to improve the design:</p>
+                                <ol class="list content-flex">
+                                    <li>I <mark>moved the currency and province dropdowns to a modal at the start</mark> to draw more attention to them; users wouldn't have to reach the top of the screen when they first use the app.</li>
+                                    <li>The “Add to list” button now <mark>floats near the bottom right corner for easier access</mark>. It stays visible to users regardless of how long their shopping list can get.</li>
+                                    <li>I reworked the colour palette to <mark>improve colour contrast</mark>; while the original colours look alright to my eyes, they didn't pass the accessibility check.</li>
+                                </ol>
+                            </div>       
+                        </div>
+            
+                        <img src="../img/shopping-calculator/iteration-3.png" class="wide">
+                    </div>
+                </section>
+
+
+                <section class="section grid row-gap-120" id="develop">
+                    <div class="grid desktop-columns-12 row-gap-40">
+                        <div class="center-content content-flex">
+                            <h2>Develop</h2>
+                            <h3>I coded a prototype with HTML, CSS, and JavaScript, using an API to retrieve real-time conversion rates.</h3>
+                            <p>
+                                Real-time conversion is crucial—1 CAD was roughly 18,000 VND in 2022, but roughly 19,000 VND in 2025, with a lot of fluctuations in between. 
+                                I initially used Exchangerates.host API to retrieve the conversion rates. 
+                                I leveraged local storage to prototype a simple save feature.
+                            </p>
+                        </div>
+        
+                        <img src="../img/shopping-calculator/develop-1.png" class="desktop-span-12">   
+                    </div>
+                    
+                    <div class="grid desktop-columns-12 row-gap-40">
+                        <div class="center-content content-flex">
+                            <h3>As I learned more about front-end development, I cleaned up the initial code and added error handling to improve the user experience.</h3>
+                            <p>
+                                My first task was replacing the Exchangerates.host API with the Frankfurter API which has fewer available currencies.  
+                                It may not be suitable to scale up, but it's more reliable for a small and low-maintenance project and sufficient for a proof of concept. 
+                            </p>
+                            <p>
+                                In addition to implementing the UI redesigns, I added a “Close form” button close to the bottom of the screen to improve reachability. 
+                                <mark>I leveraged local storage to allow users to save the selected currency and province and remove unwanted items from the shopping list.</mark> 
+                                I implemented a disabled state for the input form, simplified the layout of the summary area so it takes up less space and reduces confusion, and removed clutter in the “Saved” screen by only displaying categories with information.
+                            </p>
+                        </div>
+
+                        <img src="../img/shopping-calculator/develop-2.png" class="desktop-span-12">   
+                    </div>
+                </section>
+
+
+                <section class="extended grid row-gap-120">
+                    <div class="extended-wrapper coloured-section">
+                        <div class="grid tablet-columns-4 mobile-columns-2 row-gap-40 extended-content">
+                            <div class="content-flex tablet-span-2 mobile-span-2 pad-right-40" style="justify-content: center;">
+                                <h3>While the original prototype wasn't properly designed for a mobile app, it was better suited for mobile browsers.</h3>
+                                <p>
+                                    Ideally, a mobile app would be more convenient and could leverage the device's hardware and operating system. 
+                                    However, the way that I developed the prototype makes it more suitable for a web app, and native hardware isn't necessary for this proof of concept. 
+                                    The small size of the original wireframes happens to be more suitable for mobile browsers.
+                                </p>
+                            </div>
+                            
+                            <video width="100%" height="auto" controls autoplay loop muted style="display: block;">
+                                <source src="../img/shopping-calculator/demo-2.mp4" type="video/mp4">
+                            </video>
+                            <video width="100%" height="auto" controls autoplay loop muted style="display: block;">
+                                <source src="../img/shopping-calculator/demo-1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="extended-wrapper extended-content grid row-gap-16 desktop-columns-12">
+                        <h3 class="center-content">With this app, new residents get a point of reference when they're shopping with an unfamiliar currency, learn when sales tax is usually applied, and keep track of their spending during their shopping trip.</h3>
+                        <img src="../img/shopping-calculator/outcome.png" class="desktop-span-12 tablet-wide-img mobile-wide-img">
+                    </div>
+                    
+                </section>
+
+                
+                <section class="section extended grid row-gap-40" id="next-steps">
+                    <div class="extended-wrapper extended-content grid desktop-columns-12 row-gap-40">
+                        <div class="center-content content-flex">
+                            <h2>Next steps</h2>
+                            <h3>Beyond the prototype</h3>
+                            <p>
+                                There are improvements I could make to the prototype, such as adding geolocation to automatically detect the province the user is in, or a confirmation modal when the user taps on “Remove” on an item. 
+                                I want to open up the design and research portion of this project to <mark>further explore designing for accessibility.</mark> 
+                                What would this app look like for older audiences? 
+                                What if there's an option to interact with this app in another language? 
+                            </p>
+                        </div>
+
+                        <div class="desktop-span-12 grid desktop-columns-12 tablet-columns-2">
+                            <div class="content-flex center-left" style="justify-content: center;">
+                                <h3 class="text-medium">Typing takes time, how about scanning?</h3>
+                                <p>
+                                    Typing out each item and price manually isn't very convenient and may takes up more time than necessary. 
+                                    However, grocery items are often labelled with their names and prices. 
+                                    <mark>Using the phone's camera to scan the labels would speed up the information-inputting process.</mark>
+                                </p>
+                            </div>
+                            
+                            <img src="../img/shopping-calculator/concept-1.png" class="desktop-span-6 mobile-wide-img">
+                        </div>
+
+                        <div class="desktop-span-12 grid desktop-columns-12 tablet-columns-2">
+                            <div class="content-flex center-left" style="justify-content: center;">
+                                <h3 class="text-medium">Deselecting instead of removing</h3>
+                                <p>
+                                    Shoppers are often indecisive. 
+                                    Some items go into the cart, then back to the shelf in the next minute, and maybe back into the cart. 
+                                    <mark>Allowing the user to deselect items they're still considering would allow them to view how much their total would change and easily add a previously unwanted item back onto their list.</mark>
+                                </p>
+                            </div>
+                            
+                            <img src="../img/shopping-calculator/concept-2.png" class="desktop-span-6 mobile-wide-img">
+                        </div>
+                    </div>
+
+                    <div class="grid row-gap-24">
+                        <div class="extended-wrapper extended-content grid desktop-columns-12">
+                            <div class="center-content content-flex">
+                                <h3 class="text-medium">Envisioning a more scalable product</h3>
+                                <p>
+                                    To implement the two features above would require a more complex system that leverages a frontend framework, backend database, and device hardware. 
+                                    <mark>With these proposed features added, the user base can expand to shoppers looking for an intuitive shopping calculator.</mark> 
+                                    There's also potential to expand this app to other countries, not just limiting it to Canada.
+                                </p>
+                            </div>
+                        </div>
+
+                        <img src="../img/shopping-calculator/concept-3.png" class="wide">
+                    </div>
+                </section>
+
+
+                <section class="section grid desktop-columns-12 row-gap-40" id="reflection">
+                    <div class="center-content content-flex">
+                        <h3>Takeaways</h3>
+                        <p>
+                            This is one of my favourite projects and I enjoy coming back to it from time to time and improve the wireframes and prototype as my skills improve. 
+                            However, as I continue to work on this, I realized how often I was considering how some features would actually be developed beyond user flows and wireframes and getting caught up in technical constraints. 
+                            <mark>Features that would greatly improve the user experience weren't considered simply because I couldn't code them.</mark> 
+                        </p>
+                        <p>
+                            Having a good grasp of the technology and development process is valuable when considering product feasibility. 
+                            Moving forward, <mark>I just can't discard an idea because I personally can't code it. 
+                            As long as I did the research and design properly—including research into the technology requirements—I can make a comprehensive blueprint for a talented development team to pick up from there.</mark>
+                            I still want to continue revisiting this concept and improving it, but staying more within the research and design aspects.
+                        </p>
+                    </div>
+
+                    <img src="../img/shopping-calculator/mockup-2.jpg" class="desktop-span-12" alt="A person in a store aisle using the shopping calculator on their phone.">
+                </section>
+
+
+                <nav class="page-nav-container">
+                    <ul class="page-nav" id="page-nav">
+                        <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
+                        <li><a href="#challenge" class="nav-link">Challenge</a></li>
+                        <li><a href="#design" class="nav-link">Design</a></li>
+                        <li><a href="#develop" class="nav-link">Develop</a></li>
+                        <li><a href="#next-steps" class="nav-link">Next Steps</a></li>
+                        <li><a href="#reflection" class="nav-link">Takeaways</a></li>
+                    </ul>
+                </nav>
+            
+    
+                <footer-el></footer-el>
+            </main>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/carousel.js"></script>
+    </body>
+</html>
