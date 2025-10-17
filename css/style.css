@@ -365,7 +365,10 @@ img{
 
 img.wide{border-radius: 0;}
 
-video{border-radius: 2px;}
+video{
+    display: block;
+    border-radius: 2px;
+}
 
 svg{fill: var(--dark-green);}
 .dark svg {fill: var(--light-green);}
