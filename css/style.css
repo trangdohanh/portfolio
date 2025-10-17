@@ -369,6 +369,15 @@ video{border-radius: 2px;}
 
 svg{fill: var(--dark-green);}
 .dark svg {fill: var(--light-green);}
+
+.overflow-img{
+    width: 100vw; 
+    overflow-x: scroll;
+}
+.overflow-img img{
+    height: 600px;
+    width: auto;
+}
 /* ////////// */
 
 
