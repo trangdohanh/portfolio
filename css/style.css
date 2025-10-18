@@ -377,6 +377,7 @@ svg{fill: var(--dark-green);}
     width: 100vw; 
     overflow-x: scroll;
 }
+
 .overflow-img img{
     height: 600px;
     width: auto;
@@ -1049,6 +1050,10 @@ svg{fill: var(--dark-green);}
         margin-right: -20px;
         width: 100vw;
         border-radius: 0;
+    }
+
+    .overflow-img img{
+        height: 500px;
     }
 
     a:hover{text-decoration: none; color: inherit;}
