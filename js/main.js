@@ -34,6 +34,7 @@ app.component('header-el', {
                         </a>
         
                         <span class="material-icons" id="nav-trigger">menu</span>
+                        <span class="material-icons hide-trigger" id="nav-close">close</span>
                         
                         <nav id="nav-triggered">
                             <a href="../#works">Works</a>
@@ -46,13 +47,17 @@ app.component('header-el', {
 app.mount('body')
 // End of Vue components
 
-
+var navbar = document.getElementById("nav-triggered")
+var navOpen = document.getElementById("nav-trigger");
+var navClose = document.getElementById("nav-close");
 // Code from https://www.w3schools.com/howto/howto_js_media_queries.asp
 function checkDevice(x) {
     if (x.matches) {
-        document.getElementById("nav-triggered").classList.add("hide-nav");
+        navbar.classList.add("hide-nav");
     } else {
-        document.getElementById("nav-triggered").classList.remove("hide-nav");
+        navbar.classList.remove("hide-nav");
+        navOpen.classList.remove("hide-trigger");
+        navClose.classList.add("hide-trigger");
     }
 }
   
@@ -66,9 +71,16 @@ x.addEventListener("change", function() {
 // End of code from https://www.w3schools.com/howto/howto_js_media_queries.asp
 
 
-document.getElementById("nav-trigger").addEventListener("click", () => {
-    document.getElementById("nav-triggered").classList.toggle("hide-nav");
-    document.getElementById("nav-triggered").classList.toggle("show-nav");
+navOpen.addEventListener("click", () => {
+    navbar.classList.remove("hide-nav");
+    navOpen.classList.add("hide-trigger");
+    navClose.classList.remove("hide-trigger");
+})
+
+navClose.addEventListener("click", () => {
+    navbar.classList.add("hide-nav");
+    navOpen.classList.remove("hide-trigger");
+    navClose.classList.add("hide-trigger");
 })
 
 
