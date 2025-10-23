@@ -269,7 +269,7 @@ header nav{
     transition: all 0.8s ease;
 }
 
-#nav-trigger{
+#nav-trigger, #nav-close{
     place-self: start end;
     padding: 1rem 0;
     cursor: pointer;
@@ -281,6 +281,10 @@ header nav{
     -webkit-transform: translateY(-500px);
     -ms-transform: translateY(-500px);
     transform: translateY(-500px);
+}
+
+.hide-trigger{
+    display: none;
 }
 
 .logo{
@@ -1152,7 +1156,7 @@ svg{fill: var(--dark-green);}
         justify-content: space-between;
     }
 
-    #nav-trigger{
+    #nav-trigger, #nav-close{
         display: none;
     }
 
