@@ -609,7 +609,7 @@ svg{fill: var(--dark-green);}
 .line{
     border-left: 2px solid var(--black);
     height: 100%;
-    grid-area: 1/1/10/2;
+    grid-area: 1/1/9/2;
     margin-left: 7px;
     z-index: -1;
 }
