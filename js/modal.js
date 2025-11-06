@@ -8,7 +8,7 @@ function openModal(e) {
   document.body.appendChild(template)
   template.style.display = "flex";
   if (e.classList.contains("video-modal")){
-    document.getElementById("modal-content").innerHTML = `<video width="90%" height="auto" id="video-modal" controls>
+    document.getElementById("modal-content").innerHTML = `<video width="100%" height="auto" id="video-modal" controls>
                                                               <source type="video/mp4" src="../img/lightbox/${e.id}.mp4">
                                                           </video>`;
   } else{

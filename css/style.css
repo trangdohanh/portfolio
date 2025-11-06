@@ -19,7 +19,7 @@ body{
     position: relative;
     color: var(--black);
     background-color: var(--white);
-    font-family: "Jost", sans-serif;
+    font-family: "Jost", Arial, Helvetica, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -56,7 +56,7 @@ body.dark{
 
 /* TEXT STYLING */
 h1, h2, h3, h4{
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 
@@ -73,6 +73,11 @@ h2, h4{
 p{
     font-size: 1.08rem;
     line-height: 1.73rem;
+}
+
+p.headline{
+    font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .text-small{font-size: 0.85rem !important; line-height: 1.36rem;}
@@ -95,6 +100,7 @@ p{
 .text-stc{text-transform: capitalize;}
 
 .type-jost{font-family: "Jost", sans-serif;}
+.type-dm{font-family: "DM Sans", sans-serif;}
 .type-space{font-family: "Space Grotesk", sans-serif;}
 
 mark{
@@ -118,7 +124,7 @@ mark{
 .list{
     padding-left: 1rem;
     font-size: 1.08rem;
-    line-height: 1.75rem;
+    line-height: 1.73rem;
 }
 /* ////////// */
 
@@ -127,7 +133,7 @@ mark{
 section{
     max-width: 1024px;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 160px;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -162,7 +168,7 @@ section.extended{
 /* ////////// */
 
 
-/* LINK, BUTTON, & NAVIGATION */
+/* LINK AND BUTTON */
 a{
     width: fit-content;
     font-size: 1.08rem;
@@ -172,7 +178,7 @@ a{
     transition: 0.3s ease;
 }
 
-a:hover{
+a:hover, a:focus{
     text-decoration: underline;
     color: var(--dark-green);
 }
@@ -181,10 +187,10 @@ a.link{
     font-size: inherit;
     text-decoration: underline;
 }
-a.link:hover{text-decoration: none;}
+a.link:hover, a.link:focus{text-decoration: none;}
 
 .dark a{color: var(--white);}
-.dark a:hover{color: var(--light-green);}
+.dark a:hover, .dark a:focus{color: var(--light-green);}
 
 .link-button{
     height: fit-content;
@@ -201,13 +207,13 @@ a.link:hover{text-decoration: none;}
     border-color: var(--white);
 }
 
-.link-button:hover{
+.link-button:hover, .link-button:focus{
     background-color: var(--green);
     color: var(--white);
     border-color: var(--green);
 }
 
-.dark .link-button:hover{
+.dark .link-button:hover, .dark .link-button:focus{
     color: var(--white);
 }
 
@@ -230,14 +236,23 @@ header .link-button .material-icons{
     font-size: 1.125rem;
 }
 
-header .link-button:hover{
+header .link-button:hover, header .link-button:focus{
     text-decoration: none;
 }
 
-.home .link-button:hover{
+.home .link-button:hover, .home .link-button:focus{
     text-decoration: none;
 }
 
+.buttons{
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+}
+/* ////////// */
+
+
+/* HEADER AND NAVIGATION */
 header{
     position: fixed;
     top: 0;
@@ -338,7 +353,7 @@ footer{
     color: #1a1a1a80;
 }
 
-.page-nav a:hover{
+.page-nav a:hover, .page-nav a:focus{
     color: var(--dark-green);
 }
 
@@ -347,6 +362,25 @@ footer{
     color: var(--green) !important;
 }
 /* ////////// */
+
+
+/* Code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
+.progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 0.25rem;
+    background: var(--light-green);
+}
+
+.progress-bar {
+    height: 0.25rem;
+    background: var(--green);
+    width: 0%;
+}
+/* End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
 
 
 /* MEDIA STYLING */
@@ -381,7 +415,6 @@ svg{fill: var(--dark-green);}
     width: 100vw; 
     overflow-x: scroll;
 }
-
 .overflow-img img{
     height: 600px;
     width: auto;
@@ -404,6 +437,10 @@ svg{fill: var(--dark-green);}
 .row-gap-80{row-gap: 5rem;}
 .row-gap-120{row-gap: 7.5rem;}
 .row-gap-160{row-gap: 10rem;}
+
+.grid-h-center{
+    align-items: center;
+}
 /* ////////// */
 
 
@@ -420,6 +457,10 @@ svg{fill: var(--dark-green);}
 
 .content-flex p{
     margin-top: 0.5rem;
+}
+
+.content-flex p.headline{
+    margin-top: 0;
 }
 
 #summary .content-flex p{
@@ -478,12 +519,12 @@ svg{fill: var(--dark-green);}
     transition: all 0.3s ease;
 }
 
-.project:hover {
+.project:hover, .project:focus {
     text-decoration: none;
     color: var(--black);
 }
 
-.dark .project:hover {
+.dark .project:hover, .dark .project:focus {
     color: var(--white);
 }
 
@@ -492,7 +533,16 @@ svg{fill: var(--dark-green);}
     box-shadow: none;
 }
 
+.project:focus img{
+    scale: 98%;
+    box-shadow: none;
+}
+
 .project.incomplete:hover img{
+    scale: 100%;
+}
+
+.project.incomplete:focus img{
     scale: 100%;
 }
 
@@ -501,7 +551,16 @@ svg{fill: var(--dark-green);}
     color: var(--dark-green);
 }
 
+.project:focus .title{
+    text-decoration: underline;
+    color: var(--dark-green);
+}
+
 .dark .project:hover .title{
+    color: var(--light-green);
+}
+
+.dark .project:focus .title{
     color: var(--light-green);
 }
 
@@ -509,11 +568,23 @@ svg{fill: var(--dark-green);}
     color: var(--black);
 }
 
+.project:focus .subtitle{
+    color: var(--black);
+}
+
 .dark .project:hover .subtitle{
     color: var(--white);
 }
 
+.dark .project:focus .subtitle{
+    color: var(--white);
+}
+
 .projects:has(.project:hover) .project:not(:hover){
+    filter: blur(3px);
+}
+
+.projects:has(.project:focus) .project:not(:focus){
     filter: blur(3px);
 }
 
@@ -570,11 +641,11 @@ svg{fill: var(--dark-green);}
     text-overflow: ellipsis;
 }
 
-.label.prototype{background-color: #cae1e3;}
-.label.ux{background-color: #e4d1f4;}
-.label.frontend{background-color: #cee2d3;}
-.label.visual{background-color: #f9ecc9;}
-.label.system{background-color: #fad6c5;}
+.label.prototype{background-color: #CAE1E3;}
+.label.ux{background-color: #E4D1F4;}
+.label.frontend{background-color: #CEE2D3;}
+.label.visual{background-color: #F9ECC9;}
+.label.system{background-color: #FAD6C5;}
 .label.theme{background-color: var(--light-green);}
 /* ////////// */
 
@@ -777,6 +848,11 @@ svg{fill: var(--dark-green);}
     position: relative;
 }
 
+.caption{
+    vertical-align: top;
+    white-space: normal;
+}
+
 .next, .prev{
     cursor: pointer;
     z-index: 3;
@@ -962,6 +1038,10 @@ svg{fill: var(--dark-green);}
         margin-top: 80px;
     }
 
+    #hero{
+        margin-top: 120px;
+    }
+
     section.extended{
         margin-left: -20px;
         margin-right: -20px;
@@ -1073,6 +1153,10 @@ svg{fill: var(--dark-green);}
         padding: 0 40px;
     }
 
+    section:first-child{
+        margin-top: 120px;
+    }
+
     section.extended{
         margin-left: -40px;
         margin-right: -40px;
@@ -1095,7 +1179,11 @@ svg{fill: var(--dark-green);}
     #works{
         margin-top: 0;
     }
-    
+
+    .grid{
+        column-gap: 1.5rem;
+    }
+
     #sandbox{
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(7, 1fr);
@@ -1110,10 +1198,6 @@ svg{fill: var(--dark-green);}
         grid-row-gap: 5rem;
     }
 
-    .grid{
-        column-gap: 1.5rem;
-    }
-    
     .tablet-columns-2{grid-template-columns: repeat(2, 1fr);}
     .tablet-columns-3{grid-template-columns: repeat(3, 1fr);}
     .tablet-columns-4{grid-template-columns: repeat(4, 1fr);}
@@ -1222,7 +1306,9 @@ svg{fill: var(--dark-green);}
     }
     
     section{
-        margin: 120px auto 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
     }
 
     footer{
@@ -1247,7 +1333,9 @@ svg{fill: var(--dark-green);}
     .desktop-columns-2{grid-template-columns: repeat(2, 1fr);}
     .desktop-columns-3{grid-template-columns: repeat(3, 1fr);}
     .desktop-columns-4{grid-template-columns: repeat(4, 1fr);}
+    .desktop-columns-5{grid-template-columns: repeat(5, 1fr);}
     .desktop-columns-6{grid-template-columns: repeat(6, 1fr);}
+    
     .desktop-columns-12{grid-template-columns: repeat(12, 1fr);}
 
     .desktop-span-2{grid-column: span 2;}
@@ -1267,6 +1355,7 @@ svg{fill: var(--dark-green);}
     .desktop-row-6{grid-row: span 6;}
 
     .center-content{grid-column: 2/12;}
+    .centerer-content{grid-column: 3/11;}
     .center-left{grid-column: 2/7;}
     .center-right{grid-column: 7/12;}
 
@@ -1337,6 +1426,8 @@ svg{fill: var(--dark-green);}
 /* 1920px screen */
 @media only screen and (min-width: 1920px) {
     .wrapper{max-width: 1440px;}
+
     .extended-content{max-width: 1440px;}
+
     header div{max-width: 1440px;}
 }
