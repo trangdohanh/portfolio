@@ -1,47 +1,39 @@
-// Vue components
-let app = Vue.createApp();
-app.component('footer-el', {
-    template: `<footer class="grid row-gap-8">
-                    <h2 class="text-medium">Get in touch</h2>
-                    <div class="contacts flex row-gap-8">
-                        <div class="contact">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
-                            <a href="mailto:trangdohanh@gmail.com">trangdohanh@gmail.com</a>
-                        </div>
-                        
-                        <div class="contact">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
-                            <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank">linkedin.com/in/hanh-trang-do</a>
-                        </div>
-                    </div>
-                </footer>`
-})
-// Project page header only
-app.component('header-el', {
-    template: `<header>
-                    <div class="grid desktop-columns-4 tablet-columns-3 mobile-columns-2">
-                        <a href="../" class="logo">
-                            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
-                                <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
-                                <ellipse cx="192" cy="94" rx="14" ry="14"/>
-                                <ellipse cx="96" cy="94" rx="14" ry="14"/>
-                            </svg>
-                            Trang Do
-                        </a>
-        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;" class="nav" id="nav-trigger"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;" class="nav hide-trigger" id="nav-close"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-                        
-                        <nav id="nav-triggered">
-                            <a href="../#works">Works</a>
-                            <a href="../#about">About</a>
-                            <a href="files/resume.pdf" target="_blank" class="link-button">Resume <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg></a>
-                        </nav> 
-                    </div>  
-                </header>`
-})
-app.mount('body')
-// End of Vue components
+var homepage = document.getElementById("home")
+if (!document.body.contains(homepage)){
+    document.getElementById("header").innerHTML = `<div class="grid desktop-columns-4 tablet-columns-3 mobile-columns-2">
+                                                        <a href="../" class="logo">
+                                                            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
+                                                                <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
+                                                                <ellipse cx="192" cy="94" rx="14" ry="14"/>
+                                                                <ellipse cx="96" cy="94" rx="14" ry="14"/>
+                                                            </svg>
+                                                            Trang Do
+                                                        </a>
+                                        
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;" class="nav" id="nav-trigger"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;" class="nav hide-trigger" id="nav-close"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                                        
+                                                        <nav id="nav-triggered">
+                                                            <a href="../#works">Works</a>
+                                                            <a href="../#about">About</a>
+                                                            <a href="files/resume.pdf" target="_blank" class="link-button">Resume <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg></a>
+                                                        </nav> 
+                                                    </div>`;
+}
+
+document.getElementById("footer").setAttribute("class", "grid row-gap-8");
+document.getElementById("footer").innerHTML = `<h2 class="text-medium">Get in touch</h2>
+                                                <div class="contacts flex row-gap-8">
+                                                    <div class="contact">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
+                                                        <a href="mailto:trangdohanh@gmail.com">trangdohanh@gmail.com</a>
+                                                    </div>
+                                                    
+                                                    <div class="contact">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+                                                        <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank">linkedin.com/in/hanh-trang-do</a>
+                                                    </div>
+                                                </div>`;
 
 var navbar = document.getElementById("nav-triggered")
 var navOpen = document.getElementById("nav-trigger");
