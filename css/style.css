@@ -937,14 +937,9 @@ svg{fill: var(--dark-green);}
     top: 0.5rem;
     right: 0.5rem;
     display: inline-block;
-    padding: 1rem;
+    margin: 1rem;
     vertical-align: middle;
-    text-decoration: none;
-    text-align: center;
     cursor: pointer;
-    white-space: nowrap;
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 .close-overlay{
@@ -959,6 +954,14 @@ svg{fill: var(--dark-green);}
 #video-modal{
     display: block;
     margin: 0 auto;
+}
+
+.modal svg{
+    fill: var(--black) !important;
+}
+
+.dark .modal svg:not(.next svg, .prev svg){
+    fill: var(--white) !important;
 }
 /* ////////// */
 
