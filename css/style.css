@@ -41,7 +41,7 @@ body.dark{
     scroll-behavior: smooth;
 }
 
-.home .wrapper{
+#home .wrapper{
     position: fixed;
     background-image: url(../img/background-light.png);
     background-size: cover;
@@ -50,7 +50,7 @@ body.dark{
     background-attachment: fixed;
 }
 
-.home.dark .wrapper{background-image: url(../img/background.png);}
+#home.dark .wrapper{background-image: url(../img/background.png);}
 /* ////////// */
 
 
@@ -252,10 +252,6 @@ header .link-button .material-icons{
 }
 
 header .link-button:hover, header .link-button:focus{
-    text-decoration: none;
-}
-
-.home .link-button:hover, .home .link-button:focus{
     text-decoration: none;
 }
 
