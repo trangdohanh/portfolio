@@ -18,14 +18,11 @@
         <style>
             mark, .coloured-section {background-color: #00aeef33;}
         </style>
-
-        <!-- Vue CDN -->
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
 
     <body>
         <div class="wrapper">
-            <header-el></header-el>
+            <header id="header"></header>
     
             <main>
                 <section class="section grid row-gap-40" id="overview">
@@ -174,7 +171,6 @@
                     <img src="../img/blue-dragon/mockup-2.jpg" class="desktop-span-12">
                 </section>
 
-
                 <nav class="page-nav-container">
                     <ul class="page-nav" id="page-nav">
                         <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
@@ -184,9 +180,8 @@
                         <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
-                
-    
-                <footer-el></footer-el>
+
+                <footer id="footer"></footer>
             </main>
         </div>
         
