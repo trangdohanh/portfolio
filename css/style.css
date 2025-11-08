@@ -217,8 +217,23 @@ a.link:hover, a.link:focus{text-decoration: none;}
     color: var(--white);
 }
 
-.link-button .material-icons{
+.link-button svg{
+    fill: var(--black);
     vertical-align: bottom;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.dark .link-button svg{
+    fill: var(--white);
+}
+
+.link-button:hover svg{
+    fill: var(--white);
+}
+
+.link-button:focus svg{
+    fill: var(--white);
 }
 
 header .link-button{
@@ -284,10 +299,15 @@ header nav{
     transition: all 0.8s ease;
 }
 
-#nav-trigger, #nav-close{
+.nav{
     place-self: start end;
-    padding: 1rem 0;
+    margin: 1rem 0;
     cursor: pointer;
+    fill: var(--black) !important;
+}
+
+.dark .nav{
+    fill: var(--white) !important;
 }
 
 .hide-nav{
