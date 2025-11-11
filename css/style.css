@@ -297,12 +297,17 @@ header nav{
 
 .nav{
     place-self: start end;
-    margin: 1rem 0;
+    padding: 0.75rem;
+    margin-right: -0.75rem;
     cursor: pointer;
+    line-height: 0.75rem;
+}
+
+.nav svg{
     fill: var(--black) !important;
 }
 
-.dark .nav{
+.dark .nav svg{
     fill: var(--white) !important;
 }
 
@@ -857,8 +862,7 @@ svg{fill: var(--dark-green);}
     top: 45%;
     width: auto;
     padding: 1rem;
-    font-weight: bold;
-    font-size: 1.25rem;
+    line-height: 0.75rem;
     border-radius: 0 3px 3px 0;
     color: var(--black) !important;
     background-color: rgba(251, 247, 244, 0.2);
@@ -929,15 +933,20 @@ svg{fill: var(--dark-green);}
 .modal-content{
     position: relative;
     max-width: 1024px;
-    place-self: center;
+}
+
+.modal-content:not(.modal-content:has(.slides)){
+    place-self: start center;
+    margin-top: 3rem;
 }
 
 .close-modal{
     position: fixed;
-    top: 0.5rem;
+    top: 0.25rem;
     right: 0.5rem;
     display: inline-block;
-    margin: 1rem;
+    padding: 0.75rem;
+    line-height: 0.75rem;
     vertical-align: middle;
     cursor: pointer;
 }
@@ -1271,6 +1280,16 @@ svg{fill: var(--dark-green);}
 
     .modal{
         padding: 64px 40px 40px 40px;
+    }
+
+    .modal-content:not(.modal-content:has(.slides)){
+        place-self: center;
+        margin-top: 0;
+    }
+
+    .close-modal{
+        top: 0.75rem;
+        right: 0.75rem;
     }
 
     .mobile-version{
