@@ -12,7 +12,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
@@ -21,6 +20,7 @@
             mark, .coloured-bg{background-color: var(--theme) !important;}
             .coloured-border{border-color: var(--theme);}
             .pie-chart-in{background-color: var(--theme) !important;}
+            .themed-text{color: var(--theme-fg);}
         </style>
     </head>
 
@@ -29,380 +29,385 @@
             <header id="header"></header>
     
             <main>
-                <section class="section grid row-gap-40" id="overview">
-                    <div class="grid row-gap-16">
+                <section class="section grid row-reg" id="overview">
+                    <div class="grid row-xs">
                         <h1>Developing a smart documentation tool for early childhood educators</h1>
-                        <img src="../img/noto/mockup-1.jpg">
+                        <img src="../img/noto/mockup-1.jpg" class="m-wide">
                     </div>
                     
-                    <div class="grid tablet-columns-12 row-gap-40 rows-3" id="summary">
-                        <div class="content-flex tablet-span-12">
-                            <h2 class="text-medium">Overview</h2>
-                            <p>
-                                Neurodiversity is rising in today's classrooms, but fragmented support often prioritize administrative needs and put responsibility on already-overworked teachers to put together their own resources. 
-                                Through extensive research and conversations with educators, we saw a lack of accessible professional development, inefficient behavioural tracking, and heavy administrative load.
-                                <mark>We designed NOTO to accelerate documentation and provide practical training modules, with a professional development dashboard, classroom management tools, smart documentation, and an AI assistant.</mark>
-                            </p>
+                    <div class="grid t-col-12 row-reg rows-3" id="summary">
+                        <div class="content-flex t-span-12">
+                            <h2>Overview</h2>
+                            <p>Neurodiversity is rising in today's classrooms, but fragmented support often prioritize administrative needs and put responsibility on already-overworked teachers to put together their own resources. After extensive research and conversations with educators, we designed NOTO to accelerate communication and provide accessible and practical support through a professional development dashboard, classroom management tools, smart documentation, and an AI assistant.</p>
                             <p style="margin-top: 0.5rem;">NOTO was developed as part of Red Thread Innovations' Purposeful Innovation mentorship and came in second place!</p>
                         </div>
         
-                        <div class="content-flex tablet-span-12">
-                            <h3 class="text-medium">Team</h3>
+                        <div class="content-flex t-span-12">
+                            <h3 class="text-md">Team</h3>
                             <p>Sketchy Solutions includes <a href="https://www.linkedin.com/in/marriane-jane/" target="_blank" class="link">Marriane Angga</a>, Trang Do (me!), <a href="https://www.linkedin.com/in/jadeguerin/" target="_blank" class="link">Jade Guerin</a>, <a href="https://www.linkedin.com/in/hgallenlin/" target="_blank" class="link">Allen Lin</a>, and <a href="https://www.linkedin.com/in/haileypham510/" target="_blank" class="link">Hailey Pham</a>.</p>
                         </div>
 
-                        <div class="content-flex tablet-span-6">
-                            <h3 class="text-medium">Role</h3>
+                        <div class="content-flex t-span-6">
+                            <h3 class="text-md">Role</h3>
                             <p>UX/UI Researcher and Designer</p>
                         </div>
         
-                        <div class="content-flex tablet-span-6">
-                            <h3 class="text-medium">Duration</h3>
+                        <div class="content-flex t-span-6">
+                            <h3 class="text-md">Duration</h3>
                             <p>Jan &#8211 Apr 2025 (14 weeks)</p>
                         </div>
                     </div>
                 </section>
 
 
-                <section class="section extended grid row-gap-80" id="problem">
-                    <div class="extended-wrapper extended-content grid desktop-columns-12">
+                <section class="section extended grid row-md" id="problem">                    
+                    <div class="extended-wrapper extended-content grid d-col-12">
                         <div class="content-flex center-content">
-                            <h2>Problem space</h2>
-                            <h3>Neurodiversity is rising, but teacher support isn't.</h3>
-                            <p>
-                                Today's classrooms are more diverse than ever, but the support systems behind them have not kept up. 
-                                <mark>Educators are increasingly expected to meet the needs of students with a wide range of abilities and learning profiles, often without adequate training, support, or time.</mark> 
-                                While inclusive education is widely promoted, many educators are left to implement it alone—without consistent support staff, practical professional development, or actionable tools.
-                            </p>
+                            <h2 class="themed-text">Problem space</h2>
+                            <h3>Today's classrooms are more diverse than ever, but the support systems behind them have not kept up.</h3>
+                            <p>While inclusive education is widely promoted, many educators are left to implement it without consistent support staff, practical professional development, or actionable tools. The alarming rates of burnout and attrition reveal a system built on reactive workarounds instead of proactive infrastructure. Fragmented training, administrative overload, and inconsistent inclusion support leave teachers stretched thin and students underserved.</p>
                         </div>
                     </div>
-                    
+
                     <div class="extended-wrapper coloured-section coloured-bg">
-                        <div class="extended-content grid desktop-columns-2 row-gap-24 grid-h-center">
-                            <div class="content-flex">
-                                <h3>The human cost of system failure.</h3>
-
-                                <p>This problem is magnified by alarming rates of teacher burnout and attrition. These numbers reveal a system built on reactive workarounds instead of proactive infrastructure. <span class="font-medium">Fragmented training, administrative overload, and inconsistent inclusion support leave teachers stretched thin and students underserved.</span></p>
-
-                                <p>While educators face escalating demands, most tools are built for administrators, not teachers. They focus on performance metrics and compliance, not empathy, real-time support, or inclusion. Our opportunity lies in this disconnect. The solution does not have to be complex: <span class="font-medium">teachers do not need more platforms, they need support systems that understand their classroom realities.</span></p>
+                        <div class="extended-padding grid row-sm d-col-4 t-col-2">
+                            <div class="chart-h">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 158.4deg, var(--theme-bg) 158.4deg);">
+                                    <div class="pie-chart-in">
+                                        <p class="text-lg font-medium">44%</p>
+                                    </div> 
+                                </div>
+                                <p>
+                                    of K-12 teachers report frequent burnout.
+                                    <br><a href="https://www.devlinpeck.com/content/teacher-burnout-statistics" target="_blank" class="link font-light text-sm">(Devlin Peck, 2025)</a>
+                                </p>
                             </div>
 
-                            <div class="charts charts-4 inside-section grid row-gap-24 tablet-columns-2">
-                                <div class="chart-h desktop-span-2">
-                                    <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 158.4deg, var(--theme-bg) 158.4deg);">
-                                        <div class="pie-chart-in">
-                                            <p class="text-large type-space font-bold">44%</p>
-                                        </div> 
-                                    </div>
-                                    <p>
-                                        of K-12 teachers report frequent burnout.
-                                        <br><a href="https://www.devlinpeck.com/content/teacher-burnout-statistics" target="_blank" class="link font-light text-small">(Devlin Peck, 2025)</a>
-                                    </p>
+                            <div class="chart-h">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 273.6deg, var(--theme-bg) 273.6deg);">
+                                    <div class="pie-chart-in">
+                                        <p class="text-lg font-medium">76%</p>
+                                    </div> 
                                 </div>
+                                <p>
+                                    of teachers report emotional exhaustion.
+                                    <br><a href="https://crowncounseling.com/statistics/teacher-burnout/" target="_blank" class="link font-light text-sm">(Elka Jacobs-Pinson, 2025)</a>
+                                </p>
+                            </div>
 
-                                <div class="chart-h desktop-span-2">
-                                    <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 273.6deg, var(--theme-bg) 273.6deg);">
-                                        <div class="pie-chart-in">
-                                            <p class="text-large type-space font-bold">76%</p>
-                                        </div> 
-                                    </div>
-                                    <p>
-                                        of teachers report emotional exhaustion.
-                                        <br><a href="https://crowncounseling.com/statistics/teacher-burnout/" target="_blank" class="link font-light text-small">(Elka Jacobs-Pinson, 2025)</a>
-                                    </p>
+                            <div class="chart-h">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 198deg, var(--theme-bg) 198deg);">
+                                    <div class="pie-chart-in">
+                                        <p class="text-lg font-medium">55%</p>
+                                    </div> 
                                 </div>
+                                <p>
+                                    of teachers plan to leave the profession early.
+                                    <br><a href="https://nces.ed.gov/programs/coe/indicator/clr/%20public-school-teachers" target="_blank" class="link font-light text-sm">(NCES, 2022)</a>
+                                </p>
+                            </div>
 
-                                <div class="chart-h desktop-span-2">
-                                    <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 198deg, var(--theme-bg) 198deg);">
-                                        <div class="pie-chart-in">
-                                            <p class="text-large type-space font-bold">55%</p>
-                                        </div> 
-                                    </div>
-                                    <p>
-                                        of teachers plan to leave the profession earlier than expected.
-                                        <br><a href="https://nces.ed.gov/programs/coe/indicator/clr/%20public-school-teachers" target="_blank" class="link font-light text-small">(NCES, 2022)</a>
-                                    </p>
+                            <div class="chart-h">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 244.8deg, var(--theme-bg) 244.8deg);">
+                                    <div class="pie-chart-in">
+                                        <p class="text-lg font-medium">68%</p>
+                                    </div> 
                                 </div>
-
-                                <div class="chart-h desktop-span-2">
-                                    <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) 244.8deg, var(--theme-bg) 244.8deg);">
-                                        <div class="pie-chart-in">
-                                            <p class="text-large type-space font-bold">68%</p>
-                                        </div> 
-                                    </div>
-                                    <p>
-                                        cite workload as the main factor for stress.
-                                        <br><a href="https://www.edweek.org/teaching-learning/how-teachers-can-motivate-and-engage-neurodiverse-students/2024/10" target="_blank" class="link font-light text-small">(Heubeck, 2022)</a>
-                                    </p>
-                                </div>
+                                <p>
+                                    cite workload as the main factor for stress.
+                                    <br><a href="https://www.edweek.org/teaching-learning/how-teachers-can-motivate-and-engage-neurodiverse-students/2024/10" target="_blank" class="link font-light text-sm">(Heubeck, 2022)</a>
+                                </p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="extended-wrapper extended-content grid d-col-12">
+                        <div class="content-flex center-content">
+                            <h3>Teachers do not need more platforms—they need support systems that understand their classroom realities.</h3>
+                            <p>While educators face escalating demands, most tools are built for administrators, not teachers. They focus on performance metrics and compliance, not empathy, real-time support, or inclusion. Our opportunity lies in this disconnect.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-container" style="background-image: url(../img/noto/problem.png);">
+                        <div class="extended-wrapper quote-overlay">
+                            <div class="extended-content grid d-col-12">
+                                <blockquote class="center-content glass dark-bg">“What would real support feel like on a Tuesday morning, when a nonverbal student is having a meltdown, and the teacher has no aide, no training, and nowhere to turn but her own instincts?”</blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="section grid row-lg" id="solution">
+                    <div class="grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h2 class="themed-text">Meet NOTO</h2>
+                            <h3>An AI-powered support system designed for the day-to-day reality of early childhood educators.</h3>
+                            <p>Designed with early childhood educators, NOTO offers teachers real-time support, inclusive learning strategies, and streamlined administrative tools. Whether tracking student growth, navigating Individual Education Plans, or exploring bite-sized professional development content, NOTO empowers educators to do what they do best—teach, connect, and care.</p>
+                        </div>
+
+                        <img src="../img/noto/mockup-2.jpg" class="d-span-12 m-wide">
+                    </div>
+
+                    <div class="grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h3>The documentation tool organizes brain dumps into insights—teachers can speak, snap, or type, and NOTO sorts it all.</h3>
+                            <p>NOTO's documentation feature accelerates notetaking and reports, allowing educators to reclaim lost time and reduce redundancy. Quick voice recordings and rough notes are distilled into structured outputs for report cards, logs, or communication with caregivers.</p>
+                        </div>
+
+                        <video width="100%" height="auto" controls autoplay loop muted class="d-span-12 m-wide">
+                            <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </section>
 
                 
-                <section class="section extended grid row-gap-120" id="research">
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
+                <section class="section extended grid row-xl" id="research">
+                    <div class="extended-wrapper grid row-reg">
+                        <div class="extended-content grid d-col-12">
                             <div class="content-flex center-content">
-                                <h2>Research</h2>
+                                <h2 class="themed-text">Research</h2>
                                 <h3>Looking at trends in education technology and inclusivity in the classroom, we saw a gap in support for neurodivergence for both students and educators.</h3>
                                 <p>
                                     The growing emphasis on mental well-being and the importance of AI literacy highlight the need for supportive, adaptive learning environments. 
-                                    We saw a <mark>strong desire for personalization and flexibility in education, alongside increasing support for neurodivergent students—all hindered by the digital divide and paywalls.</mark> 
-                                    Fostering parent-teacher collaboration and providing free, easy-to-access content for educators are vital for ensuring effective support for students and educators. 
+                                    The strong desire for personalization and flexibility in education and increasing support for neurodivergent students is hindered by the digital divide and paywalls. 
                                 </p>
                             </div>
                         </div>
 
-                        <img src="../img/noto/affinity-mapping.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/noto/affinity-mapping.png" class="wide t-wide m-wide">
                     </div>
-                    
-                    <div class="extended-wrapper extended-content grid row-gap-120">
-                        <div class="grid desktop-columns-12 row-gap-40">
-                            <div class="content-flex center-content">
-                                <h3>We noted hypotheses based on our deep dive into online forums, then verified them through real-life conversations with educators.</h3>
 
-                                <p>Online stories and discussions showed us how under-supported educators are, especially with neurodivergent students. The interviews uncovered two core realities: <mark>teachers don't want to pay out-of-pocket for one more platform, and any tool we build must reduce—not increase—their workload.</mark></p>
-                            </div>
-
-                            <div class="desktop-span-12 grid desktop-columns-3 tablet-columns-2 row-gap-24">
-                                <div class="textbox content-flex coloured-bg">
-                                    <h4>Inclusion efforts are well-intentioned, but unsupported.</h4>
-                                    <p>Teachers feel unprepared to support neurodiverse learners without on-the-ground guidance. Existing platforms do not have integrated frameworks for adaptive learning, especially in neurodiverse classrooms.</p>
-                                </div>
-
-                                <div class="textbox content-flex coloured-bg">
-                                    <h4>Professional development is impractical and out of sync.</h4>
-                                    <p>61% of teachers say PD lacks real-world relevance and is too time-consuming. PD tools available in the market are too lengthy, costly, and lack accessibility during regular working hours.</p>
-                                </div>
-
-                                <div class="textbox content-flex coloured-bg">
-                                    <h4>Administrative demands outweigh teaching.</h4>
-                                    <p>Educators face challenges in managing paper logs and non-integrated digital apps, causing inefficiencies. Documentation and planning steal hours, leaving less time for direct support and reflection.</p>
-                                </div>
-                            </div>
+                    <div class="extended-wrapper extended-content grid t-col-2 row-reg grid-h-center">
+                        <div class="content-flex d-pad-right">
+                            <h3>Online stories and real-life conversations revealed that educators find existing tools too rigid, too theoretical, or built with administrators rather than teachers in mind.</h3>
                         </div>
 
-                        <div class="grid desktop-columns-12 row-gap-24">
-                            <h3 class="center-content"> Interview findings validated the need for a buyer-user persona split. Our users are the educators, but our buyers are often the administrator or the school board.</h3>
+                        <div class="grid row-xs">
+                            <details class="coloured-bg" name="painpoints">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Impractical Traditional Training
+                                </summary>
+                                <p class="content">Traditional professional development often feels irrelevant or inaccessible during the workday. During our primary research, over 60% of educators said their professional development felt disconnected from their classroom reality and was often completed “just to tick a box.”</p>
+                            </details>
 
-                            <div class="desktop-span-12 slides mobile-wide-img">
-                                <img src="../img/noto/archetype-1.png"  class="slide fade" style="padding: 0 3rem;">
-                                <img src="../img/noto/archetype-2.png"  class="slide fade" style="padding: 0 3rem;">
+                            <details class="coloured-bg" name="painpoints">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Fragmented Management Systems
+                                </summary>
+                                <p class="content">Teachers struggle to keep track of how each student is doing in fast-paced, ever-changing classrooms. Existing systems are fragmented, slow to update, or require too much clicking and cognitive load to be useful in the moment. Teachers need visual tools to quickly spot patterns and where support is most needed without digging through spreadsheets and notes.</p>
+                            </details>
 
-                                <a class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></a>
-                                <a class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></a>
-                            </div>
+                            <details class="coloured-bg" name="painpoints">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Inconsistent Documentation
+                                </summary>
+                                <p class="content">Documentation is time-consuming, inconsistent, and often inaccessible across platforms—leading to duplicated work and missed context. During our primary research, 65% of teachers said their current documentation system failed them—especially when tools were hard to use or learn.</p>
+                            </details>
+
+                            <details class="coloured-bg" name="painpoints">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Lacking Immediate Support
+                                </summary>
+                                <p class="content">In moments of stress or crisis, teachers often lack immediate support and practical strategies. They want a tool that could “think with them” during real classroom scenarios.</p>
+                            </details>
                         </div>
+                    </div>
 
-                        <div class="grid desktop-columns-12 tablet-columns-2 row-gap-24">                                
-                            <h3 class="center-content tablet-span-2">From research insights, we uncovered core value pillars and translated them into NOTO's core concept.</h3>
-
-                            <div class="desktop-span-4 textbox content-flex coloured-bg">
-                                <h4>Teacher-Friendly Digital Assistant</h4>
-                                <p>Teachers need real-time, hands-free support to manage growing classroom complexity. They need support for documentation, task management, and real-time guidance.</p>
+                    <div class="extended-wrapper extended-content grid d-col-12">
+                        <div class="d-span-12 grid row-sm t-col-3">                                    
+                            <div class="thumbnails switch-thumbnail">
+                                <div class="thumbnail switch-img" onclick="currentSlide(1)"><img src="../img/noto/educator.png"></div>
+                                <div class="thumbnail switch-img" onclick="currentSlide(2)"><img src="../img/noto/administrator.png"></div>
                             </div>
+                            
+                            <div class="t-span-2 slides">
+                                <div class="slide fade">
+                                    <div class="grid row-sm">
+                                        <h4 class="text-lg">For Educators, our users, to effectively support students and navigate classroom challenges, they need...</h4>
 
-                            <div class="desktop-span-4 textbox content-flex coloured-bg">
-                                <h4>Scenario-Driven Professional Development</h4>
-                                <p>Current professional development is disconnected from daily practice. Teachers need short, practical PD tied to real situations.</p>
-                            </div>
+                                        <div class="grid-sm t-col-2 row-xs" style="text-align: center;">
+                                            <p class="textbox coloured-bg">Tools with low learning curve, high ease of use, and reduced workload</p>
+                                            <p class="textbox coloured-bg">Seamless integration into the classroom and daily routine</p>
+                                            <p class="textbox coloured-bg">Intuitive documentation of students' progess with actionable insights</p>
+                                            <p class="textbox coloured-bg">Accessible and tailored mental health support</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="desktop-span-4 textbox content-flex coloured-bg">
-                                <h4>AI-Powered Behavior Tracking</h4>
-                                <p>Teachers lack personalized and accessible tools to support inclusion. Predictive tools will help spot and respond to trends with resources to support neurodivergent learners.</p>
-                            </div>
+                                <div class="slide fade">
+                                    <div class="grid row-sm">
+                                        <h4 class="text-lg">For Administrators, our buyers, to ensure efficiency, scalability, and cost-effectiveness, tools need to be..</h4>
 
-                            <div class="desktop-span-4 textbox content-flex coloured-bg">
-                                <h4>Centralized Voice & Visual Logging</h4>
-                                <p>Teachers need smart, streamlined documentation with voice-to-text, image capture, and progress tracking—organized in one intuitive system.</p>
-                            </div>
-
-                            <div class="desktop-span-4 textbox content-flex coloured-bg">
-                                <h4>Wellness-Embedded UX</h4>
-                                <p>Burnout is real and rising. Teachers need a compassionate design philosophy that provides micro-reflections, reduces cognitive load, and respects teachers' bandwidth and emotional energy.</p>
+                                        <div class="grid-sm t-col-2 row-xs" style="text-align: center;">
+                                            <p class="textbox coloured-bg">Research-backed with case studies or success stories</p>
+                                            <p class="textbox coloured-bg">Compliant with district mandates and funding programs</p>
+                                            <p class="textbox coloured-bg">Integrated with existing district-wide systems</p>
+                                            <p class="textbox coloured-bg">Minimal training required to ensure smooth adoption</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
 
-                <section class="section extended extended-wrapper grid row-gap-120" id="design">
-                    <div class="grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h2>Design</h2>
-                                <h3>The features are divided into a web platform and a mobile companion app based on teachers' needs.</h3>
-                                <p>Our initial idea for a professional development platform does not address the need for accessible in-the-moment communication and learning. We decided to outline 2 platforms: <mark>the desktop platform focuses more on administrative actions, while the mobile app focuses on providing real-time support.</mark> </p>
-                            </div>
+                <section class="section extended extended-wrapper grid row-xl" id="design">
+                    <div class="extended-content grid t-col-2 row-reg grid-h-center">
+                        <div class="content-flex d-pad-right">
+                            <h2 class="themed-text">Design</h2>
+                            <h3>We turned design opportunities into NOTO's core concepts.</h3>
+                            <p>Teachers need real-time, hands-free support, smart behaviour logging, reinforced by practical learning and wellness features.</p>
                         </div>
+                        
+                        <div class="grid row-xs">
+                            <details class="coloured-bg" name="features">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Professional Development
+                                </summary>
+                                <p class="content">A visual dashboard of bite-sized, relevant, and certification-aligned modules that educators can complete during school hours.</p>
+                            </details>
 
-                        <img src="../img/noto/information-architecture.png" class="wide coloured-bg tablet-wide-img mobile-wide-img">
-                    </div>
+                            <details class="coloured-bg" name="features">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Classroom Management 
+                                </summary>
+                                <p class="content">Real-time classroom tool with data visualization that pulls from student profiles and behaviour logs, offering an overview at a glance.</p>
+                            </details>
 
-                    <div class="extended-content grid row-gap-120">
-                        <div class="grid desktop-columns-12 tablet-columns-2 row-gap-24">
-                            <h3 class="center-content tablet-span-2">Coming into the design and testing stage, we focused on refining the 4 core capabilities.</h3>
+                            <details class="coloured-bg" name="features">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Smart Documentation
+                                </summary>
+                                <p class="content">On-the-go raw inputs are distilled into structured outputs for report cards, logs, or communication with caregivers.</p>
+                            </details>
 
-                            <div class="desktop-span-6 textbox content-flex coloured-bg">
-                                <h4>Professional Development Dashboard</h4>
-                                <p>A visual dashboard of bite-sized, relevant, and certification-aligned modules, with tangible progress indicators, that educators can complete during school hours.</p>
-                            </div>
-
-                            <div class="desktop-span-6 textbox content-flex coloured-bg">
-                                <h4>Classroom Management</h4>
-                                <p>Real-time classroom tool designed with data visualization that pulls from student profiles and classroom behaviour logs, offering an overview at a glance.</p>
-                            </div>
-
-                            <div class="desktop-span-6 textbox content-flex coloured-bg">
-                                <h4>Smart, Streamlined Documentation</h4>
-                                <p>NOTO allows educators to voice-record or jot down notes on the go. Raw inputs are then distilled into structured outputs for report cards, logs, or communication with caregivers.</p>
-                            </div>
-
-                            <div class="desktop-span-6 textbox content-flex coloured-bg">
-                                <h4>AI Assistant</h4>
-                                <p>NOTO AI provides just-in-time assistance—suggesting classroom strategies, helping with documentation, or even flagging helpful PD modules in a hands-free format.</p>
-                            </div>
-                        </div>
-
-                        <div class="grid desktop-columns-12 row-gap-40">
-                            <h3 class="center-content">I led the design and testing of the smart documentation feature for the mobile platform. Since this feature needed to be easily accessible and to allow messy inputs, we thought a widget would be the most suitable.</h3>
-
-                            <img src="../img/noto/low-fidelity.png" class="desktop-span-12">
-                        </div>
-
-                        <div class="grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h3>The widget idea was a step in the right direction, but we missed the mark on clarity and use case.</h3>
-                                <p><mark>Our first big mistake was designing this feature for phones</mark>, since it may not be appropriate for teachers to take out their phones in the middle of class. Many teachers have a tablet as they teach, so we should have developed this companion app and widget for tablets. <mark>Our second mistake was trying to cram many features and information into the widget.</mark> Test participants mistook the purpose of icons and didn't know what features were supposed to be represented.</p>
-                            </div>
-                        </div>
-
-                        <div class="grid desktop-columns-12 row-gap-24">
-                            <div class="center-content content-flex">
-                                <h3>The smart documentation was rebuilt as a brain-dump tool and its interface reworked for tablet-first compatibility.</h3>
-                                <p>
-                                    A more structured input form improves clarity but slows teachers down. 
-                                    Our team had the idea to <mark>use AI to distill messy inputs into necessary fields, allowing teachers to forego structure when they need to act fast.</mark> 
-                                    These notes and reports can be revisited and updated at a later time. 
-                                    We left only the most necessary inputs in the form. 
-                                </p>
-                            </div>
-
-                            <img src="../img/noto/documentation-1.png" class="desktop-span-12 tablet-wide-img mobile-wide-img">
-                        </div>
-
-                        <div class="grid desktop-columns-12 row-gap-24">
-                            <h3 class="center-content">The widget was redesigned to only show the most important features, with proper labels to avoid confusion.</h3>
-
-                            <img src="../img/noto/documentation-2.png" class="desktop-span-12 tablet-wide-img mobile-wide-img">
+                            <details class="coloured-bg" name="features">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    AI Assistant
+                                </summary>
+                                <p class="content">NOTO AI suggests classroom strategies, helps with documentation, or flags helpful professional development modules in a hands-free format.</p>
+                            </details>
                         </div>
                     </div>
-
-                    <div class="grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <h3 class="center-content">As our prototypes were coming together, our visual designers Allen and Marriane started adapting atoms from Tailwind component library to fit our visual direction and ensure consistency and efficiency when we built the custom elements we needed.</h3>
+                    
+                        
+                    <div class="grid row-reg">
+                        <div class="extended-content grid d-col-12">
+                            <div class="center-content content-flex">
+                                <h3>To address the need for accessible in-the-moment communication and learning, we outlined a desktop platform for on administrative actions and a mobile app providing real-time support.</h3>
+                            </div>
                         </div>
 
-                        <img src="../img/noto/design-system.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/noto/information-architecture.png" class="wide coloured-bg t-wide m-wide">
+                    </div>
 
-                        <div class="extended-content grid desktop-columns-12">
+
+                    <div class="grid row-reg">
+                        <div class="extended-content grid d-col-12">
+                            <h3 class="center-content">I led the design and testing of the smart documentation feature for the mobile platform. Since this feature needs to be easily accessible, we thought a widget would be the most suitable.</h3>
+                        </div>
+
+                        <img src="../img/noto/low-fidelity.png" class="wide t-wide m-wide">
+                    </div>
+
+
+                    <div class="extended-content grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h3>The widget idea was a step in the right direction, but we missed the mark on clarity and use case.</h3>
+                            <p>Our first prototype tried to cram many features and information into the widget. Test participants mistook the purpose of icons and didn't know what features were supposed to be represented. We redesigned it to only show the most important features, with proper labels to avoid confusion.</p>
+                        </div>
+
+                        <img src="../img/noto/documentation-2.png" class="d-span-12 t-wide m-wide">
+                    </div>
+
+
+                    <div class="extended-content grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h3>The smart documentation was rebuilt as a brain-dump tool and reworked for tablet-first compatibility.</h3>
+                            <p>Many teachers have a tablet as they teach, so developing this app for tablets is more appropriate than for phones. Our team had the idea to use AI to distill messy inputs into necessary fields, allowing teachers to forego structure when they need to act fast.</p>
+                        </div>
+
+                        <img src="../img/noto/documentation-1.png" class="d-span-12 t-wide m-wide">
+                    </div>
+
+
+                    <div class="grid row-reg">
+                        <div class="extended-content grid d-col-12">
+                            <h3 class="center-content">As our prototypes were coming together, we adapted the Tailwind component library to fit our visual direction and ensure consistency and efficiency when we built the custom elements we needed.</h3>
+                        </div>
+
+                        <img src="../img/noto/design-system.png" class="wide t-wide m-wide">
+
+                        <div class="extended-content grid d-col-12">
                             <p class="center-content">
                                 With ready-made components from Tailwind and our customized design system, I built out the remaining UI elements for the tablet platform. 
                                 As Marriane moved on to designing our pitch deck and proposal, I worked with Allen, who was in charge of the desktop platform, to ensure consistency and accessibility. 
-                                <mark>Despite minor styling and spacing inconsistencies that we had to overlook to complete the prototypes on time, both platforms were visually and functionally cohesive.</mark>
                             </p>
                         </div>
 
-                        <img src="../img/noto/high-fidelity.png" class="wide tablet-wide-img mobile-wide-img">
-                    </div>
-                </section>
-
-
-                <section class="section extended grid row-gap-120" id="solution">
-                    <div class="extended-wrapper extended-content grid desktop-columns-12 row-gap-40">
-                        <div class="center-content content-flex">
-                            <h2>Solution</h2>
-                            <h3>Meet NOTO: An AI-powered support system designed for the day-to-day reality of early childhood educators—simplifying classroom management, accelerating documentation, and delivering on-the-go professional development.</h3>
-                            <p>
-                                Designed with early childhood educators, <mark>NOTO meets teachers where they are—offering real-time support, inclusive learning strategies, and streamlined administrative tools.</mark>
-                                Whether tracking student growth, navigating Individual Education Plans, or exploring bite-sized professional development content, NOTO empowers educators to do what they do best—teach, connect, and care.
-                            </p>
-                        </div>
-
-                        <img src="../img/noto/mockup-2.jpg" class="desktop-span-12">
+                        <img src="../img/noto/high-fidelity.png" class="wide t-wide m-wide">
                     </div>
 
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h3>The documentation tool organizes brain dumps into insights—teachers can speak, snap, or type, and NOTO sorts it all.</h3>
-                                <p>
-                                    NOTO's documentation feature accelerates notetaking and reports, allowing educators to reclaim lost time and reduce redundancy. 
-                                    <mark>Teachers can quickly voice-record or jot down notes. 
-                                    These rough notes are then distilled into structured outputs</mark> for report cards, logs, or communication with caregivers.
-                                </p>
+                    <div class="extended-content grid d-col-12 row-reg">
+                        <h3 class="center-content">The next step for NOTO is live testing and observation in classrooms to validate what success looks like for educators.</h3>
+                        
+                        <div class="center-content grid-sm t-col-2 row-xs">
+                            <div class="textbox content-flex coloured-bg">
+                                <h4>Adoption</h4>
+                                <p>Number of active users per school, adoption rate, and admin support for integration will show scalability, institutional buy-in, and sustainability.</p>
+                            </div>
+
+                            <div class="textbox content-flex coloured-bg">
+                                <h4>Engagement</h4>
+                                <p>Usage and frequency of core features will show whether NOTO is intuitive, timely, and integrated into natural classroom flow.</p>
+                            </div>
+
+                            <div class="textbox content-flex coloured-bg">
+                                <h4>Impact</h4>
+                                <p>Time saved on admin tasks and teacher-reported reduction in overwhelm or decision fatigue will show how workload and stress are reduced.</p>
+                            </div>
+
+                            <div class="textbox content-flex coloured-bg">
+                                <h4>Well-being</h4>
+                                <p>Data on voluntary use of Wellness Center, teacher-reported benefit from self-reflection tools, and uptake of peer mentorship.</p>
                             </div>
                         </div>
-
-                        <div class="coloured-section coloured-bg">
-                            <video width="100%" height="auto" controls autoplay loop muted class="extended-content">
-                                <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="extended-wrapper extended-content grid desktop-columns-12 tablet-columns-2 row-gap-24">
-                        <h3 class="center-content tablet-span-2">The next step for NOTO is live testing and observation in classrooms to validate what success looks like for educators.</h3>
-
-                        <div class="desktop-span-6 textbox content-flex coloured-bg">
-                            <h4>Engagement</h4>
-                            <p>We will measure usage of core features (PD dashboard, classroom tools) and frequency of AI interactions during non-crisis and in-the-moment scenarios to get a sense of whether NOTO is intuitive, timely, and integrated into natural classroom flow.</p>
-                        </div>
-
-                        <div class="desktop-span-6 textbox content-flex coloured-bg">
-                            <h4>Impact</h4>
-                            <p>Time saved on admin tasks (e.g. report cards, behaviour logs) and teacher-reported reduction in overwhelm or decision fatigue will tell us how NOTO is reducing workload and stress.
-                            </p>
-                        </div>
-
-                        <div class="desktop-span-6 textbox content-flex coloured-bg">
-                            <h4>Adoption</h4>
-                            <p>We will use the number of active users per school, school/district adoption rate, and admin support for integration to gauge scalability, institutional buy-in, and potential for long-term sustainability.
-                            </p>
-                        </div>
-
-                        <div class="desktop-span-6 textbox content-flex coloured-bg">
-                            <h4>Well-being</h4>
-                            <p>We will gather data on voluntary use of Wellness Center, teacher-reported benefit from self-reflection tools, and uptake of peer mentorship to ensure emotional tools are seen as helpful and support trust in private, safe spaces.</p>
-                        </div>
                     </div>
                 </section>
 
 
-                <section class="section grid desktop-columns-12 row-gap-80" id="reflection">
+                <section class="section grid d-col-12 row-md" id="reflection">
                     <div class="center-content content-flex">
-                        <h2>Takeaways</h2>
+                        <h2 class="themed-text">Reflection</h2>
                         <h3>Using design system to increase efficiency</h3>
-                        <p>Going into this project, I had a working understanding of components, styles, and variables in Figma, but I didn't have enough experience to leverage them efficiently. <mark>I learned from my teammates how to adapt an existing component library and work with variables to design faster and maintain cohesion.</mark></p>
+                        <p>Going into this project, I had a working understanding of components, styles, and variables in Figma, but I didn't have enough experience to leverage them efficiently. I learned from my teammates how to adapt an existing component library and work with variables to design faster and maintain cohesion.</p>
                     </div>
                     <div class="center-content content-flex">
                         <h3>Collaboration with differing strengths and work flows</h3>
-                        <p>A crucial reason behind our success in this 4-month project was our trust in each other. Our work flows and opinions didn't always align, and we had as many moments of disagreement or frustration as cohesive collaboration, but we had a good idea of and trust in each other's abilities. <mark>We had a good mix of research, design, and presentation strengths, so we could take a step back and focus on our tasks, instead of worrying about every part of the project.</mark> I'm grateful to have teammates who would push me out of my comfort zone but also would readily support me when needed.</p>
+                        <p>A crucial reason behind our success in this 4-month project was our trust in each other. Our work flows and opinions didn't always align, but we had a good idea of and trust in each other's abilities. We had a good mix of research, design, and presentation strengths, so we could take a step back and focus on our tasks, instead of worrying about every part of the project.</p>
                     </div>
-                    <img src="../img/noto/mockup-3.jpg" class="desktop-span-12 mobile-wide-img">
+                    <img src="../img/noto/mockup-3.jpg" class="d-span-12 m-wide">
                 </section>
 
 
                 <nav class="page-nav-container">
-                    <ul class="page-nav" id="page-nav">
+                    <ul class="page-nav glass" id="page-nav">
                         <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
                         <li><a href="#problem" class="nav-link">Problem</a></li>
+                        <li><a href="#solution" class="nav-link">Solution</a></li>
                         <li><a href="#research" class="nav-link">Research</a></li>
                         <li><a href="#design" class="nav-link">Design</a></li>
-                        <li><a href="#solution" class="nav-link">Solution</a></li>
-                        <li><a href="#reflection" class="nav-link">Takeaways</a></li>
+                        <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
 

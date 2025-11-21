@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,12 +12,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
-
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
@@ -33,6 +28,9 @@
             .coloured-bg-2{background-color: var(--theme-grey-1)}
             .coloured-bg-3{background-color: var(--theme-2)}
             .pie-chart-in{background-color: var(--theme-grey-1) !important;}
+            .themed-text{color: #9c6a3d;}
+
+            #mascot{position: absolute; width: auto; height: 15rem; top: -15.5rem; right: 0;}
         </style>
     </head>
 
@@ -41,175 +39,220 @@
             <header id="header"></header>
     
             <main>
-                <section class="section grid row-gap-40" id="overview">
-                    <div class="grid row-gap-16">
-                        <h1>Meet EatWell: A grocery management tool to reduce stress in meal activities.</h1>
-                        <img src="../img/eatwell/mockup-1.png">
+                <section class="section grid row-reg" id="overview">
+                    <div class="grid row-xs">
+                        <h1>Designing a grocery management tool to reduce stress in meal activities.</h1>
+                        <img src="../img/eatwell/mockup-1.png" class="m-wide">
                     </div>
                     
-                    <div class="grid tablet-columns-12 row-gap-40" id="summary">
-                        <div class="content-flex tablet-span-12">
-                            <h2 class="text-medium">Overview</h2>
+                    <div class="grid t-col-12 row-reg" id="summary">
+                        <div class="content-flex t-span-12">
+                            <h2>Overview</h2>
                             <p>It can be difficult for students to keep track of their groceries and turn their ingredients and leftovers into enjoyable meals amidst busy schedules. <mark>From research to design and testing, I explored college students' experience around meals and diets and developed EatWell, a digital tool to minimize obstacles to having healthy meals regularly.</mark> With EatWell, users easily manage their kitchen, keep track of estimated spoilage, plan grocery trips, and find recipes suitable for their dietary preferences, cooking ability, and available resources.</p>
                         </div>
         
-                        <div class="content-flex tablet-span-6">
-                            <h3 class="text-medium">Tools</h3>
+                        <div class="content-flex t-span-6">
+                            <h3 class="text-md">Tools</h3>
                             <p>Figma, Sketchbook</p>
                         </div>
 
-                        <div class="content-flex tablet-span-6">
-                            <h3 class="text-medium">Outcome</h3>
+                        <div class="content-flex t-span-6">
+                            <h3 class="text-md">Outcome</h3>
                             <p>An MVP streamlining grocery shopping, ingredients management, and cooking.</p>
                         </div>
                     </div>
                 </section>
 
 
-                <section class="section extended extended-wrapper grid row-gap-80" id="problem">
-                    <div class="extended-content grid desktop-columns-12">
+                <section class="section extended extended-wrapper grid row-md" id="problem">
+                    <div class="extended-content grid d-col-12">
                         <div class="center-content content-flex">
-                            <h2>Problem space</h2>
+                            <h2 class="themed-text">Problem space</h2>
                             <h3>How might we help young adult postsecondary students make more informed meal decisions with consideration for their needs, preferences, and limitations?</h3>
-                            <p>Young adults have higher rates of irregularity in their routine compared to other age groups, as they're in a transitional period where they're handling new environments, dynamics, and tasks. Many are moving away from home, commencing postsecondary education, and finding work. Increasing workload leads to delayed bedtime, shorter sleep duration, and irregular meal times.<mark> Under the stress of time and the high workload, many students tend to skip meals to make time or eat more unhealthily to deal with the stressful situations.</mark></p>
+                            <p>Because they're in a transitional period where they're handling new environments, dynamics, and tasks, young adults have higher rates of irregularity in their routine compared to other age groups. Coupled with increasing workload, this leads to delayed bedtime, shorter sleep duration, and irregular meal times. <mark>Under the stress of time and busy schedules, many students tend to skip meals to make time or eat unhealthily more often.</mark></p>
                         </div>          
                     </div>
 
-
-                    <div class="charts charts-3 grid desktop-columns-3" style="background-color: var(--theme-grey-1);">
+                    <div class="charts charts-3 grid d-col-3" style="background-color: var(--theme-grey-1);">
                         <div class="chart-h">
                             <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 140.4deg, var(--theme-grey-2) 140.4deg);">
                                 <div class="pie-chart-in">
-                                    <p class="text-large type-space font-bold">39%</p>
+                                    <p class="text-lg font-medium">39%</p>
                                 </div> 
                             </div>
                             <p>
                                 of students at 5 Canadian campuses were going without nutritious food.
-                                <br><a href="https://www.thestar.com/news/gta/nearly-40-per-cent-of-canadian-post-secondary-students-experience-food-insecurity-study/article_64c0cc3e-86ce-539a-a6f9-8326fd73effd.html" class="link font-light text-small">(Beeston, 2016)</a>
+                                <br><a href="https://www.thestar.com/news/gta/nearly-40-per-cent-of-canadian-post-secondary-students-experience-food-insecurity-study/article_64c0cc3e-86ce-539a-a6f9-8326fd73effd.html" class="link font-light text-sm">(Beeston, 2016)</a>
                             </p>
                         </div>
 
                         <div class="chart-h">
                             <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 159.12deg, var(--theme-grey-2) 159.12deg);">
                                 <div class="pie-chart-in">
-                                    <p class="text-large type-space font-bold">44.2%</p>
+                                    <p class="text-lg font-medium">44.2%</p>
                                 </div> 
                             </div>
                             <p>
                                 of students rarely or never eat breakfast, 3.5% skip lunch, and 2.3% skip dinner.
-                                <br><a href="https://www.intelligent.com/nearly-1-in-3-college-students-say-they-have-to-skip-meals-every-day-due-to-cost/" class="link font-light text-small">(Intelligent, 2021)</a>
+                                <br><a href="https://www.intelligent.com/nearly-1-in-3-college-students-say-they-have-to-skip-meals-every-day-due-to-cost/" class="link font-light text-sm">(Intelligent, 2021)</a>
                             </p>
                         </div>
 
                         <div class="chart-h">
                             <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 105.48deg, var(--theme-grey-2) 105.48deg);">
                                 <div class="pie-chart-in">
-                                    <p class="text-large type-space font-bold">29.3%</p>
+                                    <p class="text-lg font-medium">29.3%</p>
                                 </div> 
                             </div>
                             <p>
                                 of U.S. students skip meals every day, 38.5% skip once a week, and 13.9% skip once per month.
-                                <br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5133750/" class="link font-light text-small">(Pendergast et al., 2016)</a>
+                                <br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5133750/" class="link font-light text-sm">(Pendergast et al., 2016)</a>
                             </p>
                         </div>
                     </div>
-            
-                    <div class="extended-content grid desktop-columns-12 row-gap-40">
+                </section>
+
+
+                <section class="section extended grid row-lg" id="solution">
+                    <div class="extended-wrapper extended-content grid t-col-2 row-reg grid-h-center">
+                        <div class="content-flex d-pad-right">
+                            <h2 class="themed-text">Meet EatWell</h2>
+                            <h3>EatWell brings grocery planning, managing ingredients and leftovers, and cooking into 1 platform, to...</h3>
+                            <p>While it's difficult to solve the core problems of time and motivation, the EatWell app takes current tools and improve the ease of use to alleviate some pain points and reduce the time usually required for meal activities.</p>
+                        </div>
+                        
+                        <div class="grid row-xs">
+                            <details class="coloured-bg" name="benefits">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Reduce stress and mental workload
+                                </summary>
+                                <p class="content">EatWell keeps track of expiry dates and estimated spoilage, helping students reduce food waste and alerting them when their groceries are running low.</p>
+                            </details>
+
+                            <details class="coloured-bg" name="benefits">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Build confidence
+                                </summary>
+                                <p class="content">EatWell makes it easier for students to grocery shop and find recipes that suit their time, living situation, and skill level, helping students who live on their own for the first time familiarize themselves with grocery shopping and cooking independently.</p>
+                            </details>
+
+                            <details class="coloured-bg" name="benefits">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Provide high flexibility, low commitment
+                                </summary>
+                                <p class="content">This project aims to promote sustainable actions instead of only consistent activities. Omitting the traditional streak system would reduce stress for users.</p>
+                            </details>
+
+                            <details class="coloured-bg" name="benefits">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Promote informed and sustainable actions
+                                </summary>
+                                <p class="content">Students have more resources at their fingertips to find information that suits their situation and better understand how their choices would impact their well-being.</p>
+                            </details>
+                        </div>
+                    </div>
+                    
+
+                    <!-- <div class="external image">
+                        <div class="horizontal-scroll-wrapper" style="background-color: #FAC27E;">
+                                <img src="../img/eatwell/wireframe-2.png" class="horizontal-scroll">
+                        </div>
+                    </div> -->
+
+                    <div class="overflow-block">
+                        <img src="../img/eatwell/wireframe-2.png" class="wide" style="height: 700px;">
+                    </div>
+                </section>
+
+
+                <section class="section extended extended-wrapper grid row-md" id="research">
+                    <div class="extended-content grid d-col-12">
                         <div class="center-content content-flex">
-                            <h3>The objectives</h3>
-                            <p>This project will focus on young adult (ages 18 to 30) postsecondary students in Ontario who want to improve their diet and/or have an easier time completing meal activities such as managing groceries, meal planning, cooking, etc. This project aims to provide the following benefits:</p>
+                            <h2 class="themed-text">Research</h2>
+                            <h3>Findings from online survey reveal that lack of nutrition knowledge isn't why many postsecondary students eat unhealthily, but rather the lack of time and high stress levels.</h3>
+                            <p>I wanted to assess how often nutrition is factored into meal decisions and whether lack of understanding is a barrier. While survey results didn't discount lack of nutrition knowledge as a barrier, they identified time, cost, stress, and availability of resources as the more common and impactful barriers to healthy eating.</p>
+                        </div>
+                    </div>
+
+                    <div class="charts charts-3 grid d-col-3" style="background-color: var(--theme-grey-1);">
+                        <div class="chart-h">
+                            <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 302.4deg, var(--theme-grey-2) 302.4deg);">
+                                <div class="pie-chart-in">
+                                    <p class="text-lg font-medium">84%</p>
+                                </div> 
+                            </div>
+                            <p>frequently consider the cost when buying food, drinks, and groceries.</p>
                         </div>
 
-                        <div class="desktop-span-12 grid desktop-columns-3 row-gap-24">
-                            <div class="content-flex textbox coloured-bg">
-                                <h4>Reduce stress in grocery shopping and cooking</h4>
-                                <p>While it's difficult to solve the core problems of time and motivation, making current tools more convenient to use can alleviate some of the users' pain points and reduce the time usually required for meal activities.</p>
+                        <div class="chart-h">
+                            <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 201.6deg, var(--theme-grey-2) 201.6deg);">
+                                <div class="pie-chart-in">
+                                    <p class="text-lg font-medium">56%</p>
+                                </div> 
                             </div>
-                            <div class="content-flex textbox coloured-bg">
-                                <h4>Provide high flexibility, with low commitment</h4>
-                                <p>This project aims to promote sustainable actions instead of only consistent activities. By omitting the traditional streak system, additional stress to users will be avoided.</p>
+                            <p>often factor in the time available, while the remaining occasionally consider it.</p>
+                        </div>
+
+                        <div class="chart-h">
+                            <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 244.8deg, var(--theme-grey-2) 244.8deg);">
+                                <div class="pie-chart-in">
+                                    <p class="text-lg font-medium">68%</p>
+                                </div> 
                             </div>
-                            <div class="content-flex textbox coloured-bg">
-                                <h4>Promote and reinforce informed and sustainable actions</h4>
-                                <p>Students have more resources at their fingertips to find information that suits their situation and better understand how their choices would impact their well-being.</p>
+                            <p>often go for the convenient option.</p>
+                        </div>
+                    </div>
+
+                    <div class="extended-content grid d-col-12">
+                        <div class="center-content content-flex">
+                            <h3>Conversations with college students confirmed that students generally know how to eat healthily, but they struggle to eat healthily regularly with limited time and skills.</h3>
+                            <p><mark>Making healthy and enjoyable meals requires time and skills that many students don't have and efforts they're not motivated to make.</mark> The majority are too busy to pay attention to the nutritional value of what they're eating, while the few who actively monitor their diet are either working out or navigating serious health issues.</p>
+                        </div>
+                    </div>
+   
+                    <div class="quote-container t-wide m-wide" style="background-image: url(../img/eatwell/quotes.png);">
+                        <div class="overflow-block quote-overlay">
+                            <div class="quotes">
+                                <div>
+                                    <blockquote class="glass dark-bg">"I wanted to try and lose some weight but I had stopped after a while due to school stress."</blockquote>
+                                    <blockquote class="glass dark-bg">"When I don't have time, I just want to survive."</blockquote>
+                                </div>
+
+                                <div>
+                                    <blockquote class="glass dark-bg">"Time and motivation are very big challenges—also stress, I guess you could say—mainly because of school."</blockquote>
+                                    <blockquote class="glass dark-bg">"It's almost a full-time job."</blockquote>
+                                </div>
+
+                                <div>
+                                    <blockquote class="glass dark-bg">"It's a bad habit, but I'm working on it."</blockquote>
+                                    <blockquote class="glass dark-bg">"Whenever I feel stressed I have to get a dopamine hit, especially with sweets."</blockquote>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                            
+                    <div class="extended-content grid d-col-12 row-sm">
+                        <div class="content-flex center-content">
+                            <h3>Despite numerous existing apps, their cost, complexity, and lack of visibility prevent users from finding ones that suit their situations.</h3>
+                            <p>Nutrition coaches and diet apps can be useful and beneficial, but the calorie tracker and streak system found in many of them may not fit into students' busy lifestyles and stressful schedules. Students who have tried these apps express <mark>a lack of motivation to continue with their diet plans and dissatisfaction with the tedious freemium meal logging features.</mark></p>
+                            <p>Simpler apps like Yuka and Out of Milk are more economical for students and less mentally taxing, but are lesser known. More complex apps like MyFitnessPal or Healthify often put useful features behind a pay wall, reinforcing the misconception that eating healthy is expensive.</p>
+                        </div>
+                        
+                        <img src="../img/eatwell/competitors-1.png" class="center-content m-wide">
                     </div>
                 </section>
 
 
-                <section class="section extended grid row-gap-120" id="research">
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h2>Research</h2>
-                                <h3>Findings from online survey reveal that lack of nutrition knowledge isn't why many postsecondary students eat unhealthily, but rather the lack of time and high stress levels.</h3>
-                                <p>I wanted to assess how often nutrition is factored into meal decisions and whether lack of understanding is a barrier. While survey results didn't discount lack of nutrition knowledge as a barrier, they identified time, cost, stress, and availability of resources as the more common and impactful barriers to healthy eating.</p>
-                            </div>
-                        </div>
-
-                        <div class="charts charts-3 grid desktop-columns-3" style="background-color: var(--theme-grey-1);">
-                            <div class="chart-h">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 302.4deg, var(--theme-grey-2) 302.4deg);">
-                                    <div class="pie-chart-in">
-                                        <p class="text-large type-space font-bold">84%</p>
-                                    </div> 
-                                </div>
-                                <p>frequently consider the cost when buying food, drinks, and groceries.</p>
-                            </div>
-
-                            <div class="chart-h">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 201.6deg, var(--theme-grey-2) 201.6deg);">
-                                    <div class="pie-chart-in">
-                                        <p class="text-large type-space font-bold">56%</p>
-                                    </div> 
-                                </div>
-                                <p>often factor in the time available, while the remaining occasionally consider it.</p>
-                            </div>
-
-                            <div class="chart-h">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) 244.8deg, var(--theme-grey-2) 244.8deg);">
-                                    <div class="pie-chart-in">
-                                        <p class="text-large type-space font-bold">68%</p>
-                                    </div> 
-                                </div>
-                                <p>often go for the convenient option.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="extended-wrapper grid row-gap-120">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content">
-                                <div class="content-flex">
-                                    <h3>Conversations with college students confirmed that students generally know how to eat healthily, but they struggle to eat healthily regularly with limited time and skills.</h3>
-                                    <p><mark>Making healthy and enjoyable meals requires time and skills that many students don't have and efforts they're not motivated to make.</mark> The majority are too busy to pay attention to the nutritional value of what they're eating, while the few who actively monitor their diet are either working out or navigating serious health issues.</p>
-                                </div>
-                                
-                                <img src="../img/eatwell/problem-1.png" class="mobile-wide-img">
-                            </div>
-                        </div>
-                            
-                        <div class="extended-content grid desktop-columns-12 row-gap-24">
+                <section class="section extended grid row-lg" id="ideate">
+                    <div class="extended-wrapper grid row-reg">
+                        <div class="extended-content grid d-col-12">
                             <div class="content-flex center-content">
-                                <h3>Despite numerous existing apps, their cost, complexity, and lack of visibility prevent users from finding ones that suit their situations.</h3>
-                                <p>Nutrition coaches and diet apps can be useful and beneficial, but the calorie tracker and streak system found in many of them may not fit into students' busy lifestyles and stressful schedules. <mark>Students who have tried these apps express a lack of motivation to continue with their diet plans and dissatisfaction with the tedious freemium meal logging features.</mark></p>
-                            </div>
-                            
-                            <img src="../img/eatwell/competitors-1.png" class="center-content mobile-wide-img">
-
-                            <p class="center-content">Simpler apps like Yuka and Out of Milk are more economical for students and less mentally taxing, but are lesser known. More complex apps like MyFitnessPal or Healthify often put useful features behind a pay wall, reinforcing the misconception that eating healthy is expensive.</p>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section class="section extended grid row-gap-120" id="ideate">
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="content-flex center-content">
-                                <h2>Ideate</h2>
-                                <h3>I ideated potential solutions based on factors that affect students' eating habits, then transformed selected concepts and combinations of features into sketches to gather feedback.</h3>
+                                <h2 class="themed-text">Ideate</h2>
+                                <h3>I ideated potential solutions based on factors that affect students' eating habits, then transformed them into sketches to gather feedback.</h3>
                                 <p>
                                     Participants' general feedback and attitude toward each concept are shown through the emojis. 
                                     They were more enthusiastic toward practical tools that they haven't encountered before.
@@ -217,266 +260,218 @@
                             </div>
                         </div>
 
-                        <img src="../img/eatwell/concept-2.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/eatwell/concept-2.png" class="wide t-wide m-wide">
                     </div>
 
-                    <div class="extended-wrapper grid row-gap-24">
-                        <div class="extended-content grid desktop-columns-12">
+                    <div class="extended-wrapper grid row-reg">
+                        <div class="extended-content grid d-col-12">
                             <div class="content-flex center-content">
-                                <h3>Taking the features that had favourable feedback, I made 3 low-fidelity concepts and conducted testing, then narrowed down to 2 sets of features for the final round of concept testing.</h3>
-                                <p>Participants' feedback was more mixed. The barcode scanner was simple and straightforward, and the pantry feature was useful for managing groceries. Most participants would not meal plan, but they would use the AI image analysis if the information is accurate and they can trust it. <mark>They generally valued the convenience and affordability provided by certain tools.</mark> No concept was especially more impactful or favourable, so I mixed and matched desired features to arrive at a more comprehensive platform concept.</p>
+                                <h3>Taking the features that had favourable feedback, I made low-fidelity concepts and conducted testing.</h3>
+                                <p>Participants' feedback was more mixed. <mark>They generally valued the convenience and affordability provided by certain tools. Notably, they would use the AI image analysis if the information is accurate and they can trust it.</mark> No concept was especially more impactful or favourable, so I mixed and matched desired features for the final concept.
+                                </p>
                             </div>
                         </div>
 
-                        <img src="../img/eatwell/concept-3.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/eatwell/concept-3.png" class="wide t-wide m-wide">
                     </div>
                 </section>
 
-                <section class="grid desktop-columns-12 row-gap-24 grid-h-center">
-                    <div class="desktop-span-5 content-flex">
-                        <h3>This platform will first focus on increasing the convenience and affordability for users when buying and managing groceries.</h3>
-                        <p>This will be accomplished primarily by allowing users to track their leftovers and groceries at home, and providing cooking suggestions based on their time, abilities, available ingredients and facilities, and dietary preferences.</p>
-                    </div>
-                    
-                    <div class="desktop-span-7 slides mobile-wide-img">
-                        <div class="slide fade" style="padding: 0 3rem;">
-                            <div class="content-flex">
-                                <h4 class="text-center">Stage 1 (MVP)</h4>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Pantry manager to keep track of groceries and leftovers available at home</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Find affordable groceries or grocery deals nearby based on budget</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Recommend recipes based on available ingredients, time, difficulty, cooking equipment, etc.</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Filter results based on dietary preferences</p>
-                                </div>
-                            </div>
+                <section class="extended extended-wrapper grid row-xl">
+                    <div class="extended-content grid t-col-2 row-sm grid-h-center" style="margin-top: 2.5rem;">
+                        <div class="content-flex d-pad-right" style="position: relative;">
+                            <h3>This platform first focuses on increasing the convenience and affordability when buying and managing groceries.</h3>
+                            <p>This will be accomplished primarily by allowing users to track their leftovers and groceries at home, and providing cooking suggestions based on their time, abilities, available ingredients and facilities, and dietary preferences.</p>
+                            <img src="../img/eatwell/mascot.png" id="mascot">
                         </div>
-
-                        <div class="slide fade" style="padding: 0 3rem;">
-                            <div class="content-flex">
-                                <h4 class="text-center">Stage 2</h4>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Engaging and informative cooking instructions</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Find affordable food and beverage (grocery and non-grocery) options nearby</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>View explanations of nutrition information on food/beverage items before buying</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Connection to online grocery order</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Meal journal</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide fade" style="padding: 0 3rem;">
-                            <div class="content-flex">
-                                <h4 class="text-center">Stage 3</h4>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Get nutrition analysis by taking pictures of meals</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Collaborative database of recipes from family and friends</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Connection to healthcare professionals (dieticians, nutritionists, etc.)</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Reward system for positive activities</p>
-                                </div>
-                                <div class="textbox padding-sm coloured-bg">
-                                    <p>Meal/diet plan</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></a>
-                        <a class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></a>
-                    </div>
-                </section>
-
-                <section class="section extended grid row-gap-120" id="design">
-                    <div class="extended-wrapper">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="content-flex center-content">
-                                <h2>Design</h2>
-                                <h3>Intended features and user flows were compiled into a sitemap prior to designing wireframes.</h3>
-                            </div>
-                        </div>
-                        <img src="../img/eatwell/sitemap.png" class="wide tablet-wide-img mobile-wide-img">
-                    </div>
                         
+                        <div class="grid row-xs">
+                            <details class="coloured-bg" name="stages" open>
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Stage 1 (MVP)
+                                </summary>
+                                <ul class="list content">
+                                    <li>Pantry manager to keep track of groceries and leftovers available at home</li>
+                                    <li>Find affordable groceries or grocery deals nearby based on budget</li>
+                                    <li>Recommend recipes based on available ingredients, time, difficulty, cooking equipment, etc.</li>
+                                    <li>Filter results based on dietary preferences</li>
+                                </ul>
+                            </details>
 
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12 row-gap-40">
+                            <details class="coloured-bg" name="stages">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Stage 2
+                                </summary>
+                                <ul class="list content">
+                                    <li>Engaging and informative cooking instructions</li>
+                                    <li>Find affordable food and beverage (grocery and non-grocery) options nearby</li>
+                                    <li>View explanations of nutrition information on food/beverage items before buying</li>
+                                    <li>Connection to online grocery order</li>
+                                    <li>Meal journal</li>
+                                </ul>
+                            </details>
+
+                            <details class="coloured-bg" name="stages">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Stage 3
+                                </summary>
+                                <ul class="list content">
+                                    <li>Get nutrition analysis by taking pictures of meals</li>
+                                    <li>Collaborative database of recipes from family and friends</li>
+                                    <li>Connection to healthcare professionals (dieticians, nutritionists, etc.)</li>
+                                    <li>Reward system for positive activities</li>
+                                    <li>Meal/diet plan</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <img src="../img/eatwell/sitemap.png" class="wide t-wide m-wide">
+                </section>
+
+                <section class="section extended grid row-xl" id="design">
+                    <div class="extended-wrapper grid row-reg">
+                        <div class="extended-content grid d-col-12 row-reg">
                             <div class="center-content content-flex">
+                                <h2 class="themed-text">Design</h2>
                                 <h3>I started with low-fi screens to capture the user flows of the app and start conducting user tests.</h3>
                             </div> 
                         </div>
 
-                        <img src="../img/eatwell/wireframe-1.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/eatwell/wireframe-1.png" class="wide t-wide m-wide">
                     </div>
 
-                    <div class="extended-wrapper grid row-gap-80">
-                        <div class="extended-content grid desktop-columns-12 row-gap-40">
-                            <div class="center-content content-flex">
-                                <h3>Within the Kitchen space, I went through multiple iterations to work out how to best organize the user's food and groceries.</h3>
-                                <p>There are commonly two layers of organization when it comes to food and groceries: by space and by type. As I designed the screens and conducted user tests, the organization system evolved to first allow people to organize by the real-life space their items would be in, then by the type of food. 
-                                </p>
-                            </div>
-
-                            <img src="../img/eatwell/design-1.png" class="desktop-span-12 mobile-wide-img">
+                    <div class="extended-wrapper extended-content grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h3>Within the Kitchen space, I went through multiple iterations to work out how to best organize the user's food and groceries.</h3>
+                            <p>There are commonly two layers of organization when it comes to food and groceries: by space and by type. As I designed the screens and conducted user tests, the organization system evolved to first allow people to organize by the real-life space their items would be in, then by the type of food. 
+                            </p>
                         </div>
+
+                        <img src="../img/eatwell/design-1.png" class="d-span-12 m-wide">
                     </div>
 
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12 row-gap-40">
-                            <div class="center-content content-flex">
+                    <div class="extended-wrapper grid row-reg">
+                        <div class="extended-content grid t-col-2 row-reg grid-h-center">
+                            <div class="content-flex d-pad-right">
                                 <h3>I focused on iterating and testing the screens for image recognition, which will increase ease of use.</h3>
-                                <p>Based on findings from user tests and heuristic evaluations, I revised the user flow and wireframes to incorporate these important changes.
-                                </p>
+                                <p>While this entire process is quite long, using AI to detect what food and/or groceries are in the image gives users a starting point to add multiple things more conveniently.</p>
                             </div>
 
-                            <div class="desktop-span-12 grid desktop-columns-3 row-gap-24">
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Help users recognize, diagnose, and recover from errors</h4>
-                                    <p>The user can edit incorrect results instead of just deselecting them.</p>
-                                </div>
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Consistency and standards</h4>
-                                    <p>The UI to edit results and reorder items is designed to follow existing conventions.</p>
-                                </div>
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Visibility of system status</h4>
-                                    <p>A progress tracker is added to show the user what steps are coming up and what steps have been completed.</p>
-                                </div>
-                            </div>
+                            <div class="grid row-xs">
+                                <details class="coloured-bg" name="heuristics">
+                                    <summary class="text-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                        Opportunity to correct AI results
+                                    </summary>
+                                    <p class="content">Showing exactly how individual items are recognized instead of simply displaying them all in one list makes it easier for users to identify mistakes made by AI, if any. Users can edit incorrect results.</p>
+                                </details>
 
-                            <p class="center-content">While this entire process is quite long, using AI to detect what food and/or groceries are in the image gives users a starting point to add multiple things more conveniently.</p>
+                                <details class="coloured-bg" name="heuristics">
+                                    <summary class="text-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                        Consistency and standards
+                                    </summary>
+                                    <p class="content">The UI to edit results and reorder items is designed to follow existing conventions.</p>
+                                </details>
+
+                                <details class="coloured-bg" name="heuristics">
+                                    <summary class="text-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                        Visibility of system status
+                                    </summary>
+                                    <p class="content">A progress tracker is added to show the user what steps are coming up and what steps have been completed.</p>
+                                </details>
+
+                                <details class="coloured-bg" name="heuristics">
+                                    <summary class="text-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                        Reducing workload
+                                    </summary>
+                                    <p class="content">The user flow was changed so users can tap on a button to add more items, see everything in one list, and organize once at the end.</p>
+                                </details>
+                            </div>
                         </div>
 
-                        <img src="../img/eatwell/design-2.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/eatwell/design-2.png" class="wide t-wide m-wide">
                     </div>
 
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h3>Recipe pages are broken down into more digestible and engaging sections.</h3>
-                                <p>Long scroll pages are broken into collapsible sections, allowing users to quickly navigate to the desired section and avoiding overwhelming them with information. The "Cooking mode" highlights each step in the recipe, helping users focus on one thing at a time and learn at their own pace.</p>
-                            </div>
-                        </div>
-
-                        <img src="../img/eatwell/design-3.png" class="wide tablet-wide-img mobile-wide-img">
-                    </div>
-
-                    <div class="extended-wrapper grid row-gap-24">
-                        <div class="extended-content grid desktop-columns-12">
+                    <div class="extended-wrapper grid row-sm">
+                        <div class="extended-content grid d-col-12">
                             <div class="center-content content-flex">
                                 <h3>I conducted visual preference testing to narrow down a visual direction, then used that foundation to develop a design system to ensure consistency across screens.</h3>
-                                <p>I made three style tiles based on research into visual marketing strategies and colour trends and conducted visual preference testing. Test participants preferred <mark>warm colours, a welcoming and organic aesthetic, a sense of structure, and the homey feeling of serif fonts.</mark> One option includes neubrutalist aesthetic, which could be integrated to make the interface more interesting. Using these insights, I worked on the design system alongside iterating on wireframes.</p>
+                                <p>I made three style tiles based on research into visual marketing strategies and colour trends and conducted visual preference testing. Test participants preferred <mark>warm colours, a welcoming and organic aesthetic, a sense of structure, and the homey feeling of serif fonts.</mark> One option includes neubrutalist aesthetic, which could be integrated to make the interface more interesting.</p>
                             </div>
                         </div>
 
-                        <img src="../img/eatwell/design-system.png" class="wide tablet-wide-img mobile-wide-img">
+                        <img src="../img/eatwell/design-system.png" class="wide t-wide m-wide">
                     </div>
-                </section>
 
+                    <div class="extended-wrapper extended-content grid d-col-12 t-col-2 row-reg grid-h-center">
+                        <h3 class="center-content t-span-2">The MVP is finished, but EatWell can be refined and improved, especially in a more creative and engaging direction.</h3>
 
-                <section class="section extended grid row-gap-120" id="solution">
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12 row-gap-40">
-                            <div class="center-content content-flex">
-                                <h2>Solution</h2>
-                                <h3>EatWell brings three important meal activities—grocery planning, managing ingredients and leftovers, and cooking—into one platform, to...</h3>
-                            </div>
+                        <div class="d-span-6 grid row-xs">
+                            <details class="coloured-bg" name="steps">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Testing and prototype
+                                </summary>
+                                <p class="content">Previous user tests occurred quickly to accommodate the time constraint. I want to conduct a proper usability test with a more functional and robust Protopie prototype to continue refining the app and improving it for users.</p>
+                            </details>
 
-                            <div class="desktop-span-12 grid desktop-columns-3 row-gap-24">
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Encourage home cooking</h4>
-                                    <p>EatWell makes it easier for students to grocery shop and find recipes that suit their time, living situation, and skill level.</p>
-                                </div>
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Reduce mental workload</h4>
-                                    <p>EatWell keeps track of expiry dates and estimated spoilage, helping students reduce food waste and alerting them when their groceries are running low.</p>
-                                </div>
-                                <div class="content-flex textbox coloured-bg">
-                                    <h4>Build confidence</h4>
-                                    <p>EatWell help students who live on their own for the first time familiarize themselves with grocery shopping and cooking independently.</p>
-                                </div>
-                            </div>
+                            <details class="coloured-bg" name="steps">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Visual direction and engagement
+                                </summary>
+                                <p class="content">EatWell needs a proper visual identity. Even if it's just a wordmark, I want EatWell to have a playful and welcoming logo, along with a defined brand guideline. A companion character could make the experience more engaging and enjoyable, and aligns with the original playful direction that was excluded due to time constraints.</p>
+                            </details>
 
-                            <p class="center-content">The EatWell app lets users manage groceries and food items they have at home, create and sync grocery lists to make sure their essentials are stocked, and find recipes suitable to them.</p>
+                            <details class="coloured-bg" name="steps">
+                                <summary class="text-md">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    Incorporate nutrition information
+                                </summary>
+                                <p class="content">Going back to to the initial goal of improving understanding of nutrition, I want to explore effective learning methods and incorporate nutrition information in a stress-free and non-intrusive manner. The categorization of items by food groups opens up possibilities to include general nutrition information.</p>
+                            </details>
                         </div>
+
+                        <figure class="d-span-6 grid row-xs" style="justify-items: center; text-align: center;">
+                            <img src="../img/eatwell/cooking-buddy.png" style="max-width: 600px;">
+                            <figcaption class="text-sm font-light">Would you like one of these little ones to be your cooking buddy?</figcaption>
+                        </figure>
                         
-                        <img src="../img/eatwell/wireframe-2.png" class="wide tablet-wide-img mobile-wide-img">
-                    </div>
-                    
-
-                    <div class="extended-wrapper extended-content grid desktop-columns-12 row-gap-80">
-                        <div class="desktop-span-12 grid desktop-columns-12 tablet-columns-2 row-gap-24">
-                            <h3 class="center-content tablet-span-2">The MVP is finished, but EatWell can be refined and improved further—especially in a more creative and engaging direction.</h3>
-
-                            <div class="content-flex textbox coloured-bg desktop-span-4">
-                                <h4>Further User Testing</h4>
-                                <p>User tests occurred quickly to accommodate the time constraint. I want to conduct a proper usability test to continue refining the app and improving it for users.</p>
-                            </div>
-                            <div class="content-flex textbox coloured-bg desktop-span-4">
-                                <h4>Brand Guidelines</h4>
-                                <p>EatWell needs a proper visual identity. Even if it's just a wordmark, I want EatWell to have a playful and welcoming logo, along with a defined brand guideline.</p>
-                            </div>
-                            <div class="content-flex textbox coloured-bg desktop-span-4">
-                                <h4>Increase Engagement</h4>
-                                <p>A companion character could make the experience more engaging and enjoyable, and aligns with the original playful direction that was excluded due to time constraints.</p>
-                            </div>
-                            <div class="content-flex textbox coloured-bg desktop-span-4">
-                                <h4>A More Robust Prototype</h4>
-                                <p>Moving over to ProtoPie would allow me to create a more functional and robust prototype.</p>
-                            </div>
-                            <div class="content-flex textbox coloured-bg desktop-span-4">
-                                <h4>Additional Features</h4>
-                                <p>I want to start working on the features for stage 2 and explore how general nutritional information can be incorporated.</p>
-                            </div>
-                            <div class="desktop-span-4" style="align-content: center;">
-                                <img src="../img/eatwell/cooking-buddy.png">
-                            </div>
-                            
-                        </div>
                     </div>
                 </section>
-                    
-                <section class="section extended grid row-gap-80" id="takeaways">
-                    <div class="extended-wrapper grid row-gap-40">
-                        <div class="extended-content grid desktop-columns-12">
-                            <div class="center-content content-flex">
-                                <h2>Takeaways</h2>
-                                <h3>I didn't need a completely original idea; improving on the existing pain points would have been enough.</h3>
-                                <p>EatWell isn't a completely original or groundbreaking concept—it mixes and matches desirable features from already existing apps and improves upon tedious processes. <mark>In the search for a completely original concept, I overlooked simpler improvements to the current experience for meals, groceries, and cooking apps.</mark> I could've stuck with the initial goal of improving nutritional understanding and explored creative and innovative learning methods, or focused solely creating a great user experience for the grocery management aspect of EatWell.</p>
-                                <p>Regardless, <mark>the entire process of developing EatWell was a valuable learning experience.</mark> It was the first time I was in charge of a large-ish design project end-to-end. As much as I would have liked certain things to have been done differently, it was valuable to see where my strengths and limitations lie.</p>
-                            </div>
-                        </div>
 
-                        <img src="../img/eatwell/mockup-3.png" class="wide tablet-wide-img mobile-wide-img">
+
+                <section class="section extended extended-wrapper grid row-md" id="reflection">
+                    <div class="extended-content grid d-col-12 row-md">
+                        <div class="center-content content-flex">
+                            <h2 class="themed-text">Reflection</h2>
+                            <h3>Improving on the existing pain points would have been enough</h3>
+                            <p>EatWell isn't a completely original or groundbreaking concept—it mixes and matches desirable features from already existing apps and improves upon tedious processes. <mark>In the search for a completely original concept, I overlooked simpler improvements to the current experience for meals, groceries, and cooking apps.</mark> I'm interested in returning to the initial goal of improving nutritional understanding to explore creative and innovative learning methods, or focus solely on creating a great user experience for the grocery management aspect of EatWell.</p>
+                        </div>
+                        <div class="center-content content-flex">
+                            <h3>Managing different moving parts</h3>
+                            <p>This was the first time I was in charge of a large-ish design project end-to-end. As much as I would have liked certain things to have been done differently, it was valuable to see where my strengths and limitations lie.</p>
+                        </div>
                     </div>
+                    
+                    <img src="../img/eatwell/mockup-3.png" class="wide t-wide m-wide">
                 </section>
 
                 <nav class="page-nav-container">
-                    <ul class="page-nav" id="page-nav">
+                    <ul class="page-nav glass" id="page-nav">
                         <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
                         <li><a href="#problem" class="nav-link">Problem</a></li>
+                        <li><a href="#solution" class="nav-link">Solution</a></li>
                         <li><a href="#research" class="nav-link">Research</a></li>
                         <li><a href="#ideate" class="nav-link">Ideate</a></li>
                         <li><a href="#design" class="nav-link">Design</a></li>
-                        <li><a href="#solution" class="nav-link">Solution</a></li>
-                        <li><a href="#takeaways" class="nav-link">Takeaways</a></li>
+                        <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
 
@@ -486,6 +481,5 @@
 
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
-        <script src="../js/carousel.js"></script>
     </body>
 </html>
