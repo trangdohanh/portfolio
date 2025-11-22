@@ -1162,8 +1162,23 @@ blockquote{
 }
 
 .quote-container{
+    height: 100vh;
+    max-height: 850px;
+    min-height: 600px;    
+    position: relative;
+}
+
+.quote-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover; 
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -1173,19 +1188,8 @@ blockquote{
     -webkit-backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
-    height: 100vh;
-    max-height: 850px;
-    min-height: 600px;    
-}
-
-.quotes{
-    display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
 .quotes div{
@@ -1363,7 +1367,7 @@ blockquote{
 
     .switch-thumbnail{
         min-width: 10rem;
-        max-width: 25rem;
+        max-width: 20rem;
         aspect-ratio: 1/1;
     }
 
