@@ -1179,7 +1179,6 @@ blockquote{
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .quote-overlay{
@@ -1390,9 +1389,7 @@ blockquote{
     .link-button:hover{background-color: inherit; color: inherit; border-color: inherit;}
     .dark .link-button:hover{color: inherit;}
 
-    .quote-image{
-        background-attachment: scroll;
-    }
+    .quote-image{background-attachment: scroll;}
 }
 
 
@@ -1559,6 +1556,8 @@ blockquote{
         padding: 2rem;
         margin: 10rem 0;
     }
+
+    .quote-image{background-attachment: scroll;}
 }
 
 
@@ -1691,6 +1690,8 @@ blockquote{
         margin-left: 0;
         margin-right: 0;
     }
+
+    .quote-image{background-attachment: fixed;}
 }
 
 
