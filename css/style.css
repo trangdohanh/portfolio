@@ -1,9 +1,5 @@
 /* DOCUMENT SETUP */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+*{box-sizing: border-box; padding: 0; margin: 0;}
 
 html{
     --black: #1a1a1a;
@@ -110,20 +106,13 @@ mark{
     color: var(--white);
 }
 
-.colour-2{
-    color: var(--black-90);
-}
-
-.dark .colour-2{
-    color: var(--white-90);
-}
+.colour-2{color: var(--black-90);}
+.dark .colour-2{color: var(--white-90);}
 /* ////////// */
 
 
 /* LIST STYLING */
-.list-bullet{
-    list-style-type: disc;
-}
+.list-bullet{list-style-type: disc;}
 
 .list{
     padding-left: 1rem;
@@ -180,22 +169,14 @@ a{
     text-decoration: none;
     color: var(--black);
     -webkit-transition: all 0.3s ease;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
-
-a:hover, a:focus{
-    text-decoration: underline;
-    color: var(--dark-green);
-}
+.dark a{color: var(--white);}
 
 a.link{
     font-size: inherit;
     text-decoration: underline;
 }
-a.link:hover, a.link:focus{text-decoration: none;}
-
-.dark a{color: var(--white);}
-.dark a:hover, .dark a:focus{color: var(--light-green);}
 
 .link-button{
     height: fit-content;
@@ -207,21 +188,7 @@ a.link:hover, a.link:focus{text-decoration: none;}
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
-.dark .link-button{
-    border-color: var(--white);
-}
-
-.link-button:hover, .link-button:focus{
-    background-color: var(--green);
-    color: var(--white);
-    border-color: var(--green);
-}
-
-.dark .link-button:hover, .dark .link-button:focus{
-    color: var(--white);
-    fill: var(--white);
-}
+.dark .link-button{border-color: var(--white);}
 
 .link-button svg{
     fill: var(--black);
@@ -229,18 +196,9 @@ a.link:hover, a.link:focus{text-decoration: none;}
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.dark .link-button svg{fill: var(--white);}
 
-.dark .link-button svg{
-    fill: var(--white);
-}
-
-.link-button:hover svg{
-    fill: var(--white);
-}
-
-.link-button:focus svg{
-    fill: var(--white);
-}
+.link-button:focus svg{fill: var(--white);}
 
 header .link-button{
     display: flex;
@@ -251,10 +209,6 @@ header .link-button{
     align-self: end;
     align-items: center;
     border-width: 1px;
-}
-
-header .link-button:hover, header .link-button:focus{
-    text-decoration: none;
 }
 
 .buttons{
@@ -275,7 +229,6 @@ header{
     background-color: rgba(251, 247, 244, 0.2);
     backdrop-filter: blur(10px);
 }
-
 .dark header{background-color: rgba(26, 26, 26, 0.2);}
 
 header .grid{
@@ -297,7 +250,6 @@ header nav{
     transition: all 0.8s ease;
 }
 
-
 .nav{
     place-self: start end;
     padding: 0.75rem;
@@ -306,13 +258,8 @@ header nav{
     line-height: 0.75rem;
 }
 
-.nav svg{
-    fill: var(--black) !important;
-}
-
-.dark .nav svg{
-    fill: var(--white) !important;
-}
+.nav svg{fill: var(--black) !important;}
+.dark .nav svg{fill: var(--white) !important;}
 
 .hide-nav{
     position: absolute;
@@ -366,22 +313,16 @@ footer{
     transition: 0.3s ease;
 }
 
-.dark .page-nav a{
-    color: var(--black);
+.page-nav a{
+    font-weight: 500;
+    color: #1a1a1a80;
 }
+.dark .page-nav a{color: #1a1a1a80;}
 
 .page-nav li{
     list-style: none;
 }
 
-.page-nav a{
-    font-weight: 500;
-    color: #1a1a1a80;
-}
-
-.page-nav a:hover, .page-nav a:focus{
-    color: var(--green);
-}
 
 .nav-link-active{
     font-weight: 600 !important;
@@ -520,26 +461,10 @@ svg{fill: var(--dark-green);}
     border-width: 0px;
     background-color: var(--black-10);
 }
+.dark #hero .labels a{background-color: var(--white-10);}
 
-#hero .labels svg{
-    fill: var(--black-90);
-}
-
-.dark #hero .labels a{
-    background-color: var(--white-10);
-}
-
-.dark #hero .labels svg{
-    fill: var(--white-90);
-}
-
-#hero .labels a:hover{
-    background-color: var(--green);
-}
-
-#hero .labels a:hover svg{
-    fill: var(--white);
-}
+#hero .labels svg{fill: var(--black-90);}
+.dark #hero .labels svg{fill: var(--white-90);}
 /* ////////// */
 
 
@@ -552,7 +477,6 @@ svg{fill: var(--dark-green);}
     position: relative;
     display: flex;
     flex-direction: column;
-    /* gap: 0.25rem; */
     transition: all 0.3s ease;
 }
 
@@ -571,36 +495,11 @@ svg{fill: var(--dark-green);}
     font-weight: 300;
     color: var(--black-90);
 }
-
-.dark .project .subtitle{
-    color: var(--white-90);
-}
+.dark .project .subtitle{color: var(--white-90);}
 
 .project img{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
-
-.project a:hover, .project a:focus {
-    text-decoration: none;
-    color: var(--black-90);
-}
-
-.dark .project a:hover, .dark .project a:focus {
-    color: var(--white-90);
-}
-
-.project a:hover img, .project a:focus img{
-    scale: 98%;
-}
-
-.project a:hover .title, .project a:focus .title{
-    text-decoration: underline;
-    color: var(--dark-green);
-}
-
-.dark .project a:hover .title, .dark .project a:focus .title{
-    color: var(--light-green);
 }
 
 #sandbox .project{
@@ -615,15 +514,6 @@ svg{fill: var(--dark-green);}
 #sandbox img{
     height: 100%;
     object-fit: cover;
-}
-
-#sandbox .project:hover img, #sandbox .project a:focus img{
-    scale: 98%;
-    /* box-shadow: none; */
-}
-
-#sandbox .project.incomplete:hover img, #sandbox .project.incomplete:focus img{
-    scale: 100%;
 }
 
 #sandbox .project a{
@@ -711,10 +601,7 @@ svg{fill: var(--dark-green);}
     margin-left: 7px;
     z-index: -1;
 }
-
-.dark .line{
-    border-left: 2px solid var(--white);
-}
+.dark .line{border-left: 2px solid var(--white);}
 
 .timeline .text-sm {
     font-weight: 300;
@@ -729,10 +616,7 @@ svg{fill: var(--dark-green);}
     transition: all 0.4s ease;
     opacity: 1;
 }
-
-.dark .mode-indicator{
-    color: var(--light-green);
-}
+.dark .mode-indicator{color: var(--light-green);}
 
 .inactive-mode{
     opacity: 0.2;
@@ -793,10 +677,7 @@ svg{fill: var(--dark-green);}
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
-
-.dark .slider::before{
-    background-color: var(--light-green);
-}
+.dark .slider::before{background-color: var(--light-green);}
 
 #switch-input:checked + .slider {
     background-color: var(--light-green);
@@ -817,10 +698,7 @@ svg{fill: var(--dark-green);}
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
-.dark .blink{
-    color: var(--light-green);
-}
+.dark .blink{color: var(--light-green);}
 
 @keyframes blinker{
     30% {opacity: 1;}
@@ -926,10 +804,6 @@ svg{fill: var(--dark-green);}
     border-radius: 0;
 }
 
-.thumbnail:hover{
-    opacity: 1;
-}
-
 .active{
     cursor: initial;
     opacity: 1;
@@ -977,11 +851,7 @@ svg{fill: var(--dark-green);}
     overflow: auto;
     background-color: rgba(251, 247, 244, 0.9);
 }
-
-.dark .modal{
-    background-color: rgba(26, 26, 26, 0.9);
-}
-
+.dark .modal{background-color: rgba(26, 26, 26, 0.9);}
 
 .modal-content{
     position: relative;
@@ -1004,7 +874,6 @@ svg{fill: var(--dark-green);}
     cursor: pointer;
 }
 
-
 .close-overlay{
     position: absolute; 
     top: 0; 
@@ -1019,13 +888,8 @@ svg{fill: var(--dark-green);}
     margin: 0 auto;
 }
 
-.modal svg{
-    fill: var(--black) !important;
-}
-
-.dark .modal svg:not(.next svg, .prev svg){
-    fill: var(--white) !important;
-}
+.modal svg{fill: var(--black) !important;}
+.dark .modal svg:not(.next svg, .prev svg){fill: var(--white) !important;}
 /* ////////// */
 
 
@@ -1095,6 +959,7 @@ p.textbox{
 /* ////////// */
 
 
+/* ACCORDION */
 details{
     height: fit-content;
     border-radius: 0.5rem;
@@ -1109,21 +974,11 @@ details > summary{
     transition: all 0.3s ease;
 }
 
-summary:hover {
-    color: #1a1a1acc;
-    font-weight: 500;
-}
-
 summary svg{
     flex-shrink: 0;
     margin-top: 0.375rem;
     fill: var(--black);
     transition: all 0.3s ease-out;
-}
-
-summary:hover svg{
-    fill: #1a1a1acc;
-    rotate: 90deg;
 }
 
 details .content{
@@ -1146,13 +1001,10 @@ details[open] summary {
 details[open] svg {
     rotate: 90deg;
 }
-
-details:not([open]) svg {
-    color: white;
-}
+/* ////////// */
 
 
-/* Blockquote */
+/* BLOCKQUOTE */
 blockquote{
     font-size: 1.75rem; 
     line-height: 2.62rem;
@@ -1162,23 +1014,15 @@ blockquote{
 }
 
 .quote-container{
-    height: 100vh;
-    max-height: 850px;
-    min-height: 600px;    
+    height: clamp(600px, 100vh, 850px);
     position: relative;
 }
 
 .quote-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100%;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .quote-overlay{
@@ -1194,26 +1038,23 @@ blockquote{
 .quotes{
     display: flex;
     flex-direction: row;
-    column-gap: 2rem;
     align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    margin: 0 auto;
-}
-
-.quotes div{
-    display: flex; 
-    flex-direction: column; 
-    row-gap: 2rem;
+    width: 100vw;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 
 .quotes blockquote{
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
     flex-shrink: 0;
-    margin: 0;
-    width: 350px;
-    font-size: 1.37rem; 
-    line-height: 2.22rem;
+    flex-basis: 90%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
+/* ////////// */
 
 
 /* Code from https://hype4.academy/tools/glassmorphism-generator */
@@ -1262,7 +1103,7 @@ blockquote{
 /* End of code from https://hype4.academy/tools/glassmorphism-generator */
 
 
-/* Mobile only */
+/* MOBILE ONLY */
 @media only screen and (max-width: 767px) {
     .wrapper{
         padding: 0 20px;
@@ -1343,7 +1184,7 @@ blockquote{
     }
 
     .timeline{
-        padding: 80px 0 0 0;
+        padding: 5rem 0 0 0;
     }
 
     .colours{
@@ -1380,20 +1221,14 @@ blockquote{
         aspect-ratio: 1/1;
     }
 
-    a:hover{text-decoration: none; color: inherit;}
-    a.link:hover{text-decoration: underline;}
-    .dark a:hover{color: inherit;}
-
-    .page-nav a:hover{color: inherit;}
-
-    .link-button:hover{background-color: inherit; color: inherit; border-color: inherit;}
-    .dark .link-button:hover{color: inherit;}
-
-    .quote-image{background-attachment: scroll;}
+    .quotes{
+        column-gap: 1.25rem;
+        padding: 1.25rem;
+    }
 }
 
 
-/* 768px < screen < 1024px */
+/* 768px < SCREEN < 1024px */
 @media only screen and (min-width: 768px) {
     .wrapper{
         padding: 0 40px;
@@ -1470,9 +1305,7 @@ blockquote{
     .t-b-23{aspect-ratio: 2/3.1;}
 
 
-    .t-center-content{
-        grid-column: 2/12;
-    }
+    .t-center-content{grid-column: 2/12;}
 
     header .grid{
         margin: 0 40px;
@@ -1554,14 +1387,16 @@ blockquote{
 
     blockquote{
         padding: 2rem;
-        margin: 10rem 0;
     }
 
-    .quote-image{background-attachment: scroll;}
+    .quotes{
+        column-gap: 2.5rem;
+        padding: 2.5rem;
+    }
 }
 
 
-/* 1024px < screen < 1440px */
+/* 1024px < SCREEN < 1440px */
 @media only screen and (min-width: 1104px) {
     .wrapper{
         padding: 0;
@@ -1691,15 +1526,99 @@ blockquote{
         margin-right: 0;
     }
 
-    .quote-image{background-attachment: fixed;}
+    .quotes{
+        column-gap: 5rem;
+        padding: 5rem;
+    }
 }
 
 
-/* 1920px screen */
+/* 1920px SCREEN */
 @media only screen and (min-width: 1920px) {
     .wrapper{max-width: 1440px;}
-
+    section{max-width: 1440px;}
     .extended-content{max-width: 1440px;}
-
-    header div{max-width: 1440px;}
+    header .grid{max-width: 1440px;}
+    footer{max-width: 1440px;}
+    .modal-content{max-width: 1440px;}
 }
+
+
+/* TOUCHSCREEN DEVICE */
+@media (pointer: coarse) {
+    .quote-image{
+        background-attachment: scroll;
+    }
+}
+
+
+/* HOVER STATE */
+@media (any-hover: hover) {
+    a:hover{text-decoration: underline; color: var(--dark-green);}
+    .dark a:hover{color: var(--light-green);}
+
+    a.link:hover{text-decoration: none;}
+
+    .link-button:hover{background-color: var(--green); color: var(--white); border-color: var(--green);}
+    .dark .link-button:hover{color: var(--white);}
+
+    .link-button:hover svg{fill: var(--white);}
+
+    header .link-button:hover{text-decoration: none;}
+
+    .page-nav a:hover{color: var(--green);}
+
+    #hero .labels a:hover{background-color: var(--green);}
+    #hero .labels a:hover svg{fill: var(--white);}
+
+    .project a:hover{text-decoration: none; color: var(--black-90);}
+    .dark .project a:hover{color: var(--white-90);}
+
+    .project a:hover img{scale: 98%;}
+
+    .project a:hover .title{text-decoration: underline; color: var(--dark-green);}
+    .dark .project a:hover .title{color: var(--light-green);}
+
+    #sandbox .project:not(.incomplete):hover img{scale: 98%;}
+
+    .thumbnail:hover{opacity: 1;}
+
+    summary:hover {color: var(--black-90); font-weight: 500;}
+    summary:hover svg{fill: var(--black-90); rotate: 90deg;}
+}
+/* ////////// */
+
+
+/* FOCUS STATE */
+a:focus{text-decoration: underline; color: var(--dark-green);}
+.dark a:focus{color: var(--light-green);}
+
+a.link:focus{text-decoration: none;}
+
+.link-button:focus{background-color: var(--green); color: var(--white); border-color: var(--green);}
+.dark .link-button:focus{color: var(--white);}
+
+.link-button:focus svg{fill: var(--white);}
+
+header .link-button:focus{text-decoration: none;}
+
+.page-nav a:focus{color: var(--green);}
+
+#hero .labels a:focus{background-color: var(--green);}
+#hero .labels a:focus svg{fill: var(--white);}
+
+.project a:focus {text-decoration: none; color: var(--black-90);}
+.dark .project a:focus {color: var(--white-90);}
+
+.project a:focus img{scale: 98%;}
+
+.project a:focus .title{text-decoration: underline; color: var(--dark-green);}
+.dark .project a:focus .title{color: var(--light-green);}
+
+#sandbox .project:not(.incomplete):focus img{scale: 98%;}
+
+.thumbnail:focus{opacity: 1;}
+
+summary:focus {color: var(--black-90); font-weight: 500;}
+summary:focus svg{fill: var(--black-90); rotate: 90deg;}
+/* ////////// */
