@@ -1597,7 +1597,7 @@ blockquote{
 
     .thumbnail:hover{opacity: 1;}
 
-    summary:hover {color: var(--black-90); font-weight: 500;}
-    summary:hover svg{fill: var(--black-90); rotate: 90deg;}
+    summary:hover {color: #1a1a1acc;}
+    summary:hover svg{fill: #1a1a1acc; rotate: 90deg;}
 }
 /* ////////// */
