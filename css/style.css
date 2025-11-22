@@ -198,8 +198,6 @@ a.link{
 }
 .dark .link-button svg{fill: var(--white);}
 
-.link-button:focus svg{fill: var(--white);}
-
 header .link-button{
     display: flex;
     gap: 0.25rem;
@@ -322,7 +320,6 @@ footer{
 .page-nav li{
     list-style: none;
 }
-
 
 .nav-link-active{
     font-weight: 600 !important;
@@ -835,7 +832,6 @@ svg{fill: var(--dark-green);}
     z-index: 2;
     box-shadow: 0 0 20px #1a1a1a33;
 }
-
 /* End of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 
 
@@ -981,11 +977,14 @@ summary svg{
     transition: all 0.3s ease-out;
 }
 
-details .content{
-    padding: 1.25rem;
+details::details-content{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
-details .content.list{
+details::details-content.list{
     padding: 1.25rem 1.25rem 1.25rem 2.25rem;
 }
 
@@ -1000,6 +999,12 @@ details[open] summary {
 
 details[open] svg {
     rotate: 90deg;
+}
+
+details[open]::details-content {
+    opacity: 1;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 /* ////////// */
 
@@ -1595,39 +1600,4 @@ blockquote{
     summary:hover {color: var(--black-90); font-weight: 500;}
     summary:hover svg{fill: var(--black-90); rotate: 90deg;}
 }
-/* ////////// */
-
-
-/* FOCUS STATE */
-a:focus{text-decoration: underline; color: var(--dark-green);}
-.dark a:focus{color: var(--light-green);}
-
-a.link:focus{text-decoration: none;}
-
-.link-button:focus{background-color: var(--green); color: var(--white); border-color: var(--green);}
-.dark .link-button:focus{color: var(--white);}
-
-.link-button:focus svg{fill: var(--white);}
-
-header .link-button:focus{text-decoration: none;}
-
-.page-nav a:focus{color: var(--green);}
-
-#hero .labels a:focus{background-color: var(--green);}
-#hero .labels a:focus svg{fill: var(--white);}
-
-.project a:focus {text-decoration: none; color: var(--black-90);}
-.dark .project a:focus {color: var(--white-90);}
-
-.project a:focus img{scale: 98%;}
-
-.project a:focus .title{text-decoration: underline; color: var(--dark-green);}
-.dark .project a:focus .title{color: var(--light-green);}
-
-#sandbox .project:not(.incomplete):focus img{scale: 98%;}
-
-.thumbnail:focus{opacity: 1;}
-
-summary:focus {color: var(--black-90); font-weight: 500;}
-summary:focus svg{fill: var(--black-90); rotate: 90deg;}
 /* ////////// */
