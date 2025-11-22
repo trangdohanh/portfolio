@@ -1367,7 +1367,7 @@ blockquote{
 
     .switch-thumbnail{
         min-width: 10rem;
-        max-width: 25rem;
+        max-width: 20rem;
         aspect-ratio: 1/1;
     }
 
