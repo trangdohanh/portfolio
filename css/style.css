@@ -1379,6 +1379,10 @@ blockquote{
 
     .link-button:hover{background-color: inherit; color: inherit; border-color: inherit;}
     .dark .link-button:hover{color: inherit;}
+
+    .quote-image{
+        background-attachment: scroll;
+    }
 }
 
 
