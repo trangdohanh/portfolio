@@ -980,8 +980,7 @@ summary svg{
 details::details-content{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 details::details-content.list{
@@ -1002,7 +1001,6 @@ details[open] svg {
 }
 
 details[open]::details-content {
-    opacity: 1;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
