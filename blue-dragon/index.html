@@ -11,12 +11,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
         <style>
-            mark, .coloured-section {background-color: #00aeef33;}
-            .themed-text{color: #00649e;}
+            html {--blue: #0182b3; --orange: #ff6900; --red: #ed145b;}
+            .coloured-bg, .textbox {background-color: #00aeef33;}
+            .themed-text{color: var(--blue);}
+            .icon-text svg{fill: var(--blue);}
+            .textbox.bordered {background: none; border: 1px solid var(--blue) !important;}
+
+            .buttons button.active {background-color: var(--blue); color: var(--white); border-color: var(--blue); cursor: initial;}
+            .tabcontent {display: none;}
+
+            @media (any-hover: hover) {
+                .link-button:hover{text-decoration: none; background-color: var(--blue); border-color: var(--blue);}
+            }
+
+            #reflection p{margin-top: 0;}
         </style>
     </head>
 
@@ -25,133 +38,237 @@
             <header id="header"></header>
     
             <main>
-                <section class="section grid row-reg" id="overview">
-                    <div class="grid row-xs">
-                        <h1>A persuasive landing page for Blue Dragon Children's Foundation</h1>
-                        <img src="../img/blue-dragon/mockup-1.jpg" class="m-wide">
-                    </div>
+                <section class="grid row-md">                        
+                    <img src="../img/blue-dragon/mockup-1.jpg" class="m-wide">
                     
-                    <div class="grid d-col-12 t-col-2 row-reg" id="summary">
-                        <div class="content-flex t-span-2">
-                            <h2 class="text-md">Overview</h2>
-                            <p>Blue Dragon Children's Foundation is a Vietnam-based NGO helping children and families in crisis. They work directly with high-risk communities, host events to raise funds and awareness, and rescue children from trafficking and abuse. This is an independent project to <mark>design a persuasive landing page to encourage viewers to become a volunteer and get involved in Blue Dragon's activities.</mark></p>
+                    <div class="section grid d-col-12 row-reg" id="overview">
+                        <h1 class="center-content">A landing page for Blue Dragon Children's Foundation</h1>
+
+                        <div class="center-content content-flex">
+                            <h2 class="themed-text">Overview</h2>
+                            <p>Blue Dragon Children's Foundation is a Vietnam-based NGO helping children and families in crisis. They work directly with high-risk communities, host events to raise funds and awareness, rescue children from abuse, and provide opportunities for employment, shelter, and education. This is an independent project to <strong>design a landing page to encourage viewers to get involved with Blue Dragon's activities.</strong></p>
                         </div>
-        
-                        <div class="content-flex">
-                            <h3 class="text-md">Tools</h3>
-                            <p>Figma, Adobe Illustrator, Photoshop</p>
-                        </div>
-        
-                        <div class="content-flex">
-                            <h3 class="text-md">Duration</h3>
-                            <p>Feb &#8211 Mar 2023 (5 weeks)</p>
-                        </div>
-                    </div>
-                </section>
-    
-    
-                <section class="section extended grid row-reg" id="challenge">
-                    <div class="extended-wrapper coloured-section">
-                        <div class="grid d-col-12 extended-content">
-                            <div class="center-content content-flex">
-                                <h2 class="themed-text">Challenge</h2>
-                                <h3>How might we utilize visual rhetoric to design a landing page that effectively encourages viewers to get involved with Blue Dragon's activities?</h3>
-                                <p>Blue Dragon Children's Foundation supports children and families in Vietnam located in high-risk communities or crises such as homelessness, abuse, extreme poverty, etc. The organization advocates for survivors and high-risk youths to ensure that they are not forced into dangerous circumstances. They work to prevent abuse and homelessness and provide opportunities for employment, shelter, and education. The foundation's homepage serves as its landing page and contains different types of content and call-to-actions, the variety of which can distract viewers.
-                                </p>
+
+                        <div class="center-content grid-sm t-col-3 row-xs">
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Role</h3>
+                                <p class="text-sm">Visual Designer</p>
+                            </div>
+
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Tools</h3>
+                                <p class="text-sm">Figma, Adobe Illustrator, Photoshop</p>
+                            </div>
+            
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Duration</h3>
+                                <p class="text-sm">Feb &#8211 Mar 2023 (5 weeks)</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <figure class="d-col-12 grid row-xs extended-wrapper extended-content">
-                        <img src="../img/blue-dragon/about.jpg" class="center-content">
-                        <figcaption class="center-content">Image from <a href="https://www.facebook.com/bluedragonvietnam" target="_blank" class="link">facebook.com/bluedragonvietnam</a></figcaption>
-                    </figure>
                 </section>
     
     
-                <section class="section extended grid row-reg" id="solution">
-                    <div class="grid d-col-12 extended-wrapper extended-content">
-                        <div class="center-content content-flex">
-                            <h2 class="themed-text">Solution</h2>
-                            <h3>A separate, focused landing page more effectively conveys Blue Dragon's key activities and impact and encourages the audience to get involved by becoming a volunteer.</h3>
+                <section class="section grid d-col-12 row-reg" id="challenge">
+                    <figure class="center-content">
+                        <img src="../img/blue-dragon/current.png">
+                        <figcaption>I don't have a picture of Blue Dragon's website in 2023, but these snapshots from 2025 are still close to what the website looked like.</figcaption>
+                    </figure>
+
+                    <div class="center-content content-flex">
+                        <h2 class="themed-text">Challenge</h2>
+                        <h3>Blue Dragon's homepage provides a lot of information and call-to-actions for first-time visitors.</h3>
+                        <p>Blue Dragon's homepage is doing many things well: there's adequate and updated information for the audience to get a good idea of their cause, and their branding is unique and cohesive. However, the website would benefit from a more focused landing page that effectively raises awareness and persuades the audience to get involved.</p>
+                        
+                    </div>
+                     
+                    <div class="center-content grid-sm t-col-3 row-xs">
+                        <p class="t-span-3">This project aims to accomplish the following:</p> 
+                        
+                        <div class="textbox">
+                            <p>Highlight Blue Dragon's key goals and impacts</p>
+                        </div>
+                        
+                        <div class="textbox">
+                            <p>Utilize rhetorical tropes to create persuasive visuals</p>
+                        </div>
+
+                        <div class="textbox">
+                            <p>Raise awareness about child maltreatment in Vietnam</p>
                         </div>
                     </div>
-                    
-                    <img src="../img/blue-dragon/process-5.png" class="wide">
                 </section>
                 
     
-                <section class="section grid row-lg extended" id="process">
-                    <div class="grid d-col-12 row-reg extended-wrapper extended-content">
+                <section class="section grid row-lg" id="process">
+                    <div class="grid d-col-12 row-reg">
                         <div class="center-content content-flex">
                             <h2 class="themed-text">Process</h2>
-                            <h3>With information on the foundation's activities, I outlined a rough content structure leading up to the call-to-action. The test audience found key information unclear at first.</h3>
-                            <p>I roughly blocked out individual sections and where images and texts should be. This page will highlight the current situation, then the organization's activities, values, impacts, and finally encourage viewers to become a volunteer. During review sessions, I was advised to shorten the paragraphs and highlight the arguments and key information more clearly. <mark>Different arguments could be more distinctively separated. Keeping the information to three main arguments would strengthen the flow.</mark></p>
+                            <h3>I outlined a rough content structure and made low-fidelity iterations. The test audience found key information unclear at first.</h3>
+                            <p>During review sessions, I was advised to shorten the paragraphs, highlight the arguments and key information more clearly, and separate different arguments more distinctly. With a better idea of the content to include, I could start defining the visuals.</p>
                         </div>
                         
-                        <img src="../img/blue-dragon/process-1.png" class="center-content">
+                        <img src="../img/blue-dragon/process-1.png" class="center-content m-wide">
                     </div>
 
-                    <div class="grid d-col-12 row-reg extended-wrapper extended-content">
+                    <div class="grid d-col-12">
+                        <div class="center-content grid t-col-2 row-reg">
+                            <div class="content-flex d-pad-right" style="place-self: center start;">
+                                <h3>Visual tropes</h3>
+                                <p>Using key messages from the website, I ideated and created custom visuals with rhetorical tropes, blending photographs with illustrations that tie into Blue Dragon's playful branding.</p>
+                            </div>
+                        
+
+                            <div class="grid row-xs" style="max-width: 30rem; margin: 0 auto;">
+                                <div class="thumbnails" style="grid-template-columns: repeat(5, 1fr);">
+                                    <div class="thumbnail" onclick="currentSlide(1)">
+                                        <img src="../img/blue-dragon/process-2a.png" alt="Visual pun of children 'taking flight'.">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(2)">
+                                        <img src="../img/blue-dragon/process-2b.png" alt="Broken pieces of glass represents the fragility of childhood and the impacts of abuse.">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(3)">
+                                        <img src="../img/blue-dragon/process-2c.png" alt="Personified 'tube house' to represent an abusive household and environment.">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(4)">
+                                        <img src="../img/blue-dragon/process-2d.png" alt="Colourful handprints for collaboration and the diversity in personality and background.">
+                                    </div>
+                                    <div class="thumbnail" onclick="currentSlide(5)">
+                                        <img src="../img/blue-dragon/process-2e.png" alt="Different types of support visualized through closely-related objects.">
+                                    </div>
+                                </div>
+
+                                <div class="slides">
+                                    <img src="../img/blue-dragon/process-2a.png" class="slide fade" alt="Visual pun of children 'taking flight'.">
+
+                                    <img src="../img/blue-dragon/process-2b.png" class="slide fade" alt="Broken pieces of glass represents the fragility of childhood and the impacts of abuse.">
+
+                                    <img src="../img/blue-dragon/process-2c.png" class="slide fade" alt="Personified 'tube house' to represent an abusive household and environment.">
+
+                                    <img src="../img/blue-dragon/process-2d.png" class="slide fade" alt="Colourful handprints for collaboration and the diversity in personality and background.">
+
+                                    <img src="../img/blue-dragon/process-2e.png" class="slide fade" alt="Different types of support visualized through closely-related objects.">
+
+                                    <a class="prev" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg></a>
+                                    <a class="next" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg></a>
+                                </div>
+
+                                <p id="caption"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid d-col-12 row-reg">
                         <div class="center-content content-flex">
-                            <h3>I leveraged visual rhetorical tropes to strengthen arguments.</h3>
-                            <p>Images from the organization's website and social media pages were collected as visual inspirations and possible assets—all photographs used in this project, including those used in a collage, were sourced from Blue Dragon's public pages. <mark>Visual elements were created using Adobe Illustrator and Photoshop, either modified from sourced photographs or newly drawn in Illustrator.</mark></p>
+                            <h3>As the visuals were coming together, I started refining the design in Figma and made adjustments where needed.</h3>
+                            <p>To maintain consistency with Blue Dragon's branding, prominent colours from the original website were selected as brand and accent colours. <strong style="color: #00AEEF;">#00AEEF</strong>, Blue Dragon's primary colour, highlights the organization's activities and values. <strong style="color: #F58220;">#F58220</strong> represents dangers and crisis situations, and <strong style="color: #ED145B;">#ED145B</strong> shows the care and love the children should receive.</p>
                         </div>
 
-                        <img src="../img/blue-dragon/process-2.png" class="d-span-12 t-wide m-wide">
+                        <img src="../img/blue-dragon/process-3.png" class="d-span-12 t-wide m-wide">
                     </div>
 
-                    <div class="grid row-reg">
-                        <div class="grid d-col-12 extended-wrapper extended-content">
-                            <div class="center-content content-flex">
-                                <h3>As the visuals were coming together, I started assembling the elements in Figma.</h3>
-                                <p>I arranged the graphic and text following the previous outline. <mark>I followed key colours from Blue Dragon's website to maintain consistency with their branding.</mark> Prominent colours from the original website were identified and selected as accent colours, each given its own meaning. <span style="color: #00AEEF; font-weight: 500">#00AEEF</span> is used to highlight the organization's activities and values. <span style="color: #F5811F; font-weight: 500">#F5811F</span> represents dangers and crisis situations. <span style="color: #ED145B; font-weight: 500">#ED145B</span> shows the care and love the children should receive.</p>
-                            </div>
-                        </div> 
-
-                        <img src="../img/blue-dragon/process-3.png" class="wide">
-                    </div>
-
-                    <div class="grid row-reg">
-                        <div class="extended-wrapper extended-content grid d-col-12">
-                            <div class="center-content content-flex">
-                                <h3>I revised the colour palette to improve colour contrast and cohesion.</h3>
-                                <p>If the colours were left as is, the colour contrast would be too low in some sections and elements. Some of the original colours were also too bright and clashed when put next to each other.</p>
-                            </div>
+                    <div class="grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
+                            <h3>I revised the colour palette to improve colour contrast and cohesion.</h3>
+                            <p>Some of the original colours were too bright and clashed when put next to each other, so I worked on the colour scheme to improve colour contrast and harmony. I chose Be Vietnam Pro as the primary typeface because it supports Vietnamese diacritics and looks good in both English and Vietnamese.</p>
                         </div>
 
-                        <img src="../img/blue-dragon/process-4.png" class="wide">
+                        <div class="center-content grid d-col-4 t-col-3 row-reg grid-h-center">
+                            <div class="grid" style="gap: 0.5rem;">
+                                <p class="text-lg" style="font-family: 'Be Vietnam Pro';">Blue Dragon</p>
+                                <p class="text-lg" style="font-family: 'Be Vietnam Pro';">Rồng Xanh</p>
+                                <p class="font-light">Be Vietnam Pro</p>
+                            </div>
+
+                            <div class="d-span-3 t-span-2 grid" style="border-radius: 2px; gap: 0.25rem">
+                                <div class="colours t-col-3" style="border-radius: 0; gap: 0.25rem;">
+                                    <div class="colour" style="background-color: #CCEFFC;">
+                                        <p>#CCEFFC</p>
+                                    </div>
+                                    <div class="colour m-span-2" style="background-color: #00AEEF;">
+                                        <p>#00AEEF</p>
+                                    </div>
+                                    <div class="colour row-1" style="background-color: #00649E; color: var(--white);">
+                                        <p>#00649E</p>
+                                    </div>
+                                </div>
+
+                                <div class="colours t-col-4" style="border-radius: 0; gap: 0.25rem;">
+                                    <div class="colour" style="background-color: #FEE8EB;">
+                                        <p>#FEE8EB</p>
+                                    </div>
+                                    <div class="colour" style="background-color: #ED145B; color: var(--white);">
+                                        <p>#ED145B</p>
+                                    </div>
+                                    <div class="colour" style="background-color: #F58220;">
+                                        <p>#F58220</p>
+                                    </div>
+                                    <div class="colour" style="background-color: #1A1B1C; color: var(--white);">
+                                        <p>#1A1B1C</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
                     </div>
         
         
-                    <div class="extended-wrapper extended-content grid d-col-12 row-reg">
-                        <h3 class="center-content">I added simple interactions and animations to add another layer of meaning without the onscreen movement taking away from the overall message and experience.</h3>
+                    <div class="grid d-col-12 row-reg">
+                        <h3 class="center-content">I made simple interactions and animations to add more engagement.</h3>
                         <img src="../img/blue-dragon/animation.gif" class="center-content m-wide">
                     </div>  
                 </section>
-    
-    
+
+
+                <section class="section grid d-col-12 row-reg" id="outcome">
+                    <div class="center-content content-flex">
+                        <h2 class="themed-text">Outcome</h2>
+                        <h3>A separate, focused landing page more effectively conveys Blue Dragon's key activities and impacts.</h3>
+                        <p>Take a (static) look at the landing page design!</p>
+
+                        <div class="buttons">
+                            <button name="tablink" class="link-button tablinks" onclick="openDevice(event, 'desktop')">Desktop</button>
+                            <button name="tablink" class="link-button tablinks" onclick="openDevice(event, 'mobile')">Mobile</button>
+                        </div>
+                    </div>
+
+                    <div class="d-span-12">
+                        <div class="device-desktop tabcontent" id="desktop">
+                            <img src="../img/blue-dragon/desktop.png">
+                        </div>
+
+                        <div class="device-mobile tabcontent" id="mobile">
+                            <img src="../img/blue-dragon/mobile.png">
+                        </div>
+                    </div>
+                    
+                </section>
+
+
                 <section class="section grid d-col-12 row-md" id="reflection">
-                    <div class="center-content content-flex">
-                        <h2 class="themed-text">Takeaways</h2>
-                        <h3>Persuasive imagery</h3>
-                        <p>Visual rhetorical tropes open up the opportunity for more creative and meaningful imagery. In review sessions, <mark>the custom visuals were more impactful than the originally intended photographs</mark>—the angel children and monster house specifically resonated with the test audience.</p>
-                    </div>
+                    <div class="center-content grid-lg t-col-2 row-sm">
+                        <h2 class="t-span-2 themed-text">Reflection</h2>
 
-                    <div class="center-content content-flex">
-                        <h3>Designing for a different culture</h3>
-                        <p><mark>Compatibility for multiple languages was an important consideration,</mark> as Blue Dragon is an organization for Vietnamese communities. I had looked for and used a font family that supports diacritics used in the Vietnamese alphabet, and I want to explore how this landing page can be remade for the Vietnamese audience in the future. </p>
-                    </div>
+                        <div class="content-flex">
+                            <p class="text-lg">01</p>
+                            <p>Rhetorical tropes expand the opportunity for more creative and meaningful imagery. In review sessions, the custom visuals were more impactful than the photographs—the winged children and monster house, in particular, resonated with the test audience.</p>
+                        </div>
 
+                        <div class="content-flex">
+                            <p class="text-lg">02</p>
+                            <p>I really saw the importance of ideation and setting a strong foundation in web design during this project. Although I brainstormed ideas for the visuals, I didn't explore different layouts enough and lost out on more creative designs.</p>
+                        </div>
+                    </div>
+                    
                     <img src="../img/blue-dragon/mockup-2.jpg" class="d-span-12 m-wide">
                 </section>
+
 
                 <nav class="page-nav-container">
                     <ul class="page-nav glass" id="page-nav">
                         <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
                         <li><a href="#challenge" class="nav-link">Challenge</a></li>
-                        <li><a href="#solution" class="nav-link">Solution</a></li>
                         <li><a href="#process" class="nav-link">Process</a></li>
+                        <li><a href="#outcome" class="nav-link">Outcome</a></li>
                         <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
@@ -162,5 +279,36 @@
         
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
+        <script src="../js/carousel.js"></script>
+        <script>
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            var tablinks = document.getElementsByClassName("tablinks");
+            
+            function openDevice(evt, deviceName) {
+                for (i = 0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}
+                for (i = 0; i < tablinks.length; i++) {tablinks[i].className = tablinks[i].className.replace(" active", "");}
+                document.getElementById(deviceName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            function showDevice(x) {
+                if (x.matches) {
+                    tablinks[1].setAttribute("id", "defaultOpen")
+                    tablinks[0].removeAttribute("id", "defaultOpen")
+                } else {
+                    tablinks[0].setAttribute("id", "defaultOpen")
+                    tablinks[1].removeAttribute("id", "defaultOpen")
+                    
+                }
+                document.getElementById("defaultOpen").click();
+            }
+                        
+            showDevice(x);
+            
+            x.addEventListener("change", function() {
+                showDevice(x);
+            });
+        </script>
     </body>
 </html>

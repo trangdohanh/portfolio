@@ -13,6 +13,8 @@ function openModal(e) {
     document.getElementById("modal-content").innerHTML = `<video width="100%" height="auto" id="video-modal" controls>
                                                               <source type="video/mp4" src="../img/lightbox/${e.id}.mp4">
                                                           </video>`;
+  } else if (e.classList.contains("gif-modal")){
+    document.getElementById("modal-content").innerHTML = `<a href="#works" onclick="closeModal()"><img id="img-modal" src="../img/${e.id}.gif"><a>`
   } else{
     document.getElementById("modal-content").innerHTML = `<img id="img-modal" src="../img/lightbox/${e.id}.png">`
   }
