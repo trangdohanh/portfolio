@@ -18,7 +18,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   
-  if (thumbnails){
+  if (document.body.contains(thumbnails[0])){
     for (i = 0; i < thumbnails.length; i++) {
       thumbnails[i].className = thumbnails[i].className.replace(" active", "");
     }
