@@ -638,6 +638,11 @@ figcaption, .figcaption, #caption{
 .label.visual{background-color: #F9ECC9;}
 .label.system{background-color: #FAD6C5;}
 .label.theme{background-color: var(--light-green);}
+footer .label.theme{
+    color: var(--green);
+    background: none;
+    border: 1px solid var(--green);
+}
 /* ////////// */
 
 
