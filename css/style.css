@@ -180,12 +180,14 @@ a.link{
 .link-button{
     height: fit-content;
     padding: 0.5rem 1rem;
+    background: none;
     border-width: 1px;
     border-style: solid;
     border-color: var(--black);
     border-radius: 4px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .dark .link-button{border-color: var(--white);}
 
@@ -468,6 +470,12 @@ figcaption, .figcaption, #caption{
     column-gap: 1rem;
     align-content: start;
 }
+
+.grid-lg{
+    display: grid;
+    column-gap: 2rem;
+    align-content: start;
+}
 /* ////////// */
 
 
@@ -638,6 +646,11 @@ figcaption, .figcaption, #caption{
 .label.visual{background-color: #F9ECC9;}
 .label.system{background-color: #FAD6C5;}
 .label.theme{background-color: var(--light-green);}
+footer .label.theme{
+    color: var(--green);
+    background: none;
+    border: 1px solid var(--green);
+}
 /* ////////// */
 
 
@@ -1040,6 +1053,7 @@ p.textbox{
 details{
     height: fit-content;
     border-radius: 0.5rem;
+    transition: all 0.6s ease;
 }
 
 details > summary{
@@ -1051,7 +1065,7 @@ details > summary{
     transition: all 0.3s ease;
 }
 
-summary svg{
+summary svg, .details svg{
     flex-shrink: 0;
     margin-top: 0.375rem;
     fill: var(--black);
@@ -1084,6 +1098,27 @@ details[open] svg {
 details[open]::details-content {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 0.5rem;
+    transition: all 0.6s ease;
+}
+
+.details div{
+    padding: 1.25rem;
+    display: flex;
+    column-gap: 0.75rem;
+    box-shadow: 0 2px 4px var(--black-10);
+    transition: all 0.3s ease;
+}
+
+.details .details-content{
+    padding: 1.25rem;
+    transition: all 0.4s ease;
 }
 /* ////////// */
 
@@ -1534,17 +1569,6 @@ blockquote{
     .centerer-content{grid-column: 3/11;}
     .center-left{grid-column: 2/7;}
     .center-right{grid-column: 7/12;}
-
-    #summary div:nth-child(1){grid-area: 1/1/3/8;}
-    #summary div:nth-child(2){grid-area: 1/9/2/13;}
-    #summary div:nth-child(3){grid-area: 2/9/3/13;}
-    #summary .link-button{grid-area: 3/1/4/8;}
-
-    #summary.rows-3 div:nth-child(1){grid-area: 1/1/4/8;}
-    #summary.rows-3 div:nth-child(2){grid-area: 1/9/2/13;}
-    #summary.rows-3 div:nth-child(3){grid-area: 2/9/3/13;}
-    #summary.rows-3 div:nth-child(4){grid-area: 3/9/4/13;}
-    #summary.rows-3 .link-button{grid-area: 4/1/5/8;}
 
     header .grid{
         margin: auto;
