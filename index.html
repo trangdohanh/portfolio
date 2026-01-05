@@ -7,19 +7,13 @@
         <meta name="author" content="Trang Do">
         <title>Trang Do</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.png">
-
         <link rel="preload" href="img/animation.gif" as="image">
-        <link rel="preload" href="img/background.png" as="image">
-        <link rel="preload" href="img/background-light.png" as="image">
-        <link rel="preload" href="img/portrait.png" as="image">
 
         <!-- Fonts and Icons -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- Google Font https://fonts.google.com/specimen/Jost -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
-        <!-- Google Font https://fonts.google.com/specimen/Space+Grotesk -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="css/style.css">
@@ -66,7 +60,7 @@
             </header>
     
             <main>
-                <section id="hero" class="grid d-col-12 t-col-12 row-reg">
+                <section id="hero" class="section grid d-col-12 t-col-12 row-reg">
                     <div class="grid row-reg t-span-5 row-2">
                         <h1>Trang Do creates intuitive and meaningful digital experiences driven by research, empathy, and a passion for problem-solving<span class="blink">|</span></h1>
                         
@@ -87,19 +81,19 @@
                         </div>                
                     </div>
                     
-                    <a href="#works" class="t-span-7 row-1">
+                    <div class="t-span-7 row-1 gif-modal" onclick="openModal(this)" id="animation">
                         <img src="img/animation.gif" alt="A laptop displays different projects one-by-one.">
-                    </a>
+                    </div>
                 </section>
     
     
-                <section id="works" class="grid row-xs">
+                <section id="works" class="section grid row-xs">
                     <h2>Case studies</h2>
     
                     <div class="grid row-md d-col-2 t-col-2 projects">
                         <div class="project">
                             <a href="noto/" class="content-flex">
-                                <img src="img/homepage/noto.png" class="mobile-wide-img" alt="A person holding a tablet with the NOTO app displayed on it.">
+                                <img src="img/homepage/noto.png" class="m-wide" alt="A person holding a tablet with the NOTO app displayed on it.">
                                 <p class="title">Smart Documentation for Teachers</p>
                             </a>
                             <p class="subtitle">Streamlining notetaking and communication for ECE teachers.</p>
@@ -162,12 +156,12 @@
                 </section>
     
     
-                <section id="about">
+                <section id="about" class="section">
                     <div class="grid d-col-12 t-col-12">
                         <div class="grid t-span-5 row-sm">
                             <div class="content-flex">
                                 <h2>About me</h2>
-                                <p>I'm a product designer based in Ontario, Canada. I'm at the early stage of my career, but I've had experience with a variety of digital design projects in both individual and collaborative settings. I've designed intuitive digital solutions, created informational and interactive designs, developed responsive websites, enhanced application accessibility, and conducted usability research.</p>
+                                <p>I'm a product designer in Ontario, Canada, with an interest in design systems and frontend development. I'm at the early stage of my career, but I've had experience with a variety of digital design projects in individual and collaborative settings, such as designing intuitive digital solutions, creating informational and interactive designs, developing responsive websites, and conducting usability research and audits.</p>
                                 <p>In my free time, I like to catch up on novels, movies, TV shows, and some drawings.</p>
                             </div>
 
@@ -190,7 +184,7 @@
                             <div class="timedot" style="grid-row: 3/4;"></div>
                             <div class="timepoint" style="grid-row: 3/4;">
                                 <p class="text-sm">Jan 2024</p>
-                                <p>Designed <a href="https://devpost.com/software/career-courier" target="_blank" class="link">a career tool</a> to help high school students determine their best career path for Hackville 2024.</p>
+                                <p>Designed <a href="https://devpost.com/software/career-courier" target="_blank" class="link">a career tool</a> to help high school students to determine their best career path for Hackville 2024.</p>
                             </div>
     
                             <div class="timedot" style="grid-row: 4/5;"></div>
@@ -233,31 +227,31 @@
                     <h2>Other things I've worked on</h2>
                     
                    <div class="grid" id="sandbox">
-                        <div class="project incomplete t-span-6 t-row-4 m-span-4 m-row-3">
+                        <div class="project t-span-6 t-row-4 m-span-4 m-row-3 img-modal" onclick="openModal(this)" id="s-sense" role="img">
                             <img src="../img/homepage/s-sense.png" alt="Phone mockup of the S-Sense app.">
                         </div>
-                        <div class="project t-span-2 t-row-2 m-span-2 m-row-2 video-modal" onclick="openModal(this)" id="google-doodle">
+                        <div class="project t-span-2 t-row-2 m-span-2 m-row-2 video-modal" onclick="openModal(this)" id="google-doodle" role="img">
                             <img src="../img/homepage/google-doodle.png" alt="3D model of the Google logo designed to celebrate the Walkman.">
                         </div>
-                        <div class="project t-span-2 t-row-3 m-span-2 m-row-3 video-modal" onclick="openModal(this)" id="virtual-library">
+                        <div class="project t-span-2 t-row-3 m-span-2 m-row-3 video-modal" onclick="openModal(this)" id="virtual-library" role="img">
                             <img src="../img/homepage/virtual-library.png" alt="3D model of a library interior.">
                         </div>
-                        <div class="project t-span-2 t-row-3 m-span-2 m-row-2" onclick="openSlides(this)" id="infographics">
+                        <div class="project t-span-2 t-row-3 m-span-2 m-row-2" onclick="openSlides(this)" id="infographics" role="img">
                             <img src="../img/homepage/info-visualization.png" alt="4 sheets of infographics.">
                         </div>
-                        <div class="project t-span-2 t-row-2 m-span-2 m-row-2" onclick="openModal(this)" id="candy-model">
+                        <div class="project t-span-2 t-row-2 m-span-2 m-row-2 img-modal" onclick="openModal(this)" id="candy-model" role="img">
                             <img src="../img/homepage/3d-model.png" alt="3D model of a Starbust bag with candies flying out from the opening.">
                         </div>
                         <a href="nos4r2-book-cover/" class="project t-span-4 t-row-4 m-span-4 m-row-3">
                             <img src="../img/homepage/book-cover.png" alt="Different versions of the NOS4R2 book cover laying diagonally.">
                         </a>
-                        <div class="project t-span-2 t-row-3 m-span-2 m-row-3" onclick="openSlides(this)" id="coffee">
+                        <div class="project t-span-2 t-row-3 m-span-2 m-row-3" onclick="openSlides(this)" id="coffee" role="img">
                             <img src="../img/homepage/coffee-mill.png" alt="Coffee cup and takeout bag with the Coffee Mill logo on the counter.">
                         </div>
                         <a href="career-courier/" class="project t-span-3 t-row-3 m-span-3 m-row-2">
                             <img src="../img/homepage/career-courier.png" alt="A laptop displays the homepage of the Career Courier website.">
                         </a>
-                        <div class="project incomplete t-span-3 t-row-3 m-span-3 m-row-2" id="awake-coffee">
+                        <div class="project t-span-3 t-row-3 m-span-3 m-row-2 img-modal" onclick="openModal(this)" id="awake-coffee" role="img">
                             <img src="../img/homepage/awake-coffee.png" alt="A kiosk mockup and two phones showing the Awake Coffee ordering site.">
                         </div>
                     </div>
