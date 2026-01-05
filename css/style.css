@@ -56,24 +56,13 @@ body.dark{
 
 
 /* TEXT STYLING */
-h1, h2, h3, h4{
-    font-weight: 400;
-}
+h1, h2, h3, h4{font-weight: 400;}
 
-h1, h3{
-    font-size: 1.75rem;
-    line-height: 2.62rem;
-}
+h1, h3{font-size: 1.75rem; line-height: 2.62rem;}
 
-h2, h4{
-    font-size: 1.37rem;
-    line-height: 2.22rem;
-}
+h2, h4{font-size: 1.37rem; line-height: 2.22rem;}
 
-p{
-    font-size: 1.08rem;
-    line-height: 1.73rem;
-}
+p{font-size: 1.08rem; line-height: 1.73rem;}
 
 .text-sm{font-size: 0.85rem !important; line-height: 1.36rem;}
 .text-reg{font-size: 1.08rem !important; line-height: 1.73rem;}
@@ -85,7 +74,7 @@ p{
 .text-center{text-align: center;}
 
 .font-light{font-weight: 300;}
-.font-regular{font-weight: 300;}
+.font-regular{font-weight: 400;}
 .font-medium{font-weight: 500;}
 .font-semibold{font-weight: 600;}
 .font-bold{font-weight: 700;}
@@ -98,14 +87,16 @@ p{
 .type-dm{font-family: "DM Sans", sans-serif;}
 .type-space{font-family: "Space Grotesk", sans-serif;}
 
-mark{
-    padding: 0 2px;
-    margin: 0 -2px;
+strong{font-weight: 500;}
+
+button{
+    font-family: "Jost", sans-serif;
+    font-size: 1.08rem; 
+    line-height: 1.73rem;
 }
 
-.dark mark{
-    color: var(--white);
-}
+mark{padding: 0 2px; margin: 0 -2px;}
+.dark mark{color: var(--white);}
 
 .colour-2{color: var(--black-90);}
 .dark .colour-2{color: var(--white-90);}
@@ -121,6 +112,8 @@ mark{
     line-height: 1.73rem;
 }
 
+.list li{margin-top: 0.5rem;}
+
 .no-bullet{list-style-type: none;}
 /* ////////// */
 
@@ -129,11 +122,14 @@ mark{
 section{
     max-width: 1024px;
     width: 100%;
-    margin-top: 160px;
+    margin-top: 120px;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     align-items: start;
+}
+
+.section{
     scroll-margin-top: 120px;
 }
 
@@ -184,7 +180,7 @@ a.link{
 .link-button{
     height: fit-content;
     padding: 0.5rem 1rem;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: var(--black);
     border-radius: 4px;
@@ -209,7 +205,6 @@ header .link-button{
     width: fit-content;
     align-self: end;
     align-items: center;
-    border-width: 1px;
 }
 
 .buttons{
@@ -286,6 +281,14 @@ footer{
     max-width: 1024px;
     margin-top: 2.5rem;
     padding: 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    align-items: end;
+    justify-content: space-between;
+}
+
+footer div:first-child{
     display: flex;
     row-gap: 0.5rem;
     flex-direction: column;
@@ -388,16 +391,56 @@ svg{fill: var(--dark-green);}
     width: auto;
 }
 
-figure{
+.device-desktop, .device-mobile{
+    overflow-y: scroll;
+    margin: 0 auto;
+    border: 10px solid #1a1a1a4d;
+    box-shadow: 0px 2px 10px var(--black-10);
+    border-radius: 0.5rem;
+}
+
+.device-desktop{
+    aspect-ratio: 16/10;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.device-mobile{
+    aspect-ratio: 9/18.5;
+    max-width: 390px;
+    width: auto;
+    max-height: calc(100vh - 80px);
+}
+
+figure, .figure{
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
 }
 
-figcaption{
+figcaption, .figcaption, #caption{
     font-size: 0.85rem; 
     line-height: 1.36rem;
     font-weight: 300;
+}
+
+.cards-row-container{
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: visible;
+    align-content: center;
+}
+
+.cards-row{
+    width: 100%;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.img-card img{
+    width: auto;
+    height: 400px;
 }
 /* ////////// */
 
@@ -409,7 +452,6 @@ figcaption{
     align-content: start;
 }
 
-.row-xs{row-gap: 0.5rem;}
 .row-xs{row-gap: 1rem;}
 .row-sm{row-gap: 1.5rem;}
 .row-reg{row-gap: 2.5rem;}
@@ -448,12 +490,38 @@ figcaption{
     margin-top: 0;
 }
 
-#summary .content-flex p{
+.content-flex.v-center{
+    justify-content: center;
+}
+
+#overview .content-flex p{
     margin-top: 0;
 }
 
-.content-flex.v-center{
+#overview .content-flex p:nth-child(3){
+    margin-top: 0.5rem;
+}
+
+.icon-text{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
     justify-content: center;
+}
+
+.icon-text svg{
+    margin-left: -1.75rem;
+}
+
+.icon-text p{
+    margin-top: 0;
+}
+
+.textbox .icon-text{
+    border-radius: 0.45rem 0.45rem 0 0; 
+    margin: -0.75rem -1rem 0 -1rem; 
+    padding: 0.5rem;
 }
 /* ////////// */
 
@@ -515,23 +583,17 @@ figcaption{
 }
 
 #sandbox .project{
+    display: block;
+    width: 100%;
     height: 100%;
-    cursor: pointer;
+    cursor: pointer
 }
 
-#sandbox .project.incomplete{
-    cursor: initial;
-}
+#sandbox .project.img-modal, .gif-modal{cursor: zoom-in;}
 
 #sandbox img{
     height: 100%;
     object-fit: cover;
-}
-
-#sandbox .project a{
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 /* ////////// */
 
@@ -726,6 +788,8 @@ figcaption{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     height: 5rem;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .colour{
@@ -817,36 +881,24 @@ figcaption{
     border-radius: 0;
 }
 
+.dot {
+    cursor: pointer;
+    height: 0.875rem;
+    width: 0.875rem;
+    margin: 0 2px;
+    background-color: #1a1a1a33;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #1a1a1a80;
+}
+
 .active{
     cursor: initial;
     opacity: 1;
-}
-
-.switch-thumbnail{
-    display: flex;
-    margin: 0 auto; 
-    height: 100%;
-    border-radius: 2px;
-}
-
-.switch-thumbnail .thumbnail{
-    width: 33%;
-    min-height: 15rem;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-.switch-thumbnail .thumbnail img{
-    min-height: 15rem;
-    height: 100%;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-}
-
-.switch-thumbnail .active{
-    width: 100%;
-    z-index: 2;
-    box-shadow: 0 0 20px #1a1a1a33;
 }
 /* End of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 
@@ -919,12 +971,25 @@ figcaption{
     padding: 2.5rem !important;
 }
 
-.textbox p{
-    margin: 0;
+.textbox p:not(.icon-text p, .textbox p:first-child, #overview p){
+    margin-top: 0.5rem;
 }
 
 p.textbox{
     padding: 1rem !important;
+}
+
+.persona-card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1.5rem !important;
+    background-color: var(--white); 
+    border: 1px solid var(--green);
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
 }
 /* ////////// */
 
@@ -1202,6 +1267,12 @@ blockquote{
         flex-wrap: wrap;
     }
 
+    footer{
+        flex-direction: column;
+        row-gap: 1.5rem;
+        align-items: start;
+    }
+
     .timeline{
         padding: 5rem 0 0 0;
     }
@@ -1233,20 +1304,6 @@ blockquote{
     .overflow-block img{
         height: 500px;
     }
-
-    .switch-thumbnail{
-        min-width: 10rem;
-        max-width: 20rem;
-        aspect-ratio: 1/1;
-    }
-
-    .quotes{
-        column-gap: 1.25rem;
-        padding: 1.25rem;
-    }
-
-    .quotes blockquote:first-child{margin-left: 1.25rem;}
-    .quotes blockquote:last-child{margin-right: 1.25rem;}
 }
 
 
@@ -1257,7 +1314,7 @@ blockquote{
     }
 
     section:first-child{
-        margin-top: 120px;
+        margin-top: 80px;
     }
 
     section.extended{
@@ -1410,14 +1467,6 @@ blockquote{
     blockquote{
         padding: 2rem;
     }
-
-    .quotes{
-        column-gap: 2.5rem;
-        padding: 2.5rem;
-    }
-    
-    .quotes blockquote:first-child{margin-left: 2.5rem;}
-    .quotes blockquote:last-child{margin-right: 2.5rem;}
 }
 
 
@@ -1430,7 +1479,6 @@ blockquote{
     section{
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 0;
     }
 
     footer{
@@ -1550,14 +1598,6 @@ blockquote{
         margin-left: 0;
         margin-right: 0;
     }
-
-    .quotes{
-        column-gap: 5rem;
-        padding: 5rem;
-    }
-
-    .quotes blockquote:first-child{margin-left: 5rem;}
-    .quotes blockquote:last-child{margin-right: 5rem;}
 }
 
 
@@ -1577,6 +1617,19 @@ blockquote{
     .quote-image{
         background-attachment: scroll;
     }
+}
+
+
+@media (any-hover: hover) and (min-width: 768px) {
+    .cards-row-container{overflow-x: initial; overflow-y: initial;}
+    .cards-row{width: 100vw; gap: 0;}
+    .img-card{width: 20vw; overflow-x: hidden; filter: drop-shadow(-4px 0px 2px #1a1a1a4d); transition: 0.6s ease;}
+    .img-card img{border-radius: 0;}
+    .img-card:hover{width: 100%;}
+
+    .persona-card:nth-child(1){transform: rotate(-4deg);}
+    .persona-card:nth-child(2){transform: rotate(2deg);}
+    .persona-card:nth-child(3){transform: rotate(-2deg);}
 }
 
 
@@ -1613,5 +1666,7 @@ blockquote{
 
     summary:hover {color: #1a1a1acc;}
     summary:hover svg{fill: #1a1a1acc; rotate: 90deg;}
+
+    .persona-card:hover{transform: rotate(0deg);}
 }
 /* ////////// */
