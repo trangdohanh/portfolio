@@ -26,17 +26,19 @@ if (!document.body.contains(homepage)){
                                                     </div>`;
 }
 
-document.getElementById("footer").setAttribute("class", "grid");
-document.getElementById("footer").innerHTML = `<h2 class="text-md">Get in touch</h2>
-                                                <div class="contact">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
-                                                    <a href="mailto:trangdohanh@gmail.com">trangdohanh@gmail.com</a>
+document.getElementById("footer").innerHTML = `<div>
+                                                    <h2 class="text-md">Get in touch</h2>
+                                                    <div class="contact">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
+                                                        <a href="mailto:trangdohanh@gmail.com">trangdohanh@gmail.com</a>
+                                                    </div>
+                                                    <div class="contact">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+                                                        <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank">linkedin.com/in/hanh-trang-do</a>
+                                                    </div>
                                                 </div>
                                                 
-                                                <div class="contact">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
-                                                    <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank">linkedin.com/in/hanh-trang-do</a>
-                                                </div>`;
+                                                <span class="label theme">Made with HTML, CSS, and JS</span>`;
 
 var navbar = document.getElementById("nav-triggered")
 var navOpen = document.getElementById("nav-trigger");
