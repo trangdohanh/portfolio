@@ -161,7 +161,7 @@ if (document.body.contains(slideCarousels[0])){
 			}
         })
 
-        prev.addEventListener('click', function() {carousel.scrollBy(-container.offsetWidth, 0)})
-        next.addEventListener('click', function() {carousel.scrollBy(container.offsetWidth, 0)})
+        prev.addEventListener('click', function() {carousel.scrollBy(-slides[0].offsetWidth, 0)})
+        next.addEventListener('click', function() {carousel.scrollBy(slides[0].offsetWidth, 0)})
     })
 }
