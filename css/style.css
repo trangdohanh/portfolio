@@ -93,6 +93,8 @@ button{
     font-family: "Jost", sans-serif;
     font-size: 1.08rem; 
     line-height: 1.73rem;
+    color: var(--black);
+    border: none;
 }
 
 mark{padding: 0 2px; margin: 0 -2px;}
@@ -129,9 +131,7 @@ section{
     align-items: start;
 }
 
-.section{
-    scroll-margin-top: 120px;
-}
+.section{scroll-margin-top: 120px;}
 
 section.extended{
     max-width: 100vw;
@@ -267,9 +267,7 @@ header nav{
     transform: translateY(-500px);
 }
 
-.hide-trigger{
-    display: none;
-}
+.hide-trigger{display: none;}
 
 .logo{
     display: flex;
@@ -325,9 +323,7 @@ footer div:first-child{
 }
 .dark .page-nav a{color: #1a1a1a80;}
 
-.page-nav li{
-    list-style: none;
-}
+.page-nav li{list-style: none;}
 
 .nav-link-active{
     font-weight: 600 !important;
@@ -383,16 +379,6 @@ video{
 svg{fill: var(--dark-green);}
 .dark svg {fill: var(--light-green);}
 
-.overflow-block{
-    width: 100vw;
-    overflow-x: scroll;
-}
-
-.overflow-block img{
-    height: 600px;
-    width: auto;
-}
-
 .device-desktop, .device-mobile{
     overflow-y: scroll;
     margin: 0 auto;
@@ -413,6 +399,8 @@ svg{fill: var(--dark-green);}
     width: auto;
     max-height: calc(100vh - 80px);
 }
+
+.device-shadow{box-shadow: 0px 2px 5px var(--black-10);}
 
 figure, .figure{
     display: flex;
@@ -454,17 +442,6 @@ figcaption, .figcaption, #caption{
     align-content: start;
 }
 
-.row-xs{row-gap: 1rem;}
-.row-sm{row-gap: 1.5rem;}
-.row-reg{row-gap: 2.5rem;}
-.row-md{row-gap: 5rem;}
-.row-lg{row-gap: 7.5rem;}
-.row-xl{row-gap: 10rem;}
-
-.grid-h-center{
-    align-items: center;
-}
-
 .grid-sm{
     display: grid;
     column-gap: 1rem;
@@ -476,13 +453,20 @@ figcaption, .figcaption, #caption{
     column-gap: 2rem;
     align-content: start;
 }
+
+.row-xs{row-gap: 1rem;}
+.row-sm{row-gap: 1.5rem;}
+.row-reg{row-gap: 2.5rem;}
+.row-md{row-gap: 5rem;}
+.row-lg{row-gap: 7.5rem;}
+.row-xl{row-gap: 10rem;}
+
+.grid-h-center{align-items: center;}
 /* ////////// */
 
 
 /* FLEX */
-.flex{
-    display: flex;
-}
+.flex{display: flex;}
 
 .content-flex{
     display: flex;
@@ -568,9 +552,7 @@ figcaption, .figcaption, #caption{
     transition: all 0.3s ease;
 }
 
-.project a{
-    cursor: pointer;
-}
+.project a{cursor: pointer;}
 
 .project .title{
     font-family: "Jost", sans-serif;
@@ -690,9 +672,7 @@ footer .label.theme{
 }
 .dark .line{border-left: 2px solid var(--white);}
 
-.timeline .text-sm {
-    font-weight: 300;
-}
+.timeline .text-sm {font-weight: 300;}
 /* ////////// */
 
 
@@ -705,9 +685,7 @@ footer .label.theme{
 }
 .dark .mode-indicator{color: var(--light-green);}
 
-.inactive-mode{
-    opacity: 0.2;
-}
+.inactive-mode{opacity: 0.2;}
 
 .toggle-wrapper{
     display: flex;
@@ -837,32 +815,7 @@ footer .label.theme{
     white-space: normal;
     text-align: left;
     width: 100%;
-    height: 100%;
     position: relative;
-}
-
-.caption{
-    vertical-align: top;
-    white-space: normal;
-}
-
-.next, .prev{
-    cursor: pointer;
-    z-index: 3;
-    position: absolute;
-    top: 45%;
-    width: auto;
-    padding: 1rem;
-    line-height: 0.75rem;
-    border-radius: 0 3px 3px 0;
-    color: var(--black) !important;
-    background-color: rgba(251, 247, 244, 0.2);
-    transition: all 0.3s ease;
-}
-
-.next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 .fade{
@@ -874,6 +827,31 @@ footer .label.theme{
     from {opacity: 0.5}
     to {opacity: 1}
 }
+
+.caption{
+    vertical-align: top;
+    white-space: normal;
+}
+
+.carousel button, .slides button, .slides-container button {
+    font-family: none;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    border: none;
+    border-radius: 2px;
+    background: none;
+    width: auto;
+    padding: 0.75rem;
+    background-color: #1a1a1a1a;
+    transition: all 0.3s ease;
+}
+
+button.prev, button.next{top: 45%;}
+button.prev{border-radius: 0 2px 2px 0;}
+button.next{right: 0; border-radius: 2px 0 0 2px;}
 
 .thumbnails{
     display: grid;
@@ -889,9 +867,19 @@ footer .label.theme{
 
 .thumbnail img{
     height: 100%;
-    object-fit: cover;
     object-position: 50% 50%;
     border-radius: 0;
+}
+
+.dots {
+    place-self: center center;
+    display: flex;
+    column-gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    background-color: #1a1a1a33;
+    border-radius: 0.75rem;
 }
 
 .dot {
@@ -916,6 +904,98 @@ footer .label.theme{
 /* End of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 
 
+/* Code from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels */
+.carousel, .slides-container{
+    position: relative;
+}
+
+.scroll-slides{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+}
+
+.scroll-slides.padded{padding: 0 1rem 3rem 1rem;}
+
+.scroll-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+.slides-container button:not(button.prev, button.next) {
+    bottom: 1rem;
+}
+
+.slides-container button.disabled{
+    opacity: 0.3;
+    cursor: unset;
+}
+/* End of code from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels */
+
+.no-scrollbar {scrollbar-width: none;}
+.no-scrollbar::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar-button {display: none;}
+.thin-scrollbar {scrollbar-width: thin;}
+.thin-scrollbar::-webkit-scrollbar, .thin-scrollbar::-webkit-scrollbar-button {width: 0.25rem;}
+
+
+/* IMAGE SLIDER */
+/* Code from https://codepen.io/pig3onkick3r/pen/YzqqWKY */
+.before-after-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.after-image {display: block;}
+
+.before-image {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.before-image img{height: 100%;}
+
+.resizer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background: var(--black);
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+}
+/* End of code from https://codepen.io/pig3onkick3r/pen/YzqqWKY */
+
+.resizer div {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    position: absolute;
+    margin-left: calc(-1.5rem + 1px);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.resizer svg{fill: var(--black);}
+
+
 /* MODAL */
 .modal{
     z-index: 10;
@@ -925,14 +1005,17 @@ footer .label.theme{
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
-    background-color: rgba(251, 247, 244, 0.9);
+    padding: 0 1.25rem;
+    overflow-y: scroll;
+    background-color: var(--white-90);
 }
-.dark .modal{background-color: rgba(26, 26, 26, 0.9);}
+.dark .modal{background-color: var(--black-90);}
 
 .modal-content{
     position: relative;
     max-width: 1024px;
+    height: fit-content;
+    padding: 4rem 0;
 }
 
 .modal-content:not(.modal-content:has(.slides)){
@@ -944,6 +1027,7 @@ footer .label.theme{
     position: fixed;
     top: 0.25rem;
     right: 0.5rem;
+    z-index: 5;
     display: inline-block;
     padding: 0.75rem;
     line-height: 0.75rem;
@@ -964,6 +1048,8 @@ footer .label.theme{
     display: block;
     margin: 0 auto;
 }
+
+.proj-modal{cursor: zoom-in;}
 
 .modal svg{fill: var(--black) !important;}
 .dark .modal svg:not(.next svg, .prev svg){fill: var(--white) !important;}
@@ -1321,23 +1407,13 @@ blockquote{
         height: 5rem;
     }
 
-    .modal{
-        padding: 64px 20px;
-    }
-
-    .desktop-version{
-        display: none;
-    }
+    .desktop-version{display: none;}
 
     .m-wide{
         margin-left: -20px;
         margin-right: -20px;
         width: 100vw;
         border-radius: 0;
-    }
-
-    .overflow-block img{
-        height: 500px;
     }
 }
 
@@ -1418,7 +1494,6 @@ blockquote{
     .t-b-32{aspect-ratio: 3/2;}
     .t-b-23{aspect-ratio: 2/3.1;}
 
-
     .t-center-content{grid-column: 2/12;}
 
     header .grid{
@@ -1458,12 +1533,12 @@ blockquote{
     }
 
     .modal{
-        padding: 64px 40px 40px 40px;
+        padding: 0 2.5rem;
     }
 
     .modal-content:not(.modal-content:has(.slides)){
         place-self: center;
-        margin-top: 0;
+        padding-top: 4rem;
     }
 
     .close-modal{
@@ -1471,9 +1546,9 @@ blockquote{
         right: 0.75rem;
     }
 
-    .mobile-version{
-        display: none;
-    }
+    .scroll-slides.padded{padding: 0 2rem 3rem 2rem;}
+
+    .mobile-version{display: none;}
 
     .t-wide{
         margin-left: -40px;
@@ -1599,12 +1674,14 @@ blockquote{
     .d-pad-bottom{padding-bottom: 1.25rem;}
     .d-pad-right{padding-right: 1.25rem;}
 
-    .modal{
-        padding: 40px 0;
-    }
-
     .modal-content{
         margin: 0 auto;
+    }
+
+    .scroll-slides.padded{
+        padding: 2rem 2rem 3rem 2rem;
+        border: 1px solid var(--black);
+        border-radius: 2px;
     }
 
     .t-wide{
@@ -1661,16 +1738,11 @@ blockquote{
 @media (any-hover: hover) {
     a:hover{text-decoration: underline; color: var(--dark-green);}
     .dark a:hover{color: var(--light-green);}
-
     a.link:hover{text-decoration: none;}
-
     .link-button:hover{background-color: var(--green); color: var(--white); border-color: var(--green);}
     .dark .link-button:hover{color: var(--white);}
-
     .link-button:hover svg{fill: var(--white);}
-
     header .link-button:hover{text-decoration: none;}
-
     .page-nav a:hover{color: var(--green);}
 
     #hero .labels a:hover{background-color: var(--green);}
@@ -1678,12 +1750,9 @@ blockquote{
 
     .project a:hover{text-decoration: none; color: var(--black-90);}
     .dark .project a:hover{color: var(--white-90);}
-
     .project a:hover img{scale: 98%;}
-
     .project a:hover .title{text-decoration: underline; color: var(--dark-green);}
     .dark .project a:hover .title{color: var(--light-green);}
-
     #sandbox .project:not(.incomplete):hover img{scale: 98%;}
 
     .thumbnail:hover{opacity: 1;}
@@ -1692,5 +1761,10 @@ blockquote{
     summary:hover svg{fill: #1a1a1acc; rotate: 90deg;}
 
     .persona-card:hover{transform: rotate(0deg);}
+
+    .resizer div:hover {background: var(--green); border-color: var(--green)}
+    .resizer div:hover svg {fill: var(--white);}
+
+    .slides button:hover, .slides-container button:not(button.disabled):hover{background-color: #50826e80;}
 }
 /* ////////// */

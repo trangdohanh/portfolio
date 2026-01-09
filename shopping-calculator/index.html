@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
@@ -19,14 +20,14 @@
             .bordered-section{border: 2px solid #cde1e3;}
             .themed-text{color: #598392;}
             .textbox.bordered{border: 1px solid #598392;}
-            .textbox .icon-text {background-color: #cde1e3cc; color: #598392;}
+            .textbox .icon-text {background-color: #cde1e3cc; color: #245567;}
         </style>
     </head>
 
     <body>
         <div class="wrapper">
             <header id="header"></header>
-    
+
             <main>
                 <section class="section grid row-md">                        
                     <img src="../img/shopping-calculator/mockup-1.jpg" class="m-wide">
@@ -62,28 +63,24 @@
 
                 <section class="section grid d-col-12 row-lg" id="challenge">
                     <div class="center-content grid row-reg">
-                        <figure style="row-gap: 0;">
-                            <img src="../img/shopping-calculator/problem.png">
-                            <figcaption>Grocery prices in Canadian dollars and Vietnamese dong. Illustrations were sourced from Flaticon.</figcaption>
-                        </figure>
-
                         <div class="content-flex">
                             <h2 class="themed-text">The challenge</h2>
                             <h3>There is an additional cognitive load for new residents when shopping due to their unfamiliarity with the pricing structure.</h3>
                             <p>Shoppers tend to judge prices based on their previous experience, but for many newcomers, switching between currencies is a necessary added step to navigate unfamiliar pricing. <strong>Being able to mentally convert from one currency to another is one thing, keeping track of the numbers is another matter.</strong> Those who've been used to tax-inclusive pricing also have the additional task of figuring out how the sales tax applies.</p>
                         </div>
+
+                        <figure style="row-gap: 0;">
+                            <img src="../img/shopping-calculator/problem.png">
+                            <figcaption>Grocery prices in Canadian dollars and Vietnamese dong. Illustrations were sourced from Flaticon.</figcaption>
+                        </figure>
                     </div>
 
-                    <div class="center-content grid row-reg">
-                        <img src="../img/shopping-calculator/problem-2.png">
-
-                        <div class="content-flex">
-                            <h3>The extra seconds calculating a point of reference can add up to minutes that could have been spent on more meaningful activities.</h3>
-                            <p>The common advice is to "give it time, and you'll get used to it." People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. <strong>Amidst other challenges that come with relocating, one less source of stress could be valuable.</strong></p>
-                        </div>
+                    <div class="center-content content-flex">
+                        <h3>The extra seconds calculating a point of reference can add up to minutes that could have been spent on more meaningful activities.</h3>
+                        <p>The common advice is to "give it time, and you'll get used to it." People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. <strong>Amidst other challenges that come with relocating, one less source of stress could be valuable.</strong></p>
                     </div>
 
-                    <div class="center-content textbox coloured-bg">
+                    <div class="center-content textbox coloured-bg bordered">
                         <p class="text-lg text-center">What if there's something to give people back those extra minutes? Something that combines existing tools to help newcomers adapt to the new currency and prices?</p>
                     </div>
                 </section>
@@ -92,7 +89,7 @@
                 <section class="section grid d-col-12 row-reg" id="concept">
                     <div class="center-content content-flex">
                         <h2 class="themed-text">The idea</h2>
-                        <h3>A shopping calculator that converts from Canadian dollars to the user's currency of choice, providing them with the conversion as they shop.</h3>
+                        <h3>A shopping calculator that converts from Canadian dollars to the user's currency of choice, showing them the conversion as they shop.</h3>
                         <p>Most people have their phone with them when they go out, so a shopping calculator app with integrated currency conversion would provide convenience and utility. Based on research and observations, I outlined primary features—calculation and conversion—and additional ones that may be beneficial.</p>
                     </div>
 
@@ -128,19 +125,44 @@
                 </section>
                 
 
-                <section class="section extended grid row-lg" id="design">
-                    <div class="extended-wrapper grid row-reg">   
-                        <div class="extended-content grid d-col-12">
-                            <div class="center-content content-flex">
-                                <h2 class="themed-text">Design</h2>
-                                <h3>Once I have the desired features, I mapped out the user interactions (in blue) and machine activities (in green).</h3>
-                            </div>
+                <section class="section grid row-lg" id="design">
+                    <div class="grid d-col-12 row-reg">   
+                        <div class="center-content content-flex">
+                            <h2 class="themed-text">Design</h2>
+                            <h3>I mapped out the user interactions (in blue) and machine activities (in green).</h3>
                         </div>
 
-                        <img src="../img/shopping-calculator/user-flow.png" class="wide t-wide m-wide"> 
+                        <div class="desktop-version d-span-12 t-wide slides-container">
+                            <div class="scroll-slides padded thin-scrollbar">
+                                <img src="../img/shopping-calculator/user-flow-a.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/user-flow-b.png" class="scroll-slide">
+                            </div>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+                        </div>
+
+                        <div class="mobile-version m-wide slides-container">
+                            <div class="scroll-slides padded thin-scrollbar">
+                                <img src="../img/shopping-calculator/user-flow-1a.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/user-flow-1b.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/user-flow-1c.png" class="scroll-slide">
+                            </div>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="extended-wrapper extended-content grid d-col-12 row-reg">
+                    <div class="grid d-col-12 row-reg">
                         <div class="center-content content-flex">
                             <h3>I used paper prototypes to ideate layouts and conduct quick user tests.</h3>
                             <p>My experience with front-end development was limited at this point, so I was advised to keep everything to one HTML document—thus, one screen. A challenge I encountered early on was fitting a lot of information into one phone screen. To address this constraint, most participants recommended displaying the information gradually.</p>
@@ -149,84 +171,113 @@
                         <img src="../img/shopping-calculator/paper-prototype.jpg" class="d-span-12">  
                     </div>
 
-                    <div class="extended-wrapper extended-content grid d-col-12 row-reg">
+                    <div class="grid d-col-12 row-reg">
                         <div class="center-content content-flex">
                             <h3>The low-fidelity designs were transformed into digital wireframes on Adobe XD, then Figma.</h3>
                             <p>From the first to the second iterations, I omitted the initial screens prompting the user to select their currency and province and intended to replace them with a brief instructional pop-up.</p>
                         </div>
         
-                        <img src="../img/shopping-calculator/iteration-1.png" class="d-span-12">
-                        <img src="../img/shopping-calculator/iteration-2.png" class="d-span-12">                 
+                        <div class="d-span-12 grid row-sm">
+                            <img src="../img/shopping-calculator/iteration-1.png" class="m-wide">
+                            <img src="../img/shopping-calculator/iteration-2.png" class="m-wide">      
+                        </div>
+                                   
                     </div>
 
-                    <div class="extended-wrapper grid row-reg">
-                        <div class="extended-content grid d-col-12 row-reg">
-                            <div class="center-content grid content-flex t-span-2">
-                                <h3>I addressed shortcomings from my initial designs to better account for the constraints of mobile devices.</h3>
-                                <p>The biggest mistake I made when designing the original wireframes was not taking into account the device restrictions. The screen size I used was smaller than what most phones at the time had, and I didn't consider the native UI elements or the reachability of certain features.</p>
+                    <div class="grid d-col-12 row-reg">
+                        <div class="center-content grid content-flex">
+                            <h3>For a mobile app, my designs needed to ensure the reachability of components and better account for native UI elements.</h3>
+                        </div>
+
+                        <div class="d-span-12 figure">
+                            <div class="t-wide m-wide before-after-slider">
+                                <div class="before-image">
+                                    <img src="../img/shopping-calculator/before.png"/>
+                                </div>
+                            
+                                <div class="after-image">
+                                    <img src="../img/shopping-calculator/after.png"/>
+                                </div>
+
+                                <div class="resizer">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path></svg>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="center-content grid-sm t-col-3 row-xs">
-                                <div class="textbox padding-sm bordered">
-                                    <div class="icon-text">
-                                        <p>Better onboarding</p>
-                                    </div>
-                                    <p class="text-sm">I moved the currency and province dropdowns to a modal at the start, so users wouldn't have to reach the top of the screen when they first use the app.</p>            
-                                </div>
+                            <p class="figcaption">Slide between the "before" and "after" wireframes.</p>
+                        </div>
 
-                                <div class="textbox padding-sm bordered">
-                                    <div class="icon-text">
-                                        <p>Easy button access</p>
-                                    </div>
-                                    <p class="text-sm">The “Add to list” button floats near the bottom right corner for easier access. It stays visible to users regardless of how long their shopping list gets.</p>            
-                                </div>
+                        <div class="d-span-12 grid-sm d-col-4 t-col-2 row-xs">
+                            <div class="textbox coloured-bg">
+                                <p><strong>Better onboarding</strong>: New users are presented with the modal to select currency and province, and don't have to reach the top of the screen.</p>            
+                            </div>
 
-                                <div class="textbox padding-sm bordered">
-                                    <div class="icon-text">
-                                        <p>Reduce clutter</p>
-                                    </div>
-                                    <p class="text-sm">I simplified the layout of the summary area to reduce confusion and removed clutter in the “Saved” screen.</p>            
-                                </div>
+                            <div class="textbox coloured-bg">
+                                <p><strong>Easy button access</strong>: The “Add to list” button floats near the bottom right corner and stays visible to users regardless of the length of the shopping list.</p>            
+                            </div>
+
+                            <div class="textbox coloured-bg">
+                                <p><strong>Reduce clutter</strong>: Simplified the layout of the summary area to reduce confusion, and removed clutter in the “Saved” screen.</p>            
+                            </div>
+
+                            <div class="textbox coloured-bg">
+                                <p><strong>Improve contrast</strong>: Adjusted the colour palette to increase colour contrast and cohesion.</p>            
                             </div>
                         </div>
-            
-                        <img src="../img/shopping-calculator/iteration-3.png" class="wide t-wide m-wide">
                     </div>
                 </section>
 
 
-                <section class="section extended grid row-lg" id="develop">
-                    <div class="extended-wrapper extended-content grid row-lg">
-                        <div class="grid d-col-12 row-md">
-                            <div class="center-content content-flex">
-                                <h2 class="themed-text">Develop</h2>
-                                <h3>I coded a prototype with HTML, CSS, and JavaScript, using an API to retrieve real-time conversion rates and leveraging local storage for a simple save feature.</h3>
-                                <p>After turning my design into code, I worked out the math for calculations when items are added and removed. I used the Frankfurter API to retrieve conversion rates. User-selected currency and province are saved using local storage, so they could skip this onboarding process when they use the app the second time.</p>
-                            </div>
-
-                            <img src="../img/shopping-calculator/develop-2.png" class="d-span-12">  
-                        </div>
-
-                    </div>
-                    
-                    <div class="extended-wrapper extended-content grid t-col-4 m-col-2 row-reg grid-h-center">
-                        <div class="content-flex t-span-2 m-span-2 d-pad-right">
-                            <h3>Turning this into a web app</h3>
+                <section class="section grid row-lg" id="develop">  
+                    <div class="grid d-col-12 row-reg">
+                        <div class="center-content grid content-flex">
+                            <h2 class="themed-text">Develop</h2>
+                            <h3>With all that being said, let's make this a web application first.</h3>
                             <p>Ideally, a mobile app would be more convenient and could leverage the device's hardware and operating system. However, native hardware isn't necessary for this proof of concept, and a web application could reach more potential users.</p>
                         </div>
-                        
-                        <div class="figure">
-                            <video width="100%" height="auto" controls autoplay loop muted>
-                                <source src="../img/shopping-calculator/demo-2.mp4" type="video/mp4">
-                            </video>
-                            <p class="figcaption">My first prototype</p>
+
+                        <div class="desktop-version d-span-12 t-wide slides-container">
+                            <div class="scroll-slides padded thin-scrollbar">
+                                <img src="../img/shopping-calculator/iteration-3a.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/iteration-3b.png" class="scroll-slide">
+                            </div>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
                         </div>
 
-                        <div class="figure">
-                            <video width="100%" height="auto" controls autoplay loop muted>
+                        <div class="mobile-version m-wide slides-container">
+                            <div class="scroll-slides padded thin-scrollbar">
+                                <img src="../img/shopping-calculator/iteration-3-1a.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/iteration-3-1b.png" class="scroll-slide">
+                                <img src="../img/shopping-calculator/iteration-3-1c.png" class="scroll-slide">
+                            </div>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid d-col-12">
+                        <div class="center-content grid d-col-5 t-col-5 row-reg grid-h-center">
+                            <div class="d-span-3 t-span-3 content-flex d-pad-right">
+                                <h3>I coded a prototype with real-time conversion rates and simple saving capability.</h3>
+                                <p>I turned my wireframes into code using HTML, CSS, and JavaScript, and worked out the math for calculations when items are added and removed. I used the Frankfurter API to retrieve conversion rates. The selected currency and province are saved using local storage, allowing the user to skip this selection process when they use the app again.</p>
+                            </div>
+
+                            <video class="t-span-2 figure" width="100%" height="auto" controls autoplay loop muted>
                                 <source src="../img/shopping-calculator/demo-1.mp4" type="video/mp4">
                             </video>
-                            <p class="figcaption">My final prototype</p>
                         </div>
                     </div>
                 </section>
@@ -272,7 +323,7 @@
                 </section>
 
 
-                <section class="section grid d-col-12 row-md" id="reflection">
+                <section class="section grid d-col-12 row-reg" id="reflection">
                     <div class="center-content content-flex">
                         <h2 class="themed-text">Reflection</h2>
                         <h3>Trying not to get caught up in technical constraints</h3>
@@ -300,5 +351,6 @@
         
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
+        <script src="../js/carousel.js"></script>
     </body>
 </html>
