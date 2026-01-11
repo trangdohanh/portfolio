@@ -11,7 +11,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
        
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="../css/style.css">
@@ -61,27 +60,27 @@
                 </section>
 
 
-                <section class="section grid d-col-12 row-lg" id="challenge">
-                    <div class="center-content grid row-reg">
-                        <div class="content-flex">
+                <section class="section grid row-lg extended" id="challenge">
+                    <div class="extended-wrapper extended-content grid d-col-12 row-reg">
+                        <div class="center-content content-flex">
                             <h2 class="themed-text">The challenge</h2>
                             <h3>There is an additional cognitive load for new residents when shopping due to their unfamiliarity with the pricing structure.</h3>
                             <p>Shoppers tend to judge prices based on their previous experience, but for many newcomers, switching between currencies is a necessary added step to navigate unfamiliar pricing. <strong>Being able to mentally convert from one currency to another is one thing, keeping track of the numbers is another matter.</strong> Those who've been used to tax-inclusive pricing also have the additional task of figuring out how the sales tax applies.</p>
                         </div>
 
-                        <figure style="row-gap: 0;">
+                        <figure class="center-content" style="row-gap: 0;">
                             <img src="../img/shopping-calculator/problem.png">
                             <figcaption>Grocery prices in Canadian dollars and Vietnamese dong. Illustrations were sourced from Flaticon.</figcaption>
                         </figure>
                     </div>
 
-                    <div class="center-content content-flex">
-                        <h3>The extra seconds calculating a point of reference can add up to minutes that could have been spent on more meaningful activities.</h3>
-                        <p>The common advice is to "give it time, and you'll get used to it." People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. <strong>Amidst other challenges that come with relocating, one less source of stress could be valuable.</strong></p>
-                    </div>
-
-                    <div class="center-content textbox coloured-bg bordered">
-                        <p class="text-lg text-center">What if there's something to give people back those extra minutes? Something that combines existing tools to help newcomers adapt to the new currency and prices?</p>
+                    <div class="coloured-section coloured-bg">
+                        <div class="extended-wrapper extended-content grid d-col-12">
+                            <div class="center-content content-flex">
+                                <h3>What if there's something that combines existing tools to reduce that cognitive load and help newcomers adapt more easily?</h3>
+                                <p>The common advice is to "give it time, and you'll get used to it." People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. <strong>Amidst other challenges that come with relocating, one less source of stress could be valuable.</strong></p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -174,7 +173,7 @@
                     <div class="grid d-col-12 row-reg">
                         <div class="center-content content-flex">
                             <h3>The low-fidelity designs were transformed into digital wireframes on Adobe XD, then Figma.</h3>
-                            <p>From the first to the second iterations, I omitted the initial screens prompting the user to select their currency and province and intended to replace them with a brief instructional pop-up.</p>
+                            <p>From the first to the second iterations, I omitted the initial screens prompting the user to select their currency and province and experimented with a brief instructional pop-up.</p>
                         </div>
         
                         <div class="d-span-12 grid row-sm">
@@ -186,7 +185,7 @@
 
                     <div class="grid d-col-12 row-reg">
                         <div class="center-content grid content-flex">
-                            <h3>For a mobile app, my designs needed to ensure the reachability of components and better account for native UI elements.</h3>
+                            <h3>For a mobile app, my designs need to ensure the reachability of components and better account for native UI elements.</h3>
                         </div>
 
                         <div class="d-span-12 figure">
@@ -275,7 +274,7 @@
                                 <p>I turned my wireframes into code using HTML, CSS, and JavaScript, and worked out the math for calculations when items are added and removed. I used the Frankfurter API to retrieve conversion rates. The selected currency and province are saved using local storage, allowing the user to skip this selection process when they use the app again.</p>
                             </div>
 
-                            <video class="t-span-2 figure" width="100%" height="auto" controls autoplay loop muted>
+                            <video class="t-span-2 m-max-width" width="100%" height="auto" controls autoplay loop muted>
                                 <source src="../img/shopping-calculator/demo-1.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -319,7 +318,21 @@
                         </div>
                     </div>
 
-                    <img src="../img/shopping-calculator/concept.png" class="wide">
+                    <img src="../img/shopping-calculator/concept.png" class="wide desktop-version">
+
+                    <div class="mobile-version slides-container">
+                        <div class="scroll-slides padded thin-scrollbar">
+                            <img src="../img/shopping-calculator/concept-a.png" class="scroll-slide">
+                            <img src="../img/shopping-calculator/concept-b.png" class="scroll-slide">
+                        </div>
+
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                        </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                        </button>
+                    </div>
                 </section>
 
 
