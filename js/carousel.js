@@ -127,12 +127,12 @@ if (document.body.contains(slideCarousels[0])){
 			window.addEventListener("resize", placeArrows);
 		}
 
-        function enablePrev() {prev.disabled = false; prev.classList.remove("disabled");  }
-        function disablePrev() {prev.disabled = true; prev.classList.add("disabled"); }
+        function enablePrev() {prev.disabled = false;}
+        function disablePrev() {prev.disabled = true;}
         disablePrev()
 
-        function enableNext() {next.disabled = false; next.classList.remove("disabled");}
-        function disableNext() {next.disabled = true; next.classList.add("disabled");}
+        function enableNext() {next.disabled = false;}
+        function disableNext() {next.disabled = true;}
 
         carousel.addEventListener('scroll', function() {
             if (Math.floor(carousel.scrollLeft - (slides[0].offsetWidth * (slides.length - 1))) == 0) {
