@@ -57,18 +57,14 @@ body.dark{
 
 /* TEXT STYLING */
 h1, h2, h3, h4{font-weight: 400;}
+h1, h3 {font-size: 1.78rem; line-height: 2.67rem;}
+h2, h4 {font-size: 1.39rem; line-height: 2.09rem;}
+p {font-size: 1.08rem; line-height: 1.73rem;}
 
-h1, h3{font-size: 1.75rem; line-height: 2.62rem;}
-
-h2, h4{font-size: 1.37rem; line-height: 2.22rem;}
-
-p{font-size: 1.08rem; line-height: 1.73rem;}
-
-.text-sm{font-size: 0.85rem !important; line-height: 1.36rem;}
+.text-sm{font-size: 0.84rem !important; line-height: 1.34rem;}
 .text-reg{font-size: 1.08rem !important; line-height: 1.73rem;}
-.text-md{font-size: 1.37rem !important; line-height: 2.22rem;}
-.text-lg{font-size: 1.75rem !important; line-height: 2.62rem;}
-.text-xl{font-size: 2.22rem !important; line-height: 3.33rem;}
+.text-md{font-size: 1.39rem !important; line-height: 2.09rem;}
+.text-lg{font-size: 1.78rem !important; line-height: 2.67rem;}
 
 .text-right{text-align: right;}
 .text-center{text-align: center;}
@@ -82,10 +78,6 @@ p{font-size: 1.08rem; line-height: 1.73rem;}
 .font-italic{font-style: italic;}
 .text-upc{text-transform: uppercase;}
 .text-stc{text-transform: capitalize;}
-
-.type-jost{font-family: "Jost", sans-serif;}
-.type-dm{font-family: "DM Sans", sans-serif;}
-.type-space{font-family: "Space Grotesk", sans-serif;}
 
 strong{font-weight: 500;}
 
@@ -140,8 +132,8 @@ section.extended{
 }
 
 .coloured-section{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .coloured-border{
@@ -207,11 +199,15 @@ header .link-button{
     width: fit-content;
     align-self: end;
     align-items: center;
+    border-width: 1px;
 }
 
 .buttons{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    max-width: 100%;
     width: fit-content;
 }
 /* ////////// */
@@ -332,26 +328,12 @@ footer div:first-child{
 /* ////////// */
 
 
-/* Code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
-.progress-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 0.25rem;
-    background: var(--light-green);
-}
-
-.progress-bar {
-    height: 0.25rem;
-    background: var(--green);
-    width: 0%;
-}
-/* End of code from https://www.w3schools.com/howto/howto_js_scroll_indicator.asp */
-
-
 /* MEDIA STYLING */
+iframe{
+    width: 100%;
+    height: auto;
+}
+
 img{
     display: block;
     width: 100%;
@@ -371,10 +353,7 @@ img{
 
 img.wide{border-radius: 0;}
 
-video{
-    display: block;
-    border-radius: 2px;
-}
+video{display: block; border-radius: 2px;}
 
 svg{fill: var(--dark-green);}
 .dark svg {fill: var(--light-green);}
@@ -649,7 +628,7 @@ footer .label.theme{
 
 .timedot{
     width: 1rem;
-    height: 1rem;
+    aspect-ratio: 1 / 1;
     border-radius: 0.5rem;
     border: 2px solid var(--black);
     background-color: var(--white);
@@ -700,8 +679,6 @@ footer .label.theme{
     gap: 0.375rem;
     align-items: center;
 }
-/* ////////// */
-
 
 /* Code from https://www.w3schools.com/howto/howto_css_switch.asp */
 .switch {
@@ -733,8 +710,8 @@ footer .label.theme{
 .slider::before {
     position: absolute;
     content: "";
-    height: 14px;
     width: 14px;
+    aspect-ratio: 1 / 1;
     left: 2px;
     bottom: 2px;
     border-radius: 50%;
@@ -798,6 +775,7 @@ footer .label.theme{
 /* ////////// */
 
 
+/* CAROUSELS */
 /* Start of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 .slides{
     z-index: 1;
@@ -818,22 +796,12 @@ footer .label.theme{
     position: relative;
 }
 
-.fade{
-    animation-name: fade;
-    animation-duration: 0.5s;
-}
-
-@keyframes fade{
-    from {opacity: 0.5}
-    to {opacity: 1}
-}
-
 .caption{
     vertical-align: top;
     white-space: normal;
 }
 
-.carousel button, .slides button, .slides-container button {
+.slides button, .slides-container button {
     font-family: none;
     font-size: 0;
     line-height: 0;
@@ -882,30 +850,31 @@ button.next{right: 0; border-radius: 2px 0 0 2px;}
     border-radius: 0.75rem;
 }
 
+.dots.in-slide {
+    position: absolute;
+    bottom: 1rem;
+}
+
 .dot {
     cursor: pointer;
-    height: 0.875rem;
-    width: 0.875rem;
-    margin: 0 2px;
+    width: 0.75rem;
+    aspect-ratio: 1 / 1;
     background-color: #1a1a1a33;
     border-radius: 50%;
     display: inline-block;
-    transition: 0.6s ease;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
 }
 
-.active, .dot:hover {
-  background-color: #1a1a1a80;
-}
-
-.active{
+.active {
+    background-color: #1a1a1a80;
     cursor: initial;
     opacity: 1;
 }
 /* End of code from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
 
-
 /* Code from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels */
-.carousel, .slides-container{
+.slides-container{
     position: relative;
 }
 
@@ -928,7 +897,7 @@ button.next{right: 0; border-radius: 2px 0 0 2px;}
     bottom: 1rem;
 }
 
-.slides-container button.disabled{
+button:disabled{
     opacity: 0.3;
     cursor: unset;
 }
@@ -994,6 +963,7 @@ button.next{right: 0; border-radius: 2px 0 0 2px;}
 }
 
 .resizer svg{fill: var(--black);}
+/* ////////// */
 
 
 /* MODAL */
@@ -1082,7 +1052,6 @@ p.textbox{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    max-width: 30rem;
     margin: 0 auto;
     padding: 1.5rem !important;
     background-color: var(--white); 
@@ -1239,26 +1208,6 @@ blockquote{
     width: 100vw;
     height: 100%;
 }
-
-.quotes{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-
-.quotes blockquote{
-    max-width: 50rem;
-    width: 100%;
-    margin: 0 auto;
-    flex-shrink: 0;
-    flex-basis: 90%;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
 /* ////////// */
 
 
@@ -1310,31 +1259,23 @@ blockquote{
 
 /* MOBILE ONLY */
 @media only screen and (max-width: 767px) {
-    .wrapper{
-        padding: 0 20px;
-    }
+    h1, h3 {font-size: 1.62rem; line-height: 2.43rem;}
+    h2, h4 {font-size: 1.32rem; line-height: 1.98rem;}
+    p {font-size: 1.08rem; line-height: 1.73rem;}
 
-    section:first-child{
-        margin-top: 80px;
-    }
+    .text-sm{font-size: 0.88rem !important; line-height: 1.41rem;}
+    .text-reg{font-size: 1.08rem !important; line-height: 1.73rem;}
+    .text-md{font-size: 1.32rem !important; line-height: 1.98rem;}
+    .text-lg{font-size: 1.62rem !important; line-height: 2.43rem;}
+    
+    .wrapper{padding: 0 20px;}
 
-    section{
-        scroll-margin-top: 80px;
-    }
+    section:first-child{margin-top: 80px;}
+    section{scroll-margin-top: 80px;}
+    #hero{margin-top: 120px;}
 
-    #hero{
-        margin-top: 120px;
-    }
-
-    section.extended{
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    .extended-wrapper{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    section.extended{margin-left: -20px; margin-right: -20px;}
+    .extended-wrapper{padding-left: 20px; padding-right: 20px;}
 
     #sandbox{
         grid-template-columns: repeat(6, 1fr);
@@ -1415,25 +1356,24 @@ blockquote{
         width: 100vw;
         border-radius: 0;
     }
+
+    .m-max-width{
+        max-width: 30rem;
+        margin: 0 auto
+    }
 }
 
 
 /* 768px < SCREEN < 1024px */
 @media only screen and (min-width: 768px) {
-    .wrapper{
-        padding: 0 40px;
-    }
+    .wrapper{padding: 0 40px;}
 
-    section:first-child{
-        margin-top: 80px;
-    }
+    section:first-child{margin-top: 80px;}
 
-    section.extended{
-        margin-left: -40px;
-        margin-right: -40px;
-    }
+    section.extended{margin-left: -40px; margin-right: -40px;}
 
     .extended-wrapper{
+        max-width: 100%;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -1449,9 +1389,7 @@ blockquote{
         margin-top: 0;
     }
 
-    .grid{
-        column-gap: 1.5rem;
-    }
+    .grid{column-gap: 1.5rem;}
 
     #sandbox{
         grid-template-columns: repeat(12, 1fr);
@@ -1582,40 +1520,23 @@ blockquote{
 
 /* 1024px < SCREEN < 1440px */
 @media only screen and (min-width: 1104px) {
-    .wrapper{
-        padding: 0;
-    }
+    .wrapper{padding: 0;}
     
-    section{
-        margin-left: auto;
-        margin-right: auto;
-    }
+    section{margin-left: auto; margin-right: auto;}
 
     footer{
         margin: 2.5rem auto 0 auto;
     }
 
-    section.extended{
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-
-    .extended-wrapper{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
+    section.extended{margin-left: 0; margin-right: 0;}
+    .extended-wrapper{padding-left: 0; padding-right: 0;}
     .extended-content{
         margin: 0 auto;
         min-width: 1024px;
         max-width: 1024px;
     }
 
-    .extended-padding{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+    .extended-padding{padding-left: 40px; padding-right: 40px;}
 
     .d-col-2{grid-template-columns: repeat(2, 1fr);}
     .d-col-3{grid-template-columns: repeat(3, 1fr);}
@@ -1695,10 +1616,7 @@ blockquote{
         grid-column: 3/4;
     }
 
-    .charts{
-        margin-left: 0;
-        margin-right: 0;
-    }
+    .charts{margin-left: 0; margin-right: 0;}
 }
 
 
@@ -1715,9 +1633,7 @@ blockquote{
 
 /* TOUCHSCREEN DEVICE */
 @media (pointer: coarse) {
-    .quote-image{
-        background-attachment: scroll;
-    }
+    .quote-image{background-attachment: scroll;}
 }
 
 
@@ -1742,7 +1658,6 @@ blockquote{
     .link-button:hover{background-color: var(--green); color: var(--white); border-color: var(--green);}
     .dark .link-button:hover{color: var(--white);}
     .link-button:hover svg{fill: var(--white);}
-    header .link-button:hover{text-decoration: none;}
     .page-nav a:hover{color: var(--green);}
 
     #hero .labels a:hover{background-color: var(--green);}
@@ -1756,6 +1671,8 @@ blockquote{
     #sandbox .project:not(.incomplete):hover img{scale: 98%;}
 
     .thumbnail:hover{opacity: 1;}
+    .dot:hover {background-color: #1a1a1a80;}
+    .slides button:hover, .slides-container button:not(button:disabled):hover{background-color: #50826e80;}
 
     summary:hover {color: #1a1a1acc;}
     summary:hover svg{fill: #1a1a1acc; rotate: 90deg;}
@@ -1764,7 +1681,5 @@ blockquote{
 
     .resizer div:hover {background: var(--green); border-color: var(--green)}
     .resizer div:hover svg {fill: var(--white);}
-
-    .slides button:hover, .slides-container button:not(button.disabled):hover{background-color: #50826e80;}
 }
 /* ////////// */
