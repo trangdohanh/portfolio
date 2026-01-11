@@ -58,12 +58,12 @@ body.dark{
 /* TEXT STYLING */
 h1, h2, h3, h4{font-weight: 400;}
 h1, h3 {font-size: 1.78rem; line-height: 2.67rem;}
-h2, h4 {font-size: 1.39rem; line-height: 2.09rem;}
+h2, h4 {font-size: 1.39rem; line-height: 2.25rem;}
 p {font-size: 1.08rem; line-height: 1.73rem;}
 
 .text-sm{font-size: 0.84rem !important; line-height: 1.34rem;}
 .text-reg{font-size: 1.08rem !important; line-height: 1.73rem;}
-.text-md{font-size: 1.39rem !important; line-height: 2.09rem;}
+.text-md{font-size: 1.39rem !important; line-height: 2.25rem;}
 .text-lg{font-size: 1.78rem !important; line-height: 2.67rem;}
 
 .text-right{text-align: right;}
@@ -388,8 +388,8 @@ figure, .figure{
 }
 
 figcaption, .figcaption, #caption{
-    font-size: 0.85rem; 
-    line-height: 1.36rem;
+    font-size: 0.84rem; 
+    line-height: 1.34rem;
     font-weight: 300;
 }
 
@@ -536,8 +536,8 @@ figcaption, .figcaption, #caption{
 .project .title{
     font-family: "Jost", sans-serif;
     font-weight: 400;
-    font-size: 1.37rem;
-    line-height: 2.22rem;
+    font-size: 1.39rem;
+    line-height: 2.25rem;
 }
 
 .project .subtitle{
@@ -590,11 +590,11 @@ figcaption, .figcaption, #caption{
 
 .label{
     color: var(--black);
-    font-size: 0.85rem;
     font-weight: 500;
+    font-size: 0.84rem;
+    line-height: 1rem;
     padding: 0.25rem 0.5rem;
     height: 1.5rem;
-    line-height: 1rem;
     border-radius: 2px;
     white-space: nowrap;
     overflow: hidden;
@@ -769,8 +769,8 @@ footer .label.theme{
 
 .colour p{
     font-weight: 300;
-    font-size: 0.85rem;
-    line-height: 1.36rem;
+    font-size: 0.84rem;
+    line-height: 1.34rem;
 }
 /* ////////// */
 
@@ -1180,8 +1180,8 @@ details[open]::details-content {
 
 /* BLOCKQUOTE */
 blockquote{
-    font-size: 1.75rem; 
-    line-height: 2.62rem;
+    font-size: 1.78rem;
+    line-height: 2.67rem;
     text-align: center;
     padding: 1.5rem 1rem;
     border-radius: 1rem;
@@ -1260,12 +1260,12 @@ blockquote{
 /* MOBILE ONLY */
 @media only screen and (max-width: 767px) {
     h1, h3 {font-size: 1.62rem; line-height: 2.43rem;}
-    h2, h4 {font-size: 1.32rem; line-height: 1.98rem;}
+    h2, h4 {font-size: 1.32rem; line-height: 2.14rem;}
     p {font-size: 1.08rem; line-height: 1.73rem;}
 
     .text-sm{font-size: 0.88rem !important; line-height: 1.41rem;}
     .text-reg{font-size: 1.08rem !important; line-height: 1.73rem;}
-    .text-md{font-size: 1.32rem !important; line-height: 1.98rem;}
+    .text-md{font-size: 1.32rem !important; line-height: 2.14rem;}
     .text-lg{font-size: 1.62rem !important; line-height: 2.43rem;}
     
     .wrapper{padding: 0 20px;}
