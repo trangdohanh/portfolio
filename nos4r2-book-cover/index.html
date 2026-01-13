@@ -6,13 +6,9 @@
         <meta name="author" content="Trang Do">
         <title>NOS4R2 Book Cover</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-
-        <!-- Fonts and Icons -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
        
         <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/style.css">
         <style>
             .themed-text {color: #4D4F44;}
@@ -81,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="cards-row-container">
+                    <div class="desktop-version cards-row-container">
                         <div class="flex cards-row">
                             <div class="img-card">
                                 <img src="../img/nos4r2/sketch-1.jpg">
@@ -99,6 +95,25 @@
                                 <img src="../img/nos4r2/sketch-5.png">
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="mobile-version slides-container">
+                        <div class="slides">
+                            <img src="../img/nos4r2/sketch-1.jpg" class="slide">
+                            <img src="../img/nos4r2/sketch-2.jpg" class="slide">
+                            <img src="../img/nos4r2/sketch-3.jpg" class="slide">
+                            <img src="../img/nos4r2/sketch-4.jpg" class="slide">
+                            <img src="../img/nos4r2/sketch-5.png" class="slide">
+                        </div>
+
+                        <button class="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                        </button>
+                        <button class="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                        </button>
+
+                        <div class="dots in-slide"></div>
                     </div>
                 </section>
     
