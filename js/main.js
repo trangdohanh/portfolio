@@ -43,26 +43,30 @@ document.getElementById("footer").innerHTML = `<div>
 var navbar = document.getElementById("nav-triggered")
 var navOpen = document.getElementById("nav-trigger");
 var navClose = document.getElementById("nav-close");
+var tabcontent = document.getElementsByClassName("tabcontent");
+var tablinks = document.getElementsByClassName("tablinks");
 // Code from https://www.w3schools.com/howto/howto_js_media_queries.asp
 function checkDevice(x) {
-    if (x.matches) {
-        navbar.classList.add("hide-nav");
-    } else {
-        navbar.classList.remove("hide-nav");
-        navOpen.classList.remove("hide-trigger");
-        navClose.classList.add("hide-trigger");
+    navbar.classList.remove("hide-nav");
+    navOpen.classList.remove("hide-trigger");
+    navClose.classList.add("hide-trigger");
+    if (x.matches) {navbar.classList.add("hide-nav");}
+
+    if (document.body.contains(tablinks[0])) {
+        tablinks[0].setAttribute("id", "defaultOpen")
+        tablinks[1].removeAttribute("id", "defaultOpen")
+        if (x.matches) {
+            tablinks[1].setAttribute("id", "defaultOpen")
+            tablinks[0].removeAttribute("id", "defaultOpen")
+        }
+        document.getElementById("defaultOpen").click();
     }
 }
   
 var x = window.matchMedia("(max-width: 768px)")
-  
 checkDevice(x);
-  
-x.addEventListener("change", function() {
-    checkDevice(x);
-});
-// End of code from https://www.w3schools.com/howto/howto_js_media_queries.asp
-
+x.addEventListener("change", () => {checkDevice(x);});
+// End of code from w3schools
 
 navOpen.addEventListener("click", () => {
     navbar.classList.remove("hide-nav");
@@ -75,6 +79,13 @@ navClose.addEventListener("click", () => {
     navOpen.classList.remove("hide-trigger");
     navClose.classList.add("hide-trigger");
 })
+
+function openDevice(evt, deviceName) {
+    for (let i = 0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}
+    for (let i = 0; i < tablinks.length; i++) {tablinks[i].className = tablinks[i].className.replace(" active", "");}
+    document.getElementById(deviceName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
 
 var pageNav = document.getElementById("page-nav")

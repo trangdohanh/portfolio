@@ -258,35 +258,5 @@
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
         <script src="../js/carousel.js"></script>
-        <script>
-            var i;
-            var tabcontent = document.getElementsByClassName("tabcontent");
-            var tablinks = document.getElementsByClassName("tablinks");
-            
-            function openDevice(evt, deviceName) {
-                for (i = 0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}
-                for (i = 0; i < tablinks.length; i++) {tablinks[i].className = tablinks[i].className.replace(" active", "");}
-                document.getElementById(deviceName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-
-            function showDevice(x) {
-                if (x.matches) {
-                    tablinks[1].setAttribute("id", "defaultOpen")
-                    tablinks[0].removeAttribute("id", "defaultOpen")
-                } else {
-                    tablinks[0].setAttribute("id", "defaultOpen")
-                    tablinks[1].removeAttribute("id", "defaultOpen")
-                    
-                }
-                document.getElementById("defaultOpen").click();
-            }
-                        
-            showDevice(x);
-            
-            x.addEventListener("change", function() {
-                showDevice(x);
-            });
-        </script>
     </body>
 </html>
