@@ -131,9 +131,6 @@ section{
     max-width: 1024px;
     width: 100%;
     margin-top: 120px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
     align-items: start;
 }
 
@@ -246,9 +243,22 @@ header{
 }
 .dark header{background-color: var(--black-20);}
 
-header .grid{
+.header{
     max-width: 1024px;
     margin: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#home .header{
+    justify-content: left;
+    column-gap: 2rem;
+}
+
+.header-mobile-wrap{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 header a{
@@ -258,9 +268,9 @@ header a{
 
 header nav{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    grid-column: span 2;
+    flex-direction: row;
+    column-gap: 2rem;
+    width: fit-content;
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
 }
@@ -320,6 +330,7 @@ footer div:first-child{
 
 .page-nav{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -1029,7 +1040,7 @@ button:disabled{
 /* PADDED TEXTBOX */
 .textbox{
     padding: 1.5rem !important;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .textbox.padding-sm{
@@ -1065,7 +1076,7 @@ p.textbox{
 }
 
 .textbox .icon-text{
-    border-radius: 0.45rem 0.45rem 0 0; 
+    border-radius: 0.25rem 0.25rem 0 0; 
     margin: -0.75rem -1rem 0 -1rem; 
     padding: 0.5rem;
 }
@@ -1297,6 +1308,10 @@ blockquote{
     section.extended{margin-left: -20px; margin-right: -20px;}
     .extended-wrapper{padding-left: 20px; padding-right: 20px;}
 
+    #hero{
+        flex-direction: column;
+    }
+
     #sandbox{
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(10, 1fr);
@@ -1325,10 +1340,19 @@ blockquote{
     .m-b-43{aspect-ratio: 4/3;}
     .m-b-23{aspect-ratio: 2/3.05;}
 
-    .row-1{grid-row: 1/2;}
-    .row-2{grid-row: 2/3;}
+    .grid .row-1{grid-row: 1/2;}
+    .grid .row-2{grid-row: 2/3;}
+
+    .flex .row-1{order: 1;}
+    .flex .row-2{order: 2;}
+
+    .header {
+        flex-direction: column;
+    }
 
     header nav{
+        width: 100%;
+        flex-direction: column;
         padding-bottom: 0.5rem;
     }
 
@@ -1455,12 +1479,11 @@ blockquote{
 
     .t-center-content{grid-column: 2/12;}
 
-    header .grid{
+    .header{
         margin: 0 40px;
     }
 
     header nav{
-        grid-column: 3/4;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -1477,7 +1500,7 @@ blockquote{
 
     .page-nav-container{
         left: 0;
-        padding: 0 64px;
+        padding: 0 2.5rem;
     }
 
     .page-nav{
@@ -1516,10 +1539,6 @@ blockquote{
         border-radius: 0;
     }
 
-    .toggle-wrapper{
-        padding-right: 1.25rem;
-    }
-
     .charts{
         margin-left: -40px;
         margin-right: -40px;
@@ -1540,20 +1559,17 @@ blockquote{
 
 
 /* 1024px < SCREEN < 1440px */
-@media only screen and (min-width: 1104px) {
-    .wrapper{padding: 0;}
-    
+@media only screen and (min-width: 1025px) {    
     section{margin-left: auto; margin-right: auto;}
 
     footer{
         margin: 2.5rem auto 0 auto;
     }
 
-    section.extended{margin-left: 0; margin-right: 0;}
     .extended-wrapper{padding-left: 0; padding-right: 0;}
     .extended-content{
         margin: 0 auto;
-        min-width: 1024px;
+        min-width: 880px;
         max-width: 1024px;
     }
 
@@ -1592,12 +1608,9 @@ blockquote{
     .d-pad-bottom{padding-bottom: 1.25rem;}
     .d-pad-right{padding-right: 1.25rem;}
 
-    header .grid{
+    header{padding: 0 40px;}
+    .header{
         margin: auto;
-    }
-
-    header nav{
-        grid-column: 4/5;
     }
 
     .page-nav-container{
@@ -1605,7 +1618,13 @@ blockquote{
     }
 
     .page-nav{
-        max-width: 944px;
+        max-width: 1024px;
+    }
+
+    .d-max-width{
+        max-width: 880px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .timeline{
@@ -1631,10 +1650,6 @@ blockquote{
         margin-right: auto;
         width: 100%;
         border-radius: 2px;
-    }
-
-    .toggle-wrapper{
-        grid-column: 3/4;
     }
 
     .charts{margin-left: 0; margin-right: 0;}
