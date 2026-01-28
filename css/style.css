@@ -412,10 +412,8 @@ svg{fill: var(--dark-green);}
 
 .device-shadow{box-shadow: 0px 2px 5px var(--black-10);}
 
-figure, .figure{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
+figure img, .figure img{
+    margin-bottom: 0.5rem;   
 }
 
 figcaption, .figcaption, #caption{
@@ -535,14 +533,13 @@ figcaption, .figcaption, #caption{
     min-width: 100%;
     max-width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
     transition: all 0.3s ease;
 }
 
 .project a{cursor: pointer;}
 
 .project .title{
+    margin-top: 1rem;
     font-family: "Jost", sans-serif;
     font-weight: 400;
     font-size: var(--font-md);
