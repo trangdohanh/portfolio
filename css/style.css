@@ -315,10 +315,8 @@ footer{
     justify-content: space-between;
 }
 
-footer div:first-child{
-    display: flex;
-    row-gap: 0.5rem;
-    flex-direction: column;
+footer .contact{
+    margin-top: 0.5rem;
 }
 
 .page-nav-container{
