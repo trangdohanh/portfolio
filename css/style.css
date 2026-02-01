@@ -168,6 +168,7 @@ a, button{
     width: fit-content;
     text-decoration: none;
     color: var(--black);
+    cursor: pointer;
     -webkit-transition: all 0.3s ease;
      transition: all 0.3s ease;
 }
@@ -187,9 +188,6 @@ a.link{
     border-style: solid;
     border-color: var(--black);
     border-radius: 4px;
-    -webkit-transition: all 0.3s ease;
-     transition: all 0.3s ease;
-    cursor: pointer;
 }
 .dark .link-button{border-color: var(--white);}
 
@@ -1678,7 +1676,7 @@ blockquote{
     a:hover{text-decoration: underline; color: var(--dark-green);}
     .dark a:hover{color: var(--light-green);}
     a.link:hover{text-decoration: none;}
-    .link-button:hover{background-color: var(--green); color: var(--white); border-color: var(--green);}
+    .link-button:hover{background-color: var(--green); color: var(--white); border-color: var(--green); text-decoration: none;}
     .dark .link-button:hover{color: var(--white);}
     .link-button:hover svg{fill: var(--white);}
     .page-nav a:hover{color: var(--green);}
