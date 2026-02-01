@@ -1,0 +1,52 @@
+/* FONTS */
+@font-face {
+    font-family: "Jost";
+    font-style: normal;
+    src: url("../files/jost/Jost-VariableFont_wght.woff2");
+}
+
+@font-face {
+    font-family: "Jost";
+    font-style: italic;
+    src: url("../files/jost/Jost-Italic-VariableFont_wght.woff2");
+}
+/* ////////// */
+
+:root{
+    /* TYPOGRAPHY */
+    --font-sm: 0.84rem; --line-sm: 1.34rem;
+    --font-reg: 1.08rem; --line-reg: 1.73rem;
+    --font-md: 1.39rem; --line-md: 2.25rem;
+    --font-lg: 1.78rem; --line-lg: 2.67rem;
+    /* FOUNDATION */
+    --black: #1a1a1a; --white: #fbf7f4;
+    --black-90: #1a1a1ae6; --white-90: #fbf7f4e6;
+    --black-80: #1a1a1acc; --white-80: #fbf7f4cc;
+    --black-70: #1a1a1ab3; --white-70: #fbf7f4b3;
+    --black-50: #1a1a1a80; --white-50: #fbf7f480;
+    --black-30: #1a1a1a4d; --white-30: #fbf7f44d;
+    --black-20: #1a1a1a33; --white-20: #fbf7f433;
+    --black-10: #1a1a1a1a; --white-10: #fbf7f41a;
+    --green: #50826e;
+    --green-50: #50826e80;
+    --light-green: #96beb4;
+    --dark-green: #285046;
+    /* LIGHT MODE */
+    --light-bg-primary: var(--white);
+    --light-text-primary: var(--black);
+    --light-text-secondary: var(--black-90);
+    /* DARK MODE */
+    --dark-bg-primary: var(--black);
+    --dark-text-primary: var(--white);
+    --dark-text-secondary: var(--white-90);
+}
+
+/* MOBILE ONLY */
+@media only screen and (max-width: 767px) {
+    :root{
+        --font-sm: 0.88rem; --line-sm: 1.41rem;
+        --font-reg: 1.08rem; --line-reg: 1.73rem;
+        --font-md: 1.32rem; --line-md: 2.14rem;
+        --font-lg: 1.62rem; --line-lg: 2.43rem;
+    }
+}
