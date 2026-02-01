@@ -162,20 +162,12 @@ section.extended{
 
 
 /* LINK AND BUTTON */
-a{
+a, button{
+    font-family: "Jost", sans-serif;
+    font-size: var(--font-reg); 
     width: fit-content;
     text-decoration: none;
     color: var(--black);
-    -webkit-transition: all 0.3s ease;
-     transition: all 0.3s ease;
-}
-
-button{
-    font-family: "Jost", sans-serif;
-    font-size: var(--font-reg); 
-    line-height: var(--line-reg);
-    color: var(--black);
-    border: none;
     -webkit-transition: all 0.3s ease;
      transition: all 0.3s ease;
 }
