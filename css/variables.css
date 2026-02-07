@@ -39,6 +39,9 @@
     --dark-bg-primary: var(--black);
     --dark-text-primary: var(--white);
     --dark-text-secondary: var(--white-90);
+    /* SPACING */
+    --max-width: 1024px;
+    --border-radius: 2px;
 }
 
 /* MOBILE ONLY */
