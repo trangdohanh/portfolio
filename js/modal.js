@@ -14,8 +14,6 @@ function openModal(e) {
 		modal.innerHTML = `<video width="100%" height="auto" id="video-modal" controls>
 								<source type="video/mp4" src="../img/lightbox/${e.id}.mp4">
 							</video>`;
-	} else if (e.classList.contains("gif-modal")){
-		modal.innerHTML = `<a href="#works" onclick="closeModal()"><img id="img-modal" src="../img/animation.gif"><a>`
 	} else if (e.classList.contains("link-modal")){
 		modal.innerHTML = `<div class="content-flex">
 								<iframe style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/CFDjF0xTOzE?si=MxlUWQ0FFZkbo3_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
