@@ -2,7 +2,11 @@
 
 /* DOCUMENT SETUP */
 *{box-sizing: border-box; padding: 0; margin: 0;}
-html{scroll-behavior: smooth; overflow-x: hidden;}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body{
     width: 100vw;
@@ -114,7 +118,7 @@ section.extended{
 }
 
 .extended-content{
-    max-width: 1024px;
+    max-width: var(--max-width);
     width: 100%;
 }
 
@@ -199,7 +203,7 @@ header{
 .dark header{background-color: var(--black-20);}
 
 .header{
-    max-width: 1024px;
+    max-width: var(--max-width);
     margin: 0 20px;
     flex-direction: row;
     justify-content: space-between;
@@ -260,7 +264,7 @@ header nav{
 
 footer{
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--max-width);
     margin-top: 2.5rem;
     padding: 2.5rem 0;
     display: flex;
@@ -321,7 +325,7 @@ iframe{
 img{
     display: block;
     width: 100%;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     object-fit: cover;
     /* Code from https://key2blogging.com/how-to-disable-download-of-images-in-website/ */
     -webkit-touch-callout: none;
@@ -337,7 +341,7 @@ img{
 
 img.wide{border-radius: 0;}
 
-video{display: block; border-radius: 2px;}
+video{display: block; border-radius: var(--border-radius);}
 
 svg{fill: var(--dark-green);}
 .dark svg {fill: var(--light-green);}
@@ -467,7 +471,7 @@ figcaption, .figcaption, #caption{
 #hero .labels a{
     line-height: 1rem;
     padding: 0.125rem;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     height: fit-content;
     border-width: 0px;
     background-color: var(--black-10);
@@ -554,7 +558,7 @@ figcaption, .figcaption, #caption{
     line-height: 1rem;
     padding: 0.25rem 0.5rem;
     height: 1.5rem;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -715,7 +719,7 @@ footer .label.theme{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     height: 5rem;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
@@ -768,7 +772,7 @@ footer .label.theme{
     position: absolute;
     z-index: 3;
     border: none;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     background: none;
     width: auto;
     padding: 0.75rem;
@@ -778,8 +782,8 @@ footer .label.theme{
 }
 
 button.prev, button.next{top: 45%;}
-button.prev{border-radius: 0 2px 2px 0;}
-button.next{right: 0; border-radius: 2px 0 0 2px;}
+button.prev{border-radius: 0 var(--border-radius) var(--border-radius) 0;}
+button.next{right: 0; border-radius: var(--border-radius) 0 0 var(--border-radius);}
 
 .thumbnails{
     display: grid;
@@ -942,7 +946,7 @@ button:disabled{
 
 .modal-content{
     position: relative;
-    max-width: 1024px;
+    max-width: var(--max-width);
     height: fit-content;
     padding: 4rem 0;
 }
@@ -1238,6 +1242,51 @@ blockquote{
 /* End of code from https://hype4.academy/tools/glassmorphism-generator */
 
 
+.flair-container {
+    background-color: var(--white);
+    box-shadow: 10px 10px 50px 10px var(--black-20) inset;
+    position: relative;
+    max-width: var(--max-width);
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    margin: auto;
+    place-self: start center;
+    border-radius: 2px;
+}
+
+.flair {
+    cursor: pointer;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    -webkit-transition: scale 0.3s ease;
+     transition: scale 0.3s ease;
+}
+
+.flair.sm{
+    width: 8rem;
+}
+
+.flair.md{
+    width: 10rem;
+}
+
+.flair.lg{
+    width: 15rem;
+}
+
+.flair-text{
+    position: fixed;
+    top: calc(50vh - 0.5rem);
+    left: 0;
+    width: 100vw;
+    padding: 0 2.5rem;
+    text-align: center;
+    margin: auto;
+    color: var(--black-50);
+}
+
+
 /* MOBILE ONLY */
 @media only screen and (max-width: 767px) {    
     .wrapper{padding: 0 20px;}
@@ -1511,7 +1560,7 @@ blockquote{
     .extended-content{
         margin: 0 auto;
         min-width: 880px;
-        max-width: 1024px;
+        max-width: var(--max-width);
     }
 
     .extended-padding{padding-left: 40px; padding-right: 40px;}
@@ -1559,7 +1608,7 @@ blockquote{
     }
 
     .page-nav{
-        max-width: 1024px;
+        max-width: var(--max-width);
     }
 
     .d-max-width{
@@ -1583,14 +1632,14 @@ blockquote{
     .scroll-slides.padded{
         padding: 2rem 2rem 3rem 2rem;
         border: 1px solid var(--black);
-        border-radius: 2px;
+        border-radius: var(--border-radius);
     }
 
     .t-wide{
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        border-radius: 2px;
+        border-radius: var(--border-radius);
     }
 
     .charts{margin-left: 0; margin-right: 0;}
@@ -1599,13 +1648,13 @@ blockquote{
 
 /* 1920px SCREEN */
 @media only screen and (min-width: 1920px) {
-    .wrapper{max-width: 1024px;}
-    section{max-width: 1024px;}
-    .extended-content{max-width: 1024px;}
-    header .grid{max-width: 1024px;}
-    footer{max-width: 1024px;}
-    .modal-content{max-width: 1024px;}
-    .d-max-width{max-width: 1024px;}
+    .wrapper{max-width: var(--max-width);}
+    section{max-width: var(--max-width);}
+    .extended-content{max-width: var(--max-width);}
+    header .grid{max-width: var(--max-width);}
+    footer{max-width: var(--max-width);}
+    .modal-content{max-width: var(--max-width);}
+    .d-max-width{max-width: var(--max-width);}
 }
 
 
