@@ -238,3 +238,19 @@ if (document.body.contains(sliders[0])){
         /* End of code from https://codepen.io/pig3onkick3r/pen/YzqqWKY */
     })
 }
+
+
+// Code from https://www.youtube.com/watch?v=T33NN_pPeNI
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("fadeIn");
+        } else {
+            entry.target.classList.remove("fadeIn");
+        }
+    }) 
+})
+
+const fadeElements = document.querySelectorAll(".animated")
+fadeElements.forEach((el) => observer.observe(el));
+// End of code from https://www.youtube.com/watch?v=T33NN_pPeNI
