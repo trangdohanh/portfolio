@@ -42,6 +42,10 @@
     /* SPACING */
     --max-width: 1024px;
     --border-radius: 2px;
+    --scroll-margin: 120px;
+    --page-margin: 40px;
+    --page-neg-margin: -40px;
+    --column-rg-gap: 24px;
 }
 
 /* MOBILE ONLY */
@@ -51,5 +55,9 @@
         --font-reg: 1.08rem; --line-reg: 1.73rem;
         --font-md: 1.32rem; --line-md: 2.14rem;
         --font-lg: 1.62rem; --line-lg: 2.43rem;
+        --scroll-margin: 80px;
+        --page-margin: 20px;
+        --page-neg-margin: -20px;
+        --column-rg-gap: 16px;
     }
 }
