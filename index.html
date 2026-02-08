@@ -319,6 +319,12 @@
                     flair.style.scale = "140%"
                     setTimeout(() => {flair.style.scale = "100%"}, 5000)
                 })
+                flair.addEventListener("touchstart", () => {
+                    flair.style.scale = "140%"
+                })
+                flair.addEventListener("touchend", () => {
+                    flair.style.scale = "100%"
+                })
             })
             document.querySelector(".gif-modal").addEventListener("click", () => {shoebox.style.display = "flex"})
             shoebox.querySelector(".close-modal").addEventListener("click", () => {shoebox.style.display = "none"})
