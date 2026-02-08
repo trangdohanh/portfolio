@@ -249,7 +249,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove("fadeIn");
         }
     }) 
-})
+}, {rootMargin: "0px 0px -20% 0px"})
 
 const fadeElements = document.querySelectorAll(".animated")
 fadeElements.forEach((el) => observer.observe(el));
