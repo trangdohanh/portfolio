@@ -168,7 +168,7 @@ if (document.body.contains(slideCarousels[0])){
 			if (container.contains(caption)) {caption.innerHTML = slides[Math.floor(carousel.scrollLeft / slides[0].offsetWidth)].alt;}
         })
 
-        prev.addEventListener('click', function() {carousel.scrollBy(-slides[0].offsetWidth, 0)})
-        next.addEventListener('click', function() {carousel.scrollBy(slides[0].offsetWidth, 0)})
+        prev.addEventListener('click', function() {carousel.scrollBy(-slides[0].offsetWidth - 16, 0)})
+        next.addEventListener('click', function() {carousel.scrollBy(slides[0].offsetWidth + 16, 0)})
     })
 }
