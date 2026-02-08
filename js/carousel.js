@@ -80,6 +80,11 @@ if (document.body.contains(slideCarousels[0])){
 		let dots = container.getElementsByClassName("dots")[0];
 		let thumbnails = container.getElementsByClassName("thumbnails")[0];
 		let slides = Array.from(carousel.getElementsByClassName("scroll-slide"));
+		let caption = container.querySelector('p#caption');
+		
+		let gap;
+		if (carousel.classList.contains("w-gap")){gap = 16 * (slides.length-1);}
+		else {gap = 0;}
 
 		if (container.contains(dots)){
 			slides.forEach((slide) => {
@@ -135,7 +140,7 @@ if (document.body.contains(slideCarousels[0])){
         function disableNext() {next.disabled = true;}
 
         carousel.addEventListener('scroll', function() {
-            if (Math.floor(carousel.scrollLeft - (slides[0].offsetWidth * (slides.length - 1))) == 0) {
+            if (Math.floor(carousel.scrollLeft - (slides[0].offsetWidth * (slides.length - 1)) - gap) == 0) {
                 enablePrev();
                 disableNext();
             }
@@ -160,6 +165,7 @@ if (document.body.contains(slideCarousels[0])){
 					else {thumbnails.children[i].classList.remove("active")}
 				}
 			}
+			if (container.contains(caption)) {caption.innerHTML = slides[Math.floor(carousel.scrollLeft / slides[0].offsetWidth)].alt;}
         })
 
         prev.addEventListener('click', function() {carousel.scrollBy(-slides[0].offsetWidth, 0)})
