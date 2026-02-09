@@ -614,10 +614,20 @@ footer .label.theme{
     background-color: var(--dark-bg-primary);
 }
 
+.timepoint:nth-child(1 of .timepoint), .timedot:nth-child(1 of .timedot) {grid-row: 1/2;}
+.timepoint:nth-child(2 of .timepoint), .timedot:nth-child(2 of .timedot) {grid-row: 2/3;}
+.timepoint:nth-child(3 of .timepoint), .timedot:nth-child(3 of .timedot) {grid-row: 3/4;}
+.timepoint:nth-child(4 of .timepoint), .timedot:nth-child(4 of .timedot) {grid-row: 4/5;}
+.timepoint:nth-child(5 of .timepoint), .timedot:nth-child(5 of .timedot) {grid-row: 5/6;}
+.timepoint:nth-child(6 of .timepoint), .timedot:nth-child(6 of .timedot) {grid-row: 6/7;}
+.timepoint:nth-child(7 of .timepoint), .timedot:nth-child(7 of .timedot) {grid-row: 7/8;}
+.timepoint:nth-child(8 of .timepoint), .timedot:nth-child(8 of .timedot) {grid-row: 8/9;}
+.timepoint:nth-child(9 of .timepoint), .timedot:nth-child(9 of .timedot) {grid-row: 9/10;}
+
 .line{
     border-left: 2px solid var(--light-text-primary);
     height: 100%;
-    grid-area: 1/1/9/2;
+    grid-area: 1 / 1 / 10 / 2;
     margin-left: 7px;
     z-index: -1;
 }
@@ -1381,9 +1391,15 @@ blockquote{
         grid-gap: 0.5rem;
     }
 
-    #coffee{
-        grid-area: 6/1/9/3;
-    }
+    #sandbox .project:nth-child(1){grid-column: span 4; grid-row: span 3;}
+    #sandbox .project:nth-child(2){grid-column: span 2; grid-row: span 2;}
+    #sandbox .project:nth-child(3){grid-column: span 2; grid-row: span 3;}
+    #sandbox .project:nth-child(4){grid-column: span 2; grid-row: span 2;}
+    #sandbox .project:nth-child(5){grid-column: span 2; grid-row: span 2;}
+    #sandbox .project:nth-child(6){grid-column: span 4; grid-row: span 3;}
+    #sandbox .project:nth-child(7){grid-column: 1 / 3; grid-row: 6 / 9;}
+    #sandbox .project:nth-child(8){grid-column: span 3; grid-row: span 2;}
+    #sandbox .project:nth-child(9){grid-column: span 3; grid-row: span 2;}
     
     .m-col-2{grid-template-columns: repeat(2, 1fr);}
     .m-col-3{grid-template-columns: repeat(3, 1fr);}
@@ -1393,15 +1409,6 @@ blockquote{
     .m-span-2{grid-column: span 2;}
     .m-span-3{grid-column: span 3;}
     .m-span-4{grid-column: span 4;}
-
-    .m-row-2{grid-row: span 2;}
-    .m-row-3{grid-row: span 3;}
-    .m-row-4{grid-row: span 4;}
-
-    .m-b-11{aspect-ratio: 1/1;}
-    .m-b-32{aspect-ratio: 3/2;}
-    .m-b-43{aspect-ratio: 4/3;}
-    .m-b-23{aspect-ratio: 2/3.05;}
 
     .grid .row-1{grid-row: 1/2;}
     .grid .row-2{grid-row: 2/3;}
@@ -1499,6 +1506,16 @@ blockquote{
         grid-gap: 0.75rem;
     }
 
+    #sandbox .project:nth-child(1){grid-column: span 6; grid-row: span 4;}
+    #sandbox .project:nth-child(2){grid-column: span 2; grid-row: span 2;}
+    #sandbox .project:nth-child(3){grid-column: span 2; grid-row: span 3;}
+    #sandbox .project:nth-child(4){grid-column: span 2; grid-row: span 3;}
+    #sandbox .project:nth-child(5){grid-column: span 2; grid-row: span 2;}
+    #sandbox .project:nth-child(6){grid-column: span 4; grid-row: span 4;}
+    #sandbox .project:nth-child(7){grid-column: span 2; grid-row: span 3;}
+    #sandbox .project:nth-child(8){grid-column: span 3; grid-row: span 3;}
+    #sandbox .project:nth-child(9){grid-column: span 3; grid-row: span 3;}
+
     #awake-coffee img{object-position: 6% 50%;}
 
     .t-col-2{grid-template-columns: repeat(2, 1fr);}
@@ -1523,12 +1540,6 @@ blockquote{
     .t-row-4{grid-row: span 4;}
     .t-row-5{grid-row: span 5;}
     .t-row-6{grid-row: span 6;}
-
-    .t-b-11{aspect-ratio: 1/1;}
-    .t-b-32{aspect-ratio: 3/2;}
-    .t-b-23{aspect-ratio: 2/3.1;}
-
-    .t-center-content{grid-column: 2/12;}
 
     .header{margin: 0 var(--page-margin);}
 
@@ -1603,10 +1614,10 @@ blockquote{
         padding: 2rem;
     }
 
-    .animated.stagger:nth-child(2){transition-delay: 0.2s;}
-    .animated.stagger:nth-child(3){transition-delay: 0.4s;}
-    .animated.stagger:nth-child(4){transition-delay: 0.6s;}
-    .animated.stagger:nth-child(5){transition-delay: 0.8s;}
+    .animated.stagger:nth-child(2 of .stagger){transition-delay: 0.2s;}
+    .animated.stagger:nth-child(3 of .stagger){transition-delay: 0.4s;}
+    .animated.stagger:nth-child(4 of .stagger){transition-delay: 0.6s;}
+    .animated.stagger:nth-child(5 of .stagger){transition-delay: 0.8s;}
 }
 
 
