@@ -2,7 +2,7 @@
 
 /* DOCUMENT SETUP */
 *{box-sizing: border-box; padding: 0; margin: 0;}
-html{scroll-behavior: smooth;}
+html{font-size: 16px; scroll-behavior: smooth;}
 
 body{
     overflow-x: hidden;
@@ -62,11 +62,11 @@ p {font-size: var(--font-reg); line-height: var(--line-reg);}
 .text-right{text-align: right;}
 .text-center{text-align: center;}
 
-.font-light{font-weight: 300;}
-.font-regular{font-weight: 400;}
-.font-medium{font-weight: 500;}
-.font-semibold{font-weight: 600;}
-.font-bold{font-weight: 700;}
+.font-light{font-weight: 300 !important;}
+.font-regular{font-weight: 400 !important;}
+.font-medium{font-weight: 500 !important;}
+.font-semibold{font-weight: 600 !important;}
+.font-bold{font-weight: 700 !important;}
 
 .font-italic{font-style: italic;}
 .text-upc{text-transform: uppercase;}
@@ -80,6 +80,9 @@ mark{padding: 0 2px; margin: 0 -2px;}
 
 
 /* LIST STYLING */
+li{
+    line-height: var(--line-reg);
+}
 .list-bullet{list-style-type: disc;}
 
 .list{
@@ -138,6 +141,8 @@ section.extended{
 
 #hero p{color: var(--light-text-secondary);}
 .dark #hero p{color: var(--dark-text-secondary);}
+
+hr{margin-top: 40px; border: 1px solid var(--green);}
 /* ////////// */
 
 
@@ -174,8 +179,16 @@ a.link{
 .link-button svg{
     fill: var(--light-text-primary);
     vertical-align: bottom;
+    margin-right: -0.25rem;
+    -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
 }
 .dark .link-button svg{fill: var(--dark-text-primary);}
+
+.link-button.solid{
+    border-color: var(--light-green);
+    background-color: var(--light-green);
+}
 
 header .link-button{
     display: flex;
@@ -326,10 +339,7 @@ footer .contact{
 
 
 /* MEDIA STYLING */
-iframe{
-    width: 100%;
-    height: auto;
-}
+iframe{width: 100%; height: auto;}
 
 img{
     display: block;
@@ -382,7 +392,12 @@ figure img, .figure img:not(.before-image img, .after-image img){
     margin-bottom: 0.5rem;   
 }
 
-figcaption, .figcaption, #caption{
+figure img:nth-child(2), .figure img:nth-child(2){
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+figcaption, .figcaption, .caption{
     font-size: var(--font-sm); 
     line-height: var(--line-sm);
     font-weight: 300;
@@ -467,6 +482,8 @@ figcaption, .figcaption, #caption{
 #overview .content-flex p:nth-child(3){
     margin-top: 0.5rem;
 }
+
+p.no-margin{margin: 0;}
 /* ////////// */
 
 
@@ -637,7 +654,7 @@ footer .label.theme{
 /* ////////// */
 
 
-/* DARK MODE TOGGLE */
+/* DARK MODE */
 .mode-indicator{
     color: var(--dark-green);
     -webkit-transition: all 0.4s ease;
@@ -732,7 +749,7 @@ footer .label.theme{
 }
 
 /* Code from https://www.youtube.com/watch?v=T33NN_pPeNI */
-.animated{
+.animated, .animatedIn{
     opacity: 0;
     filter: blur(5px);
     transition: all 0.4s ease;
@@ -886,6 +903,7 @@ button.next{right: 0; border-radius: var(--border-radius) 0 0 var(--border-radiu
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
 }
@@ -1000,6 +1018,10 @@ button:disabled{
     margin-top: 3rem;
 }
 
+.modal-content img{
+    max-height: calc(100vh - 8rem);
+}
+
 .close-modal{
     position: fixed;
     top: 0.25rem;
@@ -1064,7 +1086,7 @@ p.textbox{
 }
 
 .icon-text svg{
-    margin-left: -1.75rem;
+    margin-left: -1.25rem;
 }
 
 .icon-text p{
@@ -1073,8 +1095,12 @@ p.textbox{
 
 .textbox .icon-text{
     border-radius: 0.25rem 0.25rem 0 0; 
-    margin: -0.75rem -1rem 0 -1rem; 
+    margin: -1.5rem -1.5rem 1rem -1.5rem; 
     padding: 0.5rem;
+}
+
+.textbox.padding-sm .icon-text{
+    margin: -0.75rem -1rem 0 -1rem; 
 }
 
 .persona-card{
@@ -1136,7 +1162,8 @@ p.textbox{
 /* ACCORDION */
 details{
     height: fit-content;
-    border-radius: 0.5rem;
+    border-radius: 8px;
+    overflow: hidden;
     transition: all 0.6s ease;
 }
 
@@ -1253,7 +1280,7 @@ blockquote{
 .glass.dark-bg{
     color: var(--white);
     background: var(--black-70);
-    border: 1px solid var(--white-30);
+    border: 1px solid var(--white-50);
 }
 
 .glass::before {
@@ -1378,6 +1405,13 @@ blockquote{
 /* End of code from bento gallery */
 
 
+.summary-card{
+    padding: 32px;
+    margin: 0 -32px;
+    border-radius: 20px;
+}
+
+
 /* MOBILE ONLY */
 @media only screen and (max-width: 767px) {    
     #hero{
@@ -1480,6 +1514,11 @@ blockquote{
         grid-template-columns: 24vw 49.5vw 24vw;
         grid-template-rows: 20vh 26vh 26vh 20vh;
     }
+
+    .summary-card{
+        padding: 24px 16px;
+        margin: 0 -16px;
+    }
 }
 
 
@@ -1549,7 +1588,9 @@ blockquote{
         justify-content: space-between;
     }
 
-    #nav-trigger, #nav-close{display: none;}
+    #nav-trigger, #nav-close{
+        display: none;
+    }
 
     header .link-button{
         margin: 0;
@@ -1682,6 +1723,7 @@ blockquote{
 
     .d-max-width{
         max-width: 880px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1782,8 +1824,7 @@ blockquote{
 
 
 @media(prefers-reduced-motion) {
-    .animated{
+    .animated, .animatedIn{
         transition: none;
-        -webkit-transition: none;
     }
 }
