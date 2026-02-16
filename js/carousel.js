@@ -38,7 +38,7 @@ if (document.body.contains(jsCarousels[0])){
 
 		function showSlides(n) {
 			let i;
-			let caption = container.querySelector('p#caption');
+			let caption = container.querySelector('p.caption');
 
 			if (n > slides.length) {slideIndex = 1}
 			if (n < 1) {slideIndex = slides.length}
@@ -80,7 +80,8 @@ if (document.body.contains(slideCarousels[0])){
 		let dots = container.getElementsByClassName("dots")[0];
 		let thumbnails = container.getElementsByClassName("thumbnails")[0];
 		let slides = Array.from(carousel.getElementsByClassName("scroll-slide"));
-		let caption = container.querySelector('p#caption');
+		let caption = container.querySelector('.caption');
+		if (container.contains(caption)) {caption.innerHTML = slides[0].alt;}
 		
 		let gap;
 		if (carousel.classList.contains("w-gap")){gap = 16 * (slides.length-1);}
