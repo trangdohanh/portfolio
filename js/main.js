@@ -246,12 +246,12 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("fadeIn");
         } else {
-            if (!entry.target.classList.contains("fadeInOnly")) {
+            if (!entry.target.classList.contains("animatedIn")) {
                 entry.target.classList.remove("fadeIn");
             }
         }
     }) 
 }, {rootMargin: "0px 0px -15% 0px"})
 
-document.querySelectorAll(".animated").forEach((el) => observer.observe(el));
+document.querySelectorAll([".animated", ".animatedIn"]).forEach((el) => observer.observe(el));
 // End of code from https://www.youtube.com/watch?v=T33NN_pPeNI
