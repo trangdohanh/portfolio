@@ -13,6 +13,8 @@ html{
 .pie-chart-in{background-color: var(--theme-grey-1) !important;}
 
 .persona-card{
+    row-gap: 0.5rem;
+    padding: 24px 16px !important;
     background-color: #fbf5ea !important; 
     border: 1px solid var(--theme) !important;
 }
@@ -50,7 +52,7 @@ html{
     width: auto; 
     height: 240px; 
     bottom: -40px; 
-    left: -80px; 
+    right: -80px; 
     z-index: 10;
 }
 
@@ -79,11 +81,30 @@ html{
     overflow: hidden;
 }
 
+figure {
+    position: relative;
+}
+
+figure img:nth-child(1 of img) {
+    opacity: 1;
+    -webkit-transition: all 0.4s ease;
+     transition: all 0.4s ease;
+}
+
+figure img:nth-child(2 of img) {
+    filter: grayscale(0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    z-index: -1;
+}
+
 @media only screen and (max-width: 767px) { 
     #mascot{
         bottom: -80px;
-        left: auto;
-        right: 0; 
+        right: auto;
+        left: calc(50% - 90px);
     }   
 }
 

@@ -21,7 +21,7 @@ function openModal(e) {
 							</div>`
 		
 	} else if (e.classList.contains("proj-modal")){
-		modal.innerHTML = `<img id="img-modal" src="${e.children[0].src}">`
+		modal.innerHTML = `<img id="img-modal" src="${e.querySelector("img").src}">`
 	} else{
 		modal.innerHTML = `<img id="img-modal" src="../img/lightbox/${e.id}.png">`
 	}
