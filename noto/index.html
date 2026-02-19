@@ -8,21 +8,7 @@
         <title>Smart Documentation for ECE Teachers</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="stylesheet" href="../css/style.css">
-        <style>
-            html{--theme-bg: #F3F4FF; --theme: #D1D2FF; --theme-fg: #4F51AE; --theme-red: #DC2626;}
-            .coloured-bg, .pie-chart-in, details, .details{background-color: var(--theme) !important;}
-            .persona-card{background-color: var(--theme-bg) !important; border: 1px solid var(--theme) !important;}
-
-            .themed-text{color: var(--theme-fg);}
-            .icon-text svg{fill: var(--theme-fg);}
-            .cons .themed-text{color: var(--theme-red);}
-            .cons svg{fill: var(--theme-red);}
-            .textbox.bordered {border: 1px solid var(--theme-fg) !important;}
-            .textbox li {font-size: var(--font-sm); line-height: var(--line-sm);}
-            .textbox .icon-text {background-color: var(--theme); color: var(--theme-fg);}
-
-            #reflection p{margin-top: 0;}
-        </style>
+        <link rel="stylesheet" href="design.css">
     </head>
 
     <body>
@@ -38,7 +24,7 @@
 
                         <div class="content-flex">
                             <h2 class="themed-text">Overview</h2>
-                            <p>Fragmented support systems put responsibility on already-overworked teachers to navigate increasing neurodiversity in their classrooms on their own. Designed with insights from educators, <strong>NOTO provides teachers with accessible, consistent, and practical support through certified professional development content, classroom management and documentation tools, and AI-powered assistance.</strong></p>
+                            <p>Fragmented support systems put responsibility on already-overworked teachers to navigate increasing neurodiversity in their classrooms on their own. With insights from educators, <strong>I led the design and prototype of an AI-assisted documentation feature that accelerates notetaking, reports, and communications</strong>, a core functionality of my team's proposed support platform NOTO.</p>
                             <p>NOTO was developed for Red Thread Innovations' Purposeful Innovation mentorship and came in 2<sup>nd</sup> place!</p>
                         </div>
         
@@ -58,21 +44,65 @@
                                 <p class="text-sm">Jan &#8211 Apr 2025 (14 weeks)</p>
                             </div>
                         </div>
+
+                        <div>
+                            <p>Quick navigation</p>
+                            <div class="buttons sm-stacked">
+                                <a href="#showcase" class="link-button solid">Jump to showcase
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                                <a href="#research" class="link-button solid">Jump to case study
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
 
-                <section class="section extended grid row-md" id="problem">      
-                    <div class="extended-wrapper extended-content content-flex d-max-width">
-                        <h2 class="themed-text">Problem space</h2>
-                        <h3>Early childhood educators are left to manage increasingly neurodiverse classrooms without consistent and practical support.</h3>
-                        <p>The rates of burnout and attrition reveal a system built on reactive workarounds, leaving teachers stretched thin and students underserved. While educators face escalating demands, most tools focus on performance metrics and compliance, not empathy, real-time support, or inclusion.</p>
+                <section class="extended extended-wrapper extended-padding" id="showcase">
+                    <div class="extended-content grid-sm row-xs t-col-2">
+                        <div class="textbox cons glass animatedIn">
+                            <p>The opportunity</p>
+                            <p class="text-md no-margin">Digital classroom documentation tools have a high learning curve and low accessibility, which slow down administrative tasks and fragment communication.</p>
+                        </div>
+                        <div class="textbox coloured-bg glass animatedIn">
+                            <p>The concept</p>
+                            <p class="text-md no-margin">An AI-assisted tool distilling quick voice recordings and rough notes into structured documents, allowing educators to act fast, reduce redundancy, and reclaim lost time. </p>
+                        </div>
+                        <video width="100%" height="auto" preload="auto" controls autoplay loop muted class="t-span-2 glass animatedIn">
+                            <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="proj-modal glass animatedIn" onclick="openModal(this)">
+                            <img src="../img/noto/mockup-4.png">
+                        </div>
+                        <div class="proj-modal glass animatedIn" onclick="openModal(this)">
+                            <img src="../img/noto/mockup-5.png">
+                        </div>
+                    </div>               
+                </section>
+
+
+                <section class="section extended grid row-lg" id="research">
+                    <div class="extended-wrapper extended-content grid row-reg d-max-width">
+                        <div class="content-flex">
+                            <h2 class="themed-text">Research</h2>
+                            <h3>Looking at inclusive education and educators' well-being, we saw a disconnect between inclusion efforts and support for educators.</h3>
+                            <p>We examined peer-reviewed journals, educational policy frameworks, accessibility guidelines, EdTech trends, and materials related to neurodiversity and inclusive pedagogy. Existing platforms are inadequate in supporting neurodiverse classrooms, leaving teachers feeling unprepared.</p>
+                        </div>
+
+                        <img src="../img/noto/affinity-mapping.png" class="t-wide m-wide animated">
                     </div>
 
-                    <div class="extended-wrapper coloured-section coloured-bg">
-                        <div class="extended-padding grid-lg row-sm d-col-4 t-col-2">
-                            <div class="chart-h animated stagger">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) calc(44*3.6deg), var(--theme-bg) calc(44*3.6deg));">
+                    <div class="grid row-reg">
+                        <div class="extended-wrapper extended-content content-flex d-max-width">
+                            <h3>The rates of burnout and attrition reveal a system built on reactive workarounds, leaving teachers stretched thin and students underserved.</h3>
+                        </div>
+
+                        <div class="extended-wrapper extended-padding coloured-section coloured-bg cons grid-lg row-sm d-col-4 t-col-2">
+                            <div class="chart-h">
+                                <div class="pie-chart-out animated stagger" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) calc(44*3.6deg), var(--theme-red-20) calc(44*3.6deg));">
                                     <div class="pie-chart-in">
                                         <p class="text-lg font-medium">44%</p>
                                     </div> 
@@ -83,7 +113,7 @@
                             </div>
 
                             <div class="chart-h animated stagger">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) calc(76*3.6deg), var(--theme-bg) calc(76*3.6deg));">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) calc(76*3.6deg), var(--theme-red-20) calc(76*3.6deg));">
                                     <div class="pie-chart-in">
                                         <p class="text-lg font-medium">76%</p>
                                     </div> 
@@ -94,18 +124,18 @@
                             </div>
 
                             <div class="chart-h animated stagger">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) calc(55*3.6deg), var(--theme-bg) calc(55*3.6deg));">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) calc(55*3.6deg), var(--theme-red-20) calc(55*3.6deg));">
                                     <div class="pie-chart-in">
                                         <p class="text-lg font-medium">55%</p>
                                     </div> 
                                 </div>
-                                <p>of teachers plan to leave the profession early.
+                                <p>plan to leave the profession early.
                                     <br><a href="https://nces.ed.gov/programs/coe/indicator/clr/%20public-school-teachers" target="_blank" class="link font-light text-sm">(NCES, 2022)</a>
                                 </p>
                             </div>
 
                             <div class="chart-h animated stagger">
-                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-fg) 0deg, var(--theme-fg) calc(68*3.6deg), var(--theme-bg) calc(68*3.6deg));">
+                                <div class="pie-chart-out" style="background-image: conic-gradient(var(--theme-red) 0deg, var(--theme-red) calc(68*3.6deg), var(--theme-red-20) calc(68*3.6deg));">
                                     <div class="pie-chart-in">
                                         <p class="text-lg font-medium">68%</p>
                                     </div> 
@@ -117,120 +147,13 @@
                         </div>
                     </div>
 
-                    <div class="extended-wrapper extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h3>High learning curve and low accessibility cause digital documentation tools to be underutilized and fragment communication.</h3>
-                            <p>The variety of digital tools and their complex interfaces lead many educators to default to pen and paper to circumvent long setup time and high learning curve. Paper notes and inefficient digital folders prevent consistent follow-ups and meaningful intervention.</p>
-                        </div>
-
-                        <div class="grid-sm t-col-3 row-xs">
-                            <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
-                                    <p>Google Classroom</p>
-                                </div>
-                                <ul class="list">
-                                    <li>Limited behaviour tracking</li>
-                                    <li>Lack real-time support</li>
-                                    <li>Limited intergration with non-Google products and systems</li>
-                                </ul>
-                            </div>
-
-                            <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
-                                    <p>ClassDojo</p>
-                                </div>
-                                <ul class="list">
-                                    <li>Not designed for quick notetaking</li>
-                                    <li>Third-party privacy concerns</li>
-                                    <li>Limited functions for non-paying users</li>
-                                    <li>Lack support for technical issues</li>
-                                </ul>
-                            </div>
-
-                            <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
-                                    <p>Schoology</p>
-                                </div>
-                                <ul class="list">
-                                    <li>High learning curve</li>
-                                    <li>Old-fashioned, nonintuitive interface</li>
-                                    <li>Irrelevant and distracting features</li>
-                                    <li>Prone to bugs and crashes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section class="section extended grid row-lg" id="solution">
-                    <img src="../img/noto/mockup-2.jpg" class="wide">
-
-                    <div class="extended-wrapper grid row-reg">
-                        <div class="extended-content content-flex d-max-width">
-                            <h2 class="themed-text">Meet NOTO</h2>
-                            <h3>An AI-powered support system designed for the day-to-day reality of ECE teachers, providing intuitive and practical classroom management and intervention.</h3>
-                            <p>Designed with early childhood educators, NOTO offers real-time support, inclusive learning strategies, and streamlined administrative tools. Whether tracking student growth, navigating Individual Education Plans, or exploring professional development content, NOTO empowers educators to teach, connect, and care.</p>
-                        </div>
-
-                        <div class="extended-padding grid t-col-3 row-reg">
-                            <figure class="m-max-width animated flyLeft">
-                                <div class="proj-modal" onclick="openModal(this)">
-                                    <img src="../img/noto/feature-1.png">
-                                </div>
-                                <figcaption>Visual dashboard of short, certification-aligned modules that educators can complete during school hours.</figcaption>
-                            </figure>
-
-                            <figure class="m-max-width animated flyUp">
-                                 <div class="proj-modal" onclick="openModal(this)">
-                                    <img src="../img/noto/feature-2.png">
-                                </div>
-                                <figcaption>Real-time classroom management tool offering a quick overview for fast decision-making.</figcaption>
-                            </figure>
-
-                            <figure class="m-max-width animated flyRight">
-                                <div class="proj-modal" onclick="openModal(this)">
-                                    <img src="../img/noto/feature-3.png">
-                                </div>
-                                <figcaption>Just-in-time assistance providing adaptive strategies and real-time guidance in a hands-free format.</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div class="extended-wrapper extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h3>NOTO's smart documentation tool accelerates notetaking and reports, allowing educators to reclaim lost time and reduce redundancy.</h3>
-                            <p>The documentation feature is designed for in-the-moment brain-dumps. Quick voice recordings and rough notes are distilled into structured outputs for report cards, logs, or communication with caregivers.</p>
-                        </div>
-
-                        <video width="100%" height="auto" preload="auto" controls autoplay loop muted class="m-wide animated">
-                            <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </section>
-
-                
-                <section class="section grid row-lg d-max-width" id="research">
-                    <div class="grid row-reg">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Research</h2>
-                            <h3>Looking at inclusive education and educators' well-being, we saw a disconnect between inclusion efforts and support for educators.</h3>
-                            <p>We examined peer-reviewed journals, educational policy frameworks, accessibility guidelines, EdTech trends, and materials related to neurodiversity and inclusive pedagogy. Existing platforms are inadequate in supporting neurodiverse classrooms, leaving teachers feeling unprepared.</p>
-                        </div>
-
-                        <img src="../img/noto/affinity-mapping.png" class="t-wide m-wide animated">
-                    </div>
-
-                    <div class="grid row-reg">
+                    <div class="extended-wrapper extended-content d-max-width grid row-reg">
                         <div class="content-flex">
                             <h3>Online stories and real-life conversations revealed that educators find existing tools rigid, theoretical, or built for administrators.</h3>
                         </div>
 
                         <div class="grid-sm t-col-2 row-xs">
-                            <div class="details m-max-width">
+                            <div class="details cons m-max-width">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M214.86,180.12a8,8,0,0,1-11,2.74L136,142.13V216a8,8,0,0,1-16,0V142.13L52.12,182.86a8,8,0,1,1-8.23-13.72L112.45,128,43.89,86.86a8,8,0,1,1,8.23-13.72L120,113.87V40a8,8,0,0,1,16,0v73.87l67.88-40.73a8,8,0,1,1,8.23,13.72L143.55,128l68.56,41.14A8,8,0,0,1,214.86,180.12Z"></path></svg>
                                     <p class="text-md">Inconsistent Documentation</p>
@@ -266,43 +189,81 @@
                         </div>
                     </div>
 
-                    <div class="grid row-reg">
-                        <h3>Findings emphasized the need to balance ease of use for educators—our users, and scalability for administrators—our buyers.</h3>
-                        
-                        <div class="grid t-col-2 row-reg">
-                            <div class="persona-card m-max-width animated flyLeft">
-                                <img src="../img/noto/educator.png">
+                    <div class="extended-wrapper extended-content grid row-reg d-max-width">
+                        <div class="content-flex">
+                            <h3>Complex interfaces lead many educators to default to pen and paper to circumvent long setup time and high learning curve.</h3>
+                            <p>Paper notes and inefficient digital folders prevent consistent follow-ups and meaningful intervention.</p>
+                        </div>
 
-                                <div class="content-flex">
-                                    <p>For <strong>educators</strong> to effectively support students and navigate classroom challenges, they need...</p>
-                                    <ul class="list">
-                                        <li>Tools with <strong>low learning curve</strong>, <strong>high ease of use</strong>, and reduced workload</li>
-                                        <li><strong>Seamless integration</strong> into the classroom and daily routine</li>
-                                        <li><strong>Intuitive documentation</strong> of students' progess with actionable insights</li>
-                                        <li><strong>Accessible and tailored</strong> mental health support</li>
-                                    </ul>
+                        <div class="grid-sm t-col-3 row-xs">
+                            <div class="textbox cons bordered padding-sm m-max-width animated flyUp stagger">
+                                <div class="icon-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                    <p>Google Classroom</p>
                                 </div>
+                                <ul class="list list-bullet">
+                                    <li>Limited behaviour tracking</li>
+                                    <li>Lack real-time support</li>
+                                    <li>Limited intergration with non-Google products and systems</li>
+                                </ul>
                             </div>
 
-                            <div class="persona-card m-max-width animated flyRight">
-                                <img src="../img/noto/administrator.png">
-
-                                <div class="content-flex">
-                                    <p>To ensure efficiency, scalability, and cost-effectiveness, <strong>administrators</strong> look for...</p>
-                                    <ul class="list">
-                                        <li><strong>Research-backed</strong> with case studies or success stories</li>
-                                        <li><strong>Compliant</strong> with district mandates and funding programs</li>
-                                        <li><strong>Integrated</strong> with existing district-wide systems</li>
-                                        <li><strong>Minimal training</strong> required to ensure smooth adoption</li>
-                                    </ul>
+                            <div class="textbox cons bordered padding-sm m-max-width animated flyUp stagger">
+                                <div class="icon-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                    <p>ClassDojo</p>
                                 </div>
+                                <ul class="list list-bullet">
+                                    <li>Not designed for quick notetaking</li>
+                                    <li>Third-party privacy concerns</li>
+                                    <li>Limited functions for non-paying users</li>
+                                    <li>Lack support for technical issues</li>
+                                </ul>
+                            </div>
+
+                            <div class="textbox cons bordered padding-sm m-max-width animated flyUp stagger">
+                                <div class="icon-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                    <p>Schoology</p>
+                                </div>
+                                <ul class="list list-bullet">
+                                    <li>High learning curve</li>
+                                    <li>Old-fashioned, nonintuitive interface</li>
+                                    <li>Irrelevant and distracting features</li>
+                                    <li>Prone to bugs and crashes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section class="section grid row-lg" id="define">
+                    <div class="grid row-reg d-max-width">
+                        <div class="content-flex">
+                            <h2 class="themed-text">Define</h2>
+                            <h3>For educators to effectively support students and navigate classroom challenges, any new tools we propose should reduce their workload and cognitive load.</h3>
+                        </div>
+                        
+                        <div class="grid-sm t-col-3 row-sm grid-h-center m-max-width">
+                            <img src="../img/noto/educator.png" style="height: 100%">
+
+                            <div class="t-span-2">
+                                <p>What they're looking for:</p>
+                                <ul class="list no-bullet" style="padding-left: 0;">
+                                    <li class="textbox padding-sm coloured-bg">Tools with low learning curve, high ease of use, and reduced workload</li>
+                                    <li class="textbox padding-sm coloured-bg">Seamless integration into the classroom and daily routine</li>
+                                    <li class="textbox padding-sm coloured-bg">Intuitive documentation of students' progess with actionable insights</li>
+                                    <li class="textbox padding-sm coloured-bg">Accessible and tailored mental health support</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="grid row-reg">
+                    <div class="grid row-reg d-max-width">
                         <div class="content-flex">
-                            <h3>Pain points were transformed into NOTO's core concepts—teachers need real-time, hands-free support, reinforced by practical learning and wellness tools.</p>
+                            <h3>Their pain points were transformed into core concepts: real-time, hands-free support, reinforced by practical learning and wellness tools.</h3>
+                            <p>While our insights and findings informed a comprehensive system, I focused on the development of the smart documentation feature.</p>
                         </div>
                         
                         <div class="grid-sm t-col-2 row-xs">
@@ -339,34 +300,159 @@
                                     <p>NOTO AI suggests classroom strategies, helps with documentation, or flags helpful professional development modules in a hands-free format.</p>
                                 </details>
                             </div>
-                            
                         </div>
                     </div>
                 </section> 
                     
 
-                <section class="section extended extended-wrapper grid row-lg" id="design">       
-                    <div class="grid row-reg">
-                        <div class="extended-content content-flex d-max-width">
-                            <h2 class="themed-text">Design</h2>
-                            <h3>To address the need for in-the-moment communication and learning, we outlined a desktop platform for administrative actions and a mobile app providing real-time support.</h3>
-                        </div>
-
-                        <img src="../img/noto/information-architecture.png" class="wide t-wide m-wide animated">
-                    </div>
-
-                    <div class="extended-content grid row-reg d-max-width">
-                        <h3>With the mobile app, we focused on getting the documentation feature right. Including a widget as an entry point would facilitate quick access.</h3>
-                        <img src="../img/noto/low-fidelity.png" class="t-wide m-wide animated">
-                    </div>
-
-                    <div class="extended-content grid row-reg d-max-width">
+                <section class="section grid row-lg" id="design">       
+                    <div class="grid row-reg summary-card glass">
                         <div class="content-flex">
-                            <h3>Our first widget prototype tried to cram too many features without a clear hierarchy. We redesigned it to show the most important features with proper labels.</h3>
-                            <p>The widget idea was a step in the right direction, but we missed the mark on clarity. Test participants mistook the purpose of icons and didn't know what features were supposed to be shown. We learned from other apps' widgets to refine the layout and improve clarity.</p>
+                            <h2 class="themed-text">Design</h2>
+                            <h3>Quick and intuitive behavioural documentation</h3>
                         </div>
 
-                        <div class="grid-sm t-col-2 row-reg">
+                        <div class="grid-sm row-xs t-col-4">
+                            <div class="textbox bordered padding-sm t-span-2">
+                                <p>User story</p>
+                                <p class="text-sm no-margin">As a teacher, I want to quickly document the student's behaviour as the incident occurs and be able to review it, so I can intervene if needed and handle the paperwork later.</p>
+                            </div>
+
+                            <div class="textbox bordered padding-sm">
+                                <p>Preconditions</p>
+                                <p class="text-sm no-margin">The user has installed NOTO on a mobile device and is logged in.</p>
+                            </div>
+
+                            <div class="textbox bordered padding-sm">
+                                <p>Requirements</p>
+                                <p class="text-sm no-margin">The feature needs to be easy to learn and use, and accomodates in-crisis use.</p>
+                            </div>
+                        </div>
+
+                        <figure class="desktop-version">
+                            <figcaption class="text-reg font-regular">The initial happy path</figcaption>
+                            <img src="../img/noto/user-flow.png">
+                        </figure>
+
+                        <figure class="mobile-version">
+                            <figcaption class="text-reg font-regular">The initial happy path</figcaption>
+                            <img src="../img/noto/user-flow-m.png">
+                        </figure>
+                    </div>
+
+                    <div class="grid row-reg">
+                        <h3 class="d-max-width">Our first prototype tried to cram too many features without a clear hierarchy and missed the context of real classrooms.</h3>
+
+                        <div class="grid t-col-3 row-sm">
+                            <img src="../img/noto/low-fidelity.png" class="t-span-3 animated">
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/issue-1.png">
+                                <figcaption>Icons are unclear, confusing, and need better labelling.</figcaption>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/issue-2.png">
+                                <figcaption>Not enough context for users to understand what they need to do.</figcaption>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/issue-3.png">
+                                <figcaption>It may not be appropriate for teachers to use phones in their classrooms.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+
+                    <div class="grid row-reg">
+                        <div class="content-flex d-max-width">
+                            <h3>We rebuilt the smart documentation as a brain-dump tool with tablet-first compatibility to suit urgent use and avoid phone usage.</h3>
+                            <p>Tablets are more appropriate in a classroom environment, and many teachers already use them in-class. We incorporated AI into this feature to distill messy inputs into necessary fields, allowing teachers to forego structure when they need to act fast.</p>
+                        </div>
+
+                        <div class="grid t-col-3 row-sm">
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/documentation-1.png">
+                                <div class="icon-text cons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                    <p class="themed-text">Unclear actions</p>
+                                </div>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/documentation-2.png">
+                                <div class="icon-text cons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                    <p class="themed-text">Structured but slower</p>
+                                </div>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/documentation-3.png">
+                                <div class="icon-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <p class="themed-text">Quick and simple</p>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="grid row-md">
+                        <div class="grid row-reg">
+                            <h3 class="d-max-width">Quick, unstructured inputs would be parsed into corresponding fields by AI, with areas that required manual review and correction flagged.</h3>
+                            <img src="../img/noto/user-flow-2.png" class="desktop-version">
+                            <img src="../img/noto/user-flow-2-m.png" class="mobile-version">
+                        </div>
+
+                        <div class="grid row-sm">
+                            <p class="d-max-width">UI elements were then designed following that AI-assisted user flow.</p>
+                            <div class="grid t-col-3 row-sm">
+                                <figure class="m-max-width animated flyUp stagger">
+                                    <img src="../img/noto/flow-1.png">
+                                    <figcaption>Teachers start with messy inputs.</figcaption>
+                                </figure>
+
+                                <figure class="m-max-width animated flyUp stagger">
+                                    <img src="../img/noto/flow-2.png">
+                                    <figcaption>AI flags fields that need corrections.</figcaption>
+                                </figure>
+
+                                <figure class="m-max-width animated flyUp stagger">
+                                    <img src="../img/noto/flow-3.png">
+                                    <figcaption>Documentation is manually reviewed.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid row-reg">
+                        <h3 class="d-max-width">To distinguish casual notes and sensitive reports, I added a simple checkbox to tag “report-worthy” documents and lock them from the view of unrelated personnel.</h3>
+
+                        <div class="grid t-col-3 row-sm">
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/privacy-1.png">
+                                <figcaption>Quickly ticks a checkbox if it's a admin-related report.</figcaption>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/privacy-2.png">
+                                <figcaption>Documents are private by default; toggling on password requirement adds another layer of privacy.</figcaption>
+                            </figure>
+
+                            <figure class="m-max-width animated flyUp stagger">
+                                <img src="../img/noto/privacy-3.png">
+                                <figcaption>Sensitive reports are locked from unrelated staff.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="grid row-reg d-max-width">
+                        <div class="content-flex">
+                            <h3>The widget was redesigned to show the important features with proper labels, improving clarity.</h3>
+                            <p>The widget idea was a step in the right direction, but we missed the mark on clarity. Test participants mistook the purpose of icons and didn't know what features were supposed to be shown. We learned from other apps' widgets to refine the layout and design.</p>
+                        </div>
+
+                        <div class="grid t-col-2 row-sm">
                             <figure class="animated flyUp stagger">
                                 <img src="../img/noto/widget-1.png">
                                 <div class="icon-text cons">
@@ -385,100 +471,86 @@
                         </div>
                     </div>
 
-                    <div class="extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h3>The smart documentation was rebuilt as a brain-dump tool with tablet-first compatibility.</h3>
-                            <p>Many teachers have a tablet in class, so developing this feature for tablets first is more appropriate. We decided to incorporate AI into this feature to distill messy inputs into necessary fields, allowing teachers to forego structure when they need to act fast.</p>
+                    <div class="grid row-reg">
+                        <div class="content-flex d-max-width">
+                            <h3>Alongside the prototype's development, I collaborated with a teammate on our design system to ensure the UI's consistency and accessibility.</h3>
+                            <p>We adapted components from the Tailwind design system and followed the Atomic Design principle.</p>
                         </div>
-
-                        <div class="grid-sm t-col-3 row-reg">
-                            <figure class="animated flyUp stagger">
-                                <img src="../img/noto/documentation-1.png">
-                                <div class="icon-text cons">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-                                    <p class="themed-text">Unclear actions</p>
-                                </div>
-                            </figure>
-
-                            <figure class="animated flyUp stagger">
-                                <img src="../img/noto/documentation-2.png">
-                                <div class="icon-text cons">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-                                    <p class="themed-text">Structured but slower</p>
-                                </div>
-                            </figure>
-
-                            <figure class="animated flyUp stagger">
-                                <img src="../img/noto/documentation-3.png">
-                                <div class="icon-text">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-                                    <p class="themed-text">Quick and simple</p>
-                                </div>
-                            </figure>
-                        </div>
+                        
+                        <img src="../img/noto/design-system.png" class="t-wide m-wide animated">
                     </div>
 
                     <div class="grid row-reg">
-                        <div class="extended-content content-flex d-max-width">
-                            <h3>As our prototypes were coming together, we adapted the Tailwind component library to fit our visual direction and ensure consistency and efficiency when we built the custom elements we needed.</h3>
-                            <p>With ready-made components from Tailwind and our customized design system, I built out the remaining UI elements for the tablet platform and worked with other designers to ensure consistency and accessibility across both mobile and desktop interfaces.</p>
-                        </div>
-
-                        <img src="../img/noto/design-system.png" class="wide t-wide desktop-version animated">
-
-                        <div class="mobile-version slides-container m-wide">
-                            <div class="scroll-slides thin-scrollbar">
-                                <img src="../img/noto/design-system-a.png" class="scroll-slide">
-                                <img src="../img/noto/design-system-b.png" class="scroll-slide">
-                            </div>
-
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
-                            </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h3>User testing confirmed that teachers can reduce redundancy and create meaningful, consistent documentation with ease.</h3>
+                        <div class="content-flex d-max-width">
+                            <h3>The final round of user testing confirmed that teachers can create meaningful, consistent documentation with ease.</h3>
                             <p>We sat down with an experienced educator to test the product against real-world expectations. Aside from minor changes to refine information filtering, NOTO's documentation proved to be quick to learn and easy to use.</p>
                         </div>
 
                         <img src="../img/noto/high-fidelity.png" class="t-wide m-wide animated">
                     </div>
+                </section>
 
-                    <div class="extended-content grid row-reg d-max-width">
-                        <h3>The next step for NOTO is live testing and observation in classrooms to validate what success looks like for educators.</h3>
+
+                <section class="section grid row-lg" id="deliver">
+                    <div class="grid row-reg d-max-width">
+                        <div class="content-flex">
+                            <h2 class="themed-text">Deliver</h2>
+                            <h3>NOTO's smart documentation tool accelerates notetaking and reports, allowing educators to reclaim lost time and reduce redundancy.</h3>
+                            <p>The documentation feature is designed for in-the-moment brain-dumps. Quick voice recordings and rough notes are distilled into structured outputs for report cards, logs, or communication with caregivers.</p>
+                        </div>
+
+                        <video width="100%" height="auto" preload="auto" controls autoplay loop muted class="m-wide">
+                            <source src="../img/noto/smart-documentation.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="grid row-reg d-max-width">
+                        <h3>This is a core feature of NOTO, our proposed support system to provide ECE teachers with real-time support, inclusive learning strategies, and streamlined administrative tools.</h3>
+
+                        <div class="grid row-xs slides-container">
+                            <div class="scroll-slides w-gap no-scrollbar">
+                                <img src="../img/noto/mockup-2.jpg" class="scroll-slide" alt="NOTO supports educators through a tablet app and a desktop platform.">
+                                <img src="../img/noto/feature-1.png" class="scroll-slide" alt="Visual dashboard of short, certification-aligned modules that educators can complete during school hours.">
+                                <img src="../img/noto/feature-2.png" class="scroll-slide" alt="Real-time classroom management tool offering a quick overview for fast decision-making.">
+                                <img src="../img/noto/feature-3.png" class="scroll-slide" alt="Just-in-time assistance providing adaptive strategies and real-time guidance in a hands-free format.">
+
+                                <button class="prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                                </button>
+                                <button class="next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                </button>
+                            </div>
+                            <p class="caption text-reg font-regular text-center"></p>
+                        </div>
+                    </div>
+
+                    <div class="grid row-reg d-max-width">
+                        <h3>Notes are sorted by student profiles and development areas and synced with NOTO's cloud, allowing teachers access to them anywhere.</h3>
+                        <img src="../img/noto/mockup-6.png" class="animated">
+                    </div>
+
+                    <div class="grid row-reg">
+                        <h3 class="d-max-width">The next step is live testing and observation in classrooms to validate what success looks like for educators.</h3>
 
                         <div class="grid-sm d-col-4 t-col-2 row-xs">
                             <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Adoption</p>
-                                </div>
+                                <p class="icon-text">Adoption</p>
                                 <p class="text-sm">Number of active users per school, adoption rate, and admin support for integration helps us gauge scalability, institutional buy-in, and sustainability.</p>
                             </div>
 
                             <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Engagement</p>
-                                </div>
+                                <p class="icon-text">Engagement</p>
                                 <p class="text-sm">Usage and frequency of core features indicate whether NOTO is intuitive, timely, and integrated into natural classroom flow.</p>
                             </div>
 
                             <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Impact</p>
-                                </div>
+                                <p class="icon-text">Impact</p>
                                 <p class="text-sm">Time saved on admin tasks and teacher-reported reduction in decision fatigue help us measure how workload and stress are reduced.</p>
                             </div>
 
                             <div class="textbox bordered padding-sm m-max-width animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Well-being</p>
-                                </div>
+                                <p class="icon-text">Well-being</p>
                                 <p class="text-sm">Voluntary use of wellness tools, teacher-reported benefits, and uptake of peer mentorship ensure emotional tools are helpful and support trust.</p>
                             </div>
                         </div>
@@ -492,7 +564,7 @@
 
                         <div class="content-flex">
                             <p class="text-lg">01</p>
-                            <p>Before this project, I had a working understanding of Figma components, styles, and variables, but not enough experience to leverage them efficiently. I learned from my teammates how to <strong>adapt an existing component library and work with variables to design faster and maintain cohesion.</strong></p>
+                            <p>As we learned about teachers' daily realities, our goals expanded from improving professional development to providing comprehensive support. During iterations, <strong>we pivoted and narrowed the scope to ensure our MVP is completed on time without compromising its quality.</strong></p>
                         </div>
 
                         <div class="content-flex">
@@ -501,17 +573,17 @@
                         </div>
                     </div>
                     
-                    <img src="../img/noto/mockup-3.jpg" class="m-wide animated">
+                    <img src="../img/noto/mockup-3.jpg" class="m-wide animatedIn">
                 </section>
 
 
                 <nav class="page-nav-container">
                     <ul class="page-nav glass" id="page-nav">
                         <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
-                        <li><a href="#problem" class="nav-link">Problem</a></li>
-                        <li><a href="#solution" class="nav-link">Solution</a></li>
                         <li><a href="#research" class="nav-link">Research</a></li>
+                        <li><a href="#define" class="nav-link">Define</a></li>
                         <li><a href="#design" class="nav-link">Design</a></li>
+                        <li><a href="#deliver" class="nav-link">Deliver</a></li>
                         <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
