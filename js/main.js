@@ -255,3 +255,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll([".animated", ".animatedIn"]).forEach((el) => observer.observe(el));
 // End of code from https://www.youtube.com/watch?v=T33NN_pPeNI
+
+
+const overlays = document.querySelectorAll(".before-after-overlay")
+if (document.body.contains(overlays[0])){
+    function showBefore(e) {e.children[0].style.opacity = 0;}
+    function hideBefore(e) {e.children[0].style.opacity = 1;}
+    Array.from(overlays).forEach((overlay) => {
+        overlay.addEventListener("mouseover", event => {showBefore(overlay)})
+        overlay.addEventListener("mouseleave", event => {hideBefore(overlay)})
+        overlay.addEventListener("touchstart", event => {
+            showBefore(overlay)
+            event.preventDefault();
+        })
+        overlay.addEventListener("touchend", event => {
+            hideBefore(overlay)
+            event.preventDefault();
+        })
+    })
+}

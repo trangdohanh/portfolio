@@ -36,7 +36,7 @@ html{
 .cons.icon-text p {color: var(--theme-red);}
 .cons svg {fill: var(--theme-red);}
 
-.textbox.glass{
+#showcase .glass, .textbox.glass{
     border: 1px solid var(--white-50);
     border-radius: 8px;
 }
@@ -58,25 +58,21 @@ html{
 
 .summary-card{
     background-color: var(--theme-bg);
-    border: 1px solid var(--white-50);
 }
 
-#summary{
-    padding-top: 80px; 
-    padding-bottom: 80px; 
-    background-color: var(--theme-grey-1);
+#showcase{
+    background-color: var(--theme-bg);
 }
 
-#summary .coloured-bg {
+#showcase .coloured-bg {
     background-color: #fcd797;
 }
 
-#summary .cons {
+#showcase .cons {
     background-color: #f6ccc3;
-    border: none;
 }
 
-#summary div{
+#showcase div{
     border-radius: 8px;
     overflow: hidden;
 }
