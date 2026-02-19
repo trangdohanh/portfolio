@@ -1,0 +1,70 @@
+@import url(../css/variables.css);
+
+html{
+    --theme-bg: #F3F4FF; 
+    --theme: #D1D2FF; 
+    --theme-fg: #4F51AE; 
+    --theme-red: #DC2626;
+    --theme-red-20: #FFD8D6;
+    --theme-red-10: #FFEBEA;
+}
+
+.coloured-bg, .pie-chart-in, details, .details{background-color: var(--theme);}
+.persona-card{background-color: var(--theme-bg) !important; border: 1px solid var(--theme) !important;}
+
+.themed-text{color: var(--theme-fg);}
+.icon-text svg{fill: var(--theme-fg);}
+.cons .themed-text{color: var(--theme-red);}
+.cons svg{fill: var(--theme-red);}
+.textbox.bordered {border: 1px solid var(--theme-fg) !important;}
+.textbox li {font-size: var(--font-sm); line-height: var(--line-sm);}
+.textbox .icon-text {background-color: var(--theme); color: var(--theme-fg);}
+
+.cons.coloured-bg, .cons .pie-chart-in{background-color: var(--theme-red-10);}
+
+.cons .icon-text{background-color: var(--theme-red-20); color: var(--theme-red);}
+/* .textbox.cons svg{fill: var(--secondary);} */
+
+.textbox.cons.bordered {border: 1px solid var(--theme-red) !important;}
+
+.link-button.solid{
+    background-color: var(--theme);
+    border-color: var(--theme);
+}
+
+#reflection p{margin-top: 0;}
+
+#showcase .glass{
+    border: 1px solid var(--white-50);
+    border-radius: 8px;
+}
+
+.summary-card{
+    background-color: var(--theme);
+}
+
+#showcase{
+    background-color: #AFB0FF;
+}
+
+#showcase .coloured-bg {
+    background-color: var(--theme);
+}
+
+#showcase .cons {
+    background-color: var(--theme-red-20);
+}
+
+#showcase div{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+details[name="painpoints"], .details.cons{
+    background-color: var(--theme-red-20);
+}
+
+@media (any-hover: hover) {
+    .link-button.solid:hover{background-color: var(--theme-bg); color: var(--theme-fg); border-color: var(--theme-fg);}    
+    .link-button.solid:hover svg{fill: var(--theme-fg);}
+}
