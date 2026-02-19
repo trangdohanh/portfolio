@@ -14,10 +14,10 @@
 
 :root{
     /* TYPOGRAPHY */
-    --font-sm: 0.84rem; --line-sm: 1.34rem;
-    --font-reg: 1.08rem; --line-reg: 1.73rem;
-    --font-md: 1.39rem; --line-md: 2.25rem;
-    --font-lg: 1.78rem; --line-lg: 2.67rem;
+    --font-sm: 0.84rem; --line-sm: 160%;
+    --font-reg: 1.08rem; --line-reg: 160%;
+    --font-md: 1.39rem; --line-md: 150%;
+    --font-lg: 1.78rem; --line-lg: 145%;
     /* FOUNDATION */
     --black: #1a1a1a; --white: #fbf7f4;
     --black-90: #1a1a1ae6; --white-90: #fbf7f4e6;
@@ -51,10 +51,10 @@
 /* MOBILE ONLY */
 @media only screen and (max-width: 767px) {
     :root{
-        --font-sm: 0.88rem; --line-sm: 1.41rem;
-        --font-reg: 1.08rem; --line-reg: 1.73rem;
-        --font-md: 1.32rem; --line-md: 2.14rem;
-        --font-lg: 1.62rem; --line-lg: 2.43rem;
+        --font-sm: 0.88rem; --line-sm: 160%;
+        --font-reg: 1.08rem; --line-reg: 160%;
+        --font-md: 1.32rem; --line-md: 150%;
+        --font-lg: 1.62rem; --line-lg: 145%;
         --scroll-margin: 80px;
         --page-margin: 20px;
         --page-neg-margin: -20px;
