@@ -23,7 +23,6 @@ html{
 .cons.coloured-bg, .cons .pie-chart-in{background-color: var(--theme-red-10);}
 
 .cons .icon-text{background-color: var(--theme-red-20); color: var(--theme-red);}
-/* .textbox.cons svg{fill: var(--secondary);} */
 
 .textbox.cons.bordered {border: 1px solid var(--theme-red) !important;}
 
@@ -34,31 +33,13 @@ html{
 
 #reflection p{margin-top: 0;}
 
-#showcase .glass{
-    border: 1px solid var(--white-50);
-    border-radius: 8px;
-}
+.summary-card{background-color: var(--theme);}
 
-.summary-card{
-    background-color: var(--theme);
-}
+#showcase{background-color: #AFB0FF;}
 
-#showcase{
-    background-color: #AFB0FF;
-}
+#showcase .glass {background-color: var(--theme);}
 
-#showcase .coloured-bg {
-    background-color: var(--theme);
-}
-
-#showcase .cons {
-    background-color: var(--theme-red-20);
-}
-
-#showcase div{
-    border-radius: 8px;
-    overflow: hidden;
-}
+#showcase .cons {background-color: var(--theme-red-20);}
 
 details[name="painpoints"], .details.cons{
     background-color: var(--theme-red-20);
