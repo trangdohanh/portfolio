@@ -9,11 +9,25 @@
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="stylesheet" href="../css/style.css">
         <style>
-            mark, .coloured-bg {background-color: #cde1e3cc;}
+            .coloured-bg {background-color: #cde1e3cc;}
             .bordered-section{border: 2px solid #cde1e3;}
             .themed-text{color: #598392;}
-            .textbox.bordered{border: 1px solid #598392;}
+            .bordered{border: 1px solid #598392;}
             .textbox .icon-text {background-color: #cde1e3cc; color: #245567;}
+
+            #showcase{background-color: #cde1e3;}
+            #showcase .glass {background-color: #EAF4F4;}
+            #showcase .cons{background-color: #FFD2D2;}
+
+            .link-button.solid{
+                background-color: #cde1e3;
+                border-color: #cde1e3;
+            }
+
+            @media (any-hover: hover) {
+                .link-button.solid:hover{background-color: #cde1e3cc; color: #598392; border-color: #598392;}    
+                .link-button.solid:hover svg{fill: #598392;}
+            }
         </style>
     </head>
 
@@ -36,7 +50,7 @@
                         <div class="grid-sm t-col-3 row-xs">
                             <div class="textbox bordered padding-sm animated flyUp stagger">
                                 <h3 class="text-reg themed-text">Role</h3>
-                                <p class="text-sm">UX/UI Designer</p>
+                                <p class="text-sm">UX/UI Designer, independent project</p>
                             </div>
 
                             <div class="textbox bordered padding-sm animated flyUp stagger">
@@ -50,7 +64,48 @@
                                 <br>Dec 2024 & Mar 2025 (redesign)</p>
                             </div>
                         </div>
+
+                        <div>
+                            <p>Quick navigation</p>
+                            <div class="buttons sm-stacked">
+                                <a href="#showcase" class="link-button solid">Jump to showcase
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                                <a href="#challenge" class="link-button solid">Jump to case study
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </section>
+
+
+                <section class="extended extended-wrapper extended-padding" id="showcase">
+                    <div class="extended-content grid-sm row-xs t-col-3">
+                        <div class="grid-sm row-xs t-span-2 t-col-2">
+                            <div class="t-span-2 textbox cons glass animatedIn">
+                                <p>The challenge</p>
+                                <p class="text-md">Many new residents need to convert prices when shopping due to their unfamiliarity with the pricing structure, creating an additional cognitive load.</p>
+                            </div>
+                            <div class="t-span-2 textbox coloured-bg glass animatedIn">
+                                <p>The concept</p>
+                                <p class="text-md">A shopping calculator that converts from Canadian dollars to the user's currency of choice and displays the conversion as they shop, designed for on-the-go and one-handed use.</p>
+                            </div>
+                            <div class="glass animatedIn">
+                                <img src="../img/shopping-calculator/mockup-3.png">
+                            </div>
+                            <div class="glass animatedIn">
+                                <img src="../img/shopping-calculator/mockup-4.png">
+                            </div>
+                        </div>
+                        
+                        <div class="textbox glass animatedIn" style="align-content: center;">
+                            <video width="100%" height="auto" controls autoplay loop muted class="m-max-width device-shadow">
+                                <source src="../img/shopping-calculator/demo-1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        
+                    </div>               
                 </section>
 
 
@@ -78,7 +133,7 @@
                 <section class="section extended extended-wrapper grid row-lg" id="concept">
                     <div class="grid row-reg">
                         <div class="extended-content content-flex d-max-width">
-                            <h2 class="themed-text">The idea</h2>
+                            <h2 class="themed-text">The concept</h2>
                             <h3>A shopping calculator that converts from Canadian dollars to the user's currency of choice, showing them the conversion as they shop...</h3>
                         </div>
 
@@ -175,7 +230,7 @@
 
                     <div class="extended-content grid row-reg d-max-width">
                         <div class="content-flex">
-                            <h3>I ideate layouts and conduct quick user tests with paper prototypes.</h3>
+                            <h3>I ideated layouts and conducted quick user tests with paper prototypes.</h3>
                             <p>My experience with front-end development was limited at this point, so I was advised to keep everything to one HTML document—thus, one screen. A challenge I encountered early on was fitting a lot of information into one phone screen. To address this constraint, most participants recommended displaying the information gradually.</p>
                         </div>
 
@@ -191,35 +246,27 @@
                         </div>          
                     </div>
 
-                    <div class="extended-content d-max-width grid row-reg">
-                        <h3>For a mobile app, my designs need to ensure the reachability of components and better account for native UI elements.</h3>
+                    <div class="extended-content grid row-reg">
+                        <h3 class="d-max-width">For a mobile app, my designs need to ensure the reachability of components and better account for native UI elements.</h3>
 
-                        <div class="grid-sm d-col-4 t-col-2 row-xs">
+                        <div class="grid-sm d-col-4 t-col-2 row-xs d-max-width m-max-width">
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Better onboarding</p>
-                                </div>
+                                <p class="icon-text">Better onboarding</p>
                                 <p class="text-sm">New users are presented with the modal to select currency and province, and don't have to reach the top of the screen.</p>            
                             </div>
 
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Easy button access</p>
-                                </div>
+                                <p class="icon-text">Easy button access</p>
                                 <p class="text-sm">The “Add to list” button floats near the bottom right corner and stays visible to users regardless of the length of the shopping list.</p>            
                             </div>
 
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Reduce clutter</p>
-                                </div>
+                                <p class="icon-text">Reduce clutter</p>
                                 <p class="text-sm">Simplified the layout of the summary area to reduce confusion, and removed clutter in the “Saved” screen.</p>            
                             </div>
 
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Improve contrast</p>
-                                </div>
+                                <p class="icon-text">Improve contrast</p>
                                 <p class="text-sm">Adjusted the colour palette to increase colour contrast and cohesion.</p>            
                             </div>
                         </div>
@@ -318,32 +365,24 @@
                             <p>There are improvements I could make to the prototype, such as adding geolocation to automatically detect the province the user is in, a confirmation modal when the user removes an item, or the following changes:</p>
                         </div>
 
-                        <div class="grid-sm t-col-3 row-xs">
+                        <div class="grid-sm t-col-3 row-xs m-max-width">
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Language selection</p>
-                                </div>
+                                <p class="icon-text">Language selection</p>
                                 <p class="text-sm">Since the target users are people who are living in Canada for the first time and may not be comfortable with English, they should be able to use this tool in a familiar language.</p>            
                             </div>
 
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Scanning labels</p>
-                                </div>
+                                <p class="icon-text">Scanning labels</p>
                                 <p class="text-sm">Grocery items are often labelled with their names and prices. Using the phone's camera to scan the labels would speed up the information-inputting process.</p>            
                             </div>
 
                             <div class="textbox padding-sm bordered animated flyUp stagger">
-                                <div class="icon-text">
-                                    <p>Deselecting items</p>
-                                </div>
+                                <p class="icon-text">Deselecting items</p>
                                 <p class="text-sm">Shoppers are indecisive, so allowing them to deselect items, view how much their total would change, and add a previously unwanted item back would significantly improve the experience.</p>            
                             </div>
                         </div>
 
-                        <div class="content-flex">
-                            <p>Implementing these additional features requires a more complex system that leverages a frontend framework, backend database, and device hardware. With these proposed features added, the user base can expand to shoppers looking for an intuitive shopping calculator. There's also potential to expand this app to other countries outside Canada.</p>
-                        </div>
+                        <p>Implementing these additional features requires a more complex system that leverages a frontend framework, backend database, and device hardware. With these proposed features added, the user base can expand to shoppers looking for an intuitive shopping calculator. There's also potential to expand this app to other countries outside Canada.</p>
                     </div>
 
                     <img src="../img/shopping-calculator/concept.png" class="wide desktop-version animated">
@@ -368,7 +407,7 @@
                     <div class="content-flex">
                         <h2 class="themed-text">Reflection</h2>
                         <h3>Trying not to get caught up in technical constraints</h3>
-                        <p>I realized how often features that would improve the user experience weren't considered simply because I couldn't figure out the technicality. Having a good grasp of the technology and development process is valuable when considering product feasibility; however, moving forward, I can't just discard an idea because I personally can't code it. As long as I have completed comprehensive research and design—including research into the technology requirements—I can make a blueprint for a development team to pick up from there.</p>
+                        <p>I realized how often features that would improve the user experience weren't considered simply because I couldn't figure out the technicality. Having a good grasp of the technology and development process is valuable when considering product feasibility; however, moving forward, I can't discard an idea because I personally can't code it. As long as I have completed comprehensive research and design—including research into the technology requirements—I can make a blueprint for a development team to pick up from there.</p>
                     </div>
 
                     <img src="../img/shopping-calculator/mockup-2.jpg" class="m-wide animated" alt="A person in a store aisle using the shopping calculator on their phone.">

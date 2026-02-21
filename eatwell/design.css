@@ -36,7 +36,7 @@ html{
 .cons.icon-text p {color: var(--theme-red);}
 .cons svg {fill: var(--theme-red);}
 
-#showcase .glass, .textbox.glass{
+.textbox.glass{
     border: 1px solid var(--white-50);
     border-radius: 8px;
 }
@@ -56,30 +56,15 @@ html{
     z-index: 10;
 }
 
-.summary-card{
-    background-color: var(--theme-bg);
-}
+.summary-card{background-color: var(--theme-bg);}
 
-#showcase{
-    background-color: var(--theme-bg);
-}
+#showcase{background-color: var(--theme-bg);}
 
-#showcase .coloured-bg {
-    background-color: #fcd797;
-}
+#showcase .glass {background-color: #fcd797;}
 
-#showcase .cons {
-    background-color: #f6ccc3;
-}
+#showcase .cons {background-color: #f6ccc3;}
 
-#showcase div{
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-figure {
-    position: relative;
-}
+figure {position: relative;}
 
 figure img:nth-child(1 of img) {
     opacity: 1;
