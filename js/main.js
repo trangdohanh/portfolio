@@ -1,5 +1,4 @@
-var homepage = document.getElementById("home")
-if (!document.body.contains(homepage)){
+if (!document.body.classList.contains("fixed-bg")){
     document.getElementById("header").innerHTML = `<div class="flex header">
                                                         <div class="flex header-mobile-wrap">
                                                             <a href="../" class="logo">
