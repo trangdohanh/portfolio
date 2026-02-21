@@ -15,6 +15,16 @@
             .pros svg{fill: #065FD4;}
             .textbox.bordered{border: 1px solid #e3170a !important;}
             .textbox .icon-text {background-color: #e3170a1a; color: #e3170a;}
+            
+            #showcase{background-color: #F18B84;}
+            #showcase .glass {background-color: #F9D1CE;}
+            #showcase .cons {background-color: #F7B9B5;}
+
+            .link-button.solid{background-color: #F9D1CE; border-color: #F9D1CE;}
+            @media (any-hover: hover) {
+                .link-button.solid:hover{background-color: #F9D1CE; color: #e3170a; border-color: #e3170a;}    
+                .link-button.solid:hover svg{fill: #e3170a;}
+            }
 
             #reflection p{margin-top: 0;}
         </style>
@@ -52,13 +62,61 @@
                                 <p class="text-sm">Jan &#8211 Apr 2024 (13 weeks)</p>
                             </div>
                         </div>
+
+                        <div>
+                            <p>Quick navigation</p>
+                            <div class="buttons sm-stacked">
+                                <a href="#showcase" class="link-button solid">Jump to showcase
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                                <a href="#challenge" class="link-button solid">Jump to case study
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </section>
+
+
+                <section class="extended extended-wrapper extended-padding" id="showcase">
+                    <div class="extended-content grid-sm row-xs t-col-6">
+                        <div class="t-span-3 textbox cons glass animatedIn">
+                            <p>The challenge</p>
+                            <p class="text-md">YouTube features originally designed to give viewers an uninterrupted experience often increase screen time.</p>
+                        </div>
+                        <div class="t-span-3 textbox coloured-bg glass animatedIn">
+                            <p>The solution</p>
+                            <p class="text-md">A redesigned experience to encourage more active querying for content and monitoring watch time.</p>
+                        </div>
+
+                        <p class="t-span-2 textbox coloured-bg glass animatedIn"><strong>A redesigned Home feed</strong> puts more focus on the search bar and encourages more active queries for content. The user is shown a finite number of content and actively loads more videos.</p>
+                        
+                        <div class="t-span-4 glass animatedIn">
+                            <img src="../img/mindful-youtube/highlight-1.png">
+                        </div>
+
+                        <div class="grid row-xs t-span-3">
+                            <div class=" glass animatedIn">
+                                <img src="../img/mindful-youtube/highlight-2.png">
+                            </div>
+                            
+                            <p class="textbox coloured-bg glass animatedIn"><strong>Time tracking and break reminder features</strong>, only available on the YouTube app, were added to the redesigned web platform, with periodic alerts of long continuous usage to allow users to monitor their usage and remember to take breaks.</p>
+                        </div>
+
+                        <div class="grid row-xs t-span-3">
+                            <div class=" glass animatedIn">
+                                <img src="../img/mindful-youtube/highlight-3.png">
+                            </div>
+                            
+                            <p class="textbox coloured-bg glass animatedIn"><strong>Balanced ad breaks serve as screen time breaks.</strong> Setting ad frequency according to the <a href="https://www.healthline.com/health/eye-health/20-20-20-rule" class="link">20-20-20 rule</a> can encourage the user to take a short break from the screen while ensuring revenue for creators and the platform.</p>
+                        </div>
+                    </div>               
                 </section>
 
                 
                 <section class="section grid row-reg d-max-width" id="challenge">
                     <div class="content-flex">
-                        <h2 class="themed-text">Challenge</h2>
+                        <h2 class="themed-text">The challenge</h2>
                         <h3>How might we design the viewing experience on YouTube to reduce distractions and encourage mindful usage with minimal intrusion?</h3>
                         <p>YouTube features designed to give viewers an uninterrupted experience often increase screen time. Videos with attention-grabbing titles and thumbnails perform well, despite fragmenting viewers' attention. </p>            
                     </div>
@@ -292,37 +350,6 @@
                 </section>
 
 
-                <section class="section grid row-lg d-max-width" id="outcome">
-                    <div class="grid row-reg">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Outcome</h2>
-                            <h3>Redesigned Home feed to promote intentional usage</h3>
-                            <p>This redesigned Home feed puts more focus on the search bar and encourages more active queries for content. Users are shown a finite number of content at a time and can actively load more videos.</p>
-                        </div>
-
-                        <img src="../img/mindful-youtube/highlight-1.png" class="animated">
-                    </div>
-
-                    <div class="grid row-reg t-col-2 grid-h-center">
-                        <img src="../img/mindful-youtube/highlight-2.png" class="row-2 m-max-width animated flyLeft">
-
-                        <div class="content-flex row-1 d-pad-left">
-                            <h3>More accessible time tracking capability</h3>
-                            <p>Time tracking and break reminder features, only available on the YouTube app, were added to the redesigned web platform, with periodic alerts of long continuous usage to allow users to monitor their usage and remember to take breaks.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid row-reg t-col-12 grid-h-center">
-                        <div class="content-flex d-span-5 t-span-12 d-pad-right">
-                            <h3>Balanced ad breaks as screen time breaks</h3>
-                            <p>Setting ad frequency according to the <a href="https://www.healthline.com/health/eye-health/20-20-20-rule" class="link">20-20-20 rule</a> can encourage screen time breaks while ensuring revenue for creators and the platform.</p>
-                        </div>
-        
-                        <img src="../img/mindful-youtube/highlight-3.png" class="d-span-7 animated flyRight">
-                    </div>
-                </section>
-
-
                 <section class="section grid row-md d-max-width" id="reflection">
                     <div class="grid-lg t-col-2 row-sm">
                         <h2 class="themed-text t-span-2">Reflection</h2>
@@ -349,7 +376,6 @@
                         <li><a href="#research" class="nav-link">Research</a></li>
                         <li><a href="#define" class="nav-link">Define</a></li>
                         <li><a href="#design" class="nav-link">Design</a></li>
-                        <li><a href="#outcome" class="nav-link">Outcome</a></li>
                         <li><a href="#reflection" class="nav-link">Reflection</a></li>
                     </ul>
                 </nav>
