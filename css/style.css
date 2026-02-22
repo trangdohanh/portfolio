@@ -147,13 +147,6 @@ hr{
     margin-top: var(--margin-top-sm);
     border: 1px solid var(--green);
 }
-
-.summary-card{
-    padding: 32px;
-    margin: 0 -32px;
-    border-radius: var(--border-radius-100);
-    border: 1px solid var(--white-50);
-}
 /* ////////// */
 
 
@@ -1251,6 +1244,14 @@ blockquote{
 .page-nav.glass::before{height: 2px;}
 .page-nav::after{width: 2px;}
 /* End of code from https://hype4.academy/tools/glassmorphism-generator */
+
+
+.summary-card{
+    padding: 32px;
+    margin: 0 -32px;
+    border-radius: var(--border-radius-100);
+    border: 1px solid var(--white-50);
+}
 
 
 /* Code from https://demos.gsap.com/demo/make-elements-draggable/ */
