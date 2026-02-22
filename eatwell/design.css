@@ -19,7 +19,7 @@ html{
     border: 1px solid var(--theme) !important;
 }
 
-.themed-text{color: var(--theme-fg);}
+main h2, .themed-text{color: var(--theme-fg);}
 
 .icon-text svg{fill: var(--theme-fg);}
 
@@ -59,9 +59,7 @@ html{
 .summary-card{background-color: var(--theme-bg);}
 
 #showcase{background-color: var(--theme-bg);}
-
 #showcase .glass {background-color: #fcd797;}
-
 #showcase .cons {background-color: #f6ccc3;}
 
 figure {position: relative;}
