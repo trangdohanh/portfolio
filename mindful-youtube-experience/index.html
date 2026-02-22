@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <style>
             .coloured-bg{background-color: #e3170a1a}
-            .themed-text{color: #e3170a;}
+            main h2, .themed-text{color: #e3170a;}
             .icon-text svg{fill: #e3170a;}
             .pros .themed-text{color: #065FD4;}
             .pros svg{fill: #065FD4;}
@@ -20,13 +20,15 @@
             #showcase .glass {background-color: #F9D1CE;}
             #showcase .cons {background-color: #F7B9B5;}
 
-            .link-button.solid{background-color: #F9D1CE; border-color: #F9D1CE;}
+            .link-button.solid{
+                background-color: #F9D1CE;
+                border-color: #F9D1CE;
+            }
+
             @media (any-hover: hover) {
                 .link-button.solid:hover{background-color: #F9D1CE; color: #e3170a; border-color: #e3170a;}    
                 .link-button.solid:hover svg{fill: #e3170a;}
             }
-
-            #reflection p{margin-top: 0;}
         </style>
     </head>
 
@@ -41,8 +43,8 @@
                     <div class="section grid row-reg" id="overview">
                         <h1>Designing a more mindful YouTube experience</h1>
 
-                        <div class="content-flex">
-                            <h2 class="themed-text">Overview</h2>
+                        <div>
+                            <h2">Overview</h2>
                             <p>YouTube's features that were initially designed for users' convenience have made it easier for the platform to maximize watch time and engagement, at the same time raising concerns about digital well-being. To better account for users' mental well-being, I <strong>reimagined the viewing experience to encourage more intentional actions and remind users to take breaks, while keeping the intrusions on their experience to a minimum</strong>.</p>
                         </div>
         
@@ -115,8 +117,8 @@
 
                 
                 <section class="section grid row-reg d-max-width" id="challenge">
-                    <div class="content-flex">
-                        <h2 class="themed-text">The challenge</h2>
+                    <div>
+                        <h2>The challenge</h2>
                         <h3>How might we design the viewing experience on YouTube to reduce distractions and encourage mindful usage with minimal intrusion?</h3>
                         <p>YouTube features designed to give viewers an uninterrupted experience often increase screen time. Videos with attention-grabbing titles and thumbnails perform well, despite fragmenting viewers' attention. </p>            
                     </div>
@@ -135,7 +137,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
                                 <p>Little-known time-tracking</p>
                             </div>
-                            <p class="text-sm">Break reminders and watch time reports are only available on the app, despite desktop users having higher screen time <a class="link text-sm font-light" href="https://www.semrush.com/blog/mobile-vs-desktop-usage/">(Semrush)</a>.</p>            
+                            <p class="text-sm">Break reminders and watch time reports are only available on the app, despite desktop users having higher screen time <a class="link text-sm font-300" href="https://www.semrush.com/blog/mobile-vs-desktop-usage/">(Semrush)</a>.</p>            
                         </div>
 
                         <div class="textbox bordered padding-sm cons m-max-width animated flyUp stagger">
@@ -151,10 +153,10 @@
                     
                 <section class="section grid row-lg d-max-width" id="research">
                     <div class="grid row-reg">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Research</h2>
+                        <div>
+                            <h2>Research</h2>
                             <h3>Understanding how YouTube operates</h3>
-                            <p>The primary parties of YouTube's digital ecosystem are <strong>the viewers, the creators, and the advertisers.</strong> YouTube reaches these parties through its browser platform, mobile and TV apps, and monitors and regulates activities between them <a class="link font-light text-sm" href="https://learning.oreilly.com/library/view/the-youtube-formula/9781119716020/">(The YouTube Formula)</a>.
+                            <p>The primary parties of YouTube's digital ecosystem are <strong>the viewers, the creators, and the advertisers.</strong> YouTube reaches these parties through its browser platform, mobile and TV apps, and monitors and regulates activities between them <a class="link font-300 text-sm" href="https://learning.oreilly.com/library/view/the-youtube-formula/9781119716020/">(The YouTube Formula)</a>.
                             </p>
                         </div>
 
@@ -174,7 +176,7 @@
                     </div>
 
                     <div class="grid row-reg">
-                        <div class="content-flex">
+                        <div>
                             <h3>YouTube operates on an ad-driven model</h3>
                             <p>YouTube's Freemium experience generates revenue through advertisements on the platform. This ensures the viewers have free access to content, the creators receive compensation for their works, and the platform makes enough profit to keep running. Viewers can pay for a subscription to remove ads and watch uninterrupted.</p>
                         </div>
@@ -186,7 +188,7 @@
                     </div>
     
                     <div class="grid row-reg">
-                        <div class="content-flex">
+                        <div>
                             <h3>YouTube operates on an attention-driven model</h3>
                             <p>The longer viewers stay on the platform, the more content and advertisements they access, and the more YouTube benefits. The constant stream of content keeps viewers on the platform and increases watch time and revenue for YouTube, but at the expense of fragmenting viewers' attention and high social media usage.</p>
                         </div>
@@ -213,8 +215,8 @@
     
                 <section class="section extended extended-wrapper grid row-lg" id="define">
                     <div class="extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Define</h2>
+                        <div>
+                            <h2>Define</h2>
                             <h3>A more mindful viewing experience</h3>
                             <p>This project aims to redesign the current experience to be more cognizant of viewers' attention by encouraging more intentional actions. To create a more mindful experience, changes would be made to the ways viewers interact with advertisements and regular content on the platform.</p>
                         </div>
@@ -235,7 +237,7 @@
                     </div>
 
                     <div class="extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
+                        <div>
                             <h3>Ad placements that balance mental well-being and revenue</h3>
                             <p>Ads following the <a href="https://www.healthline.com/health/eye-health/20-20-20-rule" class="link">20-20-20 rule</a> (a 20-second break for every 20 minutes of screen time) can serve as shortened commercial breaks to reduce long binges and eyestrain. With the ads more reasonably spaced out, viewers would be more tolerant of longer unskippable ads, in turn ensuring revenue.</p>
                         </div>
@@ -247,7 +249,7 @@
                     </div>
                     
                     <div class="grid row-reg">
-                        <div class="extended-content content-flex d-max-width">
+                        <div class="extended-content d-max-width">
                             <h3>Design changes to facilitate mindful usage</h3>
                             <p>YouTube still benefits if some users spend less time on the platform. Its entertainment and education values and the long-standing brand name are competitive factors that many emerging platforms can't benefit from. There are small changes that can reduce distractions and encourage users to manage their screen time without significantly altering how the platform works.</p>
                         </div>
@@ -272,10 +274,10 @@
                 </section>
 
                     
-                <section class="section grid row-lg d-max-width" id="design">
+                <section class="section grid row-lg" id="design">
                     <div class="grid row-reg">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Design</h2>
+                        <div class="d-max-width">
+                            <h2>Design</h2>
                             <h3>Placing more emphasis on the search bar</h3>
                             <p>The additional emphasis on the search bar and filter tags encourages viewers to search for what they want, rather than passively exploring their recommendations. Since this space is often used for masthead ads, I mocked up three advertisement experiences for user testing.</p> 
                             <p>While the prominent search bar is more likely to remind them to search for something, many viewers would continue to browse. The large advertisement was found to be too distracting and was ultimately removed to create a less intrusive experience.</p>
@@ -308,8 +310,8 @@
                         </div>
                     </div>
                     
-                    <div class="grid row-reg">
-                        <div class="content-flex">
+                    <div class="grid row-reg d-max-width">
+                        <div>
                             <h3>Removing infinite scroll</h3>
                             <p>A finite number of content is displayed at a time, and the user can click on “Show more” to load more videos. If users are on the Home feed, they will be given the option to actively search and filter for results after multiple clicks. User testing found that these changes were not intrusive to the user experience; users didn't mind an extra click to load, filter, or dismiss content.</p>
                         </div>
@@ -327,8 +329,8 @@
                         </div>
                     </div>
 
-                    <div class="grid row-reg">
-                        <div class="t-span-2 content-flex">
+                    <div class="grid row-reg d-max-width">
+                        <div class="t-span-2">
                             <h3>Adding time tracking and break reminder</h3>
                             <p>I used the "Time watched" feature in the YouTube app as the foundation to design a time tracking feature and watch time reports for the website. Having an active timer displayed onscreen can be distressing, so the time watched will only update when the user clicks on a new video. A pop-up alerts viewers of long usage periods.</p>
                         </div>
@@ -352,14 +354,12 @@
 
                 <section class="section grid row-md d-max-width" id="reflection">
                     <div class="grid-lg t-col-2 row-sm">
-                        <h2 class="themed-text t-span-2">Reflection</h2>
-
-                        <div class="content-flex">
+                        <h2 class="t-span-2">Reflection</h2>
+                        <div>
                             <p class="text-lg">01</p>
                             <p>It was challenging to identify a direction to encourage users to pause their YouTube activities while ensuring revenue generation. With more time and business understanding, I would have liked to approach this project from a different angle than just monitoring screen usage.</p>
                         </div>
-
-                        <div class="content-flex">
+                        <div>
                             <p class="text-lg">02</p>
                             <p>The next step is iterating the long-usage pop-ups to be less repetitive, more engaging, and more customizable, as well as scaling the proposed changes to suit all devices and conducting further user testing to capture a wide range of experiences.</p>
                         </div>

@@ -14,10 +14,11 @@
 
 :root{
     /* TYPOGRAPHY */
-    --font-sm: 0.84rem; --line-sm: 160%;
+    --font-sm: 0.84rem; --line-sm: 150%;
     --font-reg: 1.08rem; --line-reg: 160%;
     --font-md: 1.39rem; --line-md: 150%;
     --font-lg: 1.78rem; --line-lg: 145%;
+
     /* FOUNDATION */
     --black: #1a1a1a; --white: #fbf7f4;
     --black-90: #1a1a1ae6; --white-90: #fbf7f4e6;
@@ -31,33 +32,56 @@
     --green-50: #50826e80;
     --light-green: #96beb4;
     --dark-green: #285046;
+
     /* LIGHT MODE */
     --light-bg-primary: var(--white);
     --light-text-primary: var(--black);
     --light-text-secondary: var(--black-90);
+
     /* DARK MODE */
     --dark-bg-primary: var(--black);
     --dark-text-primary: var(--white);
     --dark-text-secondary: var(--white-90);
+
     /* SPACING */
     --max-width: 1024px;
-    --border-radius: 2px;
     --scroll-margin: 120px;
+    --margin-top-lg: 120px;
+    --margin-top-md: 80px;
+    --margin-top-sm: 40px;
     --page-margin: 40px;
     --page-neg-margin: -40px;
-    --column-rg-gap: 24px;
-}
+    --padding-rg: 20px;
 
-/* MOBILE ONLY */
-@media only screen and (max-width: 767px) {
-    :root{
-        --font-sm: 0.88rem; --line-sm: 160%;
-        --font-reg: 1.08rem; --line-reg: 160%;
-        --font-md: 1.32rem; --line-md: 150%;
-        --font-lg: 1.62rem; --line-lg: 145%;
+    /* TEXT SPACING */
+    --text-space-050: 0.5rem;
+    --text-space-100: 1rem;
+
+    /* COLUMN GAP */
+    --column-gap-050: 8px;
+    --column-gap-075: 12px;
+    --column-gap-100: 16px;
+    --column-gap-125: 24px;
+    --column-gap-200: 32px;
+    --column-rg-gap: var(--column-gap-125);
+
+    /* BORDER RADIUS */
+    --border-radius-012: 2px;
+    --border-radius-025: 4px;
+    --border-radius-050: 8px;
+    --border-radius-075: 12px;
+    --border-radius-100: 16px;
+
+    /* MOBILE ONLY */
+    @media only screen and (max-width: 767px) {
+        --font-sm: 0.88rem;
+        --font-reg: 1.08rem;
+        --font-md: 1.32rem;
+        --font-lg: 1.62rem;
         --scroll-margin: 80px;
         --page-margin: 20px;
         --page-neg-margin: -20px;
-        --column-rg-gap: 16px;
+        --column-rg-gap: var(--column-gap-100);
     }
 }
+

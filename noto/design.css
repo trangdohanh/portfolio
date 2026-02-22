@@ -1,18 +1,19 @@
 @import url(../css/variables.css);
 
 html{
-    --theme-bg: #F3F4FF; 
-    --theme: #D1D2FF; 
-    --theme-fg: #4F51AE; 
-    --theme-red: #DC2626;
-    --theme-red-20: #FFD8D6;
-    --theme-red-10: #FFEBEA;
+    --theme-bg: #f3f4ff; 
+    --theme: #d1d2ff; 
+    --theme-fg: #4f51ae; 
+    --theme-red: #dc2626;
+    --theme-red-20: #ffd8d6;
+    --theme-red-10: #ffebea;
 }
 
 .coloured-bg, .pie-chart-in, details, .details{background-color: var(--theme);}
 .persona-card{background-color: var(--theme-bg) !important; border: 1px solid var(--theme) !important;}
 
-.themed-text{color: var(--theme-fg);}
+main h2, .themed-text{color: var(--theme-fg);}
+
 .icon-text svg{fill: var(--theme-fg);}
 .cons .themed-text{color: var(--theme-red);}
 .cons svg{fill: var(--theme-red);}
@@ -31,19 +32,13 @@ html{
     border-color: var(--theme);
 }
 
-#reflection p{margin-top: 0;}
-
 .summary-card{background-color: var(--theme);}
 
 #showcase{background-color: #AFB0FF;}
-
 #showcase .glass {background-color: var(--theme);}
-
 #showcase .cons {background-color: var(--theme-red-20);}
 
-details[name="painpoints"], .details.cons{
-    background-color: var(--theme-red-20);
-}
+details[name="painpoints"], .details.cons{background-color: var(--theme-red-20);}
 
 @media (any-hover: hover) {
     .link-button.solid:hover{background-color: var(--theme-bg); color: var(--theme-fg); border-color: var(--theme-fg);}    
