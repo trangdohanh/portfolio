@@ -11,7 +11,7 @@
         <style>
             .coloured-bg {background-color: #cde1e3cc;}
             .bordered-section{border: 2px solid #cde1e3;}
-            .themed-text{color: #598392;}
+            main h2, .themed-text{color: #598392;}
             .bordered{border: 1px solid #598392;}
             .textbox .icon-text {background-color: #cde1e3cc; color: #245567;}
 
@@ -42,8 +42,8 @@
                     <div class="section grid row-reg" id="overview">
                         <h1>Designing a shopping calculator to help newcomers in Canada acclimate to an unfamiliar pricing structure</h1>
 
-                        <div class="content-flex">
-                            <h2 class="themed-text">Overview</h2>
+                        <div>
+                            <h2>Overview</h2>
                             <p>The differences in currencies and tax systems make shopping slower and more inconvenient for newcomers. This project offers a more convenient shopping experience for visitors and new residents by converting prices from Canadian dollars to a currency familiar to the user, while calculating the total cost of their shopping trip and helping them keep track of their spending.</p>
                         </div>
 
@@ -111,8 +111,8 @@
 
                 <section class="section grid row-lg d-max-width" id="challenge">
                     <div>
-                        <div class="content-flex">
-                            <h2 class="themed-text">The challenge</h2>
+                        <div>
+                            <h2>The challenge</h2>
                             <h3>There is an additional cognitive load for new residents when shopping due to their unfamiliarity with the pricing structure.</h3>
                             <p>Shoppers tend to judge prices based on their experiences, but for many newcomers, switching between currencies is an added step to navigate unfamiliar pricing. <strong>Being able to mentally convert from one currency to another is one thing, keeping track of the numbers is another matter.</strong> Those who've been used to tax-inclusive pricing also have the additional task of figuring out how the sales tax applies.</p>
                         </div>
@@ -123,7 +123,7 @@
                         </figure>
                     </div>
 
-                    <div class="content-flex">
+                    <div>
                         <h3>What if there's something that combines existing tools to reduce that cognitive load and help newcomers adapt more easily?</h3>
                         <p>The common advice is to "give it time, and you'll get used to it." People get used to the currency difference eventually as they shop more often, but that transition doesn't have to be difficult or time-consuming. <strong>Amidst other challenges that come with relocating, one less source of stress could be valuable.</strong></p>
                     </div>
@@ -132,8 +132,8 @@
 
                 <section class="section extended extended-wrapper grid row-lg" id="concept">
                     <div class="grid row-reg">
-                        <div class="extended-content content-flex d-max-width">
-                            <h2 class="themed-text">The concept</h2>
+                        <div class="extended-content d-max-width">
+                            <h2>The concept</h2>
                             <h3>A shopping calculator that converts from Canadian dollars to the user's currency of choice, showing them the conversion as they shop...</h3>
                         </div>
 
@@ -160,27 +160,25 @@
                     </div>
 
                     <div class="extended-content grid row-sm d-max-width">
-                        <div class="content-flex">
-                            <h3>... and prioritizing on-the-go usage through real-time currency conversion and optimization for one-handed interactions.</h3>
-                        </div>
+                        <h3>... and prioritizing on-the-go usage through real-time currency conversion and optimization for one-handed interactions.</h3>
 
                         <div class="grid t-col-3 row-reg">
-                            <div class="content-flex m-max-width animated flyUp stagger">
-                                <h4 class="text-center text-reg font-medium">Real-time conversion</h4>
+                            <div class="m-max-width animated flyUp stagger">
+                                <h4 class="text-center text-reg font-500">Real-time conversion</h4>
                                 <figure>
                                     <img src="../img/shopping-calculator/solution-5.png">
                                     <figcaption>Pulls the latest currency exchange rates to save the user the effort to remember or do the math.</figcaption>
                                 </figure>
                             </div>
-                            <div class="content-flex m-max-width animated flyUp stagger">
-                                <h4 class="text-center text-reg font-medium">Shop in 2 currencies</h4>
+                            <div class="m-max-width animated flyUp stagger">
+                                <h4 class="text-center text-reg font-500">Shop in 2 currencies</h4>
                                 <figure>
                                     <img src="../img/shopping-calculator/solution-6.png">
                                     <figcaption>Keeps track of prices and spending in Canadian dollars and the currency of choice.</figcaption>
                                 </figure>
                             </div>
-                            <div class="content-flex m-max-width animated flyUp stagger">
-                                <h4 class="text-center text-reg font-medium">One-handed, on-the-go</h4>
+                            <div class="m-max-width animated flyUp stagger">
+                                <h4 class="text-center text-reg font-500">One-handed, on-the-go</h4>
                                 <figure>
                                     <img src="../img/shopping-calculator/solution-7.png">
                                     <figcaption>Shoppers use while they're at the grocery stores, even with one hand occupied.</figcaption>
@@ -193,8 +191,8 @@
 
                 <section class="section extended extended-wrapper grid row-lg" id="design">
                     <div class="grid row-reg">   
-                        <div class="extended-content content-flex d-max-width">
-                            <h2 class="themed-text">Design</h2>
+                        <div class="extended-content d-max-width">
+                            <h2>Design</h2>
                             <h3>I mapped out the user interactions (in blue) and machine activities (in green).</h3>
                         </div>
 
@@ -229,7 +227,7 @@
                     </div>
 
                     <div class="extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
+                        <div>
                             <h3>I ideated layouts and conducted quick user tests with paper prototypes.</h3>
                             <p>My experience with front-end development was limited at this point, so I was advised to keep everything to one HTML document—thus, one screen. A challenge I encountered early on was fitting a lot of information into one phone screen. To address this constraint, most participants recommended displaying the information gradually.</p>
                         </div>
@@ -296,8 +294,8 @@
 
                 <section class="section grid row-lg" id="develop"> 
                     <div class="grid row-reg">
-                        <div class="content-flex d-max-width">
-                            <h2 class="themed-text">Develop</h2>
+                        <div class="d-max-width">
+                            <h2>Develop</h2>
                             <h3>With all that being said, let's make this a web application first.</h3>
                             <p>Ideally, a mobile app would be more convenient and could leverage the device's hardware and operating system. However, native hardware isn't necessary for this proof of concept, and a web application could reach more potential users.</p>
                         </div>
@@ -333,7 +331,7 @@
                     </div> 
 
                     <div class="grid row-reg d-max-width">
-                        <div class="content-flex">
+                        <div>
                             <h3>A web platform also increases the usability for one-handed use.</h3>
                             <p>A short survey I conducted in 2022 saw 66.7% of respondents frequently use their phones with one hand, and 46.7% use them while shopping. The smaller space in a web browser pushes the UI elements into areas where the user's thumb can reach without shifting their grip as often.</p>
                         </div>
@@ -345,7 +343,7 @@
                     </div>
 
                     <div class="grid d-col-5 t-col-5 row-reg grid-h-center d-max-width">
-                        <div class="d-span-3 t-span-3 content-flex d-pad-right">
+                        <div class="d-span-3 t-span-3 d-pad-right">
                             <h3>I coded a prototype with real-time conversion rates and simple saving capability.</h3>
                             <p>I turned my wireframes into code using HTML, CSS, and JavaScript, and worked out the math for calculations when items are added and removed. I used the Frankfurter API to retrieve conversion rates. The selected currency and province are saved using local storage, allowing the user to skip this selection process when they use the app again.</p>
                         </div>
@@ -359,8 +357,8 @@
                 
                 <section class="section extended grid row-reg" id="next-steps">
                     <div class="extended-wrapper extended-content grid row-reg d-max-width">
-                        <div class="content-flex">
-                            <h2 class="themed-text">Next steps</h2>
+                        <div>
+                            <h2>Next steps</h2>
                             <h3>Envisioning a more scalable product</h3>
                             <p>There are improvements I could make to the prototype, such as adding geolocation to automatically detect the province the user is in, a confirmation modal when the user removes an item, or the following changes:</p>
                         </div>
@@ -404,10 +402,10 @@
 
 
                 <section class="section grid row-reg d-max-width" id="reflection">
-                    <div class="content-flex">
-                        <h2 class="themed-text">Reflection</h2>
+                    <div>
+                        <h2>Reflection</h2>
                         <h3>Trying not to get caught up in technical constraints</h3>
-                        <p>I realized how often features that would improve the user experience weren't considered simply because I couldn't figure out the technicality. Having a good grasp of the technology and development process is valuable when considering product feasibility; however, moving forward, I can't discard an idea because I personally can't code it. As long as I have completed comprehensive research and design—including research into the technology requirements—I can make a blueprint for a development team to pick up from there.</p>
+                        <p>I realized how often features that would improve the user experience weren't considered simply because I couldn't figure out the technicality. Having a good grasp of the technology and development process is valuable when considering product feasibility; however, moving forward, I can't just discard an idea because I personally can't code it. As long as I have completed comprehensive research and design—including research into the technology requirements—I can make a blueprint for a development team to pick up from there.</p>
                     </div>
 
                     <img src="../img/shopping-calculator/mockup-2.jpg" class="m-wide animated" alt="A person in a store aisle using the shopping calculator on their phone.">
