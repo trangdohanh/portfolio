@@ -1047,13 +1047,16 @@ div.icon-text{
 .persona-card{
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 16px;
     margin: 0 auto;
     padding: 1.5rem !important;
     background-color: var(--white); 
-    border: 1px solid var(--green);
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--light-green);
     border-radius: var(--border-radius-050);
-    transition: 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+     transition: 0.3s ease;
 }
 /* ////////// */
 
@@ -1661,7 +1664,7 @@ blockquote{
     summary:hover {color: var(--black-80);}
     summary:hover svg{fill: var(--black-80); rotate: 90deg;}
 
-    .persona-card:hover{transform: rotate(0deg);}
+    .persona-card:hover{rotate: 0deg;}
 
     .resizer div:hover {background: var(--green); border-color: var(--green)}
     .resizer div:hover svg {fill: var(--white);}
