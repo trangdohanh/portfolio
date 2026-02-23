@@ -13,10 +13,17 @@ html{
 .pie-chart-in{background-color: var(--theme-grey-1) !important;}
 
 .persona-card{
-    row-gap: 0.5rem;
-    padding: 24px 16px !important;
-    background-color: #fbf5ea !important; 
-    border: 1px solid var(--theme) !important;
+    padding: 12px 12px 24px 12px !important;
+    background-color: #fbf5ea; 
+    border-color: var(--theme-bg);
+}
+
+.persona-card img{
+    border: 2px solid var(--theme-bg);
+}
+
+.persona-card div{
+    margin: 0 8px;
 }
 
 main h2, .themed-text{color: var(--theme-fg);}
