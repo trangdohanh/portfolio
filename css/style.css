@@ -162,12 +162,9 @@ section.extended{
     }
 }
 
-#about .textbox{
-    -webkit-backdrop-filter: blur(10px);
-     backdrop-filter: blur(10px);
-    border: 1px solid var(--green);
-    background-color: var(--white-50);
-    .dark & {background-color: var(--black-50);}
+#about > div:first-child {
+    @media only screen and (min-width: 768px) {margin-right: 40px;}
+    @media only screen and (min-width: 1025px) { margin-right: 80px;}
 }
 
 #sandbox{
@@ -693,8 +690,6 @@ footer .label{
 .timeline{
     grid-row-gap: 40px;
     position: relative;
-    @media only screen and (min-width: 768px) {margin-left: 40px;}
-    @media only screen and (min-width: 1025px) { margin-left: 80px;}
 }
 
 .timepoint{
