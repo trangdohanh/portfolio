@@ -162,11 +162,6 @@ section.extended{
     }
 }
 
-#about > div:first-child {
-    @media only screen and (min-width: 768px) {margin-right: 40px;}
-    @media only screen and (min-width: 1025px) { margin-right: 80px;}
-}
-
 #sandbox{
     display: grid;
     grid-gap: 0.5rem;
@@ -213,9 +208,11 @@ a, button{
     .dark & {color: var(--dark-text-primary);}
 }
 
-a.link{
+.link{
     font-size: inherit;
     text-decoration: underline;
+    border: none;
+    background: none;
 }
 
 .link-button{
@@ -601,8 +598,8 @@ figcaption:not(figcaption:first-child), .figcaption:not(.figcaption:first-child)
 
 .project img{
     height: 100%;
-    -webkit-transition: all 0.6s ease-out;
-     transition: all 0.6s ease-out;
+    -webkit-transition: all 0.4s ease;
+     transition: all 0.4s ease;
 }
 
 .project a > div, #sandbox .project{
@@ -686,11 +683,37 @@ footer .label{
 }
 /* ////////// */
 
-/* TIMELINE */
-.timeline{
+/* ABOUT STUFF */
+#about > div:first-child {
+    @media only screen and (min-width: 768px) {margin-right: 40px;}
+    @media only screen and (min-width: 1025px) { margin-right: 80px;}
+}
+
+.about button {
+    margin-top: var(--text-space-100);
+    font-weight: 500;
+}
+
+.about button:nth-child(2 of button), 
+.about p:not(:nth-child(1 of p)){
+    display: none;
+}
+
+.about.show-full button:nth-child(1 of button){
+    display: none;
+}
+
+.about.show-full button:nth-child(2 of button), 
+.about.show-full p:not(:nth-child(1 of p)){
+    display: block;
+}
+
+#about > div:nth-child(2) {
     grid-row-gap: 40px;
     position: relative;
 }
+
+#about > div:nth-child(2) .text-sm {font-weight: 300;}
 
 .timepoint{
     grid-column: 1/2;
@@ -724,16 +747,13 @@ footer .label{
 .timepoint:nth-child(9 of .timepoint), .timedot:nth-child(9 of .timedot) {grid-row: 9/10;}
 
 .line{
-    border-left: 2px solid var(--light-text-primary);
-    height: 100%;
     grid-area: 1 / 1 / 10 / 2;
-    margin-left: 7px;
     z-index: -1;
-
+    height: 100%;
+    margin-left: 7px;
+    border-left: 2px solid var(--light-text-primary);
     .dark &{border-left: 2px solid var(--dark-text-primary);}
-}
-
-.timeline .text-sm {font-weight: 300;}
+} 
 /* ////////// */
 
 /* DARK MODE */
@@ -1029,7 +1049,6 @@ button:disabled{
 .thin-scrollbar {scrollbar-width: thin;}
 .thin-scrollbar::-webkit-scrollbar, .thin-scrollbar::-webkit-scrollbar-button {width: 0.25rem;}
 
-
 /* IMAGE SLIDER */
 /* Code from https://codepen.io/pig3onkick3r/pen/YzqqWKY */
 .before-after-slider {
@@ -1115,6 +1134,7 @@ button:disabled{
     padding: 4rem 0;
     place-self: start center;
     margin-top: 3rem;
+    
     @media only screen and (min-width: 1025px) {margin: 0 auto;}
 }
 
@@ -1235,7 +1255,7 @@ div.icon-text{
     max-width: 320px;
     aspect-ratio: 5/6;
     padding: 0;
-    rotate: -3deg;
+    rotate: -4deg;
     -webkit-backdrop-filter: blur(10px);
      backdrop-filter: blur(10px);
     border-color: var(--green);
@@ -1279,6 +1299,51 @@ div.icon-text{
     position: absolute;
     top: 16px;
     left: 16px;
+}
+
+.my-cards {
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+     transition: 0.4s ease;
+    @media only screen and (max-width: 1024px) {margin: 120px auto;}
+}
+
+.my-cards.hide-hobbies{
+    @media only screen and (max-width: 1024px) {margin: 0 auto;}
+}
+
+.my-cards .hobby{
+    max-width: 200px;
+    position: absolute;
+    z-index: -2;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease;
+     transition: 0.4s ease;
+
+    &:nth-child(1 of .hobby){
+        rotate: -15deg;
+        top: -10%; left: -20%;
+        @media only screen and (max-width: 1024px) {top: -45%; left: 10%;}
+    }
+
+    &:nth-child(2 of .hobby){
+        rotate: 15deg;
+        bottom: -20%; right: -15%;
+        @media only screen and (max-width: 1024px) {bottom: -45%; right: 15%;}
+    }
+}
+
+.my-cards .hobby img{
+    border: 1px solid var(--white-50);
+    box-shadow: 0px 2px 5px var(--black-50);
+    .dark & {box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);}
+}
+
+.my-cards.hide-hobbies .hobby{
+    rotate: 0deg !important;
+    opacity: 0 !important;
+    &:nth-child(1 of .hobby){top: 0 !important; left: 20% !important;}
+    &:nth-child(2 of .hobby){bottom: 0 !important; right: 20% !important;}
 }
 /* ////////// */
 
@@ -1665,10 +1730,7 @@ blockquote{
 
 /* 1024px < SCREEN < 1440px */
 @media only screen and (min-width: 1025px) {    
-    .extended-padding{
-        padding-left: var(--page-margin); 
-        padding-right: var(--page-margin);
-    }
+    .extended-padding{padding-left: var(--page-margin); padding-right: var(--page-margin);}
 
     .d-col-2{grid-template-columns: repeat(2, 1fr);}
     .d-col-3{grid-template-columns: repeat(3, 1fr);}
@@ -1776,8 +1838,14 @@ blockquote{
 
         .page & {color: var(--dark-green);}
     }
+
+    button:hover{
+        text-decoration: underline;
+        color: var(--dark-green);
+        .dark & {color: var(--light-green);}
+    }
     
-    a.link:hover{text-decoration: none;}
+    .link:hover{text-decoration: none;}
 
     .link-button:hover{
         text-decoration: none;
@@ -1822,10 +1890,12 @@ blockquote{
         box-shadow: 0px 2px 5px var(--black-50);
         .dark & {box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);}
     }
+    
 
     .resizer div:hover {
         background: var(--green); 
         border-color: var(--green);
+
         svg {fill: var(--white);}
     }
 
