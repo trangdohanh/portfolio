@@ -348,20 +348,28 @@
             })
 
             const myCard = document.querySelector(".my-cards .persona-card")
-            myCard.addEventListener("mouseover", () => {
-                myCard.parentElement.classList.remove("hide-hobbies");
-            })
-            myCard.addEventListener("mouseleave", () => {
-                myCard.parentElement.classList.add("hide-hobbies");
-            })
-            myCard.addEventListener("touchstart", () => {
-                myCard.parentElement.classList.remove("hide-hobbies");
-                event.preventDefault();
-            })
-            myCard.addEventListener("touchend", () => {
-                myCard.parentElement.classList.add("hide-hobbies");
-                event.preventDefault();
-            })
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {entry.target.parentElement.classList.remove("hide-hobbies");} 
+                    else {entry.target.parentElement.classList.add("hide-hobbies");}
+                }) 
+            }, {rootMargin: "0px 0px -30% 0px"})
+            function hoverCard() {
+                myCard.addEventListener("mouseover", () => {myCard.parentElement.classList.remove("hide-hobbies");})
+                myCard.addEventListener("mouseleave", () => {myCard.parentElement.classList.add("hide-hobbies");})
+            }
+            function checkCardHover(y) {
+                if (!y.matches) {cardObserver.observe(myCard);} 
+                else {hoverCard()}
+            }
+            function checkCardDevice(x) {
+                if (x.matches) {cardObserver.observe(myCard);} 
+                else {hoverCard()}
+            }
+            checkCardHover(y);
+            checkCardDevice(x);
+            y.addEventListener("change", () => {checkCardHover(y)});
+            x.addEventListener("change", () => {checkCardDevice(x)});
             
             const shoebox = document.querySelector(".shoebox")
             const flairs = document.querySelectorAll(".flair")
