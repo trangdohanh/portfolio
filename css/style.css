@@ -1857,7 +1857,7 @@ blockquote{
         svg{fill: var(--white);}        
     }
 
-    .project:hover img {
+    .project a:hover img {
         scale: 110%;
     }
     
