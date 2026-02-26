@@ -76,6 +76,7 @@ function checkDevice(x) {
     navbar.classList.remove("hide-nav");
     navOpen.classList.remove("hide-trigger");
     navClose.classList.add("hide-trigger");
+	navbar.inert = false;
     if (x.matches) {
         navbar.classList.add("hide-nav");
         navbar.inert = true;
