@@ -1,0 +1,20 @@
+{
+    "website" : {
+        "heading" : "This portfolio was made with HTML, CSS, JS, a little bit of GSAP, and hosted on GitHub.",
+        "paragraph_1" : "A few cups of coffee also went into making this, but I might just have a minor coffee addiction.",
+        "paragraph_2" : "My first portfolio was made with Webflow. I didn't have a good experience for the first few months. I underestimated how steep the learning curve is and jumped in head-first without much research. However, the more I stuck with it, the more I learned about coding, strangely. Webflow's interface turned lines of CSS into a visual control panel. Once I started getting used to managing and combining styles, I started to actually understand CSS.",
+        "paragraph_3" : "I started coding this website after I received my Bachelor's degree. Webflow was going to cost a lot now that I'm not a student, and I'm not uncomfortable with coding. I already had some experience with basic frontend languages, and I was, supposedly, good at them. Plus, I didn't need anything complicated. It was going to be a static site, no backend necessary, so all I had to figure out was hosting, which GitHub takes care of.",
+        "paragraph_4" : "Tools like Webflow would've given me much fancier components and effects (and maybe more peace of mind in terms of web hosting). There are also more affordable web builders with similarly powerful capabilities, such as Readymag and Framer. However, since this website is supposed to stick with me for years and represent who I am as a designer, I'm willing to trade all of that for more control and fun, and maybe show what I can do outside of Figma. I've learned a lot more about web design, had a few small wins, and gained a different level of respect for the people who engineer web builders.",
+        "paragraph_5" : "This website isn't amazing or perfect. There are things I can improve and optimized, and the case studies are a different story. But this portfolio, this iteration that is coded, has been really fun to work on. I'm still tweaking things every now and then whenever I have a new idea or saw something interesting. The last small win, in terms of the design and code, I want to achieve is getting a lightbox to work properly (AI could've done that in minutes, but I don't see the fun in that).",
+        "paragraph_6" : "If you've read this far, or even if you've just skimmed it, thank you. I know it's not smart for me to hide this away behind a small element, nor is writing an essay about my portfolio, but I just wanted to get these thoughts down somewhere and in a way that doesn't feel like... bragging, I guess. I appreciate you taking more than a cursory look at my portfolio."
+    },
+    
+    "hackathon" : {
+        "youtube" : "https://www.youtube.com/embed/CFDjF0xTOzE?si=MxlUWQ0FFZkbo3_I",
+        "paragraph_1" : "Career Courier is a web platform designed to help high school students in Ontario make informed decisions about their paths post-graduation. Instead of suggesting programs and schools based solely on the student's interests, our aim is to present all the appropriate career and training options in a structured and well-paced manner.",
+        "designer_1" : "https://www.linkedin.com/in/adriana-baric/",
+        "designer_2" : "https://www.linkedin.com/in/euna-lim/",
+        "designer_3" : "https://www.linkedin.com/in/kelly-kou/",
+        "link" : "https://devpost.com/software/career-courier"
+    }
+}
