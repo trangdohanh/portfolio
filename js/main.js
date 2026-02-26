@@ -94,6 +94,7 @@ function checkDevice(x) {
 }
   
 var x = window.matchMedia("(max-width: 768px)")
+var y = window.matchMedia("(any-hover: hover)")
 checkDevice(x);
 x.addEventListener("change", () => {checkDevice(x);});
 // End of code from w3schools
