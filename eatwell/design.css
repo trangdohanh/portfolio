@@ -61,6 +61,12 @@ main h2, .themed-text{color: var(--theme-fg);}
     bottom: -40px; 
     right: -80px; 
     z-index: 10;
+
+    @media only screen and (max-width: 767px) { 
+        bottom: -80px;
+        right: auto;
+        left: calc(50% - 90px);
+    }
 }
 
 .summary-card{background-color: var(--theme-bg);}
@@ -84,14 +90,6 @@ figure img:nth-child(2 of img) {
     right: 0;
     margin: 0;
     z-index: -1;
-}
-
-@media only screen and (max-width: 767px) { 
-    #mascot{
-        bottom: -80px;
-        right: auto;
-        left: calc(50% - 90px);
-    }   
 }
 
 @media (any-hover: hover) {
