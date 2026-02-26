@@ -57,6 +57,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <nav class="page-nav-container">
+                        <ul class="page-nav glass" id="page-nav">
+                            <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
+                            <li><a href="#research" class="nav-link">Research</a></li>
+                            <li><a href="#define" class="nav-link">Define</a></li>
+                            <li><a href="#design" class="nav-link">Design</a></li>
+                            <li><a href="#deliver" class="nav-link">Deliver</a></li>
+                            <li><a href="#reflection" class="nav-link">Reflection</a></li>
+                        </ul>
+                    </nav>
                 </section>
 
 
@@ -64,7 +75,7 @@
                     <div class="extended-content grid-sm row-xs t-col-2">
                         <div class="textbox cons glass animatedIn">
                             <p>The problem</p>
-                            <p class="text-md">Digital classroom documentation tools have a high learning curve and low accessibility, which slow down administrative tasks and fragment communication.</p>
+                            <p class="text-md">Digital classroom documentation tools have a high learning curve and low accessibility, which slows down administrative tasks and fragments communication.</p>
                         </div>
                         <div class="textbox coloured-bg glass animatedIn">
                             <p>The solution</p>
@@ -187,7 +198,7 @@
 
                     <div class="extended-wrapper extended-content grid row-reg d-max-width">
                         <div>
-                            <h3>Complex interfaces lead many educators to default to pen and paper to circumvent long setup time and high learning curve.</h3>
+                            <h3>Complex interfaces lead many educators to default to pen and paper to circumvent the long setup time and high learning curve.</h3>
                             <p>Paper notes and inefficient digital folders prevent consistent follow-ups and meaningful intervention.</p>
                         </div>
 
@@ -200,7 +211,7 @@
                                 <ul class="list list-bullet">
                                     <li>Limited behaviour tracking</li>
                                     <li>Lack real-time support</li>
-                                    <li>Limited intergration with non-Google products and systems</li>
+                                    <li>Limited integration with non-Google products and systems</li>
                                 </ul>
                             </div>
 
@@ -321,7 +332,7 @@
 
                             <div class="textbox bordered padding-sm">
                                 <p>Requirements</p>
-                                <p class="text-sm">The feature needs to be easy to learn and use, and accomodates in-crisis use.</p>
+                                <p class="text-sm">The feature needs to be easy to learn and use and accommodates in-crisis use.</p>
                             </div>
                         </div>
 
@@ -340,19 +351,21 @@
                         <h3 class="d-max-width">Our first prototype tried to cram too many features without a clear hierarchy and missed the context of real classrooms.</h3>
 
                         <div class="grid t-col-3 row-sm">
-                            <img src="../img/noto/low-fidelity.png" class="t-span-3 animated">
+                            <div class="t-span-3 animated flyUp proj-modal" onclick="openModal(this)">
+                                <img src="../img/noto/low-fidelity.png">
+                            </div>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/issue-1.png">
                                 <figcaption>Icons are unclear, confusing, and need better labelling.</figcaption>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/issue-2.png">
                                 <figcaption>Not enough context for users to understand what they need to do.</figcaption>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/issue-3.png">
                                 <figcaption>It may not be appropriate for teachers to use phones in their classrooms.</figcaption>
                             </figure>
@@ -367,7 +380,7 @@
                         </div>
 
                         <div class="grid t-col-3 row-sm">
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/documentation-1.png">
                                 <div class="icon-text cons">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
@@ -375,7 +388,7 @@
                                 </div>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/documentation-2.png">
                                 <div class="icon-text cons">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
@@ -383,7 +396,7 @@
                                 </div>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/documentation-3.png">
                                 <div class="icon-text">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
@@ -403,17 +416,17 @@
                         <div class="grid row-sm">
                             <p class="d-max-width">UI elements were then designed following that AI-assisted user flow.</p>
                             <div class="grid t-col-3 row-sm">
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/noto/flow-1.png">
                                     <figcaption>Teachers start with messy inputs.</figcaption>
                                 </figure>
 
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/noto/flow-2.png">
                                     <figcaption>AI flags fields that need corrections.</figcaption>
                                 </figure>
 
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/noto/flow-3.png">
                                     <figcaption>Documentation is manually reviewed.</figcaption>
                                 </figure>
@@ -425,17 +438,17 @@
                         <h3 class="d-max-width">To distinguish casual notes and sensitive reports, I added a simple checkbox to tag “report-worthy” documents and lock them from the view of unrelated personnel.</h3>
 
                         <div class="grid t-col-3 row-sm">
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/privacy-1.png">
-                                <figcaption>Quickly ticks a checkbox if it's a admin-related report.</figcaption>
+                                <figcaption>Quickly ticks a checkbox if it's an admin-related report.</figcaption>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/privacy-2.png">
                                 <figcaption>Documents are private by default; toggling on password requirement adds another layer of privacy.</figcaption>
                             </figure>
 
-                            <figure class="m-max-width animated flyUp stagger">
+                            <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/privacy-3.png">
                                 <figcaption>Sensitive reports are locked from unrelated staff.</figcaption>
                             </figure>
@@ -449,7 +462,7 @@
                         </div>
 
                         <div class="grid t-col-2 row-sm">
-                            <figure class="animated flyUp stagger">
+                            <figure class="animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/widget-1.png">
                                 <div class="icon-text cons">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
@@ -457,7 +470,7 @@
                                 </div>
                             </figure>
 
-                            <figure class="animated flyUp stagger">
+                            <figure class="animated flyUp stagger proj-modal" onclick="openModal(this)">
                                 <img src="../img/noto/widget-2.png">
                                 <div class="icon-text">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
@@ -509,14 +522,13 @@
                                 <img src="../img/noto/feature-1.png" class="scroll-slide" alt="Visual dashboard of short, certification-aligned modules that educators can complete during school hours.">
                                 <img src="../img/noto/feature-2.png" class="scroll-slide" alt="Real-time classroom management tool offering a quick overview for fast decision-making.">
                                 <img src="../img/noto/feature-3.png" class="scroll-slide" alt="Just-in-time assistance providing adaptive strategies and real-time guidance in a hands-free format.">
-
-                                <button class="prev">
+                            </div>
+                            <button class="prev">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                                 </button>
                                 <button class="next">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                                 </button>
-                            </div>
                             <p class="caption text-reg font-400 text-center"></p>
                         </div>
                     </div>
@@ -569,18 +581,6 @@
                     
                     <img src="../img/noto/mockup-3.jpg" class="m-wide animatedIn">
                 </section>
-
-
-                <nav class="page-nav-container">
-                    <ul class="page-nav glass" id="page-nav">
-                        <li><a href="#overview" class="nav-link nav-link-active">Overview</a></li>
-                        <li><a href="#research" class="nav-link">Research</a></li>
-                        <li><a href="#define" class="nav-link">Define</a></li>
-                        <li><a href="#design" class="nav-link">Design</a></li>
-                        <li><a href="#deliver" class="nav-link">Deliver</a></li>
-                        <li><a href="#reflection" class="nav-link">Reflection</a></li>
-                    </ul>
-                </nav>
             </main>
 
             <footer id="footer"></footer>
@@ -588,7 +588,6 @@
 
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
-        <script src="../js/modal.js"></script>
         <script src="../js/carousel.js"></script>
     </body>
 </html>
