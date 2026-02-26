@@ -1856,14 +1856,18 @@ blockquote{
 
         svg{fill: var(--white);}        
     }
-
-    .project a:hover img {
-        scale: 110%;
-    }
     
     .project a:hover .title{
         text-decoration: underline; color: var(--dark-green);
         .dark & {color: var(--light-green);}
+    }
+
+    .project a:hover img {
+        scale: 110%;
+    }
+
+    #sandbox .project:hover img {
+        scale: 110%;
     }
     
     .thumbnail:hover{opacity: 1;}
