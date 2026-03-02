@@ -1,0 +1,62 @@
+:root{
+    --theme-red: #e3170a;
+    --theme-blue: #065fd4;
+}
+
+.coloured-bg{
+    background-color: #e3170a1a
+}
+
+main h2, 
+.themed-text{
+    color: var(--theme-red);
+}
+
+.icon-text svg{
+    fill: var(--theme-red);
+}
+
+.pros .themed-text{
+    color: var(--theme-blue);
+}
+
+.pros svg{
+    fill: var(--theme-blue);
+}
+
+.textbox.bordered{
+    border: 1px solid var(--theme-red) !important;
+}
+
+.textbox .icon-text{
+    background-color: #e3170a1a; 
+    color: var(--theme-red);
+}
+
+#showcase{
+    background-color: #f18b84;
+}
+
+#showcase .glass{
+    background-color: #f9d1ce;
+}
+
+#showcase .cons{
+    background-color: #f7b9b5;
+}
+
+.link-button.solid{
+    background-color: #f9d1ce;
+    border-color: #f9d1ce;
+}
+
+@media (any-hover: hover) {
+    .link-button.solid:hover{
+        background-color: #f9d1ce; 
+        color: var(--theme-red); 
+        border-color: var(--theme-red);
+    }    
+    .link-button.solid:hover svg{
+        fill: var(--theme-red);
+    }
+}

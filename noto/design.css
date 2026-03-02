@@ -1,6 +1,6 @@
 @import url(../css/variables.css);
 
-html{
+:root{
     --theme-bg: #f3f4ff; 
     --theme: #d1d2ff; 
     --theme-fg: #4f51ae; 
@@ -9,38 +9,80 @@ html{
     --theme-red-10: #ffebea;
 }
 
-.coloured-bg, .pie-chart-in, details, .details{background-color: var(--theme);}
-.persona-card{background-color: var(--theme-bg) !important; border: 1px solid var(--theme) !important;}
+details, 
+.details,
+.coloured-bg,
+#showcase .glass{
+    background-color: var(--theme);
+}
 
-main h2, .themed-text{color: var(--theme-fg);}
+main h2, 
+.themed-text{
+    color: var(--theme-fg);
+}
 
-.icon-text svg{fill: var(--theme-fg);}
-.cons .themed-text{color: var(--theme-red);}
-.cons svg{fill: var(--theme-red);}
-.textbox.bordered {border: 1px solid var(--theme-fg) !important;}
-.textbox li {font-size: var(--font-sm); line-height: var(--line-sm);}
-.textbox .icon-text {background-color: var(--theme); color: var(--theme-fg);}
+.icon-text svg{
+    fill: var(--theme-fg);
+}
 
-.cons.coloured-bg, .cons .pie-chart-in{background-color: var(--theme-red-10);}
+.cons .themed-text{
+    color: var(--theme-red);
+}
 
-.cons .icon-text{background-color: var(--theme-red-20); color: var(--theme-red);}
+.cons svg{
+    fill: var(--theme-red);
+}
 
-.textbox.cons.bordered {border: 1px solid var(--theme-red) !important;}
+.textbox.bordered{
+    border: 1px solid var(--theme-fg);
+}
+
+.textbox.cons.bordered{
+    border: 1px solid var(--theme-red);
+}
+
+.textbox li{
+    font-size: var(--font-sm); 
+    line-height: var(--line-sm);
+}
+
+.textbox .icon-text{
+    background-color: var(--theme); 
+    color: var(--theme-fg);
+}
+
+.cons.coloured-bg, 
+.cons .pie-chart-in{
+    background-color: var(--theme-red-10);
+}
+
+.cons .icon-text{
+    background-color: var(--theme-red-20); 
+    color: var(--theme-red);
+}
 
 .link-button.solid{
     background-color: var(--theme);
     border-color: var(--theme);
 }
 
-.summary-card{background-color: var(--theme);}
+#showcase{
+    background-color: #afb0ff;
+}
 
-#showcase{background-color: #AFB0FF;}
-#showcase .glass {background-color: var(--theme);}
-#showcase .cons {background-color: var(--theme-red-20);}
-
-details[name="painpoints"], .details.cons{background-color: var(--theme-red-20);}
+#showcase .cons,
+details[name="painpoints"], 
+.details.cons{
+    background-color: var(--theme-red-20);
+}
 
 @media (any-hover: hover) {
-    .link-button.solid:hover{background-color: var(--theme-bg); color: var(--theme-fg); border-color: var(--theme-fg);}    
-    .link-button.solid:hover svg{fill: var(--theme-fg);}
+    .link-button.solid:hover{
+        background-color: var(--theme-bg); 
+        color: var(--theme-fg); 
+        border-color: var(--theme-fg);
+    }    
+    .link-button.solid:hover svg{
+        fill: var(--theme-fg);
+    }
 }

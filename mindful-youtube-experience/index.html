@@ -7,29 +7,7 @@
         <title>Mindful YouTube Experience</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="stylesheet" href="../css/style.css">
-        <style>
-            .coloured-bg{background-color: #e3170a1a}
-            main h2, .themed-text{color: #e3170a;}
-            .icon-text svg{fill: #e3170a;}
-            .pros .themed-text{color: #065FD4;}
-            .pros svg{fill: #065FD4;}
-            .textbox.bordered{border: 1px solid #e3170a !important;}
-            .textbox .icon-text {background-color: #e3170a1a; color: #e3170a;}
-            
-            #showcase{background-color: #F18B84;}
-            #showcase .glass {background-color: #F9D1CE;}
-            #showcase .cons {background-color: #F7B9B5;}
-
-            .link-button.solid{
-                background-color: #F9D1CE;
-                border-color: #F9D1CE;
-            }
-
-            @media (any-hover: hover) {
-                .link-button.solid:hover{background-color: #F9D1CE; color: #e3170a; border-color: #e3170a;}    
-                .link-button.solid:hover svg{fill: #e3170a;}
-            }
-        </style>
+        <link rel="stylesheet" href="design.css">
     </head>
 
     <body>
@@ -69,10 +47,10 @@
                             <p>Quick navigation</p>
                             <div class="buttons sm-stacked">
                                 <a href="#showcase" class="link-button solid">Jump to showcase
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
                                 </a>
                                 <a href="#challenge" class="link-button solid">Jump to case study
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
                                 </a>
                             </div>
                         </div>
@@ -93,35 +71,35 @@
 
                 <section class="extended extended-wrapper extended-padding" id="showcase">
                     <div class="extended-content grid-sm row-xs t-col-6">
-                        <div class="t-span-3 textbox cons glass animatedIn">
+                        <div class="t-span-3 textbox cons glass animated">
                             <p>The challenge</p>
                             <p class="text-md">YouTube features originally designed to give viewers an uninterrupted experience often increase screen time.</p>
                         </div>
-                        <div class="t-span-3 textbox coloured-bg glass animatedIn">
+                        <div class="t-span-3 textbox coloured-bg glass animated">
                             <p>The solution</p>
                             <p class="text-md">A redesigned experience to encourage more active querying for content and monitoring watch time.</p>
                         </div>
 
-                        <p class="t-span-2 textbox coloured-bg glass animatedIn"><strong>A redesigned Home feed</strong> puts more focus on the search bar and encourages more active queries for content. The user is shown a finite number of content and actively loads more videos.</p>
+                        <p class="t-span-2 textbox coloured-bg glass animated"><strong>A redesigned Home feed</strong> puts more focus on the search bar and encourages more active queries for content. The user is shown a finite number of content and actively loads more videos.</p>
                         
-                        <div class="t-span-4 glass animatedIn">
+                        <div class="t-span-4 glass animated proj-modal" onclick="openModal(this)">
                             <img src="../img/mindful-youtube/highlight-1.png">
                         </div>
 
                         <div class="grid row-xs t-span-3">
-                            <div class=" glass animatedIn">
+                            <div class=" glass animated proj-modal" onclick="openModal(this)">
                                 <img src="../img/mindful-youtube/highlight-2.png">
                             </div>
                             
-                            <p class="textbox coloured-bg glass animatedIn"><strong>Time tracking and break reminder features</strong>, only available on the YouTube app, were added to the redesigned web platform, with periodic alerts of long continuous usage to allow users to monitor their usage and remember to take breaks.</p>
+                            <p class="textbox coloured-bg glass animated"><strong>Time tracking and break reminder features</strong>, only available on the YouTube app, were added to the redesigned web platform, with periodic alerts of long continuous usage to allow users to monitor their usage and remember to take breaks.</p>
                         </div>
 
-                        <div class="grid row-xs t-span-3">
-                            <div class=" glass animatedIn">
+                        <div class="grid row-xs t-span-3 proj-modal" onclick="openModal(this)">
+                            <div class="glass animated">
                                 <img src="../img/mindful-youtube/highlight-3.png">
                             </div>
                             
-                            <p class="textbox coloured-bg glass animatedIn"><strong>Balanced ad breaks serve as screen time breaks.</strong> Setting ad frequency according to the <a href="https://www.healthline.com/health/eye-health/20-20-20-rule" class="link">20-20-20 rule</a> can encourage the user to take a short break from the screen while ensuring revenue for creators and the platform.</p>
+                            <p class="textbox coloured-bg glass animated"><strong>Balanced ad breaks serve as screen time breaks.</strong> Setting ad frequency according to the <a href="https://www.healthline.com/health/eye-health/20-20-20-rule" class="link">20-20-20 rule</a> can encourage the user to take a short break from the screen while ensuring revenue for creators and the platform.</p>
                         </div>
                     </div>               
                 </section>
@@ -137,7 +115,7 @@
                     <div class="grid-sm t-col-3 row-xs">
                         <div class="textbox bordered padding-sm cons m-max-width animated flyUp stagger">
                             <div class="icon-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
                                 <p>Fragmented attention</p>
                             </div>
                             <p class="text-sm">Creators are encouraged to produce sensational and attention-grabbing content which distracts viewers and grabs their attention.</p>            
@@ -145,7 +123,7 @@
 
                         <div class="textbox bordered padding-sm cons m-max-width animated flyUp stagger">
                             <div class="icon-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
                                 <p>Little-known time-tracking</p>
                             </div>
                             <p class="text-sm">Break reminders and watch time reports are only available on the app, despite desktop users having higher screen time <a class="link text-sm font-300" href="https://www.semrush.com/blog/mobile-vs-desktop-usage/">(Semrush)</a>.</p>            
@@ -153,7 +131,7 @@
 
                         <div class="textbox bordered padding-sm cons m-max-width animated flyUp stagger">
                             <div class="icon-text">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
                                 <p>Increased screen time</p>
                             </div>
                             <p class="text-sm">Features such as autoplay and queueing, in combination with the algorithm, facilitate binges and increase watch time.</p>            
@@ -298,7 +276,7 @@
                             <figure class="m-max-width animated flyUp stagger">
                                 <img src="../img/mindful-youtube/process-2a.jpg">
                                 <div class="icon-text cons">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
                                     <p class="themed-text">Unclear</p>
                                 </div>
                             </figure>
@@ -306,7 +284,7 @@
                             <figure class="m-max-width animated flyUp stagger">
                                 <img src="../img/mindful-youtube/process-2b.jpg">
                                 <div class="icon-text cons">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
                                     <p class="themed-text">Too distracting</p>
                                 </div>
                             </figure>
@@ -314,7 +292,7 @@
                             <figure class="m-max-width animated flyUp stagger">
                                 <img src="../img/mindful-youtube/process-2c.jpg">
                                 <div class="icon-text pros">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
                                     <p class="themed-text">Least intrusive</p>
                                 </div>
                             </figure>
@@ -385,5 +363,7 @@
         
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
+        <script src="../js/page-nav.js"></script>
+        <script src="../js/modal.js"></script>
     </body>
 </html>

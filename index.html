@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="UX/UI Design Portfolio">
         <meta name="author" content="Trang Do">
-        <meta name="description" content="Product Design Portfolio">
         <title>Trang Do | Product Designer</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.png">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/design.css">
     </head>
 
     <body class="dark fixed-bg">
@@ -15,8 +16,8 @@
             <header>
                 <div class="header">
                     <div>
-                        <a href="#hero" class="logo">
-                            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style="width: 1.25rem; height: 1.25rem;">
+                        <a href="#hero" class="logo" aria-label="Go to Home page">
+                            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                 <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
                                 <ellipse cx="192" cy="94" rx="14" ry="14"/>
                                 <ellipse cx="96" cy="94" rx="14" ry="14"/>
@@ -26,20 +27,21 @@
         
                         <div class="toggle-wrapper">
                             <div class="toggle-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;" class="mode-indicator" id="dm"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm65.14,94.33A88.07,88.07,0,0,1,105.67,46.86a8,8,0,0,0-10.6-9.06A96,96,0,1,0,218.2,160.93a8,8,0,0,0-9.06-10.6Z"></path></svg>
-                                <label class="switch">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" class="mode-indicator" id="dm"><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm65.14,94.33A88.07,88.07,0,0,1,105.67,46.86a8,8,0,0,0-10.6-9.06A96,96,0,1,0,218.2,160.93a8,8,0,0,0-9.06-10.6Z"></path></svg>
+                                <label class="switch" for="switch-input">
                                     <input id="switch-input" type="checkbox">
                                     <span class="slider"></span>
                                 </label>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;" class="mode-indicator inactive-mode" id="lm"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20" class="mode-indicator inactive-mode" id="lm"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>
                             </div>
                             
-                            <button class="icon-btn nav" id="nav-trigger">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                            <button class="icon-btn nav" id="nav-trigger" aria-label="Open navigation menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
                             </button>
                             
-                            <button class="icon-btn nav hide-trigger" id="nav-close">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                            
+                            <button class="icon-btn nav hide-trigger" id="nav-close" aria-label="Close navigation menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
                             </button>
                         </div>
 
@@ -49,36 +51,36 @@
                         <a href="#works">Works</a>
                         <a href="#about">About</a>
                         <a href="files/Hanh_Trang_Do_Resume.pdf" target="_blank" class="link-button">Resume 
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
                         </a>
                     </nav>
                 </div>  
             </header>
     
             <main>
-                <section id="hero" class="section grid d-col-12 t-col-12 row-reg">
-                    <div class="grid row-reg t-span-5 row-2">
+                <section id="hero" class="section grid t-col-12 row-reg">
+                    <div class="grid t-span-5 row-reg row-2">
                         <h1>Trang Do creates intuitive and meaningful digital experiences driven by research, empathy, and a passion for problem-solving<span class="blink">|</span></h1>
                         
                         <div class="grid row-xs">
-                            <p class="text-2 font-300">Recently graduated with an Honours Bachelor of Interaction Design.</p>
+                            <p class="text-2 font-300">Product Designer in Ontario. Recently graduated with an Honours Bachelor of Interaction Design.</p>
 
                             <div class="labels">
                                 <span class="label ux">Product Designer</span>
                                 <span class="label theme">Open to Work</span>
 
-                                <a href="mailto:trangdohanh@gmail.com" class="link-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
+                                <a href="mailto:trangdohanh@gmail.com" class="link-button" aria-label="Email Trang Do">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
                                 </a>
-                                <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank" class="link-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.25rem; height: 1.25rem;"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
+                                <a href="https://www.linkedin.com/in/hanh-trang-do/" target="_blank" class="link-button" aria-label="LinkedIn profile">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path></svg>
                                 </a>
                             </div>
                         </div>                
                     </div>
                     
-                    <div class="t-span-7 row-1 gif-modal">
-                        <img src="img/animation.gif" alt="A laptop displays different projects one-by-one.">
+                    <div class="t-span-7 row-1 gif-modal" tabindex="0">
+                        <img src="img/animation.gif" width="587" height="440" style="height: 100%;" alt="A laptop displays different projects one-by-one." fetchpriority="high">
                     </div>
                 </section>
     
@@ -88,9 +90,9 @@
     
                     <div class="grid row-md t-col-2">
                         <div class="project">
-                            <a href="noto/">
+                            <a href="noto/" aria-label="NOTO case study">
                                 <div>
-                                    <img src="img/homepage/noto.png" alt="A person holding a tablet with the NOTO app displayed on it.">
+                                    <img src="img/homepage/noto.png" width="600" height="400" alt="A person holding a tablet with the NOTO app displayed on it.">
                                 </div>
                                 <p class="title">Smart Documentation for Teachers</p>
                             </a>
@@ -104,13 +106,13 @@
                         </div>
 
                         <div class="project">
-                            <a href="eatwell/">
+                            <a href="eatwell/" aria-label="EatWell case study">
                                 <div>
-                                    <img src="img/homepage/eatwell.png" alt="Phone screens showing the EatWell app.">
+                                    <img src="img/homepage/eatwell.png" width="600" height="400" alt="Phone screens showing the EatWell app.">
                                 </div>
                                 <p class="title">Improving the Postsecondary Meal Experience</p>
                             </a>
-                            <p class="subtitle">Grocery management and recipe finding for students.</p>
+                            <p class="subtitle">Grocery management and recipes finding for students.</p>
                             <div class="labels">
                                 <span class="label ux">UX</span>
                                 <span class="label visual">UI Design</span>
@@ -120,9 +122,9 @@
                         </div>
 
                         <div class="project">
-                            <a href="shopping-calculator/">
+                            <a href="shopping-calculator/" aria-label="Shopping calculator case study">
                                 <div>
-                                    <img src="img/homepage/shopping-calculator.png" alt="Phone screens showing different features of a shopping calculator app.">
+                                    <img src="img/homepage/shopping-calculator.png" width="600" height="400" alt="Phone screens showing different features of a shopping calculator app.">
                                 </div>
                                 <p class="title">Shopping Calculator for Newcomers</p>
                             </a>
@@ -135,9 +137,9 @@
                         </div>
 
                         <div class="project">
-                            <a href="mindful-youtube-experience/">
+                            <a href="mindful-youtube-experience/" aria-label="Mindful YouTube experience case study">
                                 <div>
-                                    <img src="img/homepage/mindful-youtube.png" alt="A laptop displays a watch time reminder pop-up over a YouTube video.">
+                                    <img src="img/homepage/mindful-youtube.png" width="600" height="400" alt="A laptop displays a watch time reminder pop-up over a YouTube video.">
                                 </div>
                                 <p class="title">Mindful YouTube Experience</p>
                             </a>
@@ -147,95 +149,99 @@
                                 <span class="label prototype">Prototyping</span>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </section>
     
     
-                <section id="about" class="section grid t-col-2 row-lg">
+                <section id="about" class="section grid row-lg t-col-2">
                     <div class="grid row-md">
                         <div class="about">
                             <h2>About me</h2>
                             <p>I'm a product designer based in Ontario, with an interest in design systems and frontend development. I leverage the human-centered approach to design meaningful and intuitive interfaces, improving digital experiences one interaction at a time.</p>
-                            <p>Puzzles (like Sudoku and mechanical ones) and problem-solving have always interested me, especially understanding how different pieces fit into the overarching system. I like taking something apart, whether it's a pain point in the user journey or a digital component, learning how it works, then trying to make something newer and better with the parts. This sparked my enjoyment in making Figma prototypes and components, working with design systems, and learning more about frontend.</p>
+                            <p>Puzzles (like Sudoku and mechanical ones) and problem-solving have always interested me, especially learning how different pieces fit into the overarching system. I like taking something apart—whether it's a pain point in the user journey or a digital component, learning how it works, then trying to make something newer and better with the parts. This sparked my enjoyment in making Figma prototypes and components, working with design systems, and learning more about frontend.</p>
                             <p>In my free time, you might see me catching up on some fantasy or thriller novels, movies, shows, and some drawings (with headphones on, music playing, and a cup of something sweet).</p>
-                            <button class="link">Read more</button>
-                            <button class="link">Read less</button>
+                            <button class="link" aria-label="Read more">Read more</button>
+                            <button class="link" aria-label="Read less">Read less</button>
                         </div>
 
                         <div class="hide-hobbies my-cards">
-                            <div class="persona-card animatedIn flyDown">
-                                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem;">
+                            <div class="persona-card glass" id="my-card">
+                                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                                     <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
                                     <ellipse cx="192" cy="94" rx="14" ry="14"/>
                                     <ellipse cx="96" cy="94" rx="14" ry="14"/>
                                 </svg>
-                                <img src="img/portrait.png">
+                                <img src="img/portrait.png" alt="Vector portrait of a woman with shoulder-length hair and glasses.">
                             </div>
 
                             <div class="hobby">
                                 <p class="font-300 text-center text-2">what I'm reading</p>
-                                <img src="img/book.jpg">
+                                <img src="img/book.png" width="200" height="300" alt="Book cover of the novel Six Stories by Matt Wesolowski.">
                             </div>
 
                             <div class="hobby">
-                                <img src="img/music.png">
+                                <img src="img/music.png" width="200" height="200" alt="Album cover of Breach by Twenty One Pilots.">
                                 <p class="font-300 text-center text-2" style="margin: 0;">what I've had on repeat</p>
+                            </div>
+
+                            <div class="hobby">
+                                <img src="img/coffee.png" width="120" height="160" alt="Vector drawing of a cup of coffee.">
                             </div>
                         </div>
                     </div>
 
                     <div class="grid">
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
                             <p class="text-sm">Nov 2025 &#8211 Present</p>
                             <p>Freelance web designer.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Apr 2025</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Apr 2025</p>
                             <p>Received the Board Undergraduate Certificate in Creativity and Creative Problem Solving.</p>
                         </div>
                         
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Jun &#8211 Dec 2024</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Jun &#8211 Dec 2024</p>
                             <p>UI/UX and graphic designer in the S-Sense program at Sheridan College.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Jan 2024</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Jan 2024</p>
                             <p>Designed <a href="https://devpost.com/software/career-courier" target="_blank" class="link">a career tool</a> to help high school students to determine their best career path for Hackville 2024.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Apr 2023 &#8211 Apr 2024</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Apr 2023 &#8211 Apr 2024</p>
                             <p>Co-Lead of Mentorship for Sheridan's Interaction Design Association.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Feb 2023</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Feb 2023</p>
                             <p>Developed <a href="https://devpost.com/software/ara-app-extension" target="_blank" class="link">an app extension</a> that help familiarize users to new interfaces for Hackville 2023.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Jan 2023 &#8211 Present</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Jan 2023 &#8211 Present</p>
                             <p>Program and course tutor at Sheridan College.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Jan 2022</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Jan 2022</p>
                             <p>Received the TCPS 2: CORE-2022 Certificate.</p>
                         </div>
 
-                        <div class="timedot animatedIn"></div>
-                        <div class="timepoint animatedIn flyUp">
-                            <p class="text-sm">Sep 2021 &#8211 Apr 2025</p>
+                        <div class="timedot animated"></div>
+                        <div class="timepoint animated flyUp">
+                            <p class="text-sm font-300">Sep 2021 &#8211 Apr 2025</p>
                             <p>Student in the Honours Bachelor of Interaction Design at Sheridan College, graduated with High Honours.</p>
                         </div>
 
@@ -243,50 +249,50 @@
                     </div>
                 </section>
 
-                
+
                 <section class="grid row-xs">
                     <h2>Other things I've worked on</h2>
                     
                    <div id="sandbox">
-                        <div class="project img-modal" onclick="openModal(this)" id="s-sense" role="img">
+                        <div class="project img-modal" onclick="openModal(this)" id="s-sense" tabindex="0">
                             <img src="../img/homepage/s-sense.png" alt="Phone mockup of the S-Sense app.">
                         </div>
-                        <div class="project video-modal" onclick="openModal(this)" id="virtual-library" role="img">
+                        <div class="project video-modal" onclick="openModal(this)" id="virtual-library" tabindex="0">
                             <img src="img/homepage/virtual-library.png" alt="3D model of a library interior.">
                         </div>
-                        <div class="project" onclick="openSlides(this)" id="infographics" role="img">
+                        <div class="project" onclick="openSlides(this)" id="infographics" tabindex="0">
                             <img src="img/homepage/info-visualization.png" alt="4 sheets of infographics.">
                         </div>
-                        <div class="project img-modal" onclick="openModal(this)" id="awake-coffee" role="img">
+                        <div class="project img-modal" onclick="openModal(this)" id="awake-coffee" tabindex="0">
                             <img src="img/homepage/awake-coffee.png" alt="A kiosk mockup and two phones showing the Awake Coffee ordering site.">
                         </div>
-                        <div class="project img-modal" onclick="openModal(this)" id="candy-model" role="img">
-                            <img src="img/homepage/3d-model.png" alt="3D model of a Starbust bag with candies flying out from the opening.">
+                        <div class="project img-modal" onclick="openModal(this)" id="candy-model" tabindex="0">
+                            <img src="img/homepage/3d-model.png" width="200" height="200" alt="3D model of a Starbust bag with candies flying out from the opening.">
                         </div>
-                        <div class="project video-modal" onclick="openModal(this)" id="google-doodle" role="img">
-                            <img src="img/homepage/google-doodle.png" alt="3D model of the Google logo designed to celebrate the Walkman.">
+                        <div class="project video-modal" onclick="openModal(this)" id="google-doodle" tabindex="0">
+                            <img src="img/homepage/google-doodle.png" width="200" height="200" alt="3D model of the Google logo designed to celebrate the Walkman.">
                         </div>
-                        <a href="blue-dragon/" class="project">
+                        <a href="blue-dragon/" class="project" aria-label="Blue Dragon's landing page design">
                             <img src="img/homepage/blue-dragon.png" alt="A landing page design on a laptop and phone.">
                         </a>
-                        <div class="project" onclick="openSlides(this)" id="coffee" role="img">
+                        <div class="project" onclick="openSlides(this)" id="coffee" tabindex="0">
                             <img src="img/homepage/coffee-mill.png" alt="Coffee cup and takeout bag with the Coffee Mill logo on the counter.">
                         </div>
-                        <a href="nos4r2-book-cover/" class="project">
-                            <img src="img/homepage/book-cover.png" alt="Different versions of the NOS4R2 book cover laying diagonally.">
+                        <a href="nos4r2-book-cover/" class="project" aria-label="NOS4R2 book cover design">
+                            <img src="img/homepage/book-cover.png" width="250" height="250" alt="Different versions of the NOS4R2 book cover laying diagonally.">
                         </a>
-                        <div class="project page-modal" onclick="openModal(this)" id="career-courier">
-                            <img src="img/homepage/career-courier.png" alt="A laptop displays the homepage of the Career Courier website.">
+                        <div class="project page-modal" onclick="openModal(this)" id="career-courier" tabindex="0">
+                            <img src="img/homepage/career-courier.png" width="250" height="250" alt="A laptop displays the homepage of the Career Courier website.">
                         </div>
                     </div>
-                </section>
+                </section> 
             </main>
 
             <div class="shoebox modal">
                 <div class="close-overlay"></div>
-                <span class="close-modal">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-                </span>
+                <button class="icon-btn close-modal" aria-label="Close modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+                </button>
                 <div class="flair-container">
                     <p class="flair-text">(almost) everything I've worked on up to 2026</p>    
 
@@ -334,56 +340,11 @@
 
         <!-- JavaScript -->
         <script src="js/main.js"></script>
-        <script src="js/slideshows.js"></script>
-
+        <script src="js/homepage.js"></script>
+        <script src="js/modal.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Draggable.min.js"></script>
         <script>
-            const aboutBtns = document.querySelectorAll("#about button")
-            aboutBtns[0].addEventListener("click", () => {
-                document.querySelector(".about").classList.add("show-full")
-            })
-            aboutBtns[1].addEventListener("click", () => {
-                document.querySelector(".about").classList.remove("show-full")
-            })
-
-            const myCard = document.querySelector(".my-cards .persona-card")
-            const cardObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {entry.target.parentElement.classList.remove("hide-hobbies");} 
-                    else {entry.target.parentElement.classList.add("hide-hobbies");}
-                }) 
-            }, {rootMargin: "0px 0px -30% 0px"})
-            function hoverCard() {
-                myCard.addEventListener("mouseover", () => {myCard.parentElement.classList.remove("hide-hobbies");})
-                myCard.addEventListener("mouseleave", () => {myCard.parentElement.classList.add("hide-hobbies");})
-            }
-            function checkCardHover(y) {
-                if (!y.matches) {cardObserver.observe(myCard);} 
-                else {hoverCard()}
-            }
-            function checkCardDevice(x) {
-                if (x.matches) {cardObserver.observe(myCard);} 
-                else {hoverCard()}
-            }
-            checkCardHover(y);
-            checkCardDevice(x);
-            y.addEventListener("change", () => {checkCardHover(y)});
-            x.addEventListener("change", () => {checkCardDevice(x)});
-            
-            const shoebox = document.querySelector(".shoebox")
-            const flairs = document.querySelectorAll(".flair")
-            flairs.forEach((flair) => {
-                flair.addEventListener("dblclick", () => {
-                    flair.style.scale = "140%"
-                    setTimeout(() => {flair.style.scale = "100%"}, 5000)
-                })
-                flair.addEventListener("touchstart", () => {flair.style.scale = "140%"})
-                flair.addEventListener("touchend", () => {flair.style.scale = "100%"})
-            })
-            document.querySelector(".gif-modal").addEventListener("click", () => {shoebox.style.display = "flex"})
-            shoebox.querySelector(".close-modal").addEventListener("click", () => {shoebox.style.display = "none"})
-            shoebox.querySelector(".close-overlay").addEventListener("click", () => {shoebox.style.display = "none"})
             // Code from https://demos.gsap.com/demo/make-elements-draggable
             gsap.registerPlugin(Draggable);
             Draggable.create(".flair", {

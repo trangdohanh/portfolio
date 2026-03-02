@@ -8,27 +8,7 @@
         <title>Shopping Calculator for Newcomers</title>
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="stylesheet" href="../css/style.css">
-        <style>
-            .coloured-bg {background-color: #cde1e3cc;}
-            .bordered-section{border: 2px solid #cde1e3;}
-            main h2, .themed-text{color: #598392;}
-            .bordered{border: 1px solid #598392;}
-            .textbox .icon-text {background-color: #cde1e3cc; color: #245567;}
-
-            #showcase{background-color: #cde1e3;}
-            #showcase .glass {background-color: #EAF4F4;}
-            #showcase .cons{background-color: #FFD2D2;}
-
-            .link-button.solid{
-                background-color: #cde1e3;
-                border-color: #cde1e3;
-            }
-
-            @media (any-hover: hover) {
-                .link-button.solid:hover{background-color: #cde1e3cc; color: #598392; border-color: #598392;}    
-                .link-button.solid:hover svg{fill: #598392;}
-            }
-        </style>
+        <link rel="stylesheet" href="design.css">
     </head>
 
     <body>
@@ -69,10 +49,10 @@
                             <p>Quick navigation</p>
                             <div class="buttons sm-stacked">
                                 <a href="#showcase" class="link-button solid">Jump to showcase
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
                                 </a>
                                 <a href="#challenge" class="link-button solid">Jump to case study
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
                                 </a>
                             </div>
                         </div>
@@ -95,23 +75,23 @@
                 <section class="extended extended-wrapper extended-padding" id="showcase">
                     <div class="extended-content grid-sm row-xs t-col-3">
                         <div class="grid-sm row-xs t-span-2 t-col-2">
-                            <div class="t-span-2 textbox cons glass animatedIn">
+                            <div class="t-span-2 textbox cons glass animated">
                                 <p>The challenge</p>
                                 <p class="text-md">Many new residents need to convert prices when shopping due to their unfamiliarity with the pricing structure, creating an additional cognitive load.</p>
                             </div>
-                            <div class="t-span-2 textbox coloured-bg glass animatedIn">
+                            <div class="t-span-2 textbox coloured-bg glass animated">
                                 <p>The concept</p>
                                 <p class="text-md">A shopping calculator that converts from Canadian dollars to the user's currency of choice and displays the conversion as they shop, designed for on-the-go and one-handed use.</p>
                             </div>
-                            <div class="glass animatedIn">
+                            <div class="glass animated proj-modal" onclick="openModal(this)">
                                 <img src="../img/shopping-calculator/mockup-3.png">
                             </div>
-                            <div class="glass animatedIn">
+                            <div class="glass animated proj-modal" onclick="openModal(this)">
                                 <img src="../img/shopping-calculator/mockup-4.png">
                             </div>
                         </div>
                         
-                        <div class="textbox glass animatedIn" style="align-content: center;">
+                        <div class="textbox glass animated" style="align-content: center;">
                             <video width="100%" height="auto" controls autoplay loop muted class="m-max-width device-shadow">
                                 <source src="../img/shopping-calculator/demo-1.mp4" type="video/mp4">
                             </video>
@@ -150,19 +130,19 @@
 
                         <div class="extended-padding">
                             <div class="grid d-col-4 t-col-2 row-reg">
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/shopping-calculator/solution-1.png">
                                     <figcaption><strong>Convert:</strong> User types in the price and quantity, then views the converted price in a familiar currency (with the sales tax accounted for).</figcaption>
                                 </figure>
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/shopping-calculator/solution-2.png">
                                     <figcaption><strong>Categorize:</strong> Items are sorted into corresponding categories. Since sales tax depends on the type of product, this would be a small and beneficial addition.</figcaption>
                                 </figure>
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/shopping-calculator/solution-3.png">
                                     <figcaption><strong>Calculate:</strong> The app calculates the total of all the items on the user's list and displays it in Canadian dollars and their selected currency.</figcaption>
                                 </figure>
-                                <figure class="m-max-width animated flyUp stagger">
+                                <figure class="m-max-width animated flyUp stagger proj-modal" onclick="openModal(this)">
                                     <img src="../img/shopping-calculator/solution-4.png">
                                     <figcaption><strong>Save:</strong> Once they've finished shopping, the user can save the list and its total if needed for future reference.</figcaption>
                                 </figure>
@@ -213,11 +193,11 @@
                                 <img src="../img/shopping-calculator/user-flow-b.png" class="scroll-slide">
                             </div>
 
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            <button aria-label="Scroll back">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                             </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            <button aria-label="Scroll forward">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                             </button>
                         </div>
 
@@ -228,11 +208,11 @@
                                 <img src="../img/shopping-calculator/user-flow-1c.png" class="scroll-slide">
                             </div>
 
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            <button aria-label="Scroll back">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                             </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            <button aria-label="Scroll forward">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                             </button>
                         </div>
                     </div>
@@ -292,7 +272,7 @@
 
                                 <div class="resizer">
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path></svg>
                                     </div>
                                 </div>
                             </div>
@@ -317,11 +297,11 @@
                                 <img src="../img/shopping-calculator/iteration-3b.png" class="scroll-slide">
                             </div>
 
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            <button aria-label="Scroll back">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                             </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            <button aria-label="Scroll forward">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                             </button>
                         </div>
 
@@ -332,11 +312,11 @@
                                 <img src="../img/shopping-calculator/iteration-3-1c.png" class="scroll-slide">
                             </div>
 
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            <button aria-label="Scroll back">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                             </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            <button aria-label="Scroll forward">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                             </button>
                         </div>
                     </div> 
@@ -402,11 +382,11 @@
                             <img src="../img/shopping-calculator/concept-b.png" class="scroll-slide">
                         </div>
 
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                        <button aria-label="Scroll back">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                         </button>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                        <button aria-label="Scroll forward">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                         </button>
                     </div>
                 </section>
@@ -428,6 +408,9 @@
         
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
+        <script src="../js/modal.js"></script>
+        <script src="../js/page-nav.js"></script>
         <script src="../js/carousel.js"></script>
+        <script src="../js/before-after-slider.js"></script>
     </body>
 </html>
