@@ -92,10 +92,20 @@
 }
 
 #hero .gif-modal{
+    position: relative;
     animation-name: laptop-tilt;
     animation-duration: 5s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
+}
+
+#laptop-img{
+    position: absolute;
+    top: 16%;
+    left: 15.57%;
+    width: 68.7%;
+    height: 57.2%;
+    border-radius: 0;
 }
 
 #hero .labels a{
