@@ -1,0 +1,49 @@
+.coloured-bg{
+    background-color: #cde1e3cc;
+}
+
+.bordered-section{
+    border: 2px solid #cde1e3;
+}
+
+main h2, 
+.themed-text{
+    color: #598392;
+}
+
+.bordered{
+    border: 1px solid #598392;
+}
+
+.textbox .icon-text{
+    background-color: #cde1e3cc;
+    color: #245567;
+}
+
+#showcase{
+    background-color: #cde1e3;
+}
+
+#showcase .glass{
+    background-color: #eaf4f4;
+}
+
+#showcase .cons{
+    background-color: #ffd2d2;
+}
+
+.link-button.solid{
+    background-color: #cde1e3;
+    border-color: #cde1e3;
+}
+
+@media (any-hover: hover) {
+    .link-button.solid:hover {
+        background-color: #cde1e3cc; 
+        color: #598392; 
+        border-color: #598392;
+    }    
+    .link-button.solid:hover svg {
+        fill: #598392;
+    }
+}

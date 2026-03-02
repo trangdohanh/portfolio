@@ -8,18 +8,52 @@
         <link rel="icon" type="image/x-icon" href="../img/favicon.png">
         <link rel="stylesheet" href="../css/style.css">
         <style>
-            @font-face {font-family: "Be Vietnam Pro"; src: url("../files/be-vietnam/BeVietnamPro-Regular.woff");}
-            html {--blue: #0182b3; --orange: #ff6900; --red: #ed145b;}
-            .coloured-bg, .textbox {background-color: #00aeef33;}
-            main h2, .themed-text{color: var(--blue);}
-            .icon-text svg{fill: var(--blue);}
-            .textbox.bordered {background: none; border: 1px solid var(--blue) !important;}
+            @font-face {
+                font-family: "Be Vietnam Pro"; 
+                src: url("../files/be-vietnam/BeVietnamPro-Regular.woff");
+            }
 
-            .buttons button.active {background-color: var(--blue); color: var(--white); border-color: var(--blue); cursor: initial;}
-            .tabcontent {display: none;}
+            :root {
+                --blue: #0182b3; 
+                --orange: #ff6900; 
+                --red: #ed145b;
+            }
+
+            .coloured-bg, 
+            .textbox {
+                background-color: #00aeef33;
+            }
+
+            main h2, 
+            .themed-text{
+                color: var(--blue);
+            }
+
+            .icon-text svg{
+                fill: var(--blue);
+            }
+
+            .textbox.bordered {
+                background: none; 
+                border: 1px solid var(--blue) !important;
+            }
+
+            .buttons button.active {
+                background-color: var(--blue); 
+                color: var(--white); 
+                border-color: var(--blue); 
+                cursor: initial;
+            }
+
+            .tabcontent {
+                display: none;
+            }
 
             @media (any-hover: hover) {
-                .link-button:not(header .link-button):hover{background-color: var(--blue); border-color: var(--blue);}
+                .buttons button:hover{
+                    background-color: var(--blue); 
+                    border-color: var(--blue);
+                }
             }
         </style>
     </head>
@@ -37,13 +71,13 @@
 
                         <div>
                             <h2>Overview</h2>
-                            <p>Blue Dragon Children's Foundation is a Vietnam-based NGO helping children and families in crisis. They work directly with high-risk communities, host events to raise funds and awareness, rescue children from abuse, and provide opportunities for employment, shelter, and education. This is an independent project to <strong>design a landing page to encourage viewers to get involved with Blue Dragon's activities.</strong></p>
+                            <p>Blue Dragon Children's Foundation is a Vietnam-based NGO helping children and families in crisis. They work directly with high-risk communities, host events to raise funds and awareness, rescue children from abuse, and and provides opportunities for employment, shelter, and education. This is an independent project to <strong>design a landing page to encourage viewers to get involved with Blue Dragon's activities.</strong></p>
                         </div>
 
                         <div class="grid-sm t-col-3 row-xs">
                             <div class="textbox bordered padding-sm">
                                 <h3 class="text-reg themed-text">Role</h3>
-                                <p class="text-sm">Visual Designer, independent project</p>
+                                <p class="text-sm">Visual Designer</p>
                             </div>
 
                             <div class="textbox bordered padding-sm">
@@ -103,16 +137,16 @@
 
                             <div class="slides">
                                 <img src="../img/blue-dragon/process-2a.png" class="slide" alt="Visual pun of children 'taking flight'.">
-                                <img src="../img/blue-dragon/process-2b.png" class="slide" alt="Broken pieces of glass represent the fragility of childhood and the impacts of abuse.">
+                                <img src="../img/blue-dragon/process-2b.png" class="slide" alt="Broken pieces of glass represents the fragility of childhood and the impacts of abuse.">
                                 <img src="../img/blue-dragon/process-2c.png" class="slide" alt="Personified 'tube house' to represent an abusive household and environment.">
                                 <img src="../img/blue-dragon/process-2d.png" class="slide" alt="Colourful handprints for collaboration and the diversity in personality and background.">
                                 <img src="../img/blue-dragon/process-2e.png" class="slide" alt="Different types of support visualized through closely-related objects.">
 
-                                <button class="prev">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                                <button class="prev" aria-label="Previous slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
                                 </button>
-                                <button class="next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: 1.5rem; height: 1.5rem;"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                <button class="next" aria-label="Next slide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                                 </button>
                             </div>
 
@@ -174,7 +208,7 @@
                     </div>
                
                     <div class="grid row-reg">
-                        <h3>I made simple interactions and animations to increase engagement.</h3>
+                        <h3>I made simple interactions and animations to add more engagement.</h3>
                         <img src="../img/blue-dragon/animation.gif">
                     </div>  
                 </section>
@@ -188,8 +222,8 @@
                     </div>
 
                     <div class="buttons">
-                        <button name="tablink" class="link-button tablinks" onclick="openDevice(event, 'desktop')">Desktop</button>
-                        <button name="tablink" class="link-button tablinks" onclick="openDevice(event, 'mobile')">Mobile</button>
+                        <button name="tablink" class="link-button tablinks" aria-label="Open desktop design" onclick="openDevice(event, 'desktop')">Desktop</button>
+                        <button name="tablink" class="link-button tablinks" aria-label="Open mobile design" onclick="openDevice(event, 'mobile')">Mobile</button>
                     </div>
 
                     <div class="device-desktop tabcontent" id="desktop">
@@ -225,5 +259,6 @@
         <!-- JavaScript -->
         <script src="../js/main.js"></script>
         <script src="../js/carousel.js"></script>
+        <script src="../js/device-tab.js"></script>
     </body>
 </html>
