@@ -234,13 +234,12 @@
     padding: 0;
     border: 8px solid var(--green);
     background: var(--light-green); 
-    box-shadow: 0px 4px 10px var(--black-50);
-    animation-name: none;
-    animation-duration: 0s;
+    box-shadow: 0px 2px 5px var(--black-50);
+    rotate: 0deg;
 
     .dark & {
         background: var(--dark-green);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     &::before {
@@ -269,9 +268,11 @@
 }
 
 .hide-hobbies #my-card{
-    animation-name: card-tilt;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    rotate: -4deg;
+    box-shadow: 0px 4px 10px var(--black-50);
+    .dark & {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .my-cards {
@@ -280,7 +281,6 @@
 }
 
 .my-cards .hobby {
-    max-width: 200px;
     position: absolute;
     z-index: -2;
     opacity: 1;
@@ -297,57 +297,49 @@
     rotate: 15deg;
     bottom: -20%; 
     right: -15%;
-
-    & img {
-        border: 1px solid var(--white-10);
-    }
 }
 
 .hobby:nth-child(3 of .hobby) {
-    max-width: 120px;
     rotate: 10deg;
-    top: -20%; 
+    top: -22%; 
     right: 0;
 }
 
 @media only screen and (max-width: 1024px) {
     .my-cards {
-        margin: 120px auto;
-    }
-
-    .my-cards.hide-hobbies{
-        margin: 0 auto;
+        margin: 0px auto;
+        padding: 120px 0;
     }
 
     .hobby:nth-child(1 of .hobby) {
-        top: -45%; 
-        left: 10%;
+        top: -7%; 
+        left: 5%;
     }
 
     .hobby:nth-child(2 of .hobby) {
-        bottom: -45%; 
+        bottom: -8%; 
         right: 15%;
     }
 
     .hobby:nth-child(3 of .hobby) {
-        top: -30%; 
-        right: -5%;
+        top: 0%; 
+        right: 0%;
     }
 }
 
 .my-cards.hide-hobbies .hobby{
     rotate: 0deg;
     &:nth-child(1 of .hobby) {
-        top: 0; 
+        top: 10%; 
         left: 20%;
     }
     &:nth-child(2 of .hobby) {
-        bottom: 0; 
+        bottom: 20%; 
         right: 20%;
     }
 
     &:nth-child(3 of .hobby) {
-        top: 0%; 
+        top: 20%; 
         right: 20%;
     }
 }
@@ -409,12 +401,6 @@
     60% {opacity: 1;}
 }
 
-@keyframes card-tilt{
-    0% {rotate: -4deg;}
-    10% {rotate: 1deg;}
-    20% {rotate: -4deg;}
-}
-
 @keyframes laptop-tilt{
     0% {rotate: 0deg;}
     5% {rotate: -3deg;}
@@ -422,7 +408,6 @@
     15% {rotate: 0deg;}
 }
 /* ////////// */
-
 
 /* SANDBOX */
 #sandbox{
@@ -494,14 +479,6 @@
     .project a:hover .title{
         text-decoration: underline; color: var(--dark-green);
         .dark & {color: var(--light-green);}
-    }
-
-    #about .persona-card:hover{
-        rotate: 0deg;
-        box-shadow: 0px 2px 5px var(--black-50);
-        .dark & {
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-        }
     }
 }
 /* ////////// */

@@ -64,41 +64,18 @@ aboutBtns[1].addEventListener("click", () => {
 
 
 // ABOUT PROFILE PICTURE
-const myCard = document.querySelector(".my-cards .persona-card")
+const myCard = document.querySelector(".my-cards")
 const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.parentElement.classList.remove("hide-hobbies");
+            entry.target.classList.remove("hide-hobbies");
         } 
         else {
-            entry.target.parentElement.classList.add("hide-hobbies");
+            entry.target.classList.add("hide-hobbies");
         }
     }) 
 }, {rootMargin: "-30% 0px -30% 0px"})
-
-function hoverCard() {
-    myCard.addEventListener("mouseover", () => {
-        myCard.parentElement.classList.remove("hide-hobbies");
-    })
-    myCard.addEventListener("mouseleave", () => {
-        myCard.parentElement.classList.add("hide-hobbies");
-    })
-}
-
-function checkCardHover(y) {
-    if (!y.matches) {cardObserver.observe(myCard);} 
-    else {hoverCard()}
-}
-
-function checkCardDevice(x) {
-    if (x.matches) {cardObserver.observe(myCard);} 
-    else {hoverCard()}
-}
-
-checkCardHover(y)
-checkCardDevice(x)
-y.addEventListener("change", () => {checkCardHover(y)});
-x.addEventListener("change", () => {checkCardDevice(x)});
+cardObserver.observe(myCard);
 //////////
 
 
