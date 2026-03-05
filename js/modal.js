@@ -8,7 +8,9 @@ function openModal(e) {
 							</video>`;
 	} else if (e.classList.contains("proj-modal")){
 		modal.innerHTML = `<img id="img-modal" src="${e.querySelector("img").src}">`
-	} else if (e.classList.contains("page-modal")){
+	} else if (e.classList.contains("img-modal")){
+		modal.innerHTML = `<img id="img-modal" src="../img/lightbox/${e.id}.png">`
+	} else {
         template.classList.add("page")
         if (e.id == "career-courier") {
             modal.innerHTML = `<div class="grid row-sm">
@@ -19,8 +21,62 @@ function openModal(e) {
                                     </div>
                                 </div>`
 		}
-	} else{
-		modal.innerHTML = `<img id="img-modal" src="../img/lightbox/${e.id}.png">`
-	}
+		if (e.id == "s-sense") {
+            modal.innerHTML = `<div>
+									<div class="grid row-reg">
+										<img src="${content.SSense.image}">
+										<h1>${content.SSense.title}</h1>
+										<p>${content.SSense.overview}</p>
+										<div class="grid-sm t-col-3 row-xs">
+											<div class="textbox bordered padding-sm" style="border: 1px solid #286296;">
+												<h3 class="text-reg themed-text">Role</h3>
+												<p class="text-sm">${content.SSense.role}</p>
+											</div>
+											<div class="textbox bordered padding-sm" style="border: 1px solid #286296;">
+												<h3 class="text-reg themed-text">Tools</h3>
+												<p class="text-sm">${content.SSense.tools}</p>
+											</div>
+											<div class="textbox bordered padding-sm" style="border: 1px solid #286296;">
+												<h3 class="text-reg themed-text">Timeline</h3>
+												<p class="text-sm">${content.SSense.timeline}</p>
+											</div>
+										</div>
+									</div>
+
+									<section class="grid row-reg">
+										<div>
+											<h2>${content.SSense.heading_1}</h2>
+											<p>${content.SSense.paragraph_1}</p>
+										</div>
+										<img src="${content.SSense.image_1}">
+									</section>
+
+									<section class="grid-sm t-col-2 row-reg">
+										<div class="t-span-2">
+											<h2>${content.SSense.heading_2}</h2>
+											<p>${content.SSense.paragraph_2}</p>
+										</div>
+										<img src="${content.SSense.image_2}">
+										<img src="${content.SSense.image_3}">
+									</section>
+
+									<section class="grid row-reg">
+										<div>
+											<h2>${content.SSense.heading_3}</h2>
+											<p>${content.SSense.paragraph_3}</p>
+										</div>
+										<img src="${content.SSense.image_4}">
+									</section>
+
+									<section class="grid row-reg">
+										<div>
+											<h2>${content.SSense.heading_4}</h2>
+											<p>${content.SSense.paragraph_4}</p>
+										</div>
+										<img src="${content.SSense.image_5}">
+									</section>
+                                </div>`
+		}
+	} 
     document.body.style.overflowY = "hidden";
 }

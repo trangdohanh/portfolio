@@ -1066,7 +1066,7 @@ button:disabled{
     margin-top: 0;
 }
 
-.modal-content img{
+.modal-content img:not(.page img){
     max-height: calc(100vh - 8rem);
 }
 
