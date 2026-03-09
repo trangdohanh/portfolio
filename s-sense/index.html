@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Trang Do">
+        <title>Sheridan S-Sense Co-op</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <style>
+            .textbox.bordered {border: 1px solid #286296;}
+            main h2, .themed-text {color: #286296;}
+
+            .lottie{
+                position: relative;
+                background: white;
+                aspect-ratio: 5/6;
+                width: 375px;
+                margin: 0 auto;
+                border-radius: var(--border-radius-012);
+
+                @media (max-width: 420px) {
+                    width: 100vw;
+                    margin-left: -20px;
+                    margin-right: -20px;
+                }
+            }
+
+            .lottie img {
+                position: absolute;
+                width: 300px;
+                height: auto;
+                left: calc(50% - 150px);
+                top: 75px;
+                z-index: 10;
+            }
+
+            lottie-player{
+                position: absolute;
+                left: calc(50% - 375px / 2);
+                width: 375px;
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body>      
+        <div class="wrapper">
+            <header id="header"></header>
+            
+            <main>
+                <section class="grid row-reg d-max-width">                        
+                    <img src="../img/s-sense/mockup-1.jpg" class="m-wide">
+                    
+                    <div class="grid row-reg" id="overview">
+                        <h1>Improving consistency in UI and user flows for the Sheridan S-Sense app</h1>
+
+                        <div>
+                            <h2>Overview</h2>
+                            <p>Starting June 2024, I joined the S-Sense team at Sheridan College as UI/UX and Graphic Design, first as a co-op student and then continuing on a part-time capacity. While my main responsibility was designing mobile user interfaces, I got the chance to work on the Figma design library, research best practices, and document all interactions in one comprehensive map. Here are some highlights of my experience.</p>
+                        </div>
+
+                        <div class="grid-sm t-col-3 row-xs">
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Role</h3>
+                                <p class="text-sm">UI/UX and Graphic Designer</p>
+                            </div>
+
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Tools</h3>
+                                <p class="text-sm">Figma, Jira, Notion</p>
+                            </div>
+            
+                            <div class="textbox bordered padding-sm">
+                                <h3 class="text-reg themed-text">Timeline</h3>
+                                <p class="text-sm">Jun &#8211 Dec 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="grid row-reg d-max-width">
+                    <div>
+                        <h2 class="themed-text">Design System</h2>
+                        <h3>Contributing to and maintaining the design library in Figma</h3>
+                        <p>Our design library at the time was in progress. Since the colours, text styles, and basic components were already set up, my primary task was to finish the card components. I experimented with the Material Design component library to learn about nested components. Through trial and errors, I leveraged building blocks, instance swapping, and boolean variables to create customizable components. This improved consistency across screens and hand-off to developers.</p>
+                    </div>
+
+                    <img src="../img/s-sense/design-system.png" class="m-wide">
+                </section>
+
+
+                <section class="grid row-reg t-col-2 d-max-width grid-h-center">
+                    <div>
+                        <h2 class="themed-text">Motion Design</h2>
+                        <h3>Making custom animations with Figma and LottieFiles</h3>
+                        <p>The team wanted to gradually integrate simple animations, one of which is a celebration animation when a student completes a goal. I animated the sequence in Figma, then exported it as a JSON file using the LottieFiles plugin.</p>
+                        <p>Click or tap on the image to see the animation!</p>
+                    </div>
+
+                    <div class="lottie">
+                        <img src="../img/s-sense/foreground.png">
+                        <lottie-player id="firstLottie" src="GoalsAnimation.json" background="transparent" speed="0.75"></lottie-player>
+                    </div>
+                </section>
+
+
+                <section class="grid row-reg t-col-2 d-max-width grid-h-center">
+                    <div class="d-pad-right">
+                        <h2 class="themed-text">Research</h2>
+                        <h3>Looking into and documenting best practices</h3>
+                        <p>As we started implementing sound effects, animations, and haptics, I was tasked to research best practices and document patterns (for sound effects and haptics). I also looked into navigation patterns to resolve inconsistent navigation between iOS and Android devices.</p>
+                    </div>
+
+                    <div class="grid row-xs">
+                        <div class="slides">
+                            <img src="../img/s-sense/research-1.png" class="slide">
+                            <img src="../img/s-sense/research-2.png" class="slide">
+                            <img src="../img/s-sense/research-3.png" class="slide">
+
+                            <button class="prev" aria-label="Previous slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="next" aria-label="Next slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                            <div class="dots in-slide"></div>
+                        </div>
+
+                        <p class="caption">Some research notes into best practices for sound effects, haptics, and cross-platform navigation.</p>
+                    </div>
+                </section>
+
+
+                <section class="grid row-reg d-max-width">
+                    <div>
+                        <h2 class="themed-text">Wireflow</h2>
+                        <h3>Documenting interactions through a comprehensive wireflow</h3>
+                        <p>Because we're often looking at each feature individually, we missed inefficient flows when different features connect. A comprehensive wireflow would've help us review the overarching interactions. I started with mapping out the current interactions, flagged the redundant or inefficient steps, then mapped out the improved flows.</p>
+                    </div>
+
+                    <img src="../img/s-sense/wireflow.png" class="m-wide">
+                </section>
+
+
+                <section class="grid row-reg d-max-width">
+                    <div>
+                        <h2 class="themed-text">Teamwork</h2>
+                        <h3>Collaborating with cross-functional team</h3>
+                        <p>I practiced articulating design decisions to stakeholders and non-designer teammates, and learned to navigate different expertises and backgrounds. It was intimidating at first to present my work and hand my designs off to the developers, but their support and enthusiasm helped me gain more confidence in my work.</p>
+                    </div>
+
+                    <img src="../img/s-sense/mockup-2.jpg" class="m-wide">
+                </section>
+            </main>
+
+            <footer id="footer"></footer>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/carousel.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+        <script>
+            LottieInteractivity.create({
+                player: "#firstLottie",
+                mode:"cursor",
+                actions: [
+                    {
+                        type: "click",
+                        forceFlag: false
+                    }
+                ]
+            });
+        </script>
+    </body>
+</html>
