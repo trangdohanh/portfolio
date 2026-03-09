@@ -16,27 +16,5 @@
         "designer_2" : "https://www.linkedin.com/in/euna-lim/",
         "designer_3" : "https://www.linkedin.com/in/kelly-kou/",
         "link" : "https://devpost.com/software/career-courier"
-    },
-
-    "SSense" : {
-        "title" : "Improving Consistency in UI and User Flows for the Sheridan S-Sense App",
-        "overview" : "Starting June 2024, I joined the S-Sense team at Sheridan College as a UI/UX and Graphic Designer, first as a co-op student and then continuing on a part-time capacity. While my main responsibility was designing mobile user interfaces, I got the chance to work on the Figma design library, research best practices, and document all interactions in one comprehensive map.",
-        "role" : "UI/UX and Graphic Designer",
-        "tools" : "Figma, Jira, Notion",
-        "timeline" : "Jun &#8211 Dec 2024",
-        "heading_1" : "1. Contributing to and maintaining the design library in Figma",
-        "paragraph_1" : "Our design library at the time was nearing completion. Since the colours, text styles, and basic components were already set up, my primary task was to finish the card components. I experimented with the Material Design component library to learn about nested components. Through trial and error, I leveraged building blocks, instance swapping, and boolean variables to create customizable components. This improved consistency across screens and hand-off to developers.",
-        "heading_2" : "2. Research and documenting best practices",
-        "paragraph_2" : "As we started to implement sound effects, animations, and haptics, I was tasked to research best practices and document standard patterns (for sound effects and haptics). I also looked into navigation patterns to resolve inconsistent navigation between iOS and Android devices.",
-        "heading_3" : "3. Documenting interactions in a comprehensive wireflow",
-        "paragraph_3" : "Because we're often looking at each feature individually, we missed inefficient flows when different features connect. A comprehensive wireflow would've helped us review the overarching interactions. I started with mapping out the current interactions, flagged the redundant or inefficient steps, then mapped out the improved paths.",
-        "heading_4" : "4. Collaborating with cross-functional team",
-        "paragraph_4" : "I practiced articulating design decisions to stakeholders and non-designer teammates, and learned to navigate different expertises and backgrounds. It was intimidating at first to present my work and hand my designs off to the developers, but their support and enthusiasm helped me gain more confidence in my work.",
-        "image" : "../img/s-sense/mockup-1.jpg",
-        "image_1" : "../img/s-sense/design-system.png",
-        "image_2" : "../img/s-sense/research-1.png",
-        "image_3" : "../img/s-sense/research-2.png",
-        "image_4" : "../img/s-sense/wireflow.png",
-        "image_5" : "../img/s-sense/mockup-2.jpg"
     }
 }
