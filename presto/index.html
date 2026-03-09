@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="author" content="Trang Do">
+        <meta name="description" content="Personal project redesigning the user experience and interfaces around transactions on the PRESTO app.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="PRESTO Redesign">
+        <meta property="og:image" content="https://trangdo.site/img/thumbnail.png">
+        <meta property="og:url" content="https://trangdo.site/presto/">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="PRESTO Redesign">
+        <meta property="twitter:image" content="https://trangdo.site/img/thumbnail.png">
+        <title>PRESTO Redesign</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="design.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header id="header"></header>
+    
+            <main>
+                <section class="grid row-reg d-max-width">                        
+                    <img src="../img/presto/mockup-1.png" width="880" height="587" class="m-wide" fetchpriority="high" alt="Phone screens showing the redesigned features of the PRESTO app.">
+                    
+                    <div class="grid row-reg">
+                        <h1>Improving a commuter's experience with the PRESTO app</h1>
+
+                        <div>
+                            <h2>Overview</h2>
+                            <p>This is a quick personal project to kill two birds with one stone: fixing some of my personal gripes with the PRESTO app and exploring how AI can play a role in the design workflow. I focused on redesigning the UI to address 3 main pain points I have with the current experience around transactions, and explored how AI can be used to test designs and transition wireframes into code.</p>
+                        </div>
+
+                        <div class="grid-sm t-col-3 row-xs">
+                            <div class="textbox bordered padding-sm animated flyUp stagger">
+                                <h3 class="text-reg themed-text">Role</h3>
+                                <p class="text-sm">UX/UI Designer, independent project</p>
+                            </div>
+
+                            <div class="textbox bordered padding-sm animated flyUp stagger">
+                                <h3 class="text-reg themed-text">Tools</h3>
+                                <p class="text-sm">Figma, Claude</p>
+                            </div>
+            
+                            <div class="textbox bordered padding-sm animated flyUp stagger">
+                                <h3 class="text-reg themed-text">Duration</h3>
+                                <p class="text-sm">Mar 2026 (1 week)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="textbox padding-lg d-max-width glass animated flyUp">
+                    <h2 class="text-upc text-reg">Heads-up!</h2>
+                    <p>Although I've put this project in the "Case studies" section, this will be more of a showcase of a personal project that went from problem definition straight to high-fidelity design. The pain points I'm addressing are from my own experience as a PRESTO user, and there isn't much direct user research.</p> 
+                    <p>I also came across <a class="link" target="_blank" href="https://elleong.medium.com/ui-ux-use-case-public-transit-payment-card-mobile-app-redesign-ec4f8aefe63c">Elle Ong's case study</a> that touched on one of the problems I'm addressing, and her redesigns inspired some of the visual aspects of and an interaction in my designs.</p>
+                </section>
+
+
+                <section class="grid row-lg d-max-width">
+                    <div class="grid row-sm">
+                        <h2 class="text-lg">The ground rules for this project</h2>
+                        <div class="grid-sm t-col-3 row-sm">
+                            <div class="textbox goal animated flyUp stagger">
+                                <p>Keep it simple</p>
+                                <p class="text-sm">I've identified 3 pain points, and this project will primarily focus on those pain points.</p>
+                            </div>
+                            <div class="textbox goal animated flyUp stagger">
+                                <p>Work within the existing system</p>
+                                <p class="text-sm">I'm not redesigning the entire app or interactions that users have gotten used to. My ideas should fit into the current system and how it's working.</p>
+                            </div>
+                            <div class="textbox goal animated flyUp stagger">
+                                <p>AI for testing, not designing</p>
+                                <p class="text-sm">I aimed to try using AI to test my ideas and accelerate their implementation, not generating ideas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid row-sm">
+                        <h3>The pain points we're looking at</h3>
+                        <div class="grid-sm t-col-3 row-sm">
+                            <a class="textbox painpoint animated flyUp stagger" href="#problem-1">
+                                <p>1. Not being able to track the free transfer window</p>
+                                <p class="text-sm">Many commuters, especially students, rely on this transfer window to save money. This information is available (somewhere) on the app, but isn't apparent.</p>
+                            </a>
+                            <a class="textbox painpoint animated flyUp stagger" href="#problem-2">
+                                <p>2. Not seeing the balance at the time of a transaction</p>
+                                <p class="text-sm">If the user wants to double-check the math, they'd have to go online to see what their balance was at the time of a transaction.</p>
+                            </a>
+                            <a class="textbox painpoint animated flyUp stagger" href="#problem-3">
+                                <p>3. Not having preset amounts in the "Load Funds" screen</p>
+                                <p class="text-sm">Once the user taps on "Load Funds", they no longer see the preset amounts of "$10", "$20", "$50" anymore.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <section class="section grid row-md d-max-width" id="problem-1">
+                    <div class="textbox padding-lg glass animated flyUp">
+                        <h2 class="text-upc text-reg">Problem #1</h2>
+                        <p class="text-lg">The free and discounted transfer window is not easily accessible for PRESTO users. Many commuters, especially students, rely on the free transfer and discounted fare to save money.</p>
+                    </div>
+
+                    <div class="grid row-reg">
+                        <div>
+                            <p>In over 4 years of using PRESTO, this is the first time I learned that the app actually shows you the transfer window—and that seems to be a universal experience. Instead, what I usually do is look for the transaction that should've initiated the transfer window, if it's updated promptly.</p>
+                            <p>Users often check for this information on the go. It should be available right when they view a card's details. Something simple that shows the discounted transfer window would suffice. In addition to adding this window, I moved the "Presto Funds" section up so users can access it faster.</p>
+                        </div>
+
+                        <img src="../img/presto/transfer-1.png" class="m-wide animated" width="880" height="880" alt="The current UI of the PRESTO app and a redesigned UI to include the transfer window.">
+                    </div>
+
+                    <div class="grid row-reg">
+                        <p>I also moved the "Presto Funds" section up so users can access it faster. Users can now quickly view their transfer window and top-up funds if needed.</p>
+                        <img src="../img/presto/transfer-2.png" class="m-wide animated" width="880" height="704" alt="The sections on a card's details screen rearranged to provide easier access to important features.">
+                    </div>
+
+                    <div class="grid row-reg">
+                        <div>
+                            <h3>I used Claude to stress test my wireframes against all the edge cases it could identify.</h3>
+                            <p>Many of the edge cases Claude identified can be addressed by designing the different states of this element. While I didn't plan on designing the states at first, addressing the issues Claude identified improved the overall design. An edge case involving the use of colour pushed me to run everything through a vision simulator to improve contrast for users with colour blindness.</p>
+                        </div>
+
+                        <img src="../img/presto/transfer-3.png" class="m-wide animated" width="880" height="880" alt="The different states of the transfer window design.">
+                    </div>
+                </section>
+
+
+                <section class="section grid row-md d-max-width" id="problem-2">
+                    <div class="textbox padding-lg glass animated flyUp">
+                        <h2 class="text-upc text-reg">Problem #2</h2>
+                        <p class="text-lg">PRESTO users who have doubts that the numbers aren't adding up correctly have to go to the website and log in to see the balance at the time of each transaction.</p>
+                    </div>
+
+                    <div class="grid row-reg">
+                        <div>
+                            <p>Machines can malfunction from time to time. While commuters who want to double-check the math might not do the calculations right then and there, just having the numbers for them to reference adds transparency and builds trust.</p>
+                            <p>To stay consistent with the website's UI, I added a small balance underneath the amount paid. I also removed transit agencies' names since that information is already communicated through the logo. After stress testing with Claude, I added a green line to visually connect "Tap On" and "Tap Off" transactions that are parts of the same trip.</p>
+                        </div>
+
+                        <img src="../img/presto/balance.png" class="m-wide animated" width="880" height="880" alt="The current UI of the PRESTO app and a redesigned UI to show the balance at the time of each transaction.">
+                    </div>
+                </section>
+
+
+                <section class="extended section grid row-reg" id="problem-3">
+                    <div class="extended-wrapper extended-content d-max-width grid row-md">
+                        <div class="textbox padding-lg glass animated flyUp">
+                            <h2 class="text-upc text-reg">Problem #3</h2>
+                            <p class="text-lg">Once the user passes the preset top-up amounts and taps on "Load Funds", the app assumes they won't change their mind about not loading a preset amount.</p>
+                        </div>
+
+                        <p>Adding these presets to the "Load Funds" screen doesn't take up much space, and it'll increase the convenience. This is also more consistent with the flow on the PRESTO website.</p>
+                    </div>
+                    
+                    <img src="../img/presto/funds.png" class="animated" width="1440" height="720" alt="The current UI of the PRESTO app and a redesigned UI to include the preset amounts when users top-up their balance.">
+                </section>
+
+                <hr>
+
+                <section class="grid row-md d-max-width">
+                    <div class="textbox padding-lg glass animated flyUp">
+                        <h2 class="text-upc text-reg">Visual Design</h2>
+                        <p class="text-lg">There's a missed opportunity to make the experience feel more like users are handling actual physical cards.</p>
+                    </div>
+
+                    <div class="grid row-reg">
+                        <p>I drew inspiration from the Apple Wallet's UI. Having the PRESTO cards stacked is a bit more challenging due to their dark colours, but adding the white and green lines that are on physcial cards creates a good separation.</p>
+                        
+                        <div class="figure">
+                            <div class="t-wide m-wide before-after-slider">
+                                <div class="before-image">
+                                    <img src="../img/presto/visual-1.png" width="880" height="440" alt="The current card design in the PRESTO app.">
+                                </div>
+                            
+                                <div class="after-image">
+                                    <img src="../img/presto/visual-2.png" width="880" height="440" alt="The redesigned cards in the PRESTO app.">
+                                </div>
+
+                                <div class="resizer">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24"><path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="figcaption">Slide between the UI for Presto cards as of March 2026 and my redesign.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-sm row-reg">
+                        <p>After reading <a class="link" target="_blank" href="https://elleong.medium.com/ui-ux-use-case-public-transit-payment-card-mobile-app-redesign-ec4f8aefe63c">Elle Ong's case study</a>, I was inspired to create my take on the "flip" effect: showing the regular information on the front of the card, and the card flipping to reveal the card number and verification number on its back. Flipping the card also brings the user to the information tab.</p>
+
+                        <img src="../img/presto/visual-3.png" class="m-wide animated" width="880" height="880" alt="The front and back of the redesigned card.">
+                    </div>
+
+                    <div class="grid t-col-2 row-reg grid-h-center">
+                        <div class="d-pad-right">
+                            <h3>Coding the interactions with Claude</h3>
+                            <p>I prompted Claude to recreate the carousel design and flip effect with HTML, CSS, and JS. This is what Claude ended up with after 30 minutes, with some of my adjustments afterwards.</p>
+                        </div>
+
+                        <div>
+                            <iframe width="390" height="390" class="m-wide" src="carousel.html" title="Carousel of cards"></iframe>
+                            <p class="text-sm font-300">This is interactive, try it out!</p>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <hr>
+
+                <section class="grid row-sm d-max-width">
+                    <h2 class="text-lg">What's next?</h2>
+                    <div class="grid-sm t-col-3 row-sm">
+                        <div class="textbox goal animated flyUp stagger">
+                            <p>Conduct user testing</p>
+                            <p class="text-sm">This project was made for me as a user and stress tested with AI. It's ready to be opened up and tested by a wider range of users.</p>
+                        </div>
+                        <div class="textbox goal animated flyUp stagger">
+                            <p>Create a consistent system</p>
+                            <p class="text-sm">I didn't have the chance to properly document the typography, spacing, and colour usage. This will make future explorations and iterations easier.</p>
+                        </div>
+                        <div class="textbox goal animated flyUp stagger">
+                            <p>AI for micro-interactions</p>
+                            <p class="text-sm">I want to turn my Figma prototype into a coded one to push explorations of micro-interactions as far as I can.</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="grid row-md d-max-width">
+                    <div>
+                        <h2 class="text-upc text-reg">Reflection</h2>
+                        <p class="text-lg">"Use AI to think with you"</p>
+                        <p style="margin-top: var(--text-space-100);">That's the most common advice I've heard in terms of working with AI. Throughout this project, it has proven to be beneficial as an additional designer, not something to do everything for me. It wasn't news to me that Claude can be terrifyingly impressive, but I'm still impressed whenever I see how fast it works. Human oversight is important, but Claude can save a lot of time.</p>
+                    </div>
+                    <div>
+                        <p class="text-lg">More purposeful use of AI tools</p>
+                        <p style="margin-top: var(--text-space-100);">Coming from an art background and having learned only 10% of the negative impacts the rapid development of AI has had on people and the environment, AI is still not going to be a go-to tool. I do see the usefulness and the need for AI fluency to keep up with industry changes. However, at least until the physical infrastructure is more sustainable, I want to keep my own use of AI to instances where it's absolutely useful and/or necessary.</p>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer"></footer>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/before-after-slider.js"></script>
+    </body>
+</html>

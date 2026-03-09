@@ -1,0 +1,68 @@
+:root{
+    --presto-green: #d5efb5;
+    --orange: #ffc3ba;
+}
+
+img{
+    height: 100%;
+}
+
+.textbox{
+    background-color: var(--presto-green);
+}
+
+#problem-1 .textbox.glass, 
+#problem-2 .textbox.glass,
+#problem-3 .textbox.glass{
+    margin-top: var(--margin-top-sm);
+    background-color: var(--orange);
+}
+
+.textbox.bordered {
+    background: none; 
+    border: 1px solid #202125;
+}
+
+.textbox.goal, 
+.textbox.painpoint{
+    align-content: start;
+    background: none;
+    border: 2px solid var(--presto-green);
+}
+
+.textbox.painpoint{
+    border: 2px solid var(--orange);
+}
+
+.textbox.goal p:first-child, 
+.textbox.painpoint p:first-child{
+    margin: -20px -20px 0;
+    padding: 12px 20px;
+    background-color: var(--presto-green);
+}
+
+.textbox.painpoint p:first-child{
+    background-color: var(--orange);
+}
+
+.textbox.painpoint p:nth-child(2 of p), 
+.textbox.goal p:nth-child(2 of p){
+    margin-top: var(--text-space-100);
+}
+
+iframe {
+    aspect-ratio: 4/5;
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (any-hover: hover) {
+    .textbox.painpoint:hover{
+        color: initial;
+        text-decoration: none;
+    }
+    .textbox.painpoint:hover p:first-child{
+        text-decoration: underline;
+    }
+}
