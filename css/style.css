@@ -257,15 +257,17 @@ section.extended{
     padding-bottom: var(--margin-top-md);
 }
 
-#showcase .glass{
+#showcase .glass,
+.textbox.glass{
     border: 1px solid var(--white-50);
     border-radius: var(--border-radius-050);
     overflow: hidden;
 }
 
 hr{
-    margin-top: var(--margin-top-sm);
-    border: 1px solid var(--green);
+    max-width: 880px;
+    margin: var(--margin-top-lg) auto 0;
+    border: 0.75px solid var(--black);
 }
 /* ////////// */
 
@@ -660,24 +662,51 @@ footer .contact{
 }
 
 .label{
+    position: relative;
     color: var(--black);
     font-weight: 500;
     font-size: var(--font-sm);
     line-height: 1rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0 0.5rem;
     height: 1.5rem;
     border-radius: var(--border-radius-012);
     white-space: nowrap;
+    align-content: center;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.label.prototype{background-color: #CAE1E3;}
-.label.ux{background-color: #E4D1F4;}
-.label.frontend{background-color: #CEE2D3;}
-.label.visual{background-color: #F9ECC9;}
-.label.system{background-color: #FAD6C5;}
-.label.theme{background-color: var(--light-green);}
+.label::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+
+.label.prototype, .label.frontend{
+    border: 1px solid #ffd167;
+    background-color: rgba(255, 209, 103, 0.6);
+}
+.label.ux{
+    border: 1px solid #beacf9;
+    background-color: rgba(190, 172, 249, 0.6);
+}
+.label.system{
+    border: 1px solid #8ad9b8;
+    background-color: rgba(138, 217, 184, 0.6);
+}
+.label.ai{
+    border: 1px solid #b9cbff;
+    background-color: rgba(185, 203, 255, 0.6);
+}
+.label.theme{
+    border: 1px solid var(--green-50);
+    background-color: var(--light-green);
+}
 
 footer .label{
     color: var(--dark-green);
@@ -719,6 +748,7 @@ footer .label{
 .textbox{
     padding: var(--padding-rg);
     border-radius: var(--border-radius-025);
+    width: 100%;
 }
 .textbox.padding-sm{padding: 12px 16px;}
 .textbox.padding-lg{padding: 40px;}
