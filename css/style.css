@@ -726,7 +726,7 @@ footer .contact{
 }
 
 footer .label{
-    color: var(--dark-green);
+    color: var(--dark-green) !important;
     background-color: var(--white);
     border-color: var(--dark-green);
     cursor: pointer;
@@ -740,12 +740,11 @@ footer .label{
     background-size: 250% 250%, 100% 100%;
     animation-name: shine-effect;
     animation-duration: 3s;
-    animation-delay: 2s;
     animation-iteration-count: infinite;
     /* End of code from https://ibelick.com/blog/create-shine-effect-on-card-with-tailwind-css */
 
     .dark & {
-        color: var(--light-green);
+        color: var(--light-green) !important;
         background-color: var(--black);
         border: 1px solid var(--light-green);
         background-image: linear-gradient(
@@ -1630,7 +1629,7 @@ blockquote{
     }
 
     footer .label:hover{
-        color: var(--dark-text-primary);
+        color: var(--dark-text-primary) !important;
         background-color: var(--green);
         border: 1px solid var(--green);
     }
