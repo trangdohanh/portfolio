@@ -24,6 +24,9 @@ if (document.body.contains(jsCarousels[0])){
 				dot.classList.add('dot');
 				dot.addEventListener('click', event => {currentSlide(slides.indexOf(slide) + 1)})
 				dots.appendChild(dot);
+				if (dots.classList.contains("in-slide")) {
+					dots.style.left = `calc(50% - ${dots.offsetWidth}px / 2)`
+				}
 			}
 
 			if (container.contains(thumbnails)){
@@ -95,6 +98,10 @@ if (document.body.contains(slideCarousels[0])){
 				dots.appendChild(dot);
 			})
 
+			if (dots.classList.contains("in-slide")) {
+				dots.style.left = `calc(50% - ${dots.offsetWidth}px / 2)`
+			}
+
 			function dotScroll(n) {
 				carousel.scrollTo(n, 0)
 				for (let i = 0; i < slides.length; i++) {
@@ -125,8 +132,8 @@ if (document.body.contains(slideCarousels[0])){
 		}
 
         function placeArrows() {
-            prev.style.right = container.offsetWidth / 2 + 8 + "px";
-            next.style.left = container.offsetWidth / 2 + 8 + "px";
+            prev.style.right = `calc(${container.offsetWidth}px / 2 + 8px)`;
+            next.style.left = `calc(${container.offsetWidth}px / 2 + 8px)`;
         }
 		if (!prev.classList.contains('prev') && !next.classList.contains('next')) {
 			placeArrows()
