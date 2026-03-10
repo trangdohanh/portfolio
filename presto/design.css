@@ -3,6 +3,10 @@
     --orange: #ffc3ba;
 }
 
+mark{
+    background-color: #acde6b;
+}
+
 img{
     height: 100%;
 }

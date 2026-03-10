@@ -16,18 +16,32 @@
     --font-md: 1.39rem; --line-md: 150%;
     --font-lg: 1.78rem; --line-lg: 145%;
 
-    --black: #1a1a1a; --white: #fbf7f4;
-    --black-90: #1a1a1ae6; --white-90: #fbf7f4e6;
-    --black-80: #1a1a1acc; --white-80: #fbf7f4cc;
-    --black-70: #1a1a1ab3; --white-70: #fbf7f4b3;
-    --black-50: #1a1a1a80; --white-50: #fbf7f480;
-    --black-30: #1a1a1a4d; --white-30: #fbf7f44d;
-    --black-20: #1a1a1a33; --white-20: #fbf7f433;
-    --black-10: #1a1a1a1a; --white-10: #fbf7f41a;
+    --black: #1a1a1a;
+    --black-90: #1a1a1ae6;
+    --black-80: #1a1a1acc; 
+    --black-70: #1a1a1ab3; 
+    --black-60: #1a1a1a99; 
+    --black-50: #1a1a1a80; 
+    --black-40: #1a1a1a66; 
+    --black-30: #1a1a1a4d; 
+    --black-20: #1a1a1a33; 
+    --black-10: #1a1a1a1a; 
+
+    --white: #fbf7f4;
+    --white-90: #fbf7f4e6;
+    --white-80: #fbf7f4cc;
+    --white-70: #fbf7f4b3;
+    --white-60: #fbf7f499;
+    --white-50: #fbf7f480;
+    --white-40: #fbf7f466;
+    --white-30: #fbf7f44d;
+    --white-20: #fbf7f433;
+    --white-10: #fbf7f41a;
+
     --green: #50826e;
     --green-50: #50826e80;
-    --light-green-50: #96beb480;
     --light-green: #96beb4;
+    --light-green-50: #96beb480;
     --dark-green: #285046;
 
     --light-bg-primary: var(--white);
@@ -39,6 +53,7 @@
     --dark-text-secondary: var(--white-90);
 
     --max-width: 1024px;
+    --content-width: 880px;
     --scroll-margin: 120px;
     --margin-top-lg: 120px;
     --margin-top-md: 80px;
@@ -176,8 +191,8 @@ p + .text-md{margin-top: var(--text-space-050);}
 strong{font-weight: 500;}
 
 mark{
-    padding: 0 2px; 
-    margin: 0 -2px;
+    padding: 0 4px; 
+    margin: 0 -4px;
     .dark & {color: var(--white);}
 }
 
@@ -243,7 +258,7 @@ section.extended{
     width: 100%;
     @media only screen and (min-width: 1025px) {    
         margin: 0 auto;
-        min-width: 880px;
+        min-width: var(--content-width);
     }
 }
 
@@ -265,7 +280,7 @@ section.extended{
 }
 
 hr{
-    max-width: 880px;
+    max-width: var(--content-width);
     margin: var(--margin-top-lg) auto 0;
     border: 0.75px solid var(--black);
 }
@@ -293,7 +308,7 @@ a, button{
 
 .link-button{
     height: fit-content;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     background: none;
     border-width: 1px;
     border-style: solid;
@@ -305,7 +320,7 @@ a, button{
 .link-button svg{
     transition: all 0.3s ease;
     vertical-align: bottom;
-    margin-right: -0.25rem;
+    margin-right: -4px;
     fill: var(--light-text-primary);
     .dark & {fill: var(--dark-text-primary);}
 }
@@ -452,11 +467,11 @@ footer{
 
 .page-nav-container{
     position: fixed;
-    bottom: 1rem;
+    bottom: 16px;
     left: 0;
     width: 100vw;
     z-index: 10;
-    @media only screen and (max-width: 767px) {padding: 0 2rem;}
+    @media only screen and (max-width: 767px) {padding: 0 32px;}
 }
 
 .page-nav{
@@ -467,7 +482,7 @@ footer{
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.5rem 2rem;
+    padding: 8px 32px;
     background-color: var(--white-80);
     border-radius: var(--border-radius-100);
     box-shadow: 0 3px 8px var(--black-20);
@@ -481,7 +496,7 @@ footer{
     @media only screen and (min-width: 768px) {
         border-radius: 24px;
         padding: 0 2rem;
-        height: 2.5rem;
+        height: 40px;
     }
     @media only screen and (min-width: 1025px) {    
         max-width: var(--max-width);
@@ -663,17 +678,19 @@ footer .contact{
 
 .label{
     position: relative;
-    color: var(--black);
+    align-content: center;
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    border-radius: var(--border-radius-012);
+    color: var(--black) !important;
     font-weight: 500;
     font-size: var(--font-sm);
     line-height: 1rem;
-    padding: 0 0.5rem;
-    height: 1.5rem;
-    border-radius: var(--border-radius-012);
     white-space: nowrap;
-    align-content: center;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .label::after{
@@ -688,30 +705,30 @@ footer .contact{
 }
 
 .label.prototype, .label.frontend{
-    border: 1px solid #ffd167;
+    border-color: #ffd167;
     background-color: rgba(255, 209, 103, 0.6);
 }
 .label.ux{
-    border: 1px solid #beacf9;
+    border-color: #beacf9;
     background-color: rgba(190, 172, 249, 0.6);
 }
 .label.system{
-    border: 1px solid #8ad9b8;
+    border-color: #8ad9b8;
     background-color: rgba(138, 217, 184, 0.6);
 }
 .label.ai{
-    border: 1px solid #b9cbff;
+    border-color: #b9cbff;
     background-color: rgba(185, 203, 255, 0.6);
 }
 .label.theme{
-    border: 1px solid var(--green-50);
+    border-color: var(--green-50);
     background-color: var(--light-green);
 }
 
 footer .label{
     color: var(--dark-green);
     background-color: var(--white);
-    border: 1px solid var(--dark-green);
+    border-color: var(--dark-green);
     cursor: pointer;
     transition: all 0.6s ease-out;
      /* Code from https://ibelick.com/blog/create-shine-effect-on-card-with-tailwind-css */
@@ -766,17 +783,17 @@ div.icon-text{
 }
 
 .icon-text svg{
-    margin-left: -1.25rem;
+    margin-left: -24px;
 }
 
 .textbox .icon-text{
     border-radius: 3px 3px 0 0; 
-    margin: -1.25rem -1.25rem 1rem -1.25rem; 
+    margin: -20px -20px 16px; 
     padding: 0.5rem;
 }
 
 .textbox.padding-sm .icon-text{
-    margin: -0.75rem -1rem 0.5rem -1rem;
+    margin: -12px -16px 8px;
 }
 
 .persona-card{
@@ -790,7 +807,7 @@ div.icon-text{
     border-style: solid;
     border-color: var(--light-green);
     border-radius: var(--border-radius-050);
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 /* ////////// */
 
@@ -802,18 +819,20 @@ div.icon-text{
     transition: all 0.4s ease;
 }
 
-.animated.flyLeft {transform: translateX(-80%);}
-.animated.flyRight {transform: translateX(80%);}
-.animated.flyUp {transform: translateY(40%);}
-.animated.flyDown {transform: translateY(-40%);}
+.animated.flyLeft {transform: translate(-80%, 0);}
+.animated.flyRight {transform: translate(80%, 0);}
+.animated.flyUp {transform: translate(0, 40%);}
+.animated.flyDown {transform: translate(0, -40%);}
 
 .fadeIn{
     opacity: 1;
     filter: blur(0);
 }
 
-.fadeIn.flyLeft, .fadeIn.flyRight{transform: translateX(0);}
-.fadeIn.flyUp, .fadeIn.flyDown{transform: translateY(0);}
+.fadeIn.flyLeft, 
+.fadeIn.flyRight,
+.fadeIn.flyUp, 
+.fadeIn.flyDown{transform: translate(0, 0);}
 /* End of code from https://www.youtube.com/watch?v=T33NN_pPeNI */
 /* ////////// */
 
@@ -875,25 +894,22 @@ div.icon-text{
     font-family: none;
     font-size: 0;
     line-height: 0;
-    cursor: pointer;
     position: absolute;
     z-index: 3;
     border: none;
     border-radius: var(--border-radius-012);
-    background: none;
-    width: auto;
-    padding: 0.75rem;
+    padding: 12px;
     background-color: #1a1a1a1a;
-    transition: all 0.3s ease;
 }
 
 button.prev{
-    top: 45%;
+    top: calc(50% - 24px);
+    left: 0;
     border-radius: 0 var(--border-radius-012) var(--border-radius-012) 0;
 }
 
 button.next{
-    top: 45%;
+    top: calc(50% - 24px);
     right: 0; 
     border-radius: var(--border-radius-012) 0 0 var(--border-radius-012);
 }
@@ -931,7 +947,7 @@ button.next{
 .dots.in-slide{
     position: absolute;
     z-index: 5;
-    bottom: 1rem;
+    bottom: 16px;
 }
 
 .dot{
@@ -940,7 +956,6 @@ button.next{
     aspect-ratio: 1 / 1;
     background-color: var(--black-20);
     border-radius: 50%;
-    display: inline-block;
     transition: all 0.4s ease;
 }
 
@@ -964,12 +979,12 @@ button.next{
 }
 
 .scroll-slides.padded{
-    padding: 0 1rem 3rem 1rem;
+    padding: 0 16px 48px;
     @media only screen and (min-width: 768px) {
-        padding: 0 2rem 3rem 2rem;
+        padding: 0 32px 48px;
     }
     @media only screen and (min-width: 1025px) {
-        padding: 2rem 2rem 3rem 2rem;
+        padding: 32px 32px 48px;
         border: 1px solid var(--black);
         border-radius: var(--border-radius-012);
     }
@@ -1103,19 +1118,25 @@ button:disabled{
 .page .modal-content{
     max-height: calc(100vh - 120px);
     margin: 60px auto;
-    padding: var(--page-margin) !important;
+    padding: 0 !important;
     background-color: var(--light-bg-primary);
     color: var(--light-text-primary);
     border: 2px solid var(--light-green);
     border-radius: var(--border-radius-025);
     box-shadow: 0px 2px 8px var(--black-20);
-    overflow-y: scroll;
+    
     scrollbar-width: thin;
     
     @media only screen and (max-width: 767px) {
         margin: 60px var(--page-neg-margin);
         border-radius: 0;
     }
+}
+
+.page .modal-content > div{
+    overflow-y: scroll;
+    height: calc(100vh - 120px);
+    padding: var(--page-margin) !important;
 }
 
 .page .modal-content a {
@@ -1202,20 +1223,31 @@ button:disabled{
 /* ////////// */
 
 /* ACCORDION */
-details{
+details, 
+.details{
     height: fit-content;
     border-radius: var(--border-radius-050);
     overflow: hidden;
     transition: all 0.6s ease;
 }
+details[open], 
+.details{
+    display: flex;
+    flex-direction: column;
+}
 
-details > summary{
+details > summary, 
+.details div{
     cursor: pointer;
     padding: var(--padding-rg);
     list-style: none;
     display: flex;
     column-gap: var(--column-gap-075);
     transition: all 0.3s ease;
+}
+details[open] summary, 
+.details div{
+    box-shadow: 0 2px 4px var(--black-10);
 }
 
 summary svg, .details svg{
@@ -1231,15 +1263,6 @@ details::details-content{
     transition: all 0.4s ease;
 }
 
-details[open]{
-    display: flex;
-    flex-direction: column;
-}
-
-details[open] summary{
-    box-shadow: 0 2px 4px var(--black-10);
-}
-
 details[open] svg{
     rotate: 90deg;
 }
@@ -1247,23 +1270,6 @@ details[open] svg{
 details[open]::details-content{
     padding-top: var(--padding-rg);
     padding-bottom: var(--padding-rg);
-}
-
-.details{
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    border-radius: var(--border-radius-050);
-    overflow: hidden;
-    transition: all 0.6s ease;
-}
-
-.details div{
-    padding: var(--padding-rg);
-    display: flex;
-    column-gap: var(--column-gap-075);
-    box-shadow: 0 2px 4px var(--black-10);
-    transition: all 0.3s ease;
 }
 
 .details .details-content{
@@ -1315,21 +1321,20 @@ blockquote{
     position: relative;
     overflow: hidden;
 
-    &::before {
+    &::before, &::after {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    &::before {
         right: 0;
         height: 1px;
         background: linear-gradient(90deg, transparent, var(--white-80), transparent);
     }
 
     &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 1px;
         height: 100%;
         background: linear-gradient(180deg, var(--white-80), transparent, var(--white-30));
@@ -1507,7 +1512,7 @@ blockquote{
     .d-pad-right{padding-right: var(--padding-rg);}
 
     .d-max-width{
-        max-width: 880px;
+        max-width: var(--content-width);
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -1572,11 +1577,6 @@ blockquote{
         color: var(--dark-green);
         .dark & {color: var(--light-green);}
 
-        #hero .labels & {
-            background-color: var(--green);
-            svg{fill: var(--white);}
-        }
-
         .page-nav & {color: var(--green);}
 
         .project & {text-decoration: none;}
@@ -1606,7 +1606,8 @@ blockquote{
     
     .dot:hover {background-color: var(--black-80);}
     
-    .slides button:hover, .slides-container button:not(:disabled):hover{
+    .slides button:hover, 
+    .slides-container button:not(:disabled):hover{
         background-color: var(--green-50);
     }
 
