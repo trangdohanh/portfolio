@@ -99,7 +99,7 @@ footer.querySelector("span.label").addEventListener("click", () => {
 	template.style.display = "flex";
 	template.classList.add("page")
     template.querySelector("#modal-content").innerHTML = 
-        `<div>
+        `<div class="thin-scrollbar">
             <div class="grid row-xs">
                 <h2>${content.website.heading}</h2>
                 <p>${content.website.paragraph_1}
