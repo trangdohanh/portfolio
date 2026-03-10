@@ -458,6 +458,13 @@
     border-left: 2px solid var(--light-text-primary);
     .dark &{border-left: 2px solid var(--dark-text-primary);}
 } 
+
+mark{
+    background-color: var(--light-green-50);
+    .dark &{
+        background-color: var(--dark-green-70);
+    }
+}
 /* ////////// */
 
 /* ANIMATION */
