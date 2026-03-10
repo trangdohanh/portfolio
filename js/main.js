@@ -28,7 +28,7 @@ if (!document.body.classList.contains("fixed-bg")){
                                 <a href="../#works">Works</a>
                                 <a href="../#about">About</a>
                                 <a href="../files/Hanh_Trang_Do_Resume.pdf" target="_blank" class="link-button">Resume 
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="20" height="20"><path d="M219.31,72,184,36.69A15.86,15.86,0,0,0,172.69,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V83.31A15.86,15.86,0,0,0,219.31,72ZM168,208H88V152h80Zm40,0H184V152a16,16,0,0,0-16-16H88a16,16,0,0,0-16,16v56H48V48H172.69L208,83.31ZM160,72a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h56A8,8,0,0,1,160,72Z"></path></svg>
                                 </a>
                             </nav> 
                         </div>`;
@@ -99,21 +99,24 @@ footer.querySelector("span.label").addEventListener("click", () => {
 	template.style.display = "flex";
 	template.classList.add("page")
     template.querySelector("#modal-content").innerHTML = 
-        `<div class="grid row-xs">
-            <h2>${content.website.heading}</h2>
-            <p>${content.website.paragraph_1}
-                    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: var(--black) !important; vertical-align: top;"><path d="M80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm40,8a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,120,64Zm32,0a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,152,64Zm96,56v8a40,40,0,0,1-37.51,39.91,96.59,96.59,0,0,1-27,40.09H208a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H56.54A96.3,96.3,0,0,1,24,136V88a8,8,0,0,1,8-8H208A40,40,0,0,1,248,120ZM200,96H40v40a80.27,80.27,0,0,0,45.12,72h69.76A80.27,80.27,0,0,0,200,136Zm32,24a24,24,0,0,0-16-22.62V136a95.78,95.78,0,0,1-1.2,15A24,24,0,0,0,232,128Z"></path></svg>
-            </p>
-            <p>${content.website.paragraph_2}</p>
-            <p>${content.website.paragraph_3}</p>
-            <p>${content.website.paragraph_4}</p>
-            <p>${content.website.paragraph_5}</p>
-            <p>${content.website.paragraph_6}</p>
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: var(--green) !important; margin-top: var(--text-space-100);">
-                <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
-                <ellipse cx="192" cy="94" rx="14" ry="14"/>
-                <ellipse cx="96" cy="94" rx="14" ry="14"/>
-            </svg>
+        `<div>
+            <div class="grid row-xs">
+                <h2>${content.website.heading}</h2>
+                <p>${content.website.paragraph_1}
+                        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: var(--black) !important; vertical-align: top;"><path d="M80,56V24a8,8,0,0,1,16,0V56a8,8,0,0,1-16,0Zm40,8a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,120,64Zm32,0a8,8,0,0,0,8-8V24a8,8,0,0,0-16,0V56A8,8,0,0,0,152,64Zm96,56v8a40,40,0,0,1-37.51,39.91,96.59,96.59,0,0,1-27,40.09H208a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H56.54A96.3,96.3,0,0,1,24,136V88a8,8,0,0,1,8-8H208A40,40,0,0,1,248,120ZM200,96H40v40a80.27,80.27,0,0,0,45.12,72h69.76A80.27,80.27,0,0,0,200,136Zm32,24a24,24,0,0,0-16-22.62V136a95.78,95.78,0,0,1-1.2,15A24,24,0,0,0,232,128Z"></path></svg>
+                </p>
+                <p>${content.website.paragraph_2}</p>
+                <p>${content.website.paragraph_3}</p>
+                <p>${content.website.paragraph_4}</p>
+                <p>${content.website.paragraph_5}</p>
+                <p>${content.website.paragraph_6}</p>
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: var(--green) !important; margin-top: var(--text-space-100);">
+                    <path d="M128 0C198.692 0 256 57.3076 256 128C256 198.692 198.692 256 128 256H112V224C112 206.603 98.1176 192.449 80.8262 192.011L80 192H76.001C69.4768 192 64.1681 197.207 64.0039 203.691L64 204.001V244.044C63.9756 250.651 58.6124 255.999 52 255.999H64V256H32V255.998H18V253.551C26.0145 251.731 31.9971 244.565 31.998 236H32V76C32.0002 69.3726 37.3736 64.0003 44.001 64H77.9971V66.4473C70.0076 68.2611 64.0381 75.3885 64 83.918V96H64.0029C64.2565 131.381 99.9744 160 144 160C188.183 160 224 131.177 224 95.6211C224 74.298 211.118 55.3966 191.275 43.6807C172.658 56.0673 160.309 77.1295 160.006 101.096L160 102V101C160 109.837 152.837 117 144 117C135.302 117 128.224 110.059 128.005 101.413L128 101V95H127.991C127.461 60.3902 99.459 32.4438 64.8271 32.0049L64 32H19.999L19.5986 32.0039C11.211 32.1872 4.23749 38.1084 2.44629 45.998H0.000976562V32H0V9.72363C0.871806 4.77339 4.77827 0.86943 9.72949 0H128Z"/>
+                    <ellipse cx="192" cy="94" rx="14" ry="14"/>
+                    <ellipse cx="96" cy="94" rx="14" ry="14"/>
+                </svg>
+                <p class="text-sm" style="margin-top: var(--text-space-100);">${content.website.paragraph_7}</p>
+            </div>
         </div>`
     document.body.style.overflowY = "hidden";
 })
