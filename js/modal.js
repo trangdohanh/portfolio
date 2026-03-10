@@ -13,7 +13,7 @@ function openModal(e) {
 	} else {
         template.classList.add("page")
         if (e.id == "career-courier") {
-            modal.innerHTML = `<div>
+            modal.innerHTML = `<div class="thin-scrollbar">
 									<div class="grid row-sm">
 										<iframe style="aspect-ratio: 16/9;" src="${content.hackathon.youtube}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 										<div>
