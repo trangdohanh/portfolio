@@ -460,9 +460,11 @@
 } 
 
 mark{
-    background-color: var(--light-green-50);
+    padding-left: 10px;
+    margin-left: -10px;
+    background: linear-gradient(to right, #96beb433 0%, var(--light-green-50) 40%);
     .dark &{
-        background-color: var(--dark-green-70);
+        background: linear-gradient(to right, #28504633 0%, var(--dark-green-70) 40%);
     }
 }
 /* ////////// */
