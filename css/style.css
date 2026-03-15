@@ -1572,7 +1572,9 @@ blockquote{
 
 /* HOVER STATE */
 @media (any-hover: hover) {
-    a:hover{
+    a:hover,
+    button:hover{
+        box-shadow: inset 0px 3px 2px var(--black-20);
         text-decoration: underline;
         color: var(--dark-green);
         .dark & {color: var(--light-green);}
@@ -1582,12 +1584,6 @@ blockquote{
         .project & {text-decoration: none;}
 
         .page & {color: var(--dark-green);}
-    }
-
-    button:hover{
-        text-decoration: underline;
-        color: var(--dark-green);
-        .dark & {color: var(--light-green);}
     }
     
     .link:hover{text-decoration: none;}
