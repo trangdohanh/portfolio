@@ -571,6 +571,11 @@ mark{
         text-decoration: none;
     }
 
+    .project a:hover,
+    .gif-modal:hover{
+        box-shadow: none;
+    }
+
     .project a:hover img,
     #sandbox .project:hover img {
         scale: 110%;
