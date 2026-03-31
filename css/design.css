@@ -359,6 +359,7 @@
     position: absolute;
     z-index: -2;
     opacity: 1;
+    scale: 100%;
     transition: all 0.4s ease;
 }
 
@@ -378,6 +379,13 @@
     rotate: 10deg;
     top: -22%; 
     right: 0;
+}
+
+.hobby:nth-child(4 of .hobby) {
+    z-index: -5;
+    rotate: -10deg;
+    bottom: -37%;
+    left: -10%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -400,10 +408,17 @@
         top: 0%; 
         right: 0%;
     }
+
+    .hobby:nth-child(4 of .hobby) {
+        scale: 90%;
+        bottom: -2%;
+        left: -30%;
+    }
 }
 
 .my-cards.hide-hobbies .hobby{
     rotate: 0deg;
+    scale: 80%;
     &:nth-child(1 of .hobby) {
         top: 10%; 
         left: 20%;
@@ -416,6 +431,11 @@
     &:nth-child(3 of .hobby) {
         top: 20%; 
         right: 20%;
+    }
+
+    &:nth-child(4 of .hobby) {
+        bottom: 40%;
+        left: 20%;
     }
 }
 
@@ -460,11 +480,9 @@
 } 
 
 mark{
-    padding-left: 10px;
-    margin-left: -10px;
-    background: linear-gradient(to right, #96beb433 0%, var(--light-green-50) 40%);
+    background-color: var(--light-green-50);
     .dark &{
-        background: linear-gradient(to right, #28504633 0%, var(--dark-green-70) 40%);
+        background-color: var(--dark-green-70);
     }
 }
 /* ////////// */
