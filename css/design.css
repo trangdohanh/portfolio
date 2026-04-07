@@ -410,9 +410,7 @@
     }
 
     .hobby:nth-child(4 of .hobby) {
-        scale: 90%;
-        bottom: -2%;
-        left: -30%;
+        display: none;
     }
 }
 
