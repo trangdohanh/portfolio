@@ -1574,16 +1574,17 @@ blockquote{
 @media (any-hover: hover) {
     a:hover,
     button:hover{
-        box-shadow: inset 0px 3px 2px var(--black-20);
         text-decoration: underline;
         color: var(--dark-green);
         .dark & {color: var(--light-green);}
-
         .page-nav & {color: var(--green);}
-
         .project & {text-decoration: none;}
-
         .page & {color: var(--dark-green);}
+    }
+
+    button:hover, 
+    .link-button:hover{
+        box-shadow: inset 0px 3px 2px var(--black-20);
     }
     
     .link:hover{
